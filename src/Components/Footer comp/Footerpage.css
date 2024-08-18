@@ -1,6 +1,8 @@
 .footer-container {
   width: 100%;
   background-color: #d3d3d3;
+  overflow-x: hidden;
+  padding: 10px;
 }
 
 .footer-inner {
@@ -192,7 +194,7 @@
   }
 
   .footer-subscribe-input input {
-    margin-right: 10px; /* Space between input and button */
+    margin-right: 3px; /* Space between input and button */
   }
 
   .footer-social-icons {
@@ -204,6 +206,9 @@
   }
   .footer-column-subscribe {
     align-items: center; /* Center content horizontally */
+  }
+  .footer-container {
+    padding: 15px;
   }
 }
 
@@ -220,4 +225,5 @@
   .footer-column-subscribe {
     align-items: center; /* Center content horizontally */
   }
+
 }

@@ -88,7 +88,15 @@
   justify-content: center;
 }
 
-.casestudy-box-content h4, .casestudy-box-content h6 {
+.casestudy-box-content h4{
+  margin: 0 0 10px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #003873;
+  font-size: 1.2em; /* Adjusted font size */
+  text-align: justify; /* Justify text for desktop */
+}
+.casestudy-box-content h6 {
   margin: 0 0 10px 0;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
