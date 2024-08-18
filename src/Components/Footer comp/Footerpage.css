@@ -1,0 +1,223 @@
+.footer-container {
+  width: 100%;
+  background-color: #d3d3d3;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column-logo,
+.footer-column-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+.footer-column-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+.footer-column-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items vertically */
+}
+
+.footer-logo {
+  margin-right: 20px; /* Space between logo and links */
+}
+
+.footer-logo img {
+  display: block;
+  max-height: 50px; /* Adjust height as needed */
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligns links to the start (left side) */
+}
+
+.footer-links a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #003873;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.footer-divider {
+  width: 1px;
+  background-color: #ffffff; /* White color for dividers */
+  height: 150px;
+  margin: 0px; 
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: #003873;
+}
+.footer-con-icon{
+  color: #003873;
+}
+
+.footer-contact-item p {
+  margin: 5px;
+  line-height: 1.5; 
+  color: #003873;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.footer-subscribe-title {
+  margin-bottom: 10px;
+  text-align: center;
+  color: #003873;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.footer-subscribe-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.footer-subscribe-input input {
+  padding: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.footerproceed-btn {
+  padding: 7px 10px;
+  border-radius: none;
+  border: none;
+  margin-top: 10px;
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.footer-icon-button {
+  background: none;
+  border: none;
+  font-size: 24px; /* Adjust icon size */
+  color: #003873; /* Adjust color as needed */
+  margin-right: 10px; /* Space between icons */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.footer-bottom-text {
+  text-align: center;
+  color: #344ea1;
+  margin-top: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .footer-container {
+    margin-top: 10px;
+  }
+  .footer-inner {
+    flex-direction: column; /* Stack columns vertically on mobile */
+  }
+
+  .footer-column {
+    width: 100%; /* Each column takes full width on mobile */
+    margin-bottom: 20px; /* Space between columns */
+  }
+
+  .footer-divider {
+    display: none; /* Hide dividers on mobile */
+  }
+
+  .footer-column-logo {
+    flex-direction: column; /* Stack logo and links vertically on mobile */
+    align-items: center;
+  }
+
+  .footer-logo {
+    margin-right: 0; /* Remove right margin on mobile */
+    margin-bottom: 10px; /* Space between logo and links on mobile */
+  }
+
+  .footer-links {
+    align-items: center; /* Center links horizontally on mobile */
+    text-align: center; /* Center text for links */
+  }
+
+  .footer-links a {
+    margin-bottom: 8px; /* Adjust spacing between links on mobile */
+  }
+
+  .footer-contact-item {
+    flex-direction: row; /* Align icon and text horizontally on mobile */
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 10px;
+  }
+
+  .footer-contact-item p {
+    margin: 0; /* Ensure text has no extra margin */
+    font-size: 14px; /* Adjust font size for small screens */
+  }
+
+  .footer-subscribe-input {
+    flex-direction: row; /* Stack input and button horizontally on mobile */
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+  }
+
+  .footer-subscribe-input input {
+    margin-right: 10px; /* Space between input and button */
+  }
+
+  .footer-social-icons {
+    flex-direction: row; /* Align social icons in a row on mobile */
+  }
+
+  .footer-icon-button {
+    margin-right: 8px; /* Adjust spacing between social icons */
+  }
+  .footer-column-subscribe {
+    align-items: center; /* Center content horizontally */
+  }
+}
+
+@media (max-width: 400px) {
+  .footer-contact-item {
+    flex-direction: row; /* Align icon and text horizontally on mobile */
+    justify-content: center; /* Center items horizontally */
+    text-align: center; /* Center text alignment */
+  }
+
+  .footer-icon-button {
+    font-size: 20px; /* Adjust icon size for very small screens */
+  }
+  .footer-column-subscribe {
+    align-items: center; /* Center content horizontally */
+  }
+}

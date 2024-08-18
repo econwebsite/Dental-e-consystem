@@ -1,0 +1,33 @@
+/* Paragraph.css */
+
+.containerparagraph {
+  width: 100%;
+  background-color:#f1f2f2 ;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.paragraphtext {
+  text-align: center;
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #003873;
+  font-size: 1.1em;
+  line-height: 2em;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .containerparagraph {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .paragraphtext {
+    font-size: 1em; /* Adjust font size if needed */
+    padding: 10px;
+    text-align: justify;
+  }
+}

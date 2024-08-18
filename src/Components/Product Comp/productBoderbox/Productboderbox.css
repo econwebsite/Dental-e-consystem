@@ -1,0 +1,132 @@
+.Productboderbox-Total {
+  width: 100%;
+  background-color: #f1f2f2;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+.Productboderbox-container {
+  box-sizing: border-box;
+  padding: 2em;
+}
+
+.Productboderbox-container h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 3em;
+  color: #00aeef !important;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+
+.Productboderbox-description {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #344ea1;
+  font-size: 1.2em;
+}
+
+.Productboderbox-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile view */
+.Productboderbox-left-column,
+.Productboderbox-right-column {
+  flex: 1;
+  width: 100%;
+}
+
+.Productboderbox-left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  margin-right: 15px;
+}
+
+.Productboderbox-right-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.Productboderbox-border-box {
+  border: 1px solid #ccc;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #344ea1;
+  color: aliceblue;
+  box-sizing: border-box;
+}
+
+.Productboderbox-box-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Productboderbox-box-content p {
+  margin-top: 15px;
+  font-size: 1em;
+}
+
+.Productboderbox-icon-image {
+  width: 60px;
+  height: 50px;
+  object-fit: cover;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+  object-fit: cover;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  iframe {
+    height: 400px;
+  }
+  .Productboderbox-description {
+    text-align: justify;
+  }
+  .Productboderbox-container {
+ 
+    padding: 0.5em;
+  }
+
+}
+
+/* Desktop screens */
+@media (min-width: 1024px) {
+  .Productboderbox-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .Productboderbox-left-column,
+  .Productboderbox-right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Productboderbox-border-box {
+    flex: 1;
+  }
+
+  .Productboderbox-right-column {
+    height: max-content;
+    margin-top: 0; 
+  }
+  .Productboderbox-right-column iframe {
+    height: 400px;
+  }
+}

@@ -1,0 +1,115 @@
+.productcards-design-container {
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    overflow-x: hidden;
+
+  }
+  
+  #productcards-design-title {
+    text-align: center; 
+    font-size: 3em;
+    color: #003873;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+   padding: 1em;
+  }
+  
+  .productcards-content-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2px;
+    align-items: stretch; 
+    flex-wrap: wrap;
+    padding: 1em;
+  }
+  
+  .productcards-section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+  }
+  
+  .productcards-section h2 {
+    font-size: 1.5em;
+    background-color: #00aeef;
+    padding: 10px;
+    border: 1px solid #00aeef;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .productcards-Boder-color {
+    background-color: #f1f2f2;
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .productcards-section p {
+    font-size: 1em;
+    text-align: justify;
+    color: #003873;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .productcards-section-image {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+  }
+  
+  /* Media Queries */
+  
+  /* Tablets and small desktops */
+  @media screen and (max-width: 1024px) {
+    .productcards-content-container {
+      flex-direction: column; 
+      align-items: center;
+    }
+  
+    .productcards-section {
+      width: 80%;
+    }
+  
+    #productcards-design-title {
+      font-size: 1.8em;
+    }
+  }
+  
+  /* Mobile phones */
+  @media screen and (max-width: 768px) {
+    #productcards-design-title {
+      font-size: 2em;
+    }
+    .productcards-design-container {
+    
+      padding: 1px;
+    }
+  
+    .productcards-section h2 {
+      font-size: 1.2em;
+      padding: 8px;
+    }
+  
+    .productcards-section p {
+      font-size: 0.9em;
+    }
+  
+    .productcards-section {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .productcards-Boder-color {
+      padding: 15px;
+    }
+  }
+  

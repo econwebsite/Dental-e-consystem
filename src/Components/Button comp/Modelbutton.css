@@ -1,0 +1,77 @@
+.modelaclass {
+    display: inline-block; /* Ensure the button doesn't take full width */
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    outline: none;
+    transition: color 0.4s ease, background-color 0.4s ease;
+    z-index: 1;
+    background-color:  #69ba2f; 
+    color: white; 
+  }
+  
+  .modelaclass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #344ea1; /* Animation color */
+    transition: left 0.4s ease;
+    z-index: -1;
+  }
+  
+  .modelaclass:hover {
+    background-color: #344ea1;
+    color: white; /* Text color on hover */
+  }
+  
+  .modelaclass:hover::before {
+    left: 0;
+  }
+  /* Placeholder color for all inputs and text areas */
+input::placeholder,
+textarea::placeholder {
+    color: #344ea1;
+    opacity: 1; /* Ensure opacity is set to 1 for consistency */
+}
+
+/* Placeholder color for Ant Design inputs */
+.ant-input::placeholder,
+.ant-input-textarea::placeholder {
+    color: #344ea1;
+    opacity: 1; /* Ensure opacity is set to 1 for consistency */
+}
+/* Targeting the placeholder text of Ant Design Select */
+.ant-select .ant-select-selector .ant-select-selection-placeholder {
+    color: #003873; /* Placeholder color */
+}
+
+/* For dropdown items, if needed */
+.ant-select-item-option-content {
+    color: #003873; /* Item text color */
+}
+
+/* Additional styling if necessary */
+.ant-select-selector .ant-select-selection-item {
+    color: #003873; /* Text color for selected item (which might also affect the placeholder) */
+}
+/* Custom class for the modal */
+.custom-modal .ant-modal-title {
+  color: #003873; /* Change this to your desired color */
+}
+
+  @media (max-width: 600px) {
+    .modelaclass {
+      padding: 8px 20px; /* Reduce padding for smaller screens */
+      font-size: 0.9em; /* Slightly smaller font size */
+    }
+  }

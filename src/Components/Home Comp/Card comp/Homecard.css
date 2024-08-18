@@ -1,0 +1,103 @@
+.second-home-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  background-color: white;
+}
+
+.second-home-card {
+  position: relative;
+  width: 30%;
+  height: auto; 
+  background: #f1f2f2;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.second-home-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.second-home-card-inner {
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  z-index: 1;
+}
+
+.second-home-card-img {
+  width: 100%;
+  min-height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.second-home-card-title {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #003873;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.second-home-card-paragraph {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  color: #344ea1;
+  font-size: medium;
+  margin-bottom: 20px;
+}
+
+.second-home-button {
+  padding: 10px 15px;  
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .second-home-card-container {
+    padding: 20px;
+    gap: 20px; /* Reduced gap for smaller screens */
+  }
+  
+  .second-home-card {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 400px; /* Maximum width for cards */
+    height: auto; /* Auto height to maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .second-home-card-container {
+    padding: 10px;
+    gap: 10px; /* Further reduced gap */
+  }
+
+  .second-home-card {
+    width: 100%; /* Full width on very small screens */
+    height: auto; /* Ensure height adjusts to content */
+  }
+  .second-home-card:hover {
+    transform: none;
+  }
+  .second-home-card-img {
+    height: 200px; /* Adjust image height for smaller screens */
+  }
+  .second-home-button {
+    padding: 10px 10px;
+  }
+}

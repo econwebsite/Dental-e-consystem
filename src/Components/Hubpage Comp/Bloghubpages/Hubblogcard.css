@@ -1,0 +1,110 @@
+.Hubblogcard-Total {
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f1f2f2;
+}
+
+.Hubblogcard-title {
+  margin-bottom: 20px;
+  font-size: 3em; 
+  color: #003873;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.Hubblogcard-cards {
+  display: flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap: wrap;
+}
+
+.Hubblogcard-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left; /* Ensures text is aligned left */
+  width: 25%;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.Hubblogcard-image {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.Hubblogcard-title {
+  color: #013773; 
+  line-height: 1.5em;
+  text-align: justify;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.Hubblogcard-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 0.9em;
+  color: #344ea1;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.Hubblogcard-button1 {
+  padding: 8px 30px;
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .Hubblogcard-Total {
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .Hubblogcard-title {
+    font-size: 2em; /* Adjust font size for mobile */
+  }
+
+  .Hubblogcard-cards {
+    flex-direction: column; /* Stack cards vertically on mobile */
+    align-items: center; /* Center-align cards */
+  }
+
+  .Hubblogcard-card {
+    width: 90%; /* Adjust card width for mobile */
+    margin: 15px 0; /* Space between cards */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .Hubblogcard-image {
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .Hubblogcard-title {
+    font-size: 1.2em; /* Adjust font size for mobile */
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .Hubblogcard-text {
+    font-size: 0.8em; /* Adjust font size for mobile */
+    margin-bottom: 15px;
+  }
+
+  .Hubblogcard-button1 {
+    padding: 8px 20px; /* Adjust button padding for mobile */
+  }
+}
+
+  

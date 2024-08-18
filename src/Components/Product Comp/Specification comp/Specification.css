@@ -1,0 +1,165 @@
+.spec-comp {
+  width: 100%;
+  background-color: #f0feff;
+  overflow-x: hidden;
+}
+
+.spec-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.spec-title {
+  margin-bottom: 30px;
+  text-align: center; 
+  font-size: 2.5em;
+  color: #003873;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.spec-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0; 
+  padding: 30px;
+}
+
+.spec-leftColumn, .spec-rightColumn {
+  width: calc(37.5%); 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(3, auto); 
+  gap: 0; 
+  box-sizing: border-box;
+}
+
+.spec-middleColumn {
+  width: 25%; 
+}
+
+.spec-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0; 
+  margin: 0; 
+}
+
+.spec-boxContent {
+ border: none;
+  padding: 10px;
+  text-align: center;
+  width: 100%; 
+  height: 200px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.spec-innerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  box-sizing: border-box;
+  border: 1px solid #f0feff;
+}
+
+.spec-label {
+  margin: 0;
+  font-size: 0.9em;
+  color: #003873;
+}
+
+.spec-value {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+  color: #344ea1;
+}
+
+.spec-image {
+  width: 100%;
+  height: 600px;
+  box-sizing: border-box;
+  object-fit: contain;
+}
+
+.spec-buttonContainer {
+  margin-top: 30px;
+}
+
+.spec-button {
+  padding: 10px 20px;
+}
+
+/* Laptop and larger screens */
+@media (min-width: 1024px) {
+  .spec-leftColumn, .spec-rightColumn {
+    width: calc(30.5%); 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+    gap: 0; 
+  }
+
+  .spec-middleColumn {
+    width: 30%; 
+  }
+
+  .spec-box {
+    margin: 0; 
+  }
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 1024px) {
+  .spec-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 1px;
+  }
+
+  .spec-leftColumn, .spec-rightColumn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px; 
+    justify-content: center;
+  }
+
+  .spec-middleColumn {
+    width: 100%;
+  }
+
+  .spec-box {
+    width: calc(50% - 10px); 
+    height: 170px; 
+    margin: 0; 
+  }
+
+  .spec-boxContent {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spec-image {
+    object-fit: contain;
+  }
+}
+
+
+

@@ -1,0 +1,116 @@
+.Dental-Video-total {
+  display: flex;
+  flex-direction: row; /* Horizontal layout for desktop */
+  width: 100%;
+  margin-top: -20px;
+  height: 500px;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 1em;
+}
+
+.dental-video-left {
+  width: 45%;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text inside */
+}
+
+.dental-video-right {
+  width: 50%;
+  padding: 1em; /* Removed padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dental-videos-content {
+  max-width: 100%;
+  height: auto;
+  text-align: left; /* Align text to the left */
+  margin-bottom: 20px; /* Space between paragraph and button */
+}
+
+.dental-videos-content p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 1.2em;
+color: #003873;
+line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.dental-videos-content h1 {
+  line-height: 55px;
+  font-size: 3em; 
+  color: #003873;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+.know-more-button {
+  margin-top: 20px;
+  padding: 10px 40px;
+}
+
+
+.dental-video-right iframe {
+  width: 100%; /* Reduce iframe width */
+  height: 80%; /* Reduce iframe height */
+}
+
+@media (max-width: 768px) {
+  .Dental-Video-total {
+    flex-direction: column; /* Vertical layout for mobile */
+    height: auto; /* Adjust height for mobile */
+    margin-top: 20px;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text inside */
+  }
+
+  .dental-video-left {
+    width: 100%;
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text inside */
+    padding: 0; /* Removed padding */
+  }
+
+  .dental-videos-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Vertical layout for content */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text inside */
+  }
+
+  .dental-video-right {
+    width: 100%;
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    margin-top: 20px; /* Space between content and video */
+  }
+
+  .dental-video-right iframe {
+    width: 80%;
+    height: 205px; /* Adjust height for mobile if necessary */
+  }
+
+  .dental-videos-content p, .dental-videos-content h1, .know-more-button {
+    text-align:center; 
+  }
+  .dental-videos-content h1 {
+    font-size: 1.8em; 
+  }
+  .dental-videos-content p {
+  font-size: 1em;
+  }
+  .know-more-button{
+    padding: 10px 30px;
+    font-size: small;
+  }
+}
