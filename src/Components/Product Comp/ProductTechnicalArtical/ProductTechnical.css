@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 20px;
   max-width: 100%;
-    overflow-x: hidden;
+  overflow-x: hidden;
   background-color: #fff;
 }
 
@@ -18,46 +18,53 @@
 
 .ProductBlogs-cards {
   display: flex;
-  justify-content: space-between; /* Ensures space is evenly distributed */
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .ProductBlogs-card {
   border-radius: 8px;
   padding: 20px;
-  text-align: left; /* Ensures text is aligned left */
+  text-align: left;
   width: 23%; /* Adjusted to fit four cards in a row */
   margin: 10px 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f9f9f9;
 }
 
 .ProductBlogs-card-image {
   max-width: 100%;
+  height: 200px; /* Consistent height for images */
+  object-fit: cover;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .ProductBlogs-card-title {
-  margin: 10px 0;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.2em;
   color: #093e77;
+  margin: 5px 0; /* Reduced gap between title and content */
   text-align: justify;
 }
 
 .ProductBlogs-card-text {
-  margin: 10px 0;
+  margin: 5px 0; /* Reduced gap between paragraph and button */
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;
   font-size: 1em;
   color: #344ea1;
   text-align: justify;
-
-  margin-bottom: 30px;
+  flex-grow: 1;
 }
 
 .ProductBlogs-card-button {
+  margin-top: 10px; /* Ensure the button is closer to the paragraph */
   padding: 10px 40px;
 }
 
@@ -69,25 +76,35 @@
 
   .ProductBlogs-card {
     width: 100%;
-    text-align: center; /* Ensures text is centered */
+    text-align: center;
+    padding: 15px; /* Adjust padding for smaller screens */
   }
 
   .ProductBlogs-title {
     font-size: 2em; 
   }
 
-  .ProductBlogs-card-text {
-    line-height: 1.5em;
-    font-size: 0.8em; 
+  .ProductBlogs-card-image {
+    height: auto; /* Smaller image for smaller screens */
+    margin-bottom: 8px;
+    /* object-fit: fill; */
   }
 
   .ProductBlogs-card-title {
-    line-height: 1.5em;
-    font-size: 1em; 
+    line-height: 1.2em;
+    font-size: 1em;
+    margin: 5px 0; /* Reduced gap between title and paragraph */
+  }
+
+  .ProductBlogs-card-text {
+    line-height: 1.2em;
+    font-size: 0.9em;
+    margin: 5px 0; /* Reduced gap between paragraph and button */
   }
 
   .ProductBlogs-card-button {
     font-size: small;
-    padding: 10px 40px;
+    padding: 8px 30px;
+    margin-top: 8px; /* Ensure the button is close to the text */
   }
 }

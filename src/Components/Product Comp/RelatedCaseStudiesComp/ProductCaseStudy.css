@@ -25,19 +25,24 @@
 .ProductCaseStudy-card {
   border-radius: 8px;
   padding: 20px;
-  text-align: left; 
+  text-align: left;
   width: 25%;
-  margin: 10px 0;
+  margin: 10px;
   box-sizing: border-box;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .ProductCaseStudy-card-image {
   max-width: 100%;
+  height: auto;
   border-radius: 4px;
+  margin-bottom: 15px;
 }
 
 .ProductCaseStudy-card-title {
-  margin: 10px 0;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.2em;
@@ -47,7 +52,6 @@
 }
 
 .ProductCaseStudy-card-text {
-  margin: 10px 0;
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;
@@ -55,11 +59,11 @@
   color: #344ea1;
   margin-bottom: 30px;
   text-align: justify;
-
 }
 
 .ProductCaseStudy-card-button {
   padding: 10px 40px;
+  margin-top: auto;
 }
 
 @media (max-width: 768px) {
@@ -70,21 +74,21 @@
 
   .ProductCaseStudy-card {
     width: 100%;
-    text-align: center; /* Ensures text is centered */
+    text-align: center;
   }
 
   .ProductCaseStudy-title {
-    font-size: 2em; 
+    font-size: 2em;
   }
 
   .ProductCaseStudy-card-text {
     line-height: 1.5em;
-    font-size: 0.8em; 
+    font-size: 0.8em;
   }
 
   .ProductCaseStudy-card-title {
     line-height: 1.5em;
-    font-size: 1em; 
+    font-size: 1em;
   }
 
   .ProductCaseStudy-card-button {

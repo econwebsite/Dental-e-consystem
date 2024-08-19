@@ -30,7 +30,7 @@ const Specification = () => {
           <div className="spec-leftColumn">
             {/* Left Column */}
             {leftBoxes.map((box, index) => (
-              <div key={index} className="spec-box">
+              <div key={index} className="spec-box" data-aos="flip-left" data-aos-duration="1000">
                 <div className="spec-boxContent" style={{ backgroundColor: box.bgColor }}>
                   <div className="spec-innerBox">
                     <p className="spec-label">{box.label}</p>
@@ -49,7 +49,7 @@ const Specification = () => {
           <div className="spec-rightColumn">
             {/* Right Column */}
             {rightBoxes.map((box, index) => (
-              <div key={index} className="spec-box">
+              <div key={index} className="spec-box" data-aos="flip-left" data-aos-duration="1000">
                 <div className="spec-boxContent" style={{ backgroundColor: box.bgColor }}>
                   <div className="spec-innerBox">
                     <p className="spec-label">{box.label}</p>
