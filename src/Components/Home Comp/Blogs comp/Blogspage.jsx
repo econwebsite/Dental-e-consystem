@@ -34,7 +34,6 @@ const Blogspage = () => {
             <img src={rightimg1} alt="Box 1" className="homeblog-box-image" />
             <div className="homeblog-box-content">
               <h6>Autofocus vs. Fixed focus: Which Lens to Choose for Intraoral Cameras?</h6>
-              {/* <p>Understand how autofocus and fixed focus differentiate the dental imaging quality, device usability, and overall...</p> */}
            <AnimatedButton className="homeblog-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/AutofocusBlog"></AnimatedButton>
             </div>
           </div>
@@ -42,7 +41,6 @@ const Blogspage = () => {
             <img src={rightimg2} alt="Box 2" className="homeblog-box-image" />
             <div className="homeblog-box-content">
               <h6>A Guide to Choosing the Right Dental Intraoral Camera</h6>
-              {/* <p>Read to learn about the key features that make a dental intraoral camera ...</p> */}
               <AnimatedButton className="homeblog-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/AGuidTochoose"></AnimatedButton>
             </div>
           </div>
@@ -50,7 +48,6 @@ const Blogspage = () => {
             <img src={rightimg3} alt="Box 3" className="homeblog-box-image" />
             <div className="homeblog-box-content">
               <h6>Three Important Parameters in Intra Oral Camera Technology</h6>
-              {/* <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality...</p> */}
               <AnimatedButton className="homeblog-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="Threeimportant"></AnimatedButton>
             </div>
           </div>

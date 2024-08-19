@@ -9,7 +9,7 @@ function Dentalvideopg() {
       <div className="dental-video-left">
         <div className="dental-videos-content">
           <h1>Videos</h1>
-          <p>We deployed a high-quality camera with iHDR for<br />dentistry to help them motivate and educate<br /> dental patients and students.</p>
+          <p>We deployed a high-quality camera with iHDR for dentistry to help them motivate and educate dental patients and students.</p>
           <AnimatedButton className="know-more-button" text="Know more" backgroundColor="#00aeef" animationColor="#003873" hoverColor="#003873"></AnimatedButton>
 
         </div>

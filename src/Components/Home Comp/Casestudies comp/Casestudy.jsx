@@ -26,7 +26,6 @@ const Casestudy = () => {
               <img src={rightimg1} alt="Box 1" className="casestudy-box-image" />
               <div className="casestudy-box-content">
                 <h6>AI-driven and Portable Point-Of-Care Device for Pre-Cancer Screening for a US Medical Device Manufacturer</h6>
-                {/* <p>Read to know how e-con Systems developed a custom camera solution for an AI-driven, portable point-of-care device for pre-cancer screening.</p> */}
                 <AnimatedButton className="casestudy-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/" />
               </div>
             </div>
@@ -34,7 +33,6 @@ const Casestudy = () => {
               <img src={rightimg2} alt="Box 2" className="casestudy-box-image" />
               <div className="casestudy-box-content">
                 <h6>Improving Dental Documentation using 4k Dental Loupe Camera for a Leading Europe Based Dental Imaging Solutions Provider</h6>
-                {/* <p>This case study explores how e-con Systems developed a custom 4K dental loupe camera for a leading European dental imaging solutions provider.</p> */}
                 <AnimatedButton className="casestudy-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/" />
               </div>
             </div>
