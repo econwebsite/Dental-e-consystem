@@ -52,6 +52,11 @@ const Productboderbox = () => {
             ></iframe>
           </div>
         </div>
+        <br></br>
+        <br></br>
+        <p className="Productboderbox-description">
+          Many brands have shared the manufacturing of intraoral cameras, which often lead to market delays and increased costs.
+        </p>
       </div>
     </div>
     </div>

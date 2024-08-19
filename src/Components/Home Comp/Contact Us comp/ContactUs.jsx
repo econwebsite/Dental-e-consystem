@@ -94,27 +94,28 @@ const usaStates = [
 const ContactUs = () => {
   
   const [form] = Form.useForm();
-  const [selectedCountry, setSelectedCountry] = useState('');
-  const [showStates, setShowStates] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState('United States');
+  const [showStates, setShowStates] = useState(true);
 
   const onFinish = (values) => {
     console.log('Form values:', values);
     form.resetFields();
-        axios.post('http://192.168.9.82:3001/contactusform',{values})
-        .then(result=> {
-    message.success('Message sent successfully!');
-            //  navigate('/login')
-            })
-        .catch(err=>console.log(err));
-    // setOpen(false);
+    axios.post('http://192.168.9.82:3001/contactusform', { values })
+      .then(result => {
+        message.success('Message sent successfully!');
+        onClose();
+      })
+      .catch(err => console.log(err));
   };
 
   const handleCountryChange = (value) => {
     const country = countries.find(c => c.name === value);
     setSelectedCountry(value);
     setShowStates(country?.name === 'United States');
+    if (country?.name !== 'United States') {
+      form.setFieldsValue({ state: undefined });
+    }
   };
-
 
   return (
     <div className='total-contact'>
@@ -125,14 +126,23 @@ const ContactUs = () => {
    
       <div className="Contact-ted">
          <div className="mainContainer">
-         <Form form={form} name="contactForm" onFinish={onFinish} layout="vertical">
+         <Form
+        form={form}
+        name="contactForm"
+        onFinish={onFinish}
+        layout="vertical"
+        initialValues={{
+          country: 'United States',
+          state: 'AL',
+        }}
+      >
         <Row gutter={8}>
           <Col span={12}>
             <Form.Item
               name="name"
               rules={[{ required: true, message: 'Please enter your name' }]}
             >
-              <Input placeholder="Name"/>
+              <Input placeholder="Name" />
             </Form.Item>
           </Col>
           <Col span={12}>
@@ -160,7 +170,7 @@ const ContactUs = () => {
           <Col span={12}>
             <Form.Item
               name="contactNumber"
-              rules={[{ required: true, message: 'Please enter your phone number' }]}
+              rules={[{ message: 'Please enter your phone number' }]}
             >
               <Input 
                 placeholder="Contact Number"
@@ -176,7 +186,10 @@ const ContactUs = () => {
               name="country"
               rules={[{ required: true, message: 'Please select your country' }]}
             >
-              <Select placeholder="Select country" onChange={handleCountryChange}>
+              <Select
+                placeholder="Select country"
+                onChange={handleCountryChange}
+              >
                 {countries.map((country) => (
                   <Option key={country.code} value={country.name}>
                     {country.name}
@@ -207,14 +220,14 @@ const ContactUs = () => {
           <Col span={24}>
             <Form.Item
               name="queries"
-              rules={[{ required: true, message: 'Please describe your queries' }]}
+              rules={[{ message: 'Please describe your queries' }]}
             >
               <TextArea placeholder="Describe Your Queries" rows={5} />
             </Form.Item>
           </Col>
         </Row>
 
-        <Row justify="end">
+        <Row justify="center">
           <Col>
             <Form.Item>
               <AnimatedButton

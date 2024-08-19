@@ -9,7 +9,7 @@
 }
 
 .Contact-us {
-    font-size: 2.5em; /* Adjusted font size */
+    font-size: 2.5em;
     color: #003873;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
@@ -28,13 +28,13 @@
 
 .Contact-ted {
     width: 100%;
-    max-width: 700px; /* Adjusted max-width */
+    max-width: 700px; 
     background-color: #ffffff;
     padding: 20px; 
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adjusted box shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     margin: 0 auto;
-    margin-top: 5px; /* Reduced top margin */
+    margin-top: 5px; 
 }
 
 .Contacts-btn {
@@ -42,7 +42,7 @@
 }
 
 .ant-form-item-label > label {
-    display: none; /* Hide labels */
+    display: none; 
 }
 
 .ant-form-item-control-input {
@@ -61,7 +61,7 @@
 /* Placeholder color for all inputs and text areas */
 input::placeholder,
 textarea::placeholder {
-    color: #344ea1;
+    color: #69ba2f;
     opacity: 1; /* Ensure opacity is set to 1 for consistency */
 }
 
@@ -69,21 +69,21 @@ textarea::placeholder {
 .ant-input::placeholder,
 .ant-input-textarea::placeholder {
     color: #344ea1;
-    opacity: 1; /* Ensure opacity is set to 1 for consistency */
+    opacity: 1; 
 }
 /* Targeting the placeholder text of Ant Design Select */
 .ant-select .ant-select-selector .ant-select-selection-placeholder {
-    color: #003873; /* Placeholder color */
+    color: #344ea1; /* Placeholder color */
 }
 
 /* For dropdown items, if needed */
 .ant-select-item-option-content {
-    color: #003873; /* Item text color */
+    color: #344ea1; /* Item text color */
 }
 
 /* Additional styling if necessary */
 .ant-select-selector .ant-select-selection-item {
-    color: #003873; /* Text color for selected item (which might also affect the placeholder) */
+    color: #344ea1; /* Text color for selected item (which might also affect the placeholder) */
 }
 
 @media (max-width: 768px) {

@@ -31,43 +31,45 @@
   
   .modelaclass:hover {
     background-color: #344ea1;
-    color: white; /* Text color on hover */
+    color: white; 
   }
   
   .modelaclass:hover::before {
     left: 0;
   }
-  /* Placeholder color for all inputs and text areas */
-input::placeholder,
+
+  input::placeholder,
 textarea::placeholder {
     color: #344ea1;
-    opacity: 1; /* Ensure opacity is set to 1 for consistency */
+    opacity: 1; 
 }
 
-/* Placeholder color for Ant Design inputs */
+
 .ant-input::placeholder,
 .ant-input-textarea::placeholder {
-    color: #344ea1;
-    opacity: 1; /* Ensure opacity is set to 1 for consistency */
+    color: #69ba2f;
+    opacity: 1; 
 }
-/* Targeting the placeholder text of Ant Design Select */
 .ant-select .ant-select-selector .ant-select-selection-placeholder {
-    color: #003873; /* Placeholder color */
+    color: #003873; 
 }
 
-/* For dropdown items, if needed */
 .ant-select-item-option-content {
-    color: #003873; /* Item text color */
+    color: #003873; 
 }
 
-/* Additional styling if necessary */
 .ant-select-selector .ant-select-selection-item {
-    color: #003873; /* Text color for selected item (which might also affect the placeholder) */
+    color: #003873; 
 }
-/* Custom class for the modal */
 .custom-modal .ant-modal-title {
-  color: #003873; /* Change this to your desired color */
+  color: #003873; 
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
 }
+
+
+
 
   @media (max-width: 600px) {
     .modelaclass {

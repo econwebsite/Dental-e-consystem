@@ -90,11 +90,10 @@ const usaStates = [
   { code: 'WI', name: 'Wisconsin' },
   { code: 'WY', name: 'Wyoming' },
 ];
-
 function Modelform({ visible, onClose }) {
   const [form] = Form.useForm();
-  const [selectedCountry, setSelectedCountry] = useState('');
-  const [showStates, setShowStates] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState('United States');
+  const [showStates, setShowStates] = useState(true);
 
   const onFinish = (values) => {
     console.log('Form values:', values);
@@ -111,6 +110,9 @@ function Modelform({ visible, onClose }) {
     const country = countries.find(c => c.name === value);
     setSelectedCountry(value);
     setShowStates(country?.name === 'United States');
+    if (country?.name !== 'United States') {
+      form.setFieldsValue({ state: undefined });
+    }
   };
 
   return (
@@ -119,10 +121,19 @@ function Modelform({ visible, onClose }) {
       visible={visible}
       onCancel={onClose}
       footer={null}
-      width={600}
-      className="custom-modal" // Add the custom class here
+      width={450}
+      className="custom-modal"
     >
-      <Form form={form} name="contactForm" onFinish={onFinish} layout="vertical">
+      <Form
+        form={form}
+        name="contactForm"
+        onFinish={onFinish}
+        layout="vertical"
+        initialValues={{
+          country: 'United States',
+          state: 'AL',
+        }}
+      >
         <Row gutter={8}>
           <Col span={12}>
             <Form.Item
@@ -157,7 +168,7 @@ function Modelform({ visible, onClose }) {
           <Col span={12}>
             <Form.Item
               name="contactNumber"
-              rules={[{ required: true, message: 'Please enter your phone number' }]}
+              rules={[{ message: 'Please enter your phone number' }]}
             >
               <Input 
                 placeholder="Contact Number"
@@ -173,7 +184,10 @@ function Modelform({ visible, onClose }) {
               name="country"
               rules={[{ required: true, message: 'Please select your country' }]}
             >
-              <Select placeholder="Select country" onChange={handleCountryChange}>
+              <Select
+                placeholder="Select country"
+                onChange={handleCountryChange}
+              >
                 {countries.map((country) => (
                   <Option key={country.code} value={country.name}>
                     {country.name}
@@ -204,14 +218,14 @@ function Modelform({ visible, onClose }) {
           <Col span={24}>
             <Form.Item
               name="queries"
-              rules={[{ required: true, message: 'Please describe your queries' }]}
+              rules={[{ message: 'Please describe your queries' }]}
             >
               <TextArea placeholder="Describe Your Queries" rows={5} />
             </Form.Item>
           </Col>
         </Row>
 
-        <Row justify="end">
+        <Row justify="center">
           <Col>
             <Form.Item>
               <AnimatedButton
