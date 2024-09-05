@@ -4,7 +4,7 @@ import Boderimg1 from "../../../assets/Product images/Boderimg1.png";
 import Boderimg2 from "../../../assets/Product images/Boderimg2.png";
 import Boderimg3 from "../../../assets/Product images/Boderimg3.png";
 // import Vediothumbnail from "../../../assets/home images/Tumbnail.jpg"; 
-import Vediothumbnail2 from "../../../assets/Product images/boderthumb2.jpg"; 
+import Vediothumbnail2 from "../../../assets/Product images/Tumbnail.jpg"; 
 
 import FsLightbox from "fslightbox-react";
 
