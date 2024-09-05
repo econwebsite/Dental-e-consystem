@@ -4,10 +4,7 @@ import Aguidtochoose from "../../../assets/Hubpages/A-guidto-choose.jpg"
 import CMOS from "../../../assets/Hubpages/the-right-CMOS.jpg"
 import Autovsfixed from "../../../assets/Hubpages/Autovsfixed.jpg";
 import Capturing from "../../../assets/Hubpages/Capturing-the-Dentists.jpg";
-
 import Threeimp from "../../../assets/Hubpages/Three-Important-Parameters.jpg";
-
-
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import Hubblogcard from '../Bloghubpages/Hubblogcard';
 

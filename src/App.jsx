@@ -14,7 +14,7 @@ import ContactUs from './Components/Home Comp/Contact Us comp/ContactUs';
 import Threeimportant from "./Components/Future Blog/Threeimportant-Blogs/Threeimportant";
 import AutofocusBlog from "./Components/Future Blog/Autofocus-Blogs/AutofocusBlog";
 import CapturingDentists from "./Components/Future Blog/Capturing the Dentists/CapturingDentists";
-import RightforExtraoral from "./Components/Future Blog/Right for extraoral/RightforExtraoral";
+import RightCMOS from "./Components/Future Blog/RightCMOS/RightCMOS";
 import Aguidtochoose from './Components/Future Blog/A-guid to choose-Blog/Aguidtochoose';
 import HowToOvercome from "./Components/Future Blog/HowToOvercome/HowToOvercome";
 import Extraoralbestimg from "./Components/Future Blog/Extraoralbestimg/Extraoralbestimg";
@@ -38,7 +38,7 @@ const App = () => {
         <Route path="/Threeimportant" element={<Threeimportant/>} />
         <Route path="/AutofocusBlog" element={<AutofocusBlog />} />
         <Route path="/CapturingDentists" element={<CapturingDentists />} />
-        <Route path="/RightforExtraoral" element={<RightforExtraoral />} />
+        <Route path="/RightforExtraoral" element={<RightCMOS />} />
         <Route path="/howtoovercome" element={<HowToOvercome />} />
         <Route path="/Extraoralbestimg" element={<Extraoralbestimg />} />
         <Route path="/Understandingextra" element={<Understandingextra />} />

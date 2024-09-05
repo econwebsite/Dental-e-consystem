@@ -44,10 +44,19 @@
   color: #344ea1; 
   text-align: justify;
 }
-
+.pro-Boderimg{
+  background-color: #344ea1;
+  width: 40px;
+  height: auto;
+  margin-right: 20px;
+}
 .Productboderbox-left-column h4 {
-  color: #69ba2f; 
+  color: #344ea1;
+  font-weight: 500; 
   font-size: 1.3em;
+  border: 1px solid #00aeef;
+  padding: 1px;
+  text-align: left;
 }
 
 .Productboderbox-right-column {
@@ -87,9 +96,9 @@
   gap: 10px;
 }
 
-.Productboderbox-box-content p {
-  margin-top: 15px;
-  font-size: 1em;
+.Productboderbox-left-column p {
+  /* margin-top: 15px; */
+  font-size: 0.8em;
 }
 
 .Productboderbox-icon-image {
@@ -129,6 +138,16 @@ iframe {
 
   .Productboderbox-container {
     padding: 0.5em;
+  }
+  .pro-Boderimg{
+    width: 40px;
+    margin-right: 7px;
+  }
+  .Productboderbox-left-column h4 {
+    font-size: 1em;
+    padding: 1px;
+    text-align: justify;
+
   }
 }
 
