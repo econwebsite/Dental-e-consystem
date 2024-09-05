@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footerpage.css'; // Ensure this CSS file contains the styles
 import dentallogo from "../../assets/home images/NewDentallogo.png";
-import econlogo from "../../assets/home images/footerlogo-1.svg"
+import econlogo from "../../assets/home images/footerlogo-1.png"
 import { RiPhoneFill, RiMailFill} from 'react-icons/ri'; // Import necessary icons
 import AnimatedButton from "../Button comp/AnimatedButton"
 const Footerpage = () => {
