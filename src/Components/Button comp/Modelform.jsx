@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Form, Input, Select, Button, Row, Col, message, Modal } from 'antd';
+import { Form, Input, Select, Button, Row, Col, message, Modal,Result } from 'antd';
 import axios from 'axios';
 import "./Modelbutton.css";
 import AnimatedButton from './AnimatedButton';
+import DownloadButton from './DownloadButton';
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -90,20 +91,41 @@ const usaStates = [
   { code: 'WI', name: 'Wisconsin' },
   { code: 'WY', name: 'Wyoming' },
 ];
-function Modelform({ visible, onClose }) {
+function Modelform({ visible, onClose, type, docName, productName }) {
   const [form] = Form.useForm();
   const [selectedCountry, setSelectedCountry] = useState('United States');
   const [showStates, setShowStates] = useState(true);
-
+  const [isSuccess,setIsSuccess] = useState(false);
+  const [downloadUrl,setDownloadUrl] = useState('');
   const onFinish = (values) => {
     console.log('Form values:', values);
     form.resetFields();
-    axios.post('http://192.168.9.82:3001/contactusform', { values })
+    if(type ==='download'){
+      values.productName=productName;
+      values.documentName=docName;
+      axios.post('http://192.168.9.82:3001/api/downloadform', { values })
+      .then(result => {
+        //message.success('Message sent successfully!');
+        console.log(result, ' Result');
+        if(result.status === 200){
+          setIsSuccess(true);
+          setDownloadUrl(result.data[0].docName);
+        }
+        //onClose();
+      })
+      .catch(err => console.log(err));
+    }
+    else{
+      values.productName=productName;
+      values.documentName=docName;
+      axios.post('http://192.168.9.82:3001/api/contactusform', { values })
       .then(result => {
         message.success('Message sent successfully!');
         onClose();
       })
       .catch(err => console.log(err));
+    }
+    
   };
 
   const handleCountryChange = (value) => {
@@ -116,15 +138,22 @@ function Modelform({ visible, onClose }) {
   };
 
   return (
-    <Modal
-      title="Contact Form"
+    <Modal 
+      title={type === 'download' ? "Download Form":"Contact Form"}
       visible={visible}
       onCancel={onClose}
       footer={null}
       width={450}
       className="custom-modal"
     >
-      <Form
+     {isSuccess?  <Result
+    status="success"
+    title="Ready to Download"
+    subTitle="Please click below button to downlaod"
+    extra={[
+      <DownloadButton url={downloadUrl} />
+    ]}
+  /> : <Form
         form={form}
         name="contactForm"
         onFinish={onFinish}
@@ -241,6 +270,7 @@ function Modelform({ visible, onClose }) {
           </Col>
         </Row>
       </Form>
+}
     </Modal>
   );
 }

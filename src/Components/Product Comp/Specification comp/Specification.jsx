@@ -1,7 +1,7 @@
 import React from 'react';
 import './Specification.css'; // Import CSS for styling
 import specificaionimg from "../../../assets/Product images/Specimg.png";
-import AnimatedButton from "../../Button comp/AnimatedButton"
+import Modelbutton from "../../Button comp/Modelbutton"
 const leftBoxes = [
   { label: 'Resolution', value: '1920 x 1080', bgColor: '#f0feff' },
   { label: 'Frame Rate', value: '30 fps', bgColor: '#def9fc' },
@@ -62,7 +62,8 @@ const Specification = () => {
         </div>
         {/* Button Section */}
         <div className="spec-buttonContainer">
-          <AnimatedButton className="spec-button" text="Download Tech Document" backgroundColor="#69ba2f" animationColor="#344ea1" hoverColor="#344ea1" />
+          {/* <AnimatedButton className="spec-button" text="Download Tech Document" backgroundColor="#69ba2f" animationColor="#344ea1" hoverColor="#344ea1" /> */}
+          <Modelbutton className="spec-button" text="Contact Us" backgroundColor="#69ba2f" animationColor="#344ea1" hoverColor="#344ea1"/>
 
         </div>
       </div>

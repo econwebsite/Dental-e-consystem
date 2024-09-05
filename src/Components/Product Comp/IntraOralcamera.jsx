@@ -51,9 +51,9 @@ const IntraOralcamera = () => {
                         </div> */}
                         <br></br>
                         <div className='productIntraFlexEndRow'>
-                            <Modelbutton className="productIntraButtonEnd" />
+                            <Modelbutton className="productIntraButtonEnd" text="Contact Us" backgroundColor="#69ba2f" animationColor="#344ea1" hoverColor="#344ea1"/>
 
-                            {/* <AnimatedButton className="productIntraButtonEnd" text="Download Tech Document" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" /> */}
+                            {/* <Modelbutton className="productIntraButtonEnd" text="Download Tech Document" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" productName='IntraOral' docName='IntraOral User Manual' /> */}
 
                         </div>
                     </div>
