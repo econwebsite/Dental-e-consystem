@@ -116,7 +116,7 @@ function Modelform({ visible, onClose }) {
   };
 
   return (
-    <Modal 
+    <Modal
       title="Contact Form"
       visible={visible}
       onCancel={onClose}
@@ -170,9 +170,9 @@ function Modelform({ visible, onClose }) {
               name="contactNumber"
               rules={[{ message: 'Please enter your phone number' }]}
             >
-              <Input 
+              <Input
                 placeholder="Contact Number"
-                addonBefore={selectedCountry ? countries.find(c => c.name === selectedCountry)?.code : ''} 
+                addonBefore={selectedCountry ? countries.find(c => c.name === selectedCountry)?.code : ''}
               />
             </Form.Item>
           </Col>

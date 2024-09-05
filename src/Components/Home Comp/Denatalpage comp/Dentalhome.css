@@ -1,170 +1,67 @@
-/* Default desktop styling */
-.oralcamera-Dental-header {
-    display: flex;
+/* Main container styling */
+.carouselContainer {
     width: 100%;
-    height: 430px;
-    background-size: cover;
-    background-position: center;
-    flex-wrap: nowrap;
     position: relative;
-    box-sizing: border-box;
-    margin: 0 auto;
-    margin-top: -20px;
-    overflow-x: hidden;
+    margin-bottom: 2em;
 }
 
-.oralcamera-left-Bg {
-    flex: 0 0 60%; 
+/* Carousel slide styling */
+.carousel-slide {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-position: center;
-    padding: 15px;
-    box-sizing: border-box;
+    height: auto; 
 }
 
-.oralcamera-Right-Dental {
-    flex: 0 0 30%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    box-sizing: border-box;
-}
-
-.oralcamera-Dental-Img {
-    width: 490px;
-    height: 390px;
+/* Image styling */
+.carousel-image {
+    width: 100%;
+    height: auto; 
     object-fit: cover;
 }
 
-.oralcamera-total-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px;
+
+.ant-carousel .slick-dots li {
+    background-color: #ccc;
 }
 
-.oralcamera-static-text {
-    font-size: 2em;
-    color: #3443a1;
-    margin-top: 20px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    padding: 10px;
-    line-height: 1.5em;
-    padding: 15px;
+.ant-carousel .slick-dots li.slick-active {
+    background: #00aeef;
 }
 
-.oralcamera-buttons-inform {
-    display: flex;
-    flex-direction: row; 
-    justify-content: flex-start; 
-    align-items: center; 
-    margin-top: 20px; 
-    width: 100%; 
-    gap: 10px; 
-    padding: 15px;
-
+.ant-carousel .slick-dots li.slick-active button {
+    background: #00aeef;
 }
-
-.oralcamera-contactus-Button, .oralcamera-getQuote-Button {
-    padding: 15px 20px;
-    margin: 0; 
-    display: inline-block; 
+.homeBanner{
+    position: relative;
 }
-
-/* Mobile view adjustments */
+.homeBanner .homeButton{
+position: absolute;
+display: flex;
+width: max-content;
+gap: 1em;
+left: 5%;
+bottom: 10%;
+}
 @media (max-width: 800px) {
-    .oralcamera-Dental-header {
-        flex-direction: column; 
+    .carousel-slide {
+        height: auto;
+    }
+
+    .carousel-image {
+        width: 100%; 
         height: auto; 
-    }
-
-    .oralcamera-Right-Dental {
-        order: -1; 
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px; 
-    }
-
-    .oralcamera-left-Bg {
-        order: 0; 
-        width: 100%;
-        background-image: none; 
-        padding: 20px; 
-    }
-
-    .oralcamera-Dental-Img {
-        width: 60%;
-        height: auto; 
-        display: block; 
-        object-fit: cover;
-    }
-
-    .oralcamera-total-text {
-        margin: 20px 0;
-        text-align: center; 
-    }
-
-    .oralcamera-buttons-inform {
-        display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        margin-top: 20px; 
-        justify-content: center;
-        width: 100%;
-        text-align: center; 
-    }
-
-    .oralcamera-contactus-Button, .oralcamera-getQuote-Button {
-        padding: 10px 25px; 
-        font-size: small; 
-    }
-
-    .oralcamera-static-text {
-        font-size: 2em; 
     }
 }
 
 @media (max-width: 500px) {
-    .oralcamera-Dental-header {
-        height: auto; /* Allow height to adjust based on content */
+    .carousel-image {
+        width: 100%;
+        height: auto; 
+        object-fit: cover; 
     }
 
-    .oralcamera-Dental-Img {
-        width: 100%; /* Ensure image takes full width */
-        height: auto; /* Maintain aspect ratio */
-    }
-
-    .oralcamera-total-text {
-        margin: 15px 0; /* Adjust margin for better spacing */
-        font-size: 0.9em; /* Adjust font size for smaller screens */
-        margin-top: -20px;
-    }
-
-    .oralcamera-buttons-inform {
-        display: flex;
-        flex-direction: row; /* Stack buttons vertically */
-        align-items: center; /* Center align buttons */
-        justify-content: center;
-        gap: 2px;
-    }
-
-    .oralcamera-contactus-Button, .oralcamera-getQuote-Button {
-        padding: 15px 25px; /* Adjust padding for smaller screens */
-        font-size: x-small; /* Adjust font size for smaller screens */
-        display: inline-block; /* Ensure buttons are centered */
-    }
-}
-
-@media (min-width: 1400px) {
-    .oralcamera-Dental-Img {
-        width: 70%;
-        height: 80%;
+    .ant-carousel .slick-dots {
+        display: none !important;
     }
 }

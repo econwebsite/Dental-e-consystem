@@ -1,124 +1,63 @@
-.Dental-Video-total {
-  display: flex;
-  flex-direction: row; /* Horizontal layout for desktop */
-  width: 100%;
-  margin-top: -20px;
-  height: 500px;
-  box-sizing: border-box;
-  background-color: #fff;
-  padding: 1em;
-}
-
-.dental-video-left {
-  width: 50%;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Center text inside */
-}
-
-.dental-video-right {
-  width: 50%;
-  padding: 1em; /* Removed padding */
+/* Main container styling */
+.tot-denvedio {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  background-color: #f1f2f2;
 }
 
-.dental-videos-content {
-  max-width: 100%;
-  height: auto;
-  text-align: left; 
-  margin-left: 15px;
-  margin-bottom: 20px; /* Space between paragraph and button */
-}
-
-.dental-videos-content p {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-  font-size: 1.2em;
-color: #003873;
-text-align: justify;
-line-height: 30px;
-  margin-bottom: 10px;
-}
-
-.dental-videos-content h1 {
-  line-height: 55px;
-  font-size: 3em; 
+.tot-denvedio h2 {
+  display: flex;
+  padding: 1em;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em; 
   color: #003873;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
-  margin-bottom: 20px;
+  text-align: center;
 }
-.know-more-button {
-  margin-top: 20px;
-  padding: 10px 40px;
+
+/* Video title container */
+.video-title-container {
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center;
+  flex-wrap: wrap; 
+  width: 100%;
+  margin: 1em auto 2em auto;
 }
 
 
-.dental-video-right iframe {
-  width: 100%; /* Reduce iframe width */
-  height: 80%; /* Reduce iframe height */
+.home-thumbnail {
+  flex: 1;
+  max-width: 70%; 
 }
 
+.homeside-img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border: 1px solid #ccc; 
+}
+
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .Dental-Video-total {
-    flex-direction: column; /* Vertical layout for mobile */
-    height: auto; /* Adjust height for mobile */
-    margin-top: 20px;
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text inside */
+  .video-title-container {
+    flex-direction: column;
   }
 
-  .dental-video-left {
-    width: 100%;
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text inside */
-    padding: 0; /* Removed padding */
+  .home-thumbnail {
+    max-width: 100%; /* Full-width on smaller screens */
+    margin: 10px auto; /* Center images */
   }
 
-  .dental-videos-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column; /* Vertical layout for content */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text inside */
-    margin-left: 0px;
-
-  }
-
-  .dental-video-right {
-    width: 100%;
-    align-items: center; /* Center content horizontally */
+  .tot-denvedio h2 {
+    font-size: 2em;
     text-align: center;
-    margin-top: 20px; /* Space between content and video */
-  }
-
-  .dental-video-right iframe {
-    width: 80%;
-    height: 205px; /* Adjust height for mobile if necessary */
-  }
-
-   .dental-videos-content h1, .know-more-button {
-    text-align:center; 
-  }
-  .dental-videos-content p{
-    text-align:justify; 
-
-  }
-  .dental-videos-content h1 {
-    font-size: 1.8em; 
-  }
-  .dental-videos-content p {
-  font-size: 1em;
-  }
-  .know-more-button{
-    padding: 10px 30px;
-    font-size: small;
   }
 }

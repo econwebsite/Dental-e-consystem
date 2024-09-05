@@ -5,51 +5,40 @@
   background-color: #f1f2f2;
 }
 
-.Hubblogcard-title {
-  margin-bottom: 20px;
-  font-size: 3em; 
-  color: #003873;
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
 .Hubblogcard-cards {
   display: flex;
-  justify-content:center;
-  gap:20px;
+  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
 .Hubblogcard-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; 
+  align-items: center; 
   border-radius: 10px;
   padding: 20px;
-  text-align: left; /* Ensures text is aligned left */
   width: 25%;
   margin: 10px 0;
   box-sizing: border-box;
   border: 1px solid #ddd;
   background-color: #fff;
+  text-align: left; 
 }
 
 .Hubblogcard-image {
-  max-width: 100%;
+  width: 100%; 
   border-radius: 4px;
   margin-bottom: 10px;
 }
 
-.Hubblogcard-title {
-  color: #013773; 
+.Hubblogcard-titleh2 {
+  color: #003873;
   line-height: 1.5em;
-  text-align: justify;
   margin-bottom: 10px;
-  font-weight: 600;
   font-size: 1.2em;
-  text-align: justify;
+  width: 100%; 
 }
 
 .Hubblogcard-text {
@@ -59,52 +48,50 @@
   font-size: 0.9em;
   color: #344ea1;
   margin-bottom: 20px;
+  width: 100%; 
   text-align: justify;
 }
 
 .Hubblogcard-button1 {
   padding: 8px 30px;
+  align-self: flex-start; 
 }
-/* Mobile Responsiveness */
+
+
 @media (max-width: 768px) {
   .Hubblogcard-Total {
-    padding: 15px; /* Adjust padding for mobile */
-  }
-
-  .Hubblogcard-title {
-    font-size: 2em; /* Adjust font size for mobile */
+    padding: 15px; 
   }
 
   .Hubblogcard-cards {
-    flex-direction: column; /* Stack cards vertically on mobile */
-    align-items: center; /* Center-align cards */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .Hubblogcard-card {
-    width: 90%; /* Adjust card width for mobile */
-    margin: 15px 0; /* Space between cards */
-    padding: 15px; /* Adjust padding */
+    width: 100%; 
+    margin: 15px 0; 
+    padding: 15px; 
+    gap: 0px;
   }
 
   .Hubblogcard-image {
-    max-width: 100%; 
+    width: 100%; 
     height: auto; 
   }
 
-  .Hubblogcard-title {
-    font-size: 1.2em; /* Adjust font size for mobile */
+  .Hubblogcard-titleh2 {
+    font-size: 1.2em;
     margin-top: 10px;
     margin-bottom: 10px;
   }
 
   .Hubblogcard-text {
-    font-size: 0.8em; /* Adjust font size for mobile */
+    font-size: 0.8em; 
     margin-bottom: 15px;
   }
 
   .Hubblogcard-button1 {
-    padding: 8px 20px; /* Adjust button padding for mobile */
+    padding: 8px 20px; 
   }
 }
-
-  

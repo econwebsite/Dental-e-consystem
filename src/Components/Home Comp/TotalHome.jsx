@@ -15,7 +15,6 @@ const TotalHome = () => {
             <Homevideo />
             <Casestudy />
             <Blogspage />
-          
             <ContactUs />
         </div>
     );

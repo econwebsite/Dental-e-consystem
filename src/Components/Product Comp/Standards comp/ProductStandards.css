@@ -7,10 +7,10 @@
 }
 
 .product-standard-title {
-   padding: 1em;
+   padding: 1em 0 .5em 0;
     text-align: center;
     font-size: 3em;
-    color: #003873;
+    color: #344ea1;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
 }
@@ -35,6 +35,50 @@
     width: 45%;
     height: auto;
 }
+/* Paragraph.css */
+
+.product-containerparagraph {
+    width: 100%;
+    background-color:#f1f2f2 ;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  
+  .product-standparagraphtext {
+    text-align: center;
+    padding: 2em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: #003873;
+    font-size: 1.1em;
+    line-height: 2em;
+  }
+  .Product-standards{
+    text-align: center; 
+    font-size: 2.5em;
+    color: #344ea1;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    padding: 0.5em;
+    font-style: normal;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
+    .product-containerparagraph {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .product-standparagraphtext {
+      font-size: 1em; /* Adjust font size if needed */
+      padding: 10px;
+      text-align: justify;
+    }
+  }
+  
+
 
 @media (max-width: 768px) {
     .product-standard-box {

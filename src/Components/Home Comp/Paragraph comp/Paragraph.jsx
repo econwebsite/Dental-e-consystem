@@ -6,9 +6,8 @@ const Paragraph = () => {
   return (
     <div className="containerparagraph">
       <div className="mainContainer">
-      <p className="paragraphtext">
-      For over 20 years, e-con Systems has been at the forefront of OEM camera manufacturing, delivering precision and quality to diverse industries. We are bringing our expertise to the dental practice with our new line of ODM dental imaging cameras. Our ODM dental cameras are designed with the latest technology to provide superior image quality and reliability, ensuring that dental professionals have the best tools at their disposal.
-      </p>
+        <p className="paragraphtext">
+          e-con Systems Dental specializes in ODM solutions for dental imaging, with over 20 years of experience collaborating with leading manufacturers. We offer comprehensive designs for intraOral and extraOral cameras, ensuring high-quality imaging with reduced time to market and cost efficiency.      </p>
       </div>
     </div>
   );

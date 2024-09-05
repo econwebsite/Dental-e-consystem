@@ -1,33 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Homevideo.css';
-import AnimatedButton from "../../Button comp/AnimatedButton"
-function Dentalvideopg() {
-  return (
-    
-    <div className="mainContainer">
-    <div className="Dental-Video-total">
-      <div className="dental-video-left">
-        <div className="dental-videos-content">
-          <h1>Videos</h1>
-          <p>We deployed a high-quality camera with iHDR for dentistry to help them motivate and educate dental patients and students.</p>
-          <AnimatedButton className="know-more-button" text="Know more" backgroundColor="#00aeef" animationColor="#003873" hoverColor="#003873"></AnimatedButton>
+import Vediothumbnail from "../../../assets/home images/Tumbnail.jpg"; // Correct path to your image
+import FsLightbox from "fslightbox-react";
 
+function Dentalvideopg() {
+  const [toggler, setToggler] = useState(false);
+
+  return (
+    <>
+      <div className="tot-denvedio">
+      <div className='mainContainer'>
+
+        <h2>Videos</h2>
+        <div className="video-title-container">
+          <div className="home-thumbnail">
+            <img
+              src={Vediothumbnail} // Replace with the left image path
+              alt="Left Thumbnail"
+              className="homeside-img"
+              onClick={() => setToggler(!toggler)}
+            />
+          </div>
+
+          {/* <div className="home-thumbnail">
+            <img
+              src={Vediothumbnail}
+              alt="Right Thumbnail"
+              className="homeside-img"
+              onClick={() => setToggler(!toggler)}
+            />
+          </div> */}
+
+          <FsLightbox
+            toggler={toggler}
+            sources={[
+              "https://www.youtube.com/embed/wPdvM_xv-tg?autoplay=1" // Replace with your actual video URL
+            ]}
+          />
+        </div>
         </div>
       </div>
-      <div className="dental-video-right">
-        <iframe
-          width="100%"
-          height="100%"
-          src="https://www.youtube.com/embed/P6ky60BBwCk?si=PoqfPNqgWKdEZwPg"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
-      </div>
-    </div>
-    </div>
+    </>
   );
 }
 

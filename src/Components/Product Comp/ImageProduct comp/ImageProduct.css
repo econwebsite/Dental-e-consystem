@@ -1,12 +1,12 @@
 .imageproduct-container {
     width: 100%;
-    background-color: #f1f2f2;
+    background-color: white;
     padding: 30px;
     text-align: center;
   }
   
   .imageproduct-title {
-    color: #003873;
+    color: #00aeef;
     padding: 1em;
     text-align: center; 
     font-size: 3em;

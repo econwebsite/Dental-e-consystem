@@ -4,13 +4,13 @@
   padding: 20px;
   max-width: 100%;
   overflow-x: hidden;
-  background-color: #fff;
+  background-color: #f1f2f2;
 }
 
 .ProductBlogs-title {
   margin-bottom: 20px;
   font-size: 3em; 
-  color: #003873;
+  color: #00aeef;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
@@ -45,11 +45,11 @@
 
 .ProductBlogs-card-title {
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 1.2em;
+  line-height: 1.5em;
+  font-size: 1.3em;
   color: #093e77;
   margin: 5px 0; /* Reduced gap between title and content */
-  text-align: justify;
+  text-align: left;
 }
 
 .ProductBlogs-card-text {

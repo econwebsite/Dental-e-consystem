@@ -13,19 +13,19 @@ const ImageProduct = () => {
       <div className="imageproduct-row">
         <div className="imageproduct-box">
           <img src={img1} alt="Image 1" className="imageproduct-img" />
-          <div className="imageproduct-text">One Molar</div>
+          {/* <div className="imageproduct-text">One Molar</div> */}
         </div>
         <div className="imageproduct-box">
           <img src={img2} alt="Image 2" className="imageproduct-img" />
-          <div className="imageproduct-text">Two Molar</div>
+          {/* <div className="imageproduct-text">Two Molar</div> */}
         </div>
         <div className="imageproduct-box">
           <img src={img3} alt="Image 3" className="imageproduct-img" />
-          <div className="imageproduct-text">Full Face</div>
+          {/* <div className="imageproduct-text">Full Face</div> */}
         </div>
         <div className="imageproduct-box">
           <img src={img4} alt="Image 4" className="imageproduct-img" />
-          <div className="imageproduct-text">Jaw View</div>
+          {/* <div className="imageproduct-text">Jaw View</div> */}
         </div>
       </div>
     </div>

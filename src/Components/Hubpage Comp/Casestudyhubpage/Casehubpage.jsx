@@ -1,8 +1,8 @@
 import React from 'react';
 import './casehubpage.css'; // Ensure this CSS file is used
-import dentaimg from "../../../assets/Hubpages/Caseleft.jpg";
-import dented1 from "../../../assets/Hubpages/Hubcaseright1.jpg";
-import tee2 from "../../../assets/Hubpages/Hubcaseright2.jpg";
+import dentaimg from "../../../assets/Hubpages/hubpgcaseleft.jpg";
+import dented1 from "../../../assets/Hubpages/hubcaserigt1.jpg";
+import tee2 from "../../../assets/Hubpages/hubcaserigh2.jpg";
 import AnimatedButton from "../../Button comp/AnimatedButton";
 
 const Casehubpage = () => {

@@ -2,14 +2,14 @@ import React from 'react';
 import './ProductCard.css';
 import Productcard1 from "../../../assets/Product images/Productcard1.jpg";
 import Productcard2 from "../../../assets/Product images/Productcard2.jpg";
-import Productcard3 from "../../../assets/Product images/Productcard1.jpg";
+import Productcard3 from "../../../assets/Product images/productcard3.jpg";
 
 const ProductCard = () => {
   return (
     <div className="productcards-design-container">
-                    <div className='mainContainer'>
+     <div className='mainContainer'>
       <h1 id="productcards-design-title">How We Designed It?</h1>
-      <div className="productcards-content-container">
+      <div className="productcards-content-container"data-aos="flip-up" data-aos-duration="1500">
         
         <div className="productcards-section">
           <h2>Sensor Performance</h2>

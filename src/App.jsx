@@ -8,14 +8,18 @@ import ScrollToTop from "./Components/ScrollToTop"
 import Footerpage from "./Components/Footer comp/Footerpage"
 import Totalproducts1 from "./Components/Product Comp/Totalproducts1"
 import Hubpageblog from "./Components/Hubpage Comp/Bloghubpages/Hubpageblog"
-import Casehubpage from "./Components/Hubpage Comp/Casestudyhubpage/Casehubpage"
-import AboutUs from "./Components/AboutUs/AboutUs"
+import Casehubpage from "./Components/Hubpage Comp/Casestudyhubpage/Casehubpage";
+import AboutUs from "./Components/AboutUs/AboutUs";
 import ContactUs from './Components/Home Comp/Contact Us comp/ContactUs';
-import Threeimportant from "./Components/Future Blog/Threeimportant-Blogs/Threeimportant"
-import AutofocusBlog from "./Components/Future Blog/Autofocus-Blogs/AutofocusBlog"
-import CapturingDentists from "./Components/Future Blog/Capturing the Dentists/CapturingDentists"
-import RightforExtraoral from "./Components/Future Blog/Right for extraoral/RightforExtraoral"
+import Threeimportant from "./Components/Future Blog/Threeimportant-Blogs/Threeimportant";
+import AutofocusBlog from "./Components/Future Blog/Autofocus-Blogs/AutofocusBlog";
+import CapturingDentists from "./Components/Future Blog/Capturing the Dentists/CapturingDentists";
+import RightforExtraoral from "./Components/Future Blog/Right for extraoral/RightforExtraoral";
 import Aguidtochoose from './Components/Future Blog/A-guid to choose-Blog/Aguidtochoose';
+import HowToOvercome from "./Components/Future Blog/HowToOvercome/HowToOvercome";
+import Extraoralbestimg from "./Components/Future Blog/Extraoralbestimg/Extraoralbestimg";
+import Understandingextra from "./Components/Future Blog/understandingextra/Understandingextra";
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -35,8 +39,12 @@ const App = () => {
         <Route path="/AutofocusBlog" element={<AutofocusBlog />} />
         <Route path="/CapturingDentists" element={<CapturingDentists />} />
         <Route path="/RightforExtraoral" element={<RightforExtraoral />} />
+        <Route path="/howtoovercome" element={<HowToOvercome />} />
+        <Route path="/Extraoralbestimg" element={<Extraoralbestimg />} />
+        <Route path="/Understandingextra" element={<Understandingextra />} />
+     
 
-
+        
         </Routes>
         <Footerpage />
       </div>

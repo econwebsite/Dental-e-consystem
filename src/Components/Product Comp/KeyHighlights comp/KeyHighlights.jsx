@@ -12,7 +12,7 @@ const KeyHighlights = () => (
                       <div className='mainContainer'>
         <div className='key-highlights-border-rectang'>
             <h2 className="key-highlights-title-center">Key Highlights</h2>
-            <div className="key-highlights-rectangle" data-aos="zoom-in" data-aos-duration="1000">
+            <div className="key-highlights-rectangle" data-aos="zoom-in" data-aos-duration="1100">
                 {/* First Row */}
                 <div className="key-highlights-rectangle-box">
                     <div className="key-highlights-small-rectangle1">
@@ -46,7 +46,7 @@ const KeyHighlights = () => (
             </div>
 
             {/* Second Row */}
-            <div className="key-highlights-rectangle" data-aos="zoom-in" data-aos-duration="1000">
+            <div className="key-highlights-rectangle" data-aos="zoom-in" data-aos-duration="1300">
                 <div className="key-highlights-rectangle-box">
                     <div className="key-highlights-small-rectangle4">
                         <img src={KeyHighlights4} alt="Example 1" className="key-highlights-small-image" />

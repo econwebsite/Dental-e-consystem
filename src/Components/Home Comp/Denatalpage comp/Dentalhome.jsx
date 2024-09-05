@@ -1,36 +1,33 @@
 import React from 'react';
-import "./Dentalhome.css";
-import dentalimg from "../../../assets/home images/Homebanner2.png";
-import animationbg from "../../../assets/home images/animationbg.jpg";
-import AnimatedButton from "../../Button comp/AnimatedButton";
-import Modelbutton from "../../Button comp/Modelbutton";
-
+import './Dentalhome.css';
+import { Carousel } from 'antd';
+// import dentalimg1 from "../../../assets/home images/Home_Page_Banner-01.jpg";
+import dentalimg2 from "../../../assets/home images/Homebanner.jpg";
+import AnimatedButton from '../../Button comp/AnimatedButton';
+import Modelbutton from '../../Button comp/Modelbutton';
 const Dentalhome = () => {
     return (
-        <div className='mainContainer'>
-        <div className="oralcamera-Dental-header">
-               
+        <div className='carouselContainer'>
+                <div className="mainContainer">
 
-            <div className="oralcamera-left-Bg" style={{ backgroundImage: `url(${animationbg})` }}>
-                <div className="oralcamera-total-text">
-                    <p className="oralcamera-static-text">
-                    Reduce time to market and cut development costs with our <b>rebrandable,</b> high-quality <b> intraoral camera</b> built on <b>20 years of expertise </b>                   </p>
-                    <div className="oralcamera-buttons-inform">
-                        <Modelbutton className="oralcamera-contactus-Button" />
-                        <AnimatedButton 
-                            className="oralcamera-getQuote-Button"
-                            text="Download Tech Document"
-                            backgroundColor="#00aeef"
-                            animationColor="#344ea1"
-                            hoverColor="#344ea1"
-                        />
-                    </div>
+            {/* <Carousel autoplay>
+                <div className="carousel-slide"> */}
+                <div className='homeBanner'>
+                <img src={dentalimg2} alt="Slide 1" className="carousel-image" />
+                    <div className='homeButton'>
+                            <Modelbutton className="productIntraButtonEnd" />
+
+                            <AnimatedButton className="productIntraButtonEnd" text="Download Tech Document" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" />
+
+                        </div>
                 </div>
+                    
+                {/* </div> */}
+                {/* <div className="carousel-slide">
+                    <img src={dentalimg2} alt="Slide 2" className="carousel-image" />
+                </div> */}
+            {/* </Carousel> */}
             </div>
-            <div className="oralcamera-Right-Dental">
-                <img src={dentalimg} alt="Dental Home" className="oralcamera-Dental-Img" />
-            </div>
-        </div>
         </div>
     );
 };

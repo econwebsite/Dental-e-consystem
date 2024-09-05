@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footerpage.css'; // Ensure this CSS file contains the styles
-import dentallogo from "../../assets/home images/DENTAL LOGO.png";
-import econlogo from "../../assets/home images/econ_logo.png"
+import dentallogo from "../../assets/home images/NewDentallogo.png";
+import econlogo from "../../assets/home images/footerlogo-1.svg"
 import { RiPhoneFill, RiMailFill} from 'react-icons/ri'; // Import necessary icons
 import AnimatedButton from "../Button comp/AnimatedButton"
 const Footerpage = () => {
@@ -15,8 +15,8 @@ const Footerpage = () => {
           </div>
           <div className="footer-links">
             <a href="/">Home</a>
-            <a href="/Intraoralcamera">Products</a>
-            <a href="/casestudyHubPage">Casestudies</a>
+            <a href="/Intraoralcamera">IntraOral Camera</a>
+            <a href="/casestudyHubPage">Case Studies</a>
             <a href="/blogsHubPage">Blogs</a>
             <a href="/AboutUs">About Us</a>
           </div>
@@ -39,10 +39,11 @@ const Footerpage = () => {
 
           </div>
           <div className="footer-social-icons">
-          <img src={econlogo} alt="Company Logo" />
+            <a href='https://www.e-consystems.com/'>
+          <img src={econlogo} alt="e-con Logo" style={{width:"300px"}}/></a>
           </div>
           <div className="footer-bottom-text">
-            <p><span style={{color:"#00aeef"}}>e-con System</span> 2024, all rights reserved.</p>
+            <p><span style={{color:"#00aeef"}}>e-con Systems</span> 2024, all rights reserved.</p>
           </div>
         </div>
       </div>

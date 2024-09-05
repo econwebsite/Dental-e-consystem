@@ -10,7 +10,7 @@
   #productcards-design-title {
     text-align: center; 
     font-size: 3em;
-    color: #003873;
+    color: #344ea1;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-style: normal;
@@ -23,7 +23,7 @@
     gap: 2px;
     align-items: stretch; 
     flex-wrap: wrap;
-    padding: 1em;
+    padding: 2em;
   }
   
   .productcards-section {
@@ -36,9 +36,11 @@
   
   .productcards-section h2 {
     font-size: 1.5em;
-    background-color: #00aeef;
+    background-color: #b8f2ff;
     padding: 10px;
-    border: 1px solid #00aeef;
+    color: #003873;
+    font-weight: 600;
+    border: 1px solid #b8f2ff;
     text-align: center;
     margin: 0;
   }
@@ -110,6 +112,9 @@
   
     .productcards-Boder-color {
       padding: 15px;
+    }
+    .productcards-content-container {
+      gap: 15px;
     }
   }
   

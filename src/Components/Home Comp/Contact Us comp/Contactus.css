@@ -61,14 +61,14 @@
 /* Placeholder color for all inputs and text areas */
 input::placeholder,
 textarea::placeholder {
-    color: #69ba2f;
+    color: #344ea1;
     opacity: 1; /* Ensure opacity is set to 1 for consistency */
 }
 
 /* Placeholder color for Ant Design inputs */
 .ant-input::placeholder,
 .ant-input-textarea::placeholder {
-    color: #344ea1;
+    color: #003873 !important;
     opacity: 1; 
 }
 /* Targeting the placeholder text of Ant Design Select */

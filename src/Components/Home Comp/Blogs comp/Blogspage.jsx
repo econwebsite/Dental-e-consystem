@@ -3,7 +3,8 @@ import './Blogspage.css'; // Ensure this is the correct CSS file path
 import Dentalimg from "../../../assets/home images/Blogleft.jpg";
 import rightimg1 from "../../../assets/home images/Blogright1.jpg";
 import rightimg2 from "../../../assets/home images/Blogright2.jpg" ;
-import rightimg3 from "../../../assets/home images/Blogright3.jpg" ;
+import rightimg3 from "../../../assets/home images/dental-sample-img.jpg" ;
+import Capturing from "../../../assets/home images/blog-choose-right-camera.jpg"
 import AnimatedButton from "../../Button comp/AnimatedButton"
 
 const Blogspage = () => {
@@ -15,15 +16,15 @@ const Blogspage = () => {
       <div className="homeblog-component-container">
         <div className="homeblog-left-column">
           <div className="homeblog-merged-box" data-aos="zoom-in-right" data-aos-duration="1000">
-            <img src={Dentalimg} alt="Full Image" className="homeblog-full-image" />
-            <div className="homeblog-box-content">
-              <h4>Capturing the Dentists' POV with Dental Loupe Cameras</h4>
-              <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
+            <img src={Capturing} alt="Full Image" className="homeblog-full-image" />
+            <div className="homeblog-box-content" style={{height:"627px;"}}>
+              <h4>A Guide to Choosing the Right Dental Intraoral Camera</h4>
+              <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
              <br></br>
-             <p>In this blog, we explore the five critical factors in depth: ultra-lightweight design, precise color reproduction, effective heat management, advanced image stabilization, and adaptability to variable lighting conditions. Read on to get a comprehensive view of how these features come together to create a state-of-the-art dental loupe camera that improves dentists' and patient experience.</p>
+             <p>Read the blog to learn why factors like depth of field and white balance adjustments are critical in capturing clear, accurate images of the oral cavity, ultimately improving dental practice efficiency.</p>
             <br></br>
            
-             <AnimatedButton className="homeblog-btn1" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/CapturingDentists"></AnimatedButton>
+             <AnimatedButton className="homeblog-btn1" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/Aguidtochoose"></AnimatedButton>
              </div>
             
           </div>
@@ -37,18 +38,19 @@ const Blogspage = () => {
            <AnimatedButton className="homeblog-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/AutofocusBlog"></AnimatedButton>
             </div>
           </div>
-          <div className="homeblog-box">
-            <img src={rightimg2} alt="Box 2" className="homeblog-box-image" />
-            <div className="homeblog-box-content">
-              <h6>A Guide to Choosing the Right Dental Intraoral Camera</h6>
-              <AnimatedButton className="homeblog-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/AGuidTochoose"></AnimatedButton>
-            </div>
-          </div>
+        
           <div className="homeblog-box">
             <img src={rightimg3} alt="Box 3" className="homeblog-box-image" />
             <div className="homeblog-box-content">
               <h6>Three Important Parameters in Intra Oral Camera Technology</h6>
               <AnimatedButton className="homeblog-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="Threeimportant"></AnimatedButton>
+            </div>
+          </div>
+          <div className="homeblog-box">
+            <img src={rightimg2} alt="Box 2" className="homeblog-box-image" />
+            <div className="homeblog-box-content">
+              <h6>How to Choose the Right Camera for Extraoral Devices?</h6>
+              <AnimatedButton className="homeblog-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/RightforExtraoral"></AnimatedButton>
             </div>
           </div>
         </div>

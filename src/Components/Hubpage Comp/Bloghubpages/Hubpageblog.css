@@ -50,7 +50,9 @@
   box-sizing: border-box;
   height: 100%;
 }
-
+.hubblog-border-box{
+  min-height: 900px;
+}
 .hubblog-border-box img,
 .hubblog-card img {
   max-width: 100%;
@@ -61,10 +63,9 @@
 
 .hubblog-border-box h2,
 .hubblog-card h6 {
-  font-weight: 600;
-  font-size: 1.2em;
-  color: #013773;
-  text-align: justify;
+  font-size: 1.3em;
+  color: #003873;
+  text-align: left;
 }
 
 .hubblog-border-box p,

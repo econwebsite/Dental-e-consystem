@@ -2,11 +2,11 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Dropdown, Menu } from 'antd';
 import { Navbar, Nav, Container, Offcanvas, Form, Button } from 'react-bootstrap';
-import './Navbar.css'; // Ensure this CSS file is linked
-import dentallogo from '../../assets/home images/DENTAL LOGO.png'; // Import your logo image
+import './Navbar.css';
+import dentallogo from '../../assets/home images/NewDentallogo.png'; // Import your logo image
 
 const NavBarpage = () => {
-  // Ref for Offcanvas component
+ 
   const offcanvasRef = useRef(null);
 
   const handleNavLinkClick = () => {
@@ -26,19 +26,19 @@ const NavBarpage = () => {
     </Menu>
   );
 
-  const productMenu = (
-    <Menu>
-      <Menu.Item key="1">
-        <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/Intraoralcamera" onClick={handleNavLinkClick}>IntraOral camera</Link>
-      </Menu.Item>
-      <Menu.Item key="2">
-        <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/Extraoral" onClick={handleNavLinkClick}>ExtraOral camera</Link>
-      </Menu.Item>
-      <Menu.Item key="3">
-        <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/product" onClick={handleNavLinkClick}>Loupe camera</Link>
-      </Menu.Item>
-    </Menu>
-  );
+  // const productMenu = (
+  //   <Menu>
+  //     <Menu.Item key="1">
+  //       <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/Intraoralcamera" onClick={handleNavLinkClick}>IntraOral camera</Link>
+  //     </Menu.Item>
+  //     <Menu.Item key="2">
+  //       <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/Extraoral" onClick={handleNavLinkClick}>ExtraOral camera</Link>
+  //     </Menu.Item>
+  //     <Menu.Item key="3">
+  //       <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/product" onClick={handleNavLinkClick}>Loupe camera</Link>
+  //     </Menu.Item>
+  //   </Menu>
+  // );
 
   return (
     <>
@@ -52,9 +52,11 @@ const NavBarpage = () => {
             <div className="navbarpage-navItems">
               <Link to="/" className="navbarpage-navLink">Home</Link>
               <div className="navbarpage-divider"></div>
-              <Dropdown overlay={productMenu} placement="bottomLeft" trigger={['hover']}>
+              {/* <Dropdown overlay={productMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Products</Link>
-              </Dropdown>
+              </Dropdown> */}
+              <Link to="/Intraoralcamera" className="navbarpage-navLink">IntraOral Camera</Link>
+
               <div className="navbarpage-divider"></div>
               <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Resources</Link>
@@ -99,9 +101,11 @@ const NavBarpage = () => {
             <Offcanvas.Body>
               <Nav className="flex-column navbarpage-offcanvas-nav">
                 <Link className="nav-link" to="/" onClick={handleNavLinkClick}>Home</Link>
-                <Dropdown overlay={productMenu} placement="bottomLeft" className="nav-link">
+                {/* <Dropdown overlay={productMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Products</a>
-                </Dropdown>
+                </Dropdown> */}
+               <Link className="nav-link" to="/Intraoralcamera" onClick={handleNavLinkClick}>IntraOral camera</Link>
+
                 <Dropdown overlay={resourceMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Resources</a>
                 </Dropdown>

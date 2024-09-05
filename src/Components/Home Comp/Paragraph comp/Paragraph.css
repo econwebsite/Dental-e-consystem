@@ -4,12 +4,12 @@
   width: 100%;
   background-color:#f1f2f2 ;
   margin: 0 auto;
-  padding: 30px;
+  /* padding: 30px; */
 }
 
 .paragraphtext {
   text-align: center;
-  padding: 15px;
+  padding: 3.5em;
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;

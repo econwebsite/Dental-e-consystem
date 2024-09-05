@@ -1,40 +1,37 @@
-/* Casestudy.css */
 
-/* Common button styles */
 .casestudy-btn, .casestudy-btn1 {
   padding: 10px 20px; 
   margin-top: 15px;
-  align-self: flex-start; /* Default for desktop */
+  align-self: flex-start; 
 }
 .casestudy-btn1 {
   padding: 10px 20px; 
   margin-top: 25px;
-  align-self: flex-start; /* Default for desktop */
+  align-self: flex-start; 
 }
 
-/* Page container */
 .casestudy-page {
   border: 1px solid #f1f2f2;
-  background-color: #f1f2f2;
+  background-color: white;
   width: 100%;
   min-height: auto; 
   overflow: auto; 
 }
 
-/* Title styling */
+
 .casestudy-title h1 {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 25px;
-  font-size: 2.5em; /* Adjusted for better appearance */
+  font-size: 2.5em; 
   color: #003873;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-style: normal;
 }
 
-/* Main container */
+
 .casestudy-component-container {
   display: flex;
   padding: 0 20px;
@@ -45,12 +42,12 @@
   justify-content: center;
   overflow: hidden;
   margin-bottom: 20px;
-  max-width: 960px; /* Adjusted width */
+  max-width: 960px; 
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Left column */
+
 .casestudy-left-column {
   width: 50%;
   display: flex;
@@ -60,10 +57,10 @@
   overflow: hidden;
 }
 
-/* Merged box styling */
+
 .casestudy-merged-box {
   width: 100%;
-  background-color: white;
+  background-color: #f1f2f2 !important;
   border-radius: 15px;
   box-sizing: border-box;
   padding: 20px;
@@ -75,12 +72,12 @@
 
 .casestudy-full-image {
   width: 100%;
-  max-height: 480px; /* Adjust to ensure proper aspect ratio */
+  max-height: 480px; 
   object-fit: cover;
   border-radius: 15px;
 }
 
-/* Content styling */
+
 .casestudy-box-content {
   flex-grow: 1; 
   display: flex;
@@ -91,45 +88,44 @@
 .casestudy-box-content h4{
   margin: 0 0 10px 0;
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
   color: #003873;
-  font-size: 1.2em; /* Adjusted font size */
-  text-align: justify; /* Justify text for desktop */
+  font-size: 1.2em; 
+  text-align: justify; 
 }
 .casestudy-box-content h6 {
   margin: 0 0 10px 0;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   color: #003873;
-  font-size: 1.2em; /* Adjusted font size */
-  text-align: justify; /* Justify text for desktop */
+  font-size: 1.2em;
+  text-align: justify; 
 }
 
 .casestudy-box-content p {
   margin: 0;
-  text-align: justify; /* Justify text for desktop */
+  text-align: justify; 
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   color: #344ea1;
-  font-size: 1em; /* Adjusted font size */
+  font-size: 1em; 
 }
 
-/* Right column */
+
 .casestudy-right-column {
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Reduced gap */
+  gap: 20px; 
   align-items: center;
   overflow: hidden;
 }
 
-/* Box styling */
+
 .casestudy-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: #f1f2f2;
   border-radius: 15px;
   box-sizing: border-box;
   padding: 20px;

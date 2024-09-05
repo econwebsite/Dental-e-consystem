@@ -1,7 +1,7 @@
 .Productboderbox-Total {
   width: 100%;
   background-color: #f1f2f2;
-  padding:1.5em;
+  padding: 1.5em;
   overflow-x: hidden;
 }
 
@@ -22,35 +22,52 @@
 .Productboderbox-description {
   text-align: center;
   margin-bottom: 40px;
-  color: #344ea1;
+  color: #003873;
   font-size: 1.2em;
 }
 
 .Productboderbox-content {
   display: flex;
-  flex-direction: column;
-}
-
-/* Mobile view */
-.Productboderbox-left-column,
-.Productboderbox-right-column {
-  flex: 1;
-  width: 100%;
+  justify-content: space-between;
+  align-items: stretch; 
+  flex-wrap: wrap; 
 }
 
 .Productboderbox-left-column {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 8px;
+  font-size: 1.1em;
   margin-right: 20px;
+  color: #344ea1; 
+  text-align: justify;
+}
+
+.Productboderbox-left-column h4 {
+  color: #69ba2f; 
+  font-size: 1.3em;
 }
 
 .Productboderbox-right-column {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  height: 100%; 
+}
+
+.product-thumbnail {
+  width: auto;
+  height: auto; 
+  cursor: pointer;
+}
+
+.product-thumbnail IMG {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
 }
 
 .Productboderbox-border-box {
@@ -89,17 +106,30 @@ iframe {
 
 /* Tablet screens */
 @media (max-width: 768px) {
-  iframe {
-    height: 400px;
+  .Productboderbox-content {
+    flex-direction: column; 
   }
+  
+  .Productboderbox-left-column {
+    margin-right: 0; 
+    margin-bottom: 20px; 
+  }
+
+  .Productboderbox-right-column {
+    width: 100%; 
+  }
+
+  iframe {
+    height: 450px;
+  }
+  
   .Productboderbox-description {
     text-align: justify;
   }
+
   .Productboderbox-container {
- 
     padding: 0.5em;
   }
-
 }
 
 /* Desktop screens */
@@ -108,7 +138,7 @@ iframe {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: stretch; /* Ensures equal height for both columns */
   }
 
   .Productboderbox-left-column,
@@ -116,17 +146,9 @@ iframe {
     flex: 1;
     display: flex;
     flex-direction: column;
+    height: auto;
   }
 
-  .Productboderbox-border-box {
-    width: 100%;
-    height: 20%;
-  }
-
-  .Productboderbox-right-column {
-    height: max-content;
-    margin-top: 0; 
-  }
   .Productboderbox-right-column iframe {
     height: 400px;
   }

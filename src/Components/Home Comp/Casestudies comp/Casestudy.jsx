@@ -1,7 +1,7 @@
 import React from "react";
-import Dentalimg from "../../../assets/home images/Casestudyleftcard.jpg";
-import rightimg1 from "../../../assets/home images/Casestudyright1.jpg";
-import rightimg2 from "../../../assets/home images/Casestudyrigh2.jpg";
+import Dentalimg from "../../../assets/home images/Casestudyleft1.jpg";
+import rightimg1 from "../../../assets/home images/casestusyright-1.jpg";
+import rightimg2 from "../../../assets/home images/casestudyright-2.jpg";
 import AnimatedButton from "../../Button comp/AnimatedButton";
 import "./Casestudy.css"
 const Casestudy = () => {
