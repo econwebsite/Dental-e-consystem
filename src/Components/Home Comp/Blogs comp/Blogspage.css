@@ -185,6 +185,7 @@
 
   .homeblog-full-image {
     width: 100%;
+    border-radius: 15px;
     max-height: 400px;
     object-fit: contain;
     display: block; /* Ensure image is block-level for centering */
@@ -192,6 +193,8 @@
   }
   .homeblog-box-image {
     object-fit: contain;
+    border-radius: 20px !important;
+
   }
 
 
@@ -207,6 +210,7 @@
 @media (max-width: 480px) {
   .homeblog-full-image {
     max-height: 350px;
+    border-radius: 15px !important;
   }
 
   .homeblog-box-content h4 {
@@ -219,6 +223,7 @@
 
   .homeblog-box-image {
     height: 200px;
+    border-radius: 20px !important;
   }
 
   .homeblog-box-content h6 {
