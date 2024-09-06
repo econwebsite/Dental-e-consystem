@@ -1,10 +1,7 @@
-/* Paragraph.css */
-
 .containerparagraph {
   width: 100%;
   background-color:#f1f2f2 ;
   margin: 0 auto;
-  /* padding: 30px; */
 }
 
 .paragraphtext {
@@ -18,7 +15,6 @@
   line-height: 2em;
 }
 
-/* Mobile responsiveness */
 @media (max-width: 600px) {
   .containerparagraph {
     width: 100%;
@@ -26,7 +22,7 @@
   }
 
   .paragraphtext {
-    font-size: 1em; /* Adjust font size if needed */
+    font-size: 1em; 
     padding: 10px;
     text-align: justify;
   }

@@ -173,6 +173,7 @@ const ContactUs = () => {
               rules={[{ message: 'Please enter your phone number' }]}
             >
               <Input 
+              className='contact-num-box'
                 placeholder="Contact Number"
                 addonBefore={selectedCountry ? countries.find(c => c.name === selectedCountry)?.code : ''} 
               />

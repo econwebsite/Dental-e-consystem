@@ -38,12 +38,14 @@
 .homeBanner .homeButton{
 position: absolute;
 display: flex;
+display: none;
 width: max-content;
 gap: 1em;
 left: 5%;
 bottom: 10%;
 }
 @media (max-width: 800px) {
+    
     .carousel-slide {
         height: auto;
     }
@@ -52,6 +54,7 @@ bottom: 10%;
         width: 100%; 
         height: auto; 
     }
+   
 }
 
 @media (max-width: 500px) {
