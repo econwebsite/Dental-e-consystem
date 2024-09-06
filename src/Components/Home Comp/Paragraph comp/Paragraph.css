@@ -22,8 +22,9 @@
   }
 
   .paragraphtext {
-    font-size: medium; 
+    font-size: 1em; 
     padding: 10px;
     text-align: justify;
+    hyphens: auto;
   }
 }
