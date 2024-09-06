@@ -75,7 +75,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;
-  font-size: 0.9em; /* Adjust for large screens */
+  font-size: 0.9em; 
   color: #344ea1; 
   text-align: justify;
 }
@@ -195,7 +195,7 @@
   }
 
   .casehubpage-border-box p {
-    font-size: 0.8em;
+    font-size: 1em;
     text-align: justify;
   }
 
@@ -228,5 +228,8 @@
 .casehubpage-border-box {
   
   align-items: center;
+}
+.casehubpage-card-right p {
+  font-size: 1em;
 }
 }

@@ -1,6 +1,3 @@
-
-
-/* Carousel Styles */
 .carouselCustom {
     width: 100%;
     height: 100%; 
@@ -189,6 +186,9 @@
 
     .productIntraButtonEnd {
         text-align: center;
+    }
+    .productIntraFlexEndRow {
+        margin-right: 0px;
     }
 }
 

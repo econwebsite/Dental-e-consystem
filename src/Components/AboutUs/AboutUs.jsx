@@ -4,15 +4,16 @@ import w3hImage from "../../assets/home images/aboutuspage.png";
 import Intraoral from "../../assets/home images/about-intraoral.png"
 import loupe from "../../assets/home images/about-dentloupe.png"
 import surgical from "../../assets/home images/about-surgical-lights.png"
+import Aboutboderbox from './Aboutboder/AboutBoderbox';
 
 export default function AboutUs() {
   return (
     <div className="aboutus-container">
       <div className="mainContainer">
       <div className="aboutus-header-image">
-        <img src={w3hImage} className="aboutus-img-fluid" alt="About Us Header" />
+        {/* <img src={w3hImage} className="aboutus-img-fluid" alt="About Us Header" /> */}
       </div>
-
+<Aboutboderbox/>
       {/* About e-con Systems Dental Section */}
       <div className="aboutus-content">
         <div className="aboutus-left-content">

@@ -21,8 +21,8 @@ const Blogspage = () => {
               <h4>A Guide to Choosing the Right Dental Intraoral Camera</h4>
               <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
              <br></br>
-             <p>Read the blog to learn why factors like depth of field and white balance adjustments are critical in capturing clear, accurate images of the oral cavity, ultimately improving dental practice efficiency.</p>
-            <br></br>
+             <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
+             <br></br>
            
              <AnimatedButton className="homeblog-btn1" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/Aguidtochoose"></AnimatedButton>
              </div>
