@@ -38,7 +38,6 @@
 .homeBanner .homeButton{
 position: absolute;
 display: flex;
-display: none;
 width: max-content;
 gap: 1em;
 left: 5%;
@@ -54,6 +53,9 @@ bottom: 10%;
         width: 100%; 
         height: auto; 
     }
+    .homeBanner .homeButton{
+      display: none;
+        }
    
 }
 
