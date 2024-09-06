@@ -221,7 +221,7 @@
 
     .productIntraImageDescription {
         flex-direction: row; 
-        align-items: flex-start; 
+        align-items: flex-start;
     }
 
     .productIntraImageItemWrapper {
