@@ -1,0 +1,103 @@
+.custom-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.custom-lightbox-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 60%;
+    max-height: 90%;
+    width: 650px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-lightbox-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-lightbox-image {
+    max-width: 100%;
+    height: 80%;
+    object-fit: contain;
+}
+
+.custom-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 3em;
+    color: #344ea1;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.custom-close-button:hover {
+    color: #69ba2f;
+}
+
+.custom-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2.5em;
+    color: #344ea1;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.custom-prev-button {
+    left: 10px;
+}
+
+.custom-next-button {
+    right: 10px;
+}
+
+.custom-nav-button:hover {
+    color: #69ba2f;
+}
+
+@media (max-width: 768px) {
+    .custom-lightbox-content {
+        width: 800px;
+        height: 700px;
+        max-width: 80%;
+        max-height: 90%;
+    }
+
+    .custom-lightbox-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .custom-nav-button {
+        font-size: 1.5rem;
+    }
+
+    .custom-close-button {
+        font-size: 1.8rem;
+    }
+}

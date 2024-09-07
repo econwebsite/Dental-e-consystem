@@ -51,6 +51,7 @@ export default function AboutUs() {
         <p className="aboutus-paragraph">
           So far, we have built 350+ product solutions - shipping over 2 million cameras to the United States, Europe, Japan, South Korea and many more countries.
         </p>
+        <br></br>
         <p className="aboutus-paragraph">
           To know more about e-con Systems <a href="https://www.e-consystems.com/aboutus.asp" target="_blank" rel="noopener noreferrer">click here</a>
         </p>
