@@ -127,7 +127,7 @@ const Aguidtochoose = () => {
                                     <img src={Understanding} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>
                                     {/* <p></p> */}
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Understandingextra"></AnimatedButton>
                                 </div>
                                 <div className="CardBlogs">
                                     <img src={howtoovercome} alt="Camera Model 3" className="Cardrelated-image" />

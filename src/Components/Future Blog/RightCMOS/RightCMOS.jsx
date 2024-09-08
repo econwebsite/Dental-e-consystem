@@ -87,13 +87,13 @@ const RightCMOS = () => {
               <img src={Threeimp} alt="Camera Model 1" className="Cardrelated-image" />
               <h2>Three Important Parameters in Intra Oral Camera Technology</h2>
               <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality—impact intra-oral camera device performance. In this blog, we dive into the technical details of how these factors can be fine-tuned for accurate dental diagnosis.</p>
-              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
+              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
             </div>
             <div className="CardBlogs">
               <img src={Howextraoral} alt="Camera Model 2" className="Cardrelated-image" />
               <h2>How our extraoral cameras are tuned to bring best image quality?</h2>
               {/* <p></p> */}
-              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/howtoovercome"></AnimatedButton>
+              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Extraoralbestimg"></AnimatedButton>
 
             </div>
            

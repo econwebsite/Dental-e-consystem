@@ -92,7 +92,7 @@ const AutofocusBlog = () => {
                   <img src={Aguidtochoose} alt="Camera Model 1" className="Cardrelated-image" />
                   <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
                   <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
-                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/RightforExtraoral"></AnimatedButton>
+                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AGuidTochoose"></AnimatedButton>
 
                 </div>
                 <div className="CardBlogs">
@@ -105,7 +105,7 @@ const AutofocusBlog = () => {
                   <img src={Understanding} alt="Camera Model 3" className="Cardrelated-image" />
                   <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>
                   {/* <p></p> */}
-                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AGuidTochoose"></AnimatedButton>
+                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Understandingextra"></AnimatedButton>
                 </div>
               </div>
             </div>

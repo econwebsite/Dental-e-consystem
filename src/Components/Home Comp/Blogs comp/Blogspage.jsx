@@ -16,7 +16,7 @@ const Blogspage = () => {
         <div className="homeblog-left-column">
           <div className="homeblog-merged-box" data-aos="zoom-in-right" data-aos-duration="2200">
             <img src={Capturing} alt="Full Image" className="homeblog-full-image" />
-            <div className="homeblog-box-content" style={{height:"627px;"}}>
+            <div className="homeblog-box-content">
               <h4>A Guide to Choosing the Right Dental Intraoral Camera</h4>
               <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
              <br></br>
@@ -28,7 +28,6 @@ const Blogspage = () => {
             
           </div>
         </div>
-
         <div className="homeblog-right-column" data-aos="zoom-in-left" data-aos-duration="2200">
           <div className="homeblog-box">
             <img src={Autofocusvsfixed} alt="Box 1" className="homeblog-box-image" />

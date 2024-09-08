@@ -165,7 +165,7 @@ const Threeimportant = () => {
                                     <img src={Autofocus} alt="Camera Model 1" className="Cardrelated-image" />
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose for Intraoral Cameras?</h2>
                                     <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/HowIspHelp"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
                                 </div>
                                 <div className="CardBlogs">
                                     <img src={Capturing} alt="Camera Model 2" className="Cardrelated-image" />

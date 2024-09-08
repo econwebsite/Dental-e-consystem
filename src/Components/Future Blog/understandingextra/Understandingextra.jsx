@@ -94,17 +94,17 @@ const Understandingextra = () => {
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
                                 </div>
                                 <div className="CardBlogs">
-              <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
-              <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
-              <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
-              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
-            </div>
-            <div className="CardBlogs">
-              <img src={Aguidtochoose} alt="Camera Model 3" className="Cardrelated-image" />
-              <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
-              <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
-              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AGuidTochoose"></AnimatedButton>
-            </div>
+                                    <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
+                                    <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
+                                    <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
+                                </div>
+                                <div className="CardBlogs">
+                                    <img src={Aguidtochoose} alt="Camera Model 3" className="Cardrelated-image" />
+                                    <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
+                                    <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AGuidTochoose"></AnimatedButton>
+                                </div>
                             </div>
                         </div>
                     </div>

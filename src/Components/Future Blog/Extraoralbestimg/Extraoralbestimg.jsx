@@ -78,21 +78,21 @@ const HowIspHelp = () => {
                                     </div>
                                 </div>
                                 <br></br>
-<p>In extraoral imaging, de-mosaicing is crucial because it reconstructs a full-color image from the incomplete color samples captured by a camera sensor using a color filter array (CFA), typically a Bayer filter. Without proper de-mosaicing, the image may suffer from color artifacts, incorrect color representation, and reduced image clarity. De-mosaicing is performed by interpolating the missing color information for each pixel based on neighboring pixels, effectively filling in the gaps to produce a complete image. Advanced algorithms, such as bilinear interpolation or more complex edge-detection methods, are used to enhance color accuracy and reduce artifacts. Implementing de-mosaicing ensures that extraoral images have accurate color representation and high resolution.</p>
-<h3>End-User Benefits of ISP-Enhanced Extraoral Imaging</h3>
-<ol>
-    <li><p><b> Documentation of Real-Time Oral Procedures: </b>Enhanced ISP tuning allows for the accurate documentation of procedures, which can be critical for tracking treatment progress and substantiating insurance claims.</p></li>
-<li><p><b> Patient Education: </b>High-quality images generated through ISP tuning help in clearly illustrating dental conditions and treatment plans, enabling patients to better understand their oral health.</p></li>
-<li><p><b> Consulting with Fellow Doctors:</b>Enhanced imaging ensures that detailed and accurate images can be shared with colleagues, facilitating better collaboration and informed second opinions.</p></li>
-<li><p><b> Educational Material:</b>The high-resolution, accurately tuned images can be used as valuable educational resources, aiding in the training of dental professionals and students.</p></li>
-<li><p><b> Diagnosis and Treatment Planning: </b> ISP tuning enhances image quality, making it easier to identify subtle oral issues, which is crucial for accurate diagnosis and effective treatment planning.</p></li>
-</ol>
-<h3>Dental Cameras with Inbuilt ISPs Offered by e-con Systems</h3>
-<p>e-con Systems has 20+ years of experience designing, developing, and manufacturing OEM camera solutions. Our specialized expertise as an Original Design Manufacturer (ODM) enables us to provide high-quality plug-and-play cameras, especially for extraoral devices.</p>
-<p>e-con Systems' camera solutions also come equipped with inbuilt ISPs for each sensor, which ensures superior image quality, optimal color accuracy, and more.</p>
-<p>Additionally, we offer miniaturization services to customize the camera form factor to meet the specifications of your dental device.</p>
-<p><a href="">View all our dental cameras</a></p>
-<p>If you need help integrating camera solutions into your extraoral devices, please write to <a href="">camerasolutions@e-consystems.com</a>.</p>
+                                <p>In extraoral imaging, de-mosaicing is crucial because it reconstructs a full-color image from the incomplete color samples captured by a camera sensor using a color filter array (CFA), typically a Bayer filter. Without proper de-mosaicing, the image may suffer from color artifacts, incorrect color representation, and reduced image clarity. De-mosaicing is performed by interpolating the missing color information for each pixel based on neighboring pixels, effectively filling in the gaps to produce a complete image. Advanced algorithms, such as bilinear interpolation or more complex edge-detection methods, are used to enhance color accuracy and reduce artifacts. Implementing de-mosaicing ensures that extraoral images have accurate color representation and high resolution.</p>
+                                <h3>End-User Benefits of ISP-Enhanced Extraoral Imaging</h3>
+                                <ol>
+                                    <li><p><b> Documentation of Real-Time Oral Procedures: </b>Enhanced ISP tuning allows for the accurate documentation of procedures, which can be critical for tracking treatment progress and substantiating insurance claims.</p></li>
+                                    <li><p><b> Patient Education: </b>High-quality images generated through ISP tuning help in clearly illustrating dental conditions and treatment plans, enabling patients to better understand their oral health.</p></li>
+                                    <li><p><b> Consulting with Fellow Doctors:</b>Enhanced imaging ensures that detailed and accurate images can be shared with colleagues, facilitating better collaboration and informed second opinions.</p></li>
+                                    <li><p><b> Educational Material:</b>The high-resolution, accurately tuned images can be used as valuable educational resources, aiding in the training of dental professionals and students.</p></li>
+                                    <li><p><b> Diagnosis and Treatment Planning: </b> ISP tuning enhances image quality, making it easier to identify subtle oral issues, which is crucial for accurate diagnosis and effective treatment planning.</p></li>
+                                </ol>
+                                <h3>Dental Cameras with Inbuilt ISPs Offered by e-con Systems</h3>
+                                <p>e-con Systems has 20+ years of experience designing, developing, and manufacturing OEM camera solutions. Our specialized expertise as an Original Design Manufacturer (ODM) enables us to provide high-quality plug-and-play cameras, especially for extraoral devices.</p>
+                                <p>e-con Systems' camera solutions also come equipped with inbuilt ISPs for each sensor, which ensures superior image quality, optimal color accuracy, and more.</p>
+                                <p>Additionally, we offer miniaturization services to customize the camera form factor to meet the specifications of your dental device.</p>
+                                <p><a href="">View all our dental cameras</a></p>
+                                <p>If you need help integrating camera solutions into your extraoral devices, please write to <a href="">camerasolutions@e-consystems.com</a>.</p>
 
 
                             </div>
@@ -111,15 +111,15 @@ const HowIspHelp = () => {
                                     <img src={Capturing} alt="Camera Model 1" className="Cardrelated-image" />
                                     <h2>Capturing the Dentists’ POV with Dental Loupe Cameras</h2>
                                     <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/IlluminationvsImage"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
                                 </div>
-                             
+
                                 <div className="CardBlogs">
-              <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
-              <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
-              <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
-              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
-            </div>
+                                    <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
+                                    <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
+                                    <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
+                                </div>
                             </div>
                         </div>
                     </div>
