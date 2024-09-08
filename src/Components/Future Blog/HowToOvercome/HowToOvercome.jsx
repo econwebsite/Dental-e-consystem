@@ -2,10 +2,9 @@ import React from "react"
 import "../Blogcommon.css"
 
 import dentalloupe from '../../../assets/Future Blog/loupe-dental.jpg';
-// /////////////////////
-import right1 from "../../../assets/Future Blog/Hubright1.jpg"
-import right2 from "../../../assets/Future Blog/Hubright2.jpg"
-import right3 from "../../../assets/Future Blog/Hubright3.jpg"
+import CMOS from "../../../assets/Future Blog/Rightsidecards/the-right-CMOS.jpg"
+import threeimp from "../../../assets/Future Blog/Rightsidecards/Three-Important-Parameters.jpg"
+import Understanding from "../../../assets/Future Blog/Rightsidecards/UnderstandingExtraoral.jpg"
 
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import BlogArtical from "../BlogArtical"
@@ -78,22 +77,21 @@ const HowToOvercome = () => {
             <p style={{"font-weight":"bold"}}>Related Blogs</p>
             <hr/>
             <div className="CardBlogs">
-              <img src={right1} alt="Camera Model 1" className="Cardrelated-image" />
-              <h2>How to Choose the Right Camera for Extraoral Devices?</h2>
-              <p>High-performance extraoral cameras are integral in dentistry. Read on to learn more about key features like 4K resolution, autofocus capabilities, and HDR imaging that enhance diagnostic accuracy and patient communication in extraoral devices.</p>
-              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/RightforExtraoral"></AnimatedButton>
-
-            </div>
-            <div className="CardBlogs">
-              <img src={right2} alt="Camera Model 2" className="Cardrelated-image" />
-              <h2>Capturing the Dentists' POV with Dental Loupe Cameras</h2>
-              <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
+              <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
+              <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
+              <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality—impact intra-oral camera device performance. In this blog, we dive into the technical details of how these factors can be fine-tuned for accurate dental diagnosis.</p>
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
             </div>
             <div className="CardBlogs">
-              <img src={right3} alt="Camera Model 3" className="Cardrelated-image" />
-              <h2>Illumination vs. Image Quality: What Extraoral Cameras Really Need</h2>
-              <p>Dental procedures rely on bright lights, which can wash out images captured by extraoral cameras. This blog explores how features like High Dynamic Range (HDR) and Dynamic Tone Mapping (DTM) help these cameras deliver clear, accurate images ideal for dental diagnosis and treatment.</p>
+              <img src={CMOS} alt="Camera Model 1" className="Cardrelated-image" />
+              <h2>Choosing the right CMOS cameras for Extraoral Imaging</h2>
+              <p>High-performance extraoral cameras are integral in dentistry. Read on to learn more about key features like 4K resolution, autofocus capabilities, and HDR imaging that enhance diagnostic accuracy and patient communication in extraoral devices.</p>
+              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/RightforExtraoral"></AnimatedButton>
+            </div>
+            <div className="CardBlogs">
+              <img src={Understanding} alt="Camera Model 3" className="Cardrelated-image" />
+              <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>
+              {/* <p></p> */}
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/IlluminationvsImage"></AnimatedButton>
             </div>
           </div>

@@ -6,12 +6,9 @@ import differentlighting from "../../../assets/Future Blog/differentlighting.jpg
 import colorcorrecmatrix from "../../../assets/Future Blog/Color-correction-Matrix.jpg"
 import Bayer from "../../../assets/Future Blog/bayer-pattern.jpg"
 import Ispprocess from "../../../assets/Future Blog/ISP-process.jpg"
-// ///////////////
-import right1 from "../../../assets/Future Blog/Hubright1.jpg"
-import right2 from "../../../assets/Future Blog/Hubright2.jpg"
-
-import right3 from "../../../assets/Future Blog/Hubright3.jpg"
-
+import Capturing from "../../../assets/Future Blog/Rightsidecards/Capturing-the-Dentists.jpg"
+import threeimp from "../../../assets/Future Blog/Rightsidecards/Three-Important-Parameters.jpg"
+import Autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jpg";
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import BlogArtical from "../BlogArtical"
 import { Link } from 'react-router-dom';
@@ -105,24 +102,24 @@ const HowIspHelp = () => {
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
                                 <div className="CardBlogs">
-                                    <img src={right1} alt="Camera Model 1" className="Cardrelated-image" />
-                                    <h2>Illumination vs. Image Quality: What Extraoral Cameras Really Need</h2>
-                                    <p>Read about features like High Dynamic Range (HDR) and Dynamic Tone Mapping (DTM) that help extraoral cameras deliver clear, accurate images ideal for dental diagnosis and treatment.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/IlluminationvsImage"></AnimatedButton>
-
-                                </div>
-                                <div className="CardBlogs">
-                                    <img src={right2} alt="Camera Model 2" className="Cardrelated-image" />
+                                    <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
                                     <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality—impact intra-oral camera device performance. In this blog, we dive into the technical details of how these factors can be fine-tuned for accurate dental diagnosis.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
                                 </div>
                                 <div className="CardBlogs">
-                                    <img src={right3} alt="Camera Model 3" className="Cardrelated-image" />
-                                    <h2>How to Overcome Imaging-Related Manufacturing Challenges of Dental Loupes</h2>
-                                    <p>Dental loupes have gained a lot of traction among healthcare professionals, with more than 50% of American dentists incorporating them into their routine practice. Learn how overcoming issues like thermal dissipation, image stabilization, and lightweight design is crucial for creating comfortable loupe devices for dentists.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/howtoovercome"></AnimatedButton>
+                                    <img src={Capturing} alt="Camera Model 1" className="Cardrelated-image" />
+                                    <h2>Capturing the Dentists’ POV with Dental Loupe Cameras</h2>
+                                    <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/IlluminationvsImage"></AnimatedButton>
                                 </div>
+                             
+                                <div className="CardBlogs">
+              <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
+              <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
+              <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
+              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
+            </div>
                             </div>
                         </div>
                     </div>

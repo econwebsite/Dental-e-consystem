@@ -69,33 +69,27 @@ ul {
 @media (max-width: 768px) {
   .threeparameter-content {
     flex-direction: column;
-    /* Stack items vertically */
-    gap: 10px;
+    gap: 15px;
   }
 
   .threeparameter-image {
-    width: 200px;
-    /* Smaller image width for mobile devices */
-    height: 130px;
-    /* Smaller image height for mobile devices */
+    width: auto;
+    height: 280px;
   }
 
   .threeparameter-item-text {
     font-size: 1em;
-    /* Smaller font size */
   }
 }
 
-/* Extra Small Devices (Phones) */
 @media (max-width: 576px) {
   .threeparameter-image {
-    width: 150px;
-    height: 100px;
+    width: auto;
+    height: 180px;
   }
 
   .threeparameter-item-text {
     font-size: 0.9em;
-    /* Smaller font size */
   }
 }
 

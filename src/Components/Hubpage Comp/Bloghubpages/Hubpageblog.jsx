@@ -29,31 +29,33 @@ const Hubpageblog = () => {
       </div>
       <div className="hubblog-column hubblog-right" data-aos="zoom-in-left" data-aos-duration="1000">
         <div className="hubblog-card-row" >
-          <div className="hubblog-card">
-            <img src={CMOS} alt="Card Image 1" />
-            <h6>Choosing the right CMOS cameras for Extraoral Imaging</h6>
-            <p>"Read on to learn more about key features like 4K resolution, autofocus capabilities...</p>
-            <AnimatedButton className="Hubread-more" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/RightforExtraoral"></AnimatedButton>
-            </div>
+        
           <div className="hubblog-card">
             <img src={Autovsfixed} alt="Card Image 2" />
             <h6>Autofocus vs. Fixed focus: Which Lens to Choose?</h6>
               <p>Understand how autofocus and fixed focus differentiate the dental imaging quality...</p>
             <AnimatedButton className="Hubread-more" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
             </div>
+            <div className="hubblog-card">
+            <img src={CMOS} alt="Card Image 1" />
+            <h6>Choosing the right CMOS cameras for Extraoral Imaging</h6>
+            <p>"Read on to learn more about key features like 4K resolution, autofocus capabilities...</p>
+            <AnimatedButton className="Hubread-more" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/RightforExtraoral"></AnimatedButton>
+            </div>
         </div>
         <div className="hubblog-card-row">
-          <div className="hubblog-card">
-            <img src={Capturing} alt="Card Image 1" />
-            <h6>Capturing the Dentists’ POV with Dental Loupe Cameras</h6>
-              <p>This blog explores features that enable loupe cameras for precise diagnoses. Find out why size...</p>
-            <AnimatedButton className="Hubread-more" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
-            </div>
+         
           <div className="hubblog-card">
             <img src={Threeimp} alt="Card Image 2" />
             <h6>Three Important Parameters in Intra Oral Camera Technology</h6>
               <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality...</p>
             <AnimatedButton className="Hubread-more" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
+            </div>
+            <div className="hubblog-card">
+            <img src={Capturing} alt="Card Image 1" />
+            <h6>Capturing the Dentists’ POV with Dental Loupe Cameras</h6>
+              <p>This blog explores features that enable loupe cameras for precise diagnoses. Find out why size...</p>
+            <AnimatedButton className="Hubread-more" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
             </div>
         </div>
       </div>

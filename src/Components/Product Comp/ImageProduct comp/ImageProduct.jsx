@@ -9,7 +9,7 @@ const ImageProduct = () => {
     <div className="imageproduct-container">
                     <div className='mainContainer'>
       <h2 className="imageproduct-title">Images Taken from the Camera</h2>
-      <div className="imageproduct-row">
+      <div className="imageproduct-row" data-aos="flip-up" data-aos-duration="1100">
         <div className="imageproduct-box">
           <img src={Imagetaken1} alt="Image 1" className="imageproduct-img" />
           {/* <div className="imageproduct-text">One Molar</div> */}

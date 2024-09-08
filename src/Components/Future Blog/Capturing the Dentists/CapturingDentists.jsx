@@ -1,20 +1,9 @@
-// import Productmedicalimg from "../../assets/Productmedimg.png";
-import productcard1 from "../../../assets/Future Blog/techimg1.jpg";
+import React from "react";
 import "../Blogcommon.css"
 import dentalloupe from "../../../assets/Future Blog/Capturing-img.jpg"
-
-
-
-
-
-
-
-// //////////////////////////
-import right1 from "../../../assets/Future Blog/Hubleft1.jpg";
-
-import right2 from "../../../assets/Future Blog/Hubright2.jpg";
-import right3 from "../../../assets/Future Blog/Hubright3.jpg";
-
+import Autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jpg";
+import CMOS from "../../../assets/Future Blog/Rightsidecards/the-right-CMOS.jpg";
+import Aguidtochoose from "../../../assets/Future Blog/Rightsidecards/Guide-tochoose.jpg";
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import BlogArtical from "../BlogArtical"
 import { Link } from 'react-router-dom';
@@ -99,21 +88,22 @@ const CapturingDentists = () => {
           <div className="Blogrelated-articles">
             <p style={{"font-weight":"bold"}}>Related Blogs</p>
             <hr/>
+           
+           
             <div className="CardBlogs">
-              <img src={right1} alt="Camera Model 1" className="Cardrelated-image" />
-              <h2>How to Choose the Right Camera for Extraoral Devices?</h2>
-              <p>High-performance extraoral cameras are integral in dentistry. Read on to learn more about key features like 4K resolution, autofocus capabilities, and HDR imaging that enhance diagnostic accuracy and patient communication in extraoral devices.</p>
-              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/RightforExtraoral"></AnimatedButton>
-
-            </div>
-            <div className="CardBlogs">
-              <img src={right2} alt="Camera Model 2" className="Cardrelated-image" />
+              <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
               <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
               <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
             </div>
             <div className="CardBlogs">
-              <img src={right3} alt="Camera Model 3" className="Cardrelated-image" />
+              <img src={CMOS} alt="Camera Model 1" className="Cardrelated-image" />
+              <h2>Choosing the right CMOS cameras for Extraoral Imaging</h2>
+              <p>High-performance extraoral cameras are integral in dentistry. Read on to learn more about key features like 4K resolution, autofocus capabilities, and HDR imaging that enhance diagnostic accuracy and patient communication in extraoral devices.</p>
+              <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/RightforExtraoral"></AnimatedButton>
+            </div>
+            <div className="CardBlogs">
+              <img src={Aguidtochoose} alt="Camera Model 3" className="Cardrelated-image" />
               <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
               <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AGuidTochoose"></AnimatedButton>

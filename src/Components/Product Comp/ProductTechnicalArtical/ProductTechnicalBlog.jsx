@@ -4,13 +4,7 @@ import './ProductTechnical.css';
 import aguid from "../../../assets/Product images/product-blog-aguid.jpg"
 import autofocus from "../../../assets/Product images/productblog-autofocus.png"
 import threeimp from "../../../assets/Product images/productblog-threeimp.png"
-
-// /////////
-import Technical1 from "../../../assets/Product images/productimg3.jpg";
-import Technical2 from "../../../assets/Product images/productimg4.jpg";
-import Technical4 from "../../../assets/Product images/productimg5.jpg";
-
-import Technical3 from "../../../assets/Product images/productimg6.jpg";
+import Capturing from "../../../assets/Product images/product-Capturing.jpg";
 import AnimatedButton from "../../Button comp/AnimatedButton";
 
 const ProductBlogs = () => {
@@ -18,7 +12,7 @@ const ProductBlogs = () => {
     <div className="ProductBlogs-Total mt-2">
       <h1 className="ProductBlogs-title">Technical Blogs</h1>
       <div className='mainContainer'>
-      <div className="ProductBlogs-cards">
+      <div className="ProductBlogs-cards" data-aos="zoom-in-right" data-aos-duration="1800">
         <div className="ProductBlogs-card">
           <img src={threeimp} alt="AI-enabled point of care device" className="ProductBlogs-card-image" />
           <h2 className="ProductBlogs-card-title">Three Important Parameters in Intra Oral Camera Technology</h2>
@@ -38,7 +32,7 @@ const ProductBlogs = () => {
           <AnimatedButton className="ProductBlogs-card-button" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AGuidTochoose"/>
         </div>
         <div className="ProductBlogs-card">
-          <img src={Technical3} alt="AI-enabled point of care device" className="ProductBlogs-card-image" />
+          <img src={Capturing} alt="AI-enabled point of care device" className="ProductBlogs-card-image" />
           <h2 className="ProductBlogs-card-title">Capturing the Dentists’ POV with Dental Loupe Cameras</h2>
           <p className="ProductBlogs-card-text">This blog explores features that enable loupe cameras for precise diagnoses. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
           <AnimatedButton className="ProductBlogs-card-button" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists" />

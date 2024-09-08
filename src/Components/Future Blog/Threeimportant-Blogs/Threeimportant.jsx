@@ -9,11 +9,9 @@ import shalldeepcomp from "../../../assets/Future Blog/shallodeep-comp.jpg"
 import Narrowangle from "../../../assets/Future Blog/Narrow-angle.jpg"
 import Difflights from "../../../assets/Future Blog/diff-lights.jpg"
 import shadingflat from "../../../assets/Future Blog/shadingflat.jpg"
-// /////////////
-
-import rightimg1 from "../../../assets/Future Blog/Hubright1.jpg"
-import Hubleft1 from "../../../assets/Future Blog/Hubleft1.jpg"
-import Hubright3 from "../../../assets/Future Blog/Hubright3.jpg"
+import Autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jpg"
+import Capturing from "../../../assets/Future Blog/Rightsidecards/Capturing-the-Dentists.jpg"
+import howtoovercome from "../../../assets/Future Blog/Rightsidecards/How-to-Overcome.jpg"
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import { Link } from 'react-router-dom';
 import BlogArtical from "../BlogArtical"
@@ -164,19 +162,19 @@ const Threeimportant = () => {
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
                                 <div className="CardBlogs">
-                                    <img src={rightimg1} alt="Camera Model 1" className="Cardrelated-image" />
-                                    <h2>How ISPs Help Extraoral Cameras Significantly Improve Image Quality</h2>
-                                    <p>ISPs optimize various imaging parameters, such as color balance, noise reduction, and dynamic range. They can enhance extraoral camera images by fine-tuning white balance, exposure, and more. In this blog, you'll learn about the need for inbuilt ISPs in extraoral cameras and their key features and benefits.</p>
+                                    <img src={Autofocus} alt="Camera Model 1" className="Cardrelated-image" />
+                                    <h2>Autofocus vs. Fixed focus: Which Lens to Choose for Intraoral Cameras?</h2>
+                                    <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/HowIspHelp"></AnimatedButton>
                                 </div>
                                 <div className="CardBlogs">
-                                    <img src={Hubleft1} alt="Camera Model 2" className="Cardrelated-image" />
+                                    <img src={Capturing} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Capturing the Dentists' POV with Dental Loupe Cameras</h2>
                                     <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
                                 </div>
                                 <div className="CardBlogs">
-                                    <img src={Hubright3} alt="Camera Model 3" className="Cardrelated-image" />
+                                    <img src={howtoovercome} alt="Camera Model 3" className="Cardrelated-image" />
                                     <h2>How to Overcome Imaging-Related Manufacturing Challenges of Dental Loupes</h2>
                                     <p>Dental loupes have gained a lot of traction among healthcare professionals, with more than 50% of American dentists incorporating them into their routine practice. Learn how overcoming issues like thermal dissipation, image stabilization, and lightweight design is crucial for creating comfortable loupe devices for dentists.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/howtoovercome"></AnimatedButton>

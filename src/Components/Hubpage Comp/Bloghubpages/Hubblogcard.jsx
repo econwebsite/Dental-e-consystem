@@ -8,12 +8,12 @@ const Hubblogcard = () => {
   return (
     <div className="Hubblogcard-Total">
        <div className='mainContainer'>
-      <div className="Hubblogcard-cards">
+      <div className="Hubblogcard-cards" data-aos="zoom-in-right" data-aos-duration="1000">
      
         <div className="Hubblogcard-card">
           <img src={howtoovercome} alt="AI-enabled point of care device" className="Hubblogcard-image" />
           <h2 className="Hubblogcard-titleh2">How to Overcome Imaging-Related Manufacturing Challenges of Dental Loupes</h2>
-          <p className="Hubblogcard-text">"The blog explores how overcoming issues like thermal dissipation, image stabilization...</p>
+          <p className="Hubblogcard-text">The blog explores how overcoming issues like thermal dissipation, image stabilization...</p>
           <AnimatedButton className="Hubblogcard-button1" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/howtoovercome"></AnimatedButton>
         </div>
         <div className="Hubblogcard-card">

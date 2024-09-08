@@ -1,7 +1,6 @@
 import React from 'react';
 import './Dentalhome.css';
 import { Carousel } from 'antd';
-// import dentalimg1 from "../../../assets/home images/Home_Page_Banner-01.jpg";
 import dentalimg2 from "../../../assets/home images/Homebanner.jpg";
 import AnimatedButton from '../../Button comp/AnimatedButton';
 import Modelbutton from '../../Button comp/Modelbutton';

@@ -7,9 +7,9 @@ import teethblur from '../../../assets/Future Blog/future-teethblur.jpg';
 import temprature from '../../../assets/Future Blog/future-temprature.jpg';
 import focallength from '../../../assets/Future Blog/focal&fieldof view.jpg';
 
-import autofocus from "../../../assets/Future Blog/Autovsfixed.jpg";
-import capturing from "../../../assets/Future Blog/Capturing-the-Dentists.jpg";
-import howtoovercome from "../../../assets/Future Blog/How-to-Overcome.jpg";
+import autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jpg";
+import Understanding from "../../../assets/Future Blog/Rightsidecards/UnderstandingExtraoral.jpg";
+import howtoovercome from "../../../assets/Future Blog/Rightsidecards/How-to-Overcome.jpg";
 
 import AnimatedButton from "../../Button comp/AnimatedButton"
 
@@ -124,9 +124,9 @@ const Aguidtochoose = () => {
 
                                 </div>
                                 <div className="CardBlogs">
-                                    <img src={capturing} alt="Camera Model 2" className="Cardrelated-image" />
-                                    <h2>Capturing the Dentists' POV with Dental Loupe Cameras</h2>
-                                    <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
+                                    <img src={Understanding} alt="Camera Model 2" className="Cardrelated-image" />
+                                    <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>
+                                    {/* <p></p> */}
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
                                 </div>
                                 <div className="CardBlogs">

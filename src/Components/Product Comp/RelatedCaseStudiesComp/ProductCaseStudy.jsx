@@ -6,7 +6,7 @@ const ProductCaseStudy = () => {
   return (
     <div className="productcase-container">
       <h1 className="productcase-title">Case Study</h1>
-      <div className="productcase-card">
+      <div className="productcase-card" data-aos="zoom-in-right" data-aos-duration="1600">
         <div className="productcase-card-left">
           <img
             src={productcase}
