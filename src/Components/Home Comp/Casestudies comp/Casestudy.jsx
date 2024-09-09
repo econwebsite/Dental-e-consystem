@@ -2,7 +2,7 @@ import React from "react";
 import Roadmap from "../../../assets/home images/Roadmap.jpg";
 import AI from "../../../assets/home images/AI-driven.jpg";
 import Improving from "../../../assets/home images/Improving-Dental.jpg";
-import AnimatedButton from "../../Button comp/AnimatedButton";
+import Modelbutton from "../../Button comp/Modelbutton";
 import "./Casestudy.css"
 const Casestudy = () => {
   return (
@@ -17,7 +17,7 @@ const Casestudy = () => {
               <div className="casestudy-box-content">
                 <h4>The Roadmap of Dual Ethernet Camera Integration in Dental Operatory Lights</h4>
                 <p>Explore how we successfully integrated dual 4K cameras into dental operatory lights for a leading European dental device manufacturer. In this case study, we discuss the challenges we faced during the prototyping phase. Read how we customized the camera architecture and implemented other enhanced modifications, such as reduced latency and lens shading correction, to achieve superior image quality in brightly illuminated dental environments.</p>
-                <AnimatedButton className="casestudy-btn1" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/" />
+                <Modelbutton className="casestudy-btn1" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/" />
               </div>
             </div>
           </div>
@@ -26,14 +26,14 @@ const Casestudy = () => {
               <img src={AI} alt="Box 1" className="casestudy-box-image" />
               <div className="casestudy-box-content">
                 <h6>AI-driven and Portable Point-Of-Care Device for Pre-Cancer Screening for a US Medical Device Manufacturer</h6>
-                <AnimatedButton className="casestudy-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/" />
+                <Modelbutton className="casestudy-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/" />
               </div>
             </div>
             <div className="casestudy-box">
               <img src={Improving} alt="Box 2" className="casestudy-box-image" />
               <div className="casestudy-box-content">
                 <h6>Improving Dental Documentation using 4k Dental Loupe Camera for a Leading Europe Based Dental Imaging Solutions Provider</h6>
-                <AnimatedButton className="casestudy-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/" />
+                <Modelbutton className="casestudy-btn" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/" />
               </div>
             </div>
           </div>
