@@ -4,8 +4,12 @@ import Intraoral from '../../assets/home images/about-intraoral.png';
 import loupe from '../../assets/home images/about-dentloupe.png';
 import surgical from '../../assets/home images/about-surgical-lights.png';
 import Aboutboderbox from './Aboutboder/AboutBoderbox';
-import ce from '../../assets/home images/Standards1.png';
-import fc from '../../assets/home images/Standards2.png';
+import ce from '../../assets/home images/certificates-01.png';
+import fc from '../../assets/home images/certificates-02.png';
+import rohs from '../../assets/home images/certificates-03.png';
+import tic from '../../assets/home images/certificates-04.png';
+
+
 
 export default function AboutUs() {
   return (
@@ -15,7 +19,7 @@ export default function AboutUs() {
         <Aboutboderbox />
         <div className="aboutus-content">
           <div className="aboutus-left-content">
-            <p className="aboutus-heading">About e-con Systems Dental:</p>
+            <p className="aboutus-heading">About e-con Systems Dental</p>
             <p className="aboutus-paragraph">
               e-con Systems Dental is a specialized division focused on providing Original Design Manufacturing (ODM) solutions for dental imaging. At e-con Systems – Dental, we leverage our extensive expertise to meet the unique needs of the dental industry. Having collaborated with leading dental device manufacturers for more than 20 years, from ideation to market launch, we understand the challenges and intricacies of dental imaging. To address these challenges, we offer comprehensive ODM designs for dental imaging solutions, including intraoral cameras, extraoral cameras, and dental loupe cameras. Our solutions allow manufacturers to seamlessly integrate and rebrand these products into their portfolios, ensuring high-quality imaging with reduced time to market and cost efficiency.
             </p>
@@ -76,10 +80,10 @@ export default function AboutUs() {
               <img src={fc} alt="Certification FC" />
             </div>
             <div className="aboutus-image-wrapper">
-              <img src={ce} alt="Certification CE" />
+              <img src={rohs} alt="Certification CE" />
             </div>
             <div className="aboutus-image-wrapper">
-              <img src={fc} alt="Certification FC" />
+              <img src={tic} alt="Certification FC" />
             </div>
           </div>
         </div>

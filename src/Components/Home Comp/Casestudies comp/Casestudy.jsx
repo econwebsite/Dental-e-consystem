@@ -16,16 +16,16 @@ const Casestudy = () => {
         <div className='mainContainer'>
         <div className="casestudy-component-container">
           <div className="casestudy-left-column">
-            <div className="casestudy-merged-box" data-aos="zoom-in-right" data-aos-duration="2000" onClick={() => navigate('/')} style={{cursor:"pointer"}}>
+            <div className="casestudy-merged-box" data-aos="zoom-in-right" data-aos-duration="1200" onClick={() => navigate('/')} style={{cursor:"pointer"}}>
               <img src={Roadmap} alt="Full Image" className="casestudy-full-image" />
               <div className="casestudy-box-content">
                 <h4>The Roadmap of Dual Ethernet Camera Integration in Dental Operatory Lights</h4>
-                <p>Explore how we successfully integrated dual 4K cameras into dental operatory lights for a leading European dental device manufacturer. In this case study, we discuss the challenges we faced during the prototyping phase. Read how we customized the camera architecture and implemented other enhanced modifications, such as reduced latency and lens shading correction, to achieve superior image quality in brightly illuminated dental environments.</p>
+                <p>Explore how we successfully integrated dual 4K cameras into dental operatory lights for a leading European dental device manufacturer. In this case study, we discuss the challenges we faced during the prototyping phase. Read how we customized the camera architecture and implemented other enhanced modifications, such as reduced latency and lens shading correction, to achieve superior image quality in brightly illuminated dental environment.</p>
                 <Modelbutton className="casestudy-btn1" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/" />
               </div>
             </div>
           </div>
-          <div className="casestudy-right-column" data-aos="zoom-in-left" data-aos-duration="2000">
+          <div className="casestudy-right-column" data-aos="zoom-in-left" data-aos-duration="1200">
             <div className="casestudy-box" onClick={() => navigate('/')} style={{cursor:"pointer"}}>
               <img src={AI} alt="Box 1" className="casestudy-box-image" />
               <div className="casestudy-box-content">

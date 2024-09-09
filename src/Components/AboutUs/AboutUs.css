@@ -99,7 +99,7 @@
 .aboutus-image-wrapper {
     border: 2px solid #ccc;
     padding: 5px;
-    background-color: #00aeef;
+    /* background-color: #00aeef; */
     width: 100px;
     border-radius: 10px;
 }

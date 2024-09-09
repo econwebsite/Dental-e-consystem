@@ -46,7 +46,9 @@ const NavBarpage = () => {
         <div className='mainContainer'>
           <div className="navbarpage-header">
             <div className="navbarpage-logoContainer">
-              <img src={dentallogo} alt="Dental Logo" className="navbarpage-logo" />
+              <Link  to="/">
+              <img src={dentallogo} alt="Dental Logo" className="navbarpage-logo" onClick={() => navigate('/Aguidtochoose')} style={{cursor:"pointer"}}/>
+              </Link>
             </div>
             <div className="navbarpage-navItems">
               <Link to="/" className="navbarpage-navLink">Home</Link>
@@ -82,7 +84,9 @@ const NavBarpage = () => {
       <Navbar expand="lg" className="mobile-view">
         <Container fluid>
           <Navbar.Brand href="#">
+          <Link  to="/">
             <img src={dentallogo} alt="Dental Logo" className="navbarpage-logo-mobile" />
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
           <Navbar.Offcanvas className='Toggle-background'
@@ -109,7 +113,7 @@ const NavBarpage = () => {
                 <Link className="nav-link" to="/ContactUs" onClick={handleNavLinkClick}>Contact Us</Link>
                 <Link className="nav-link" to="/AboutUs" onClick={handleNavLinkClick}>About Us</Link>
               </Nav>
-              <Form className="d-flex mt-3">
+              {/* <Form className="d-flex mt-3">
                 <Form.Control
                   type="search"
                   placeholder="Search"
@@ -117,7 +121,7 @@ const NavBarpage = () => {
                   aria-label="Search"
                 />
                 <Button variant="outline-success" style={{ color: "white", borderColor: "#69ba2f", backgroundColor: "#69ba2f" }}>Search</Button>
-              </Form>
+              </Form> */}
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
