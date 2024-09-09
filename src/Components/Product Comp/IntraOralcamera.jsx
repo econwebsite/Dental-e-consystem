@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import CustomlightBox from './customlightbox/CustomlightBox'; // Import the lightbox component
+import CustomlightBox from './customlightbox/CustomlightBox'; 
 import './Product.css';
 import image1 from '../../assets/Product images/productcarousel1.png';
 import image2 from '../../assets/Product images/productcarousel2.png';
@@ -8,7 +8,11 @@ import image3 from '../../assets/Product images/productcarousel3.png';
 import AnimatedButton from "../Button comp/AnimatedButton";
 import Modelbutton from "../Button comp/Modelbutton";
 
-const images = [image1, image2, image3]; 
+const images = [
+    { src: image1, title: "Image 1 Title" },
+    { src: image2, title: "Image 2 Title" },
+    { src: image3, title: "Image 3 Title" }
+];
 
 const IntraOralcamera = () => {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -28,48 +32,32 @@ const IntraOralcamera = () => {
 
     const showNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        setSelectedImage(images[(currentIndex + 1) % images.length]);
+        setSelectedImage(images[(currentIndex + 1) % images.length].src);
     };
 
     const showPrev = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-        setSelectedImage(images[(currentIndex - 1 + images.length) % images.length]);
+        setSelectedImage(images[(currentIndex - 1 + images.length) % images.length].src);
     };
 
     return (
         <div className='col-12 productSection'>
             <div className='mainContainer'>
                 <div className='row'>
-        
+    
                     <div className='col-lg-4 col-sm-12 productLeftSide'>
                         <Carousel className='carouselCustom'>
-                            <Carousel.Item interval={5000}>
-                                <img
-                                    className="d-block w-100"
-                                    src={image1}
-                                    alt="First slide"
-                                    onClick={() => openLightbox(image1, 0)} 
-                                    style={{ cursor: 'pointer' }}
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item interval={5000}>
-                                <img
-                                    className="d-block w-100"
-                                    src={image2}
-                                    alt="Second slide"
-                                    onClick={() => openLightbox(image2, 1)} 
-                                    style={{ cursor: 'pointer' }}
-                                />
-                            </Carousel.Item>
-                            <Carousel.Item interval={5000}>
-                                <img
-                                    className="d-block w-100"
-                                    src={image3}
-                                    alt="Third slide"
-                                    onClick={() => openLightbox(image3, 2)} 
-                                    style={{ cursor: 'pointer' }}
-                                />
-                            </Carousel.Item>
+                            {images.map((image, index) => (
+                                <Carousel.Item key={index} interval={5000}>
+                                    <img
+                                        className="d-block w-100"
+                                        src={image.src}
+                                        alt={`Slide ${index + 1}`}
+                                        onClick={() => openLightbox(image.src, index)} 
+                                        style={{ cursor: 'pointer' }}
+                                    />
+                                </Carousel.Item>
+                            ))}
                         </Carousel>
                     </div>
 
@@ -91,13 +79,13 @@ const IntraOralcamera = () => {
                     </div>
                 </div>
             </div>
-
             <CustomlightBox
                 image={selectedImage} 
                 isOpen={isLightboxOpen} 
                 onClose={closeLightbox} 
                 onNext={showNext} 
                 onPrev={showPrev} 
+                title={images[currentIndex]?.title} 
             />
         </div>
     );

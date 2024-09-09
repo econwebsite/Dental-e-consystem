@@ -21,7 +21,7 @@
 .casepageblog {
   display: flex;
   margin-top: 40px;
-  height: auto; /* Adjusted to fit content */
+  height: auto;
 }
 
 .casehubpage-column {
@@ -65,7 +65,7 @@
 .casehubpage-border-box h2 {
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-size: 1.3em; /* Adjust for large screens */
+  font-size: 1.3em; 
   color: #003873; 
   line-height: 1.5em;
   text-align: justify;
@@ -163,7 +163,6 @@
   background-color: #69ba2f;
 }
 
-/* Responsive Styles for Mobile View */
 @media (max-width: 768px) {
   .mainContainer h1 {
     font-size: 2em;
@@ -181,7 +180,7 @@
 
   .casehubpage-border-box img {
     height: auto;
-    max-height: 300px; /* Adjust to fit well on mobile */
+    max-height: 300px; 
     margin-bottom: 15px;
     border-radius: 15px;
   }

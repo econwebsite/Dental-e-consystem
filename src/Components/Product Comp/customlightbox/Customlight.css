@@ -11,6 +11,18 @@
     z-index: 1000;
     overflow-x: hidden;
 }
+.custom-lightbox-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #344ea1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    z-index: 10;
+}
 
 .custom-lightbox-content {
     background-color: white;
@@ -47,7 +59,7 @@
     right: 10px;
     background: none;
     border: none;
-    font-size: 3em;
+    font-size: 2em;
     color: #344ea1;
     cursor: pointer;
     z-index: 1001;
@@ -63,7 +75,7 @@
     transform: translateY(-50%);
     background: none;
     border: none;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #344ea1;
     cursor: pointer;
     z-index: 1001;
@@ -100,5 +112,8 @@
 
     .custom-close-button {
         font-size: 1.8rem;
+    }
+    .custom-lightbox-title {
+        font-size: 1em;
     }
 }

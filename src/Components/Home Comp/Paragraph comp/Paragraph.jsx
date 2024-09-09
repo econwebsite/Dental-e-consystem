@@ -1,6 +1,5 @@
-// ParagraphComponent.js
 import React from 'react';
-import './Paragraph.css'; // Custom CSS file
+import './Paragraph.css';
 
 const Paragraph = () => {
   return (

@@ -1,6 +1,5 @@
 import React from 'react'
 import "./AboutUs.css"
-import w3hImage from "../../assets/home images/aboutuspage.png";
 import Intraoral from "../../assets/home images/about-intraoral.png"
 import loupe from "../../assets/home images/about-dentloupe.png"
 import surgical from "../../assets/home images/about-surgical-lights.png"
@@ -11,10 +10,8 @@ export default function AboutUs() {
     <div className="aboutus-container">
       <div className="mainContainer">
       <div className="aboutus-header-image">
-        {/* <img src={w3hImage} className="aboutus-img-fluid" alt="About Us Header" /> */}
       </div>
 <Aboutboderbox/>
-      {/* About e-con Systems Dental Section */}
       <div className="aboutus-content">
         <div className="aboutus-left-content">
           <p className="aboutus-heading">About e-con Systems Dental:</p>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { useNavigate } from 'react-router-dom'; 
 import './AnimatedButton.css';
 
 const AnimatedButton = ({
@@ -12,14 +12,14 @@ const AnimatedButton = ({
   to,
   ...props
 }) => {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const handleClick = (event) => {
     if (to) {
-      navigate(to); // Navigate to the specified route
+      navigate(to); 
     }
     if (onClick) {
-      onClick(event); // Execute additional onClick logic if provided
+      onClick(event); 
     }
   };
 

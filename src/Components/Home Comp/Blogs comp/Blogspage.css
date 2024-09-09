@@ -1,13 +1,12 @@
-/* Common button styles */
 .homeblog-btn {
   padding: 10px 20px; 
   margin-top: 5px;
-  align-self: flex-start; /* Default for desktop */
+  align-self: flex-start; 
 }
 
 .homeblog-btn1 {
   padding: 10px 20px; 
-  align-self: flex-start; /* Default for desktop */
+  align-self: flex-start; 
 }
 
 .homeblog-pg {
@@ -31,7 +30,6 @@
   font-style: normal;
 }
 
-/* Container to center content and prevent stretching */
 .homeblog-component-container {
   display: flex;
   padding: 0 20px;
@@ -48,7 +46,6 @@
   flex-wrap: nowrap; 
 }
 
-/* Style for the left column */
 .homeblog-left-column {
   width: 40%;
   display: flex;
@@ -58,7 +55,6 @@
   overflow: hidden;
 }
 
-/* Style for the merged box */
 .homeblog-merged-box {
   width: 100%;
   background-color: #f1f2f2;
@@ -78,7 +74,6 @@
   border-radius: 15px;
 }
 
-/* Style for the content inside the merged box */
 .homeblog-box-content {
   flex-grow: 1; 
   display: flex;
@@ -93,16 +88,15 @@
 .homeblog-box-content h4 {
   margin: 0 0 10px 0;
   font-family: "Poppins", sans-serif;
-  /* font-weight: 600; */
   font-style: normal;
   color: #003873;
   font-size: 1.3em;
-  text-align: justify; /* Justify text for desktop */
+  text-align: justify; 
 }
 
 .homeblog-box-content p {
   margin: 0;
-  text-align: justify; /* Justify text for desktop */
+  text-align: justify; 
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;
@@ -110,7 +104,6 @@
   font-size: 1.1em;
 }
 
-/* Style for the right column */
 .homeblog-right-column {
   width: 40%;
   display: flex;
@@ -120,7 +113,6 @@
   overflow: hidden;
 }
 
-/* Style for each box */
 .homeblog-box {
   display: flex;
   flex-direction: column;
@@ -156,20 +148,19 @@
 .homeblog-box-content p {
   margin: 0;
   font-size: 1.1em;
-  text-align: justify; /* Justify text for desktop */
+  text-align: justify; 
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;
   color: #344ea1;
 }
 
-/* Media Queries for Mobile Devices */
 @media (max-width: 968px) {
   .Home-blogtitle h1 {
     font-size: 1.7em;
   }
   .homeblog-component-container {
-    flex-wrap: wrap; /* Allow columns to wrap on mobile */
+    flex-wrap: wrap; 
   }
 
   .homeblog-left-column, .homeblog-right-column {
@@ -177,11 +168,11 @@
   }
 
   .homeblog-left-column {
-    order: 1; /* Display left column first */
+    order: 1; 
   }
 
   .homeblog-right-column {
-    order: 2; /* Display right column second */
+    order: 2; 
   }
 
   .homeblog-full-image {
@@ -189,8 +180,8 @@
     border-radius: 15px;
     max-height: 400px;
     object-fit: contain;
-    display: block; /* Ensure image is block-level for centering */
-    margin: 0 auto; /* Center image */
+    display: block; 
+    margin: 0 auto; 
   }
   .homeblog-box-image {
     object-fit: contain;
@@ -204,7 +195,7 @@
   }
 
   .homeblog-btn, .homeblog-btn1 {
-    align-self: center; /* Center buttons on mobile */
+    align-self: center; 
   }
 }
 
@@ -245,13 +236,11 @@
   max-width: 1200px; 
 }
 
-/* Style for the left column */
 .homeblog-left-column {
   width: 55%;
   gap: 20px;
 }
 
-/* Style for the merged box */
 .homeblog-merged-box {
   padding: 35px;
   gap: 50px;

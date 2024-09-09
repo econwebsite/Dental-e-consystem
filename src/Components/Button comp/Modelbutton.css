@@ -1,5 +1,5 @@
 .modelaclass {
-    display: inline-block; /* Ensure the button doesn't take full width */
+    display: inline-block; 
     padding: 10px 25px;
     border-radius: 5px;
     font-size: 1em;
@@ -73,7 +73,7 @@ textarea::placeholder {
 
   @media (max-width: 600px) {
     .modelaclass {
-      padding: 8px 20px; /* Reduce padding for smaller screens */
-      font-size: 0.9em; /* Slightly smaller font size */
+      padding: 8px 20px; 
+      font-size: 0.9em; 
     }
   }

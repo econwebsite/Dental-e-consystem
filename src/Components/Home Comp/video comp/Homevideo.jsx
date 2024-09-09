@@ -15,7 +15,7 @@ function Dentalvideopg() {
         <div className="video-title-container">
           <div className="home-thumbnail">
             <img
-              src={Vediothumbnail} // Replace with the left image path
+              src={Vediothumbnail} 
               alt="Left Thumbnail"
               className="homeside-img"
               onClick={() => setToggler(!toggler)}

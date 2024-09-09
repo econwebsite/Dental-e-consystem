@@ -1,6 +1,6 @@
 .aboutcomp-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 3em;
   }
@@ -59,21 +59,19 @@
     align-self: flex-end;
   }
   
-  /* Large screens (4 cards in one row) */
   @media (min-width: 1025px) {
     .aboutcomp-container {
-      grid-template-columns: repeat(4, 1fr); /* 4 columns */
+      grid-template-columns: repeat(4, 1fr); 
     }
   }
   
-  /* Medium screens (2 cards per row) */
   @media (max-width: 1024px) {
     .aboutcomp-container {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+      grid-template-columns: repeat(2, 1fr);
     }
   
     .aboutcomp-box {
-      height: auto; /* Allow the height to adjust */
+      height: auto; 
     }
   
     .aboutcomp-circle {
@@ -87,7 +85,6 @@
     }
   }
   
-  /* Mobile screens (1 card per row) */
   @media (max-width: 768px) {
     .aboutcomp-container {
       grid-template-columns: 1fr;
@@ -95,9 +92,9 @@
     }
   
     .aboutcomp-box {
-      width: 90%; /* Make the card take up 90% of the container width */
-      margin: 20px auto; /* Center the card with margin */
-      height: auto; /* Adjust height for mobile */
+      width: 90%; 
+      margin: 20px auto; 
+      height: auto; 
     }
   
     .aboutcomp-circle {

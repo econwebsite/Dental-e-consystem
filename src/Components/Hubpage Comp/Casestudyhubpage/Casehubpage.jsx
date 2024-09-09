@@ -1,5 +1,5 @@
 import React from 'react';
-import './casehubpage.css'; // Ensure this CSS file is used
+import './casehubpage.css'; 
 import Roadmap from "../../../assets/Hubpages/Roadmap.jpg";
 import AIdriven from "../../../assets/Hubpages/AI-driven.jpg";
 import Improving from "../../../assets/Hubpages/Improving-Dental.jpg";
