@@ -1,16 +1,17 @@
 import React from "react"
 import "../Blogcommon.css"
-
 import dentalloupe from '../../../assets/Future Blog/loupe-dental.jpg';
 import CMOS from "../../../assets/Future Blog/Rightsidecards/the-right-CMOS.jpg"
 import threeimp from "../../../assets/Future Blog/Rightsidecards/Three-Important-Parameters.jpg"
 import Understanding from "../../../assets/Future Blog/Rightsidecards/UnderstandingExtraoral.jpg"
-
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import BlogArtical from "../BlogArtical"
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const HowToOvercome = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
     <div className="Blogpage-cointainer">
@@ -76,22 +77,22 @@ const HowToOvercome = () => {
           <div className="Blogrelated-articles">
             <p style={{"font-weight":"bold"}}>Related Blogs</p>
             <hr/>
-            <div className="CardBlogs">
+            <div className="CardBlogs" onClick={() => navigate('/Threeimportant')} style={{cursor:"pointer"}}>
               <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
               <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
               <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality—impact intra-oral camera device performance. In this blog, we dive into the technical details of how these factors can be fine-tuned for accurate dental diagnosis.</p>
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
             </div>
-            <div className="CardBlogs">
+            <div className="CardBlogs" onClick={() => navigate('/RightforExtraoral')} style={{cursor:"pointer"}}>
               <img src={CMOS} alt="Camera Model 1" className="Cardrelated-image" />
               <h2>Choosing the right CMOS cameras for Extraoral Imaging</h2>
               <p>High-performance extraoral cameras are integral in dentistry. Read on to learn more about key features like 4K resolution, autofocus capabilities, and HDR imaging that enhance diagnostic accuracy and patient communication in extraoral devices.</p>
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/RightforExtraoral"></AnimatedButton>
             </div>
-            <div className="CardBlogs">
+            <div className="CardBlogs" onClick={() => navigate('/Understandingextra')} style={{cursor:"pointer"}}>
               <img src={Understanding} alt="Camera Model 3" className="Cardrelated-image" />
               <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>
-              {/* <p></p> */}
+              <p>Unlike intraoral cameras, which are inserted into the oral cavity, extraoral cameras are positioned externally to take comprehensive views of the jaw, teeth, and surrounding areas. In this blog, we explore the types of extraoral cameras, such as surgical light-mounted cameras, dental chair-mounted cameras, and handheld extraoral cameras, and their benefits.</p>
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Understandingextra"></AnimatedButton>
             </div>
           </div>

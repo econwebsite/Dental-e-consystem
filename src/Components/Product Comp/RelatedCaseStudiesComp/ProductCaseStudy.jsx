@@ -19,7 +19,7 @@ const ProductCaseStudy = () => {
           <br></br>
           <p className="productcase-card-paragraph">
           Read to know how e-con Systems developed a custom camera solution for an AI-driven, portable point-of-care device for pre-cancer screening.</p>
-          <Modelbutton className="ProductBlogs-card-button" text="Know more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f"/>
+          <Modelbutton className="ProductBlogs-card-button" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f"/>
 
         </div>
       </div>

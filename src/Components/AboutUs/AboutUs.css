@@ -41,12 +41,14 @@
     text-align: center;
     color: #003873;
 }
+
 .aboutus-heading2 {
     font-size: 1.5em;
     margin-bottom: 20px;
     text-align: center;
     color: #003873;
 }
+
 .aboutus-paragraph {
     font-size: 1em;
     color: #344ea1;
@@ -85,7 +87,28 @@
     line-height: 2em;
 }
 
-/* Responsive Design */
+.aboutus-image-row {
+    display: flex;
+    gap: 15px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.aboutus-image-wrapper {
+    border: 2px solid #ccc;
+    padding: 5px;
+    background-color: #00aeef;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.aboutus-image-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
 
 @media (max-width: 769px) {
     .aboutus-content {
@@ -107,6 +130,13 @@
     .aboutus-econ-systems .aboutus-paragraph {
         width: 100%;
         text-align: justify;
+    }
+    .aboutus-image-row {
+        gap: 15px;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 

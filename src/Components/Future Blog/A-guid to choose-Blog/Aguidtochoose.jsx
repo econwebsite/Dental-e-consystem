@@ -6,17 +6,17 @@ import Teethimg from '../../../assets/Future Blog/future-teeth.jpg';
 import teethblur from '../../../assets/Future Blog/future-teethblur.jpg';
 import temprature from '../../../assets/Future Blog/future-temprature.jpg';
 import focallength from '../../../assets/Future Blog/focal&fieldof view.jpg';
-
 import autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jpg";
 import Understanding from "../../../assets/Future Blog/Rightsidecards/UnderstandingExtraoral.jpg";
 import howtoovercome from "../../../assets/Future Blog/Rightsidecards/How-to-Overcome.jpg";
-
 import AnimatedButton from "../../Button comp/AnimatedButton"
-
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 import BlogArtical from "../BlogArtical"
 const Aguidtochoose = () => {
+    const navigate = useNavigate();
+
     return (
         <div>
             <div className="Blogpage-cointainer">
@@ -116,20 +116,20 @@ const Aguidtochoose = () => {
                             <div className="Blogrelated-articles">
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
-                                <div className="CardBlogs">
+                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{cursor:"pointer"}}>
                                     <img src={autofocus} alt="Camera Model 1" className="Cardrelated-image" />
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
                                     <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
 
                                 </div>
-                                <div className="CardBlogs">
+                                <div className="CardBlogs" onClick={() => navigate('/Understandingextra')} style={{cursor:"pointer"}}>
                                     <img src={Understanding} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>
-                                    {/* <p></p> */}
+                                    <p>Unlike intraoral cameras, which are inserted into the oral cavity, extraoral cameras are positioned externally to take comprehensive views of the jaw, teeth, and surrounding areas. In this blog, we explore the types of extraoral cameras, such as surgical light-mounted cameras, dental chair-mounted cameras, and handheld extraoral cameras, and their benefits.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Understandingextra"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs">
+                                <div className="CardBlogs" onClick={() => navigate('/HowToOvercome')} style={{cursor:"pointer"}}>
                                     <img src={howtoovercome} alt="Camera Model 3" className="Cardrelated-image" />
                                     <h2>How to Overcome Imaging-Related Manufacturing Challenges of Dental Loupes</h2>
                                     <p>Dental loupes have gained a lot of traction among healthcare professionals, with more than 50% of American dentists incorporating them into their routine practice. Learn how overcoming issues like thermal dissipation, image stabilization, and lightweight design is crucial for creating comfortable loupe devices for dentists.</p>

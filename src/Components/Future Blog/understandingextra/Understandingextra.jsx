@@ -9,8 +9,11 @@ import Aguidtochoose from "../../../assets/Future Blog/Rightsidecards/Guide-toch
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import { Link } from 'react-router-dom';
 import BlogArtical from "../BlogArtical"
+import { useNavigate } from 'react-router-dom';
 
 const Understandingextra = () => {
+    const navigate = useNavigate();
+
     return (
         <div>
             <div className="Blogpage-cointainer">
@@ -87,19 +90,19 @@ const Understandingextra = () => {
                             <div className="Blogrelated-articles">
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
-                                <div className="CardBlogs">
+                                <div className="CardBlogs" onClick={() => navigate('/Threeimportant')} style={{cursor:"pointer"}}>
                                     <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
                                     <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality—impact intra-oral camera device performance. In this blog, we dive into the technical details of how these factors can be fine-tuned for accurate dental diagnosis.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs">
+                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{cursor:"pointer"}}>
                                     <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
                                     <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs">
+                                <div className="CardBlogs" onClick={() => navigate('/AGuidTochoose')} style={{cursor:"pointer"}}>
                                     <img src={Aguidtochoose} alt="Camera Model 3" className="Cardrelated-image" />
                                     <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
                                     <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>

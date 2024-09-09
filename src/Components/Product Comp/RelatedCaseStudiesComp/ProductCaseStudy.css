@@ -96,4 +96,9 @@
   .productcase-card-paragraph {
     font-size: 1em;
   }
+  .productcase-card-image {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
 }

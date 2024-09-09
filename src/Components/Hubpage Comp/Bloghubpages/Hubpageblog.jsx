@@ -7,8 +7,11 @@ import Capturing from "../../../assets/Hubpages/Capturing-the-Dentists.jpg";
 import Threeimp from "../../../assets/Hubpages/Three-Important-Parameters.jpg";
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import Hubblogcard from '../Bloghubpages/Hubblogcard';
+import { useNavigate } from 'react-router-dom';
 
 const Hubpageblog = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
         
@@ -18,7 +21,7 @@ const Hubpageblog = () => {
     <div className="hubpageblog">
       
       <div className="hubblog-column hubblog-left" data-aos="zoom-in-right" data-aos-duration="1000">
-        <div className="hubblog-border-box">
+        <div className="hubblog-border-box"  onClick={() => navigate('/Aguidtochoose')} style={{cursor:"pointer"}}>
           <img src={Aguidtochoose} alt="Image Description" />
           <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
           <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
@@ -29,14 +32,13 @@ const Hubpageblog = () => {
       </div>
       <div className="hubblog-column hubblog-right" data-aos="zoom-in-left" data-aos-duration="1000">
         <div className="hubblog-card-row" >
-        
-          <div className="hubblog-card">
+          <div className="hubblog-card"  onClick={() => navigate('/AutofocusBlog')} style={{cursor:"pointer"}}>
             <img src={Autovsfixed} alt="Card Image 2" />
             <h6>Autofocus vs. Fixed focus: Which Lens to Choose?</h6>
               <p>Understand how autofocus and fixed focus differentiate the dental imaging quality...</p>
             <AnimatedButton className="Hubread-more" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
             </div>
-            <div className="hubblog-card">
+            <div className="hubblog-card"  onClick={() => navigate('/RightforExtraoral')} style={{cursor:"pointer"}}>
             <img src={CMOS} alt="Card Image 1" />
             <h6>Choosing the right CMOS cameras for Extraoral Imaging</h6>
             <p>"Read on to learn more about key features like 4K resolution, autofocus capabilities...</p>
@@ -45,13 +47,13 @@ const Hubpageblog = () => {
         </div>
         <div className="hubblog-card-row">
          
-          <div className="hubblog-card">
-            <img src={Threeimp} alt="Card Image 2" />
+          <div className="hubblog-card"  onClick={() => navigate('/Threeimportant')} style={{cursor:"pointer"}}>
+            <img src={Threeimp} alt="Card Image 2"/>
             <h6>Three Important Parameters in Intra Oral Camera Technology</h6>
               <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality...</p>
             <AnimatedButton className="Hubread-more" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
             </div>
-            <div className="hubblog-card">
+            <div className="hubblog-card"  onClick={() => navigate('/CapturingDentists')} style={{cursor:"pointer"}}>
             <img src={Capturing} alt="Card Image 1" />
             <h6>Capturing the Dentists’ POV with Dental Loupe Cameras</h6>
               <p>This blog explores features that enable loupe cameras for precise diagnoses. Find out why size...</p>

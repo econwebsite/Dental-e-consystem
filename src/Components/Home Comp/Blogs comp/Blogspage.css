@@ -81,7 +81,7 @@
   justify-content: center;;
 }
 .homeblog-left-column .homeblog-box-content {
-  /* height: 657px; */
+  /* height: 720px; */
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -261,7 +261,7 @@
 }
 
 .homeblog-box-image {
-  height: 240px; 
+  height: 250px; 
 }
 }
 

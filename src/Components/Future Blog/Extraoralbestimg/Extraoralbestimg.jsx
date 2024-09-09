@@ -12,8 +12,11 @@ import Autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jp
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import BlogArtical from "../BlogArtical"
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const HowIspHelp = () => {
+    const navigate = useNavigate();
+
     return (
         <div>
             <div className="Blogpage-cointainer">
@@ -31,7 +34,7 @@ const HowIspHelp = () => {
 
                             <div className="blogborder-box">
                                 <p>Extraoral cameras, integral to modern dental practices, are designed to capture detailed images of a patient’s oral and facial structures from outside the mouth. These cameras are commonly integrated into dental equipment such as surgical lights, dental chairs, and handheld devices. Among their many applications, one of the most important is the role they play in insurance verification, where high-quality images are vital for accurate documentation and assessment.</p>
-                                <h3>Importance of Image Quality in Insurance Claim Verifications:</h3>
+                                <h3>Importance of Image Quality in Insurance Claim Verifications</h3>
                                 <p>Poor-quality images can lead to misinterpretations, where details are either missed or incorrectly assessed. This can result in delays or even cancellations of insurance claims, causing frustration and financial strain for both dentists and patients. For dentists, re-evaluating or capturing new images adds to their workload and delays the treatment process. For patients, this can mean prolonged wait times for insurance approval, unexpected out-of-pocket expenses, and stress.</p>
                                 <p>Given the stakes involved, ensuring high image quality (IQ) in extraoral imaging is of utmost importance. Achieving this requires more than just a good camera sensor; it demands precise synchronization between the sensor and the Image Signal Processor (ISP). However, achieving optimal IQ doesn’t stop at sensor-ISP sync. Optimizing the ISP is critical in achieving the desired image quality.</p>
                                 <p>The importance of ISP tuning lies in its ability to optimize the image processing pipeline, enhancing crucial aspects such as color accuracy, contrast, and sharpness, which are essential for detailed dental imaging. This is where e-con Systems’ expertise in ISP tuning becomes crucial. By fine-tuning the ISP to match the specific needs of dental imaging, e-con Systems ensures that extraoral cameras deliver the highest possible image quality.</p>
@@ -101,20 +104,20 @@ const HowIspHelp = () => {
                             <div className="Blogrelated-articles">
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
-                                <div className="CardBlogs">
+                                <div className="CardBlogs" onClick={() => navigate('/Threeimportant')} style={{cursor:"pointer"}}>
                                     <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
                                     <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality—impact intra-oral camera device performance. In this blog, we dive into the technical details of how these factors can be fine-tuned for accurate dental diagnosis.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs">
+                                <div className="CardBlogs" onClick={() => navigate('/CapturingDentists')} style={{cursor:"pointer"}}>
                                     <img src={Capturing} alt="Camera Model 1" className="Cardrelated-image" />
                                     <h2>Capturing the Dentists’ POV with Dental Loupe Cameras</h2>
                                     <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
                                 </div>
 
-                                <div className="CardBlogs">
+                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{cursor:"pointer"}}>
                                     <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
                                     <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>

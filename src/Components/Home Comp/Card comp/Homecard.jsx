@@ -4,12 +4,13 @@ import Cardimg1 from "../../../assets/home images/Intraoral.jpg";
 import Cardimg2 from "../../../assets/home images/Extraoral.jpg";
 import Cardimg3 from "../../../assets/home images/Loupecamera.jpg";
 import AnimatedButton from "../../Button comp/AnimatedButton";
-
+import { useNavigate } from 'react-router-dom';
 const Homecard = () => {
+  const navigate = useNavigate();
   return (
     <div className="mainContainer">
       <div className="second-home-card-container">
-        <div className="second-home-card1">
+        <div className="second-home-card1" onClick={() => navigate('/Intraoralcamera')} style={{cursor:"pointer"}}>
           <div className="second-home-card-inner">
             <img src={Cardimg1} alt="IntraOral Camera" className="second-home-card-img" />
             <h2 className="second-home-card-title">IntraOral Camera</h2>

@@ -4,12 +4,13 @@ import Fixedfocus from "../../../assets/Future Blog/fixed-focus.png";
 import Aguidtochoose from "../../../assets/Future Blog/Rightsidecards/Guide-tochoose.jpg"
 import Capturing from "../../../assets/Future Blog/Rightsidecards/Capturing-the-Dentists.jpg"
 import Understanding from "../../../assets/Future Blog/Rightsidecards/UnderstandingExtraoral.jpg"
-
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import BlogArtical from "../BlogArtical"
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AutofocusBlog = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="Blogpage-cointainer">
@@ -88,23 +89,23 @@ const AutofocusBlog = () => {
               <div className="Blogrelated-articles">
                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                 <hr />
-                <div className="CardBlogs">
+                <div className="CardBlogs" onClick={() => navigate('/AGuidTochoose')} style={{cursor:"pointer"}}>
                   <img src={Aguidtochoose} alt="Camera Model 1" className="Cardrelated-image" />
                   <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
                   <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
                   <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AGuidTochoose"></AnimatedButton>
 
                 </div>
-                <div className="CardBlogs">
+                <div className="CardBlogs" onClick={() => navigate('/CapturingDentists')} style={{cursor:"pointer"}}>
                   <img src={Capturing} alt="Camera Model 2" className="Cardrelated-image" />
                   <h2>Capturing the Dentists' POV with Dental Loupe Cameras</h2>
                   <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
                   <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
                 </div>
-                <div className="CardBlogs">
+                <div className="CardBlogs" onClick={() => navigate('/Understandingextra')} style={{cursor:"pointer"}}>
                   <img src={Understanding} alt="Camera Model 3" className="Cardrelated-image" />
                   <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>
-                  {/* <p></p> */}
+                  <p>Unlike intraoral cameras, which are inserted into the oral cavity, extraoral cameras are positioned externally to take comprehensive views of the jaw, teeth, and surrounding areas. In this blog, we explore the types of extraoral cameras, such as surgical light-mounted cameras, dental chair-mounted cameras, and handheld extraoral cameras, and their benefits.</p>
                   <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Understandingextra"></AnimatedButton>
                 </div>
               </div>

@@ -4,11 +4,15 @@ import dentalloupe from "../../../assets/Future Blog/Capturing-img.jpg"
 import Autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jpg";
 import CMOS from "../../../assets/Future Blog/Rightsidecards/the-right-CMOS.jpg";
 import Aguidtochoose from "../../../assets/Future Blog/Rightsidecards/Guide-tochoose.jpg";
+import Loupecamera from "../../../assets/Future Blog/Loupe-camera.jpg"
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import BlogArtical from "../BlogArtical"
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const CapturingDentists = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
     <div className="Blogpage-cointainer">
@@ -39,7 +43,7 @@ const CapturingDentists = () => {
 <h3>✓ Light Weight and Small Form Factor</h3>
 <p>Heavy dental loupes used during procedures can be cumbersome, especially during long sessions, causing strain on the dentist’s neck and shoulders. Additionally, larger cameras can obstruct the dentist's view, making it difficult to maintain focus. Integrating these cameras with dental loupes presents an additional challenge, as larger cameras can disrupt the loupe's form factor.</p>
 <div class="futureblog-imgcenter">
-    <img src={dentalloupe} alt="Image"/>
+    <img src={Loupecamera} alt="Image"/>
 </div>
 <br></br>
 <p>The dental loupe camera’s lightweight design and small form factor significantly reduces the physical burden on the dentist and can be perfectly integrated into the loupes. This is achieved by using a lightweight camera body and a compact design. This ensures the loupe camera maintains its form factor without obstructing the dentist's view.</p>
@@ -90,19 +94,19 @@ const CapturingDentists = () => {
             <hr/>
            
            
-            <div className="CardBlogs">
+            <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{cursor:"pointer"}}>
               <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
               <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
               <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
             </div>
-            <div className="CardBlogs">
+            <div className="CardBlogs" onClick={() => navigate('/RightforExtraoral')} style={{cursor:"pointer"}}>
               <img src={CMOS} alt="Camera Model 1" className="Cardrelated-image" />
               <h2>Choosing the right CMOS cameras for Extraoral Imaging</h2>
               <p>High-performance extraoral cameras are integral in dentistry. Read on to learn more about key features like 4K resolution, autofocus capabilities, and HDR imaging that enhance diagnostic accuracy and patient communication in extraoral devices.</p>
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/RightforExtraoral"></AnimatedButton>
             </div>
-            <div className="CardBlogs">
+            <div className="CardBlogs" onClick={() => navigate('/AGuidTochoose')} style={{cursor:"pointer"}}>
               <img src={Aguidtochoose} alt="Camera Model 3" className="Cardrelated-image" />
               <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
               <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>

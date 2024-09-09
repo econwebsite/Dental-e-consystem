@@ -6,7 +6,6 @@ import './Navbar.css';
 import dentallogo from '../../assets/home images/NewDentallogo.png'; // Import your logo image
 
 const NavBarpage = () => {
- 
   const offcanvasRef = useRef(null);
 
   const handleNavLinkClick = () => {
@@ -18,10 +17,10 @@ const NavBarpage = () => {
   const resourceMenu = (
     <Menu>
       <Menu.Item key="1">
-        <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/blogsHubPage" onClick={handleNavLinkClick}>Blogs</Link>
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/blogsHubPage" onClick={handleNavLinkClick}>Blogs</Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/casestudyHubPage" onClick={handleNavLinkClick}>Case Studies</Link>
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/casestudyHubPage" onClick={handleNavLinkClick}>Case Studies</Link>
       </Menu.Item>
     </Menu>
   );
@@ -56,7 +55,6 @@ const NavBarpage = () => {
                 <Link className="navbarpage-navLink">Products</Link>
               </Dropdown> */}
               <Link to="/Intraoralcamera" className="navbarpage-navLink">IntraOral Camera</Link>
-
               <div className="navbarpage-divider"></div>
               <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Resources</Link>
@@ -88,10 +86,10 @@ const NavBarpage = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="offcanvasNavbar" />
           <Navbar.Offcanvas className='Toggle-background'
-            id="offcanvasNavbar" 
+            id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
             placement="end"
-            ref={offcanvasRef} 
+            ref={offcanvasRef}
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel">
@@ -104,8 +102,7 @@ const NavBarpage = () => {
                 {/* <Dropdown overlay={productMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Products</a>
                 </Dropdown> */}
-               <Link className="nav-link" to="/Intraoralcamera" onClick={handleNavLinkClick}>IntraOral camera</Link>
-
+                <Link className="nav-link" to="/Intraoralcamera" onClick={handleNavLinkClick}>IntraOral camera</Link>
                 <Dropdown overlay={resourceMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Resources</a>
                 </Dropdown>
@@ -119,7 +116,7 @@ const NavBarpage = () => {
                   className="me-2"
                   aria-label="Search"
                 />
-                <Button variant="outline-success" style={{color:"white",borderColor:"#69ba2f",backgroundColor:"#69ba2f"}}>Search</Button>
+                <Button variant="outline-success" style={{ color: "white", borderColor: "#69ba2f", backgroundColor: "#69ba2f" }}>Search</Button>
               </Form>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
