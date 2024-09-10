@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footerpage.css'; 
 import dentallogo from "../../assets/home images/NewDentallogo.png";
-import econlogo from "../../assets/home images/footerlogo-1.png"
+import econlogo from "../../assets/home images/footerlogo-1.svg"
 import { RiPhoneFill, RiMailFill} from 'react-icons/ri';
 import AnimatedButton from "../Button comp/AnimatedButton"
 const Footerpage = () => {
