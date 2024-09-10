@@ -8,7 +8,7 @@ const leftBoxes = [
   { label: 'Interface', value: 'Plug and play USB 2.0 and USB 3.0', bgColor: '#b8f2ff' },
   { label: 'Output Format', value: 'MJPEG and YUV', bgColor: '#caf5fc' },
   { label: 'Warranty', value: '3 Years', bgColor: '#caf5fc' },
-  { label: 'Regulatory standards', value: 'CE FCC ROHS Reach', bgColor: '#def9fc' },
+  { label: 'Regulatory standards', value: 'CE, FCC, ROHS Reach', bgColor: '#def9fc' },
 ];
 
 const rightBoxes = [

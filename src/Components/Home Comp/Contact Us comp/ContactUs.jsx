@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState,useMemo } from 'react';
 import { Form, Input, Select, Row, Col, message } from 'antd'; // Make sure Select is imported
 import axios from 'axios';
 import './Contactus.css'; // Import custom CSS for styling
 import AnimatedButton from "../../Button comp/AnimatedButton"
+import countryList from 'react-select-country-list';
 
 const { TextArea } = Input;
 const { Option } = Select;
 
-const countries = [
+const countries1 = [
   { code: '+1', name: 'United States' },
   { code: '+1', name: 'Canada' },
   { code: '+52', name: 'Mexico' },
@@ -96,7 +97,12 @@ const ContactUs = () => {
   const [form] = Form.useForm();
   const [selectedCountry, setSelectedCountry] = useState('United States');
   const [showStates, setShowStates] = useState(true);
-
+  const countries = useMemo(() => {
+    return countryList().getData().map(country => ({
+    value: country.value,
+    label: country.label
+    }));
+    }, []);
   const onFinish = (values) => {
     console.log('Form values:', values);
     form.resetFields();
@@ -109,10 +115,10 @@ const ContactUs = () => {
   };
 
   const handleCountryChange = (value) => {
-    const country = countries.find(c => c.name === value);
+    const country = countries.find(c => c.value === value);
     setSelectedCountry(value);
-    setShowStates(country?.name === 'United States');
-    if (country?.name !== 'United States') {
+    setShowStates(country?.value === 'US');
+    if (country?.value !== 'US') {
       form.setFieldsValue({ state: undefined });
     }
   };
@@ -175,7 +181,7 @@ const ContactUs = () => {
               <Input 
               className='contact-num-box'
                 placeholder="Contact Number"
-                addonBefore={selectedCountry ? countries.find(c => c.name === selectedCountry)?.code : ''} 
+                //addonBefore={selectedCountry ? countries.find(c => c.name === selectedCountry)?.code : ''} 
               />
             </Form.Item>
           </Col>
@@ -192,8 +198,8 @@ const ContactUs = () => {
                 onChange={handleCountryChange}
               >
                 {countries.map((country) => (
-                  <Option key={country.code} value={country.name}>
-                    {country.name}
+                  <Option key={country.value} value={country.value}>
+                    {country.label}
                   </Option>
                 ))}
               </Select>

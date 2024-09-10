@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState,useMemo } from 'react';
 import { Form, Input, Select, Button, Row, Col, message, Modal,Result } from 'antd';
 import axios from 'axios';
 import "./Modelbutton.css";
+import countryList from 'react-select-country-list';
 import AnimatedButton from './AnimatedButton';
 import DownloadButton from './DownloadButton';
 
@@ -9,7 +10,7 @@ const { TextArea } = Input;
 const { Option } = Select;
 
 
-const countries = [
+const countries1 = [
   { code: '+1', name: 'United States' },
   { code: '+1', name: 'Canada' },
   { code: '+52', name: 'Mexico' },
@@ -97,6 +98,12 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
   const [showStates, setShowStates] = useState(true);
   const [isSuccess,setIsSuccess] = useState(false);
   const [downloadUrl,setDownloadUrl] = useState('');
+  const countries = useMemo(() => {
+    return countryList().getData().map(country => ({
+    value: country.value,
+    label: country.label
+    }));
+    }, []);
   const onFinish = (values) => {
     console.log('Form values:', values);
     form.resetFields();
@@ -129,10 +136,10 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
   };
 
   const handleCountryChange = (value) => {
-    const country = countries.find(c => c.name === value);
+    const country = countries.find(c => c.value === value);
     setSelectedCountry(value);
-    setShowStates(country?.name === 'United States');
-    if (country?.name !== 'United States') {
+    setShowStates(country?.value === 'US');
+    if (country?.value !== 'US') {
       form.setFieldsValue({ state: undefined });
     }
   };
@@ -234,7 +241,7 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
             >
               <Input
                 placeholder="Contact Number"
-                addonBefore={selectedCountry ? countries.find(c => c.name === selectedCountry)?.code : ''}
+                // addonBefore={selectedCountry ? countries.find(c => c.value === selectedCountry)?.code : ''}
               />
             </Form.Item>
           </Col>
@@ -251,8 +258,8 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
                 onChange={handleCountryChange}
               >
                 {countries.map((country) => (
-                  <Option key={country.code} value={country.name}>
-                    {country.name}
+                  <Option key={country.value} value={country.value}>
+                    {country.label}
                   </Option>
                 ))}
               </Select>
