@@ -40,6 +40,10 @@ const Understandingextra = () => {
                                         <img src={surgical} alt="Image" />
                                     </div>
                                     <br></br>
+                                    <div style={{ display: "flex", justifyContent: "center" }}>
+                                        <p style={{ textAlign: "center", color: "#036534" }}>A dental loupe in use</p>
+                                    </div>
+                                    <br></br>
                                     <li><p><b>Dental Chair-Mounted Cameras:</b>Mounted on the dental chair or its armrest, these cameras offer a fixed position to capture images of the patient’s face, jaw, and teeth.</p></li>
                                     <li><p><b>Handheld Extraoral Cameras: </b>Portable and versatile, handheld extraoral cameras can be used in various positions to capture images of the patient’s oral and facial structures.</p></li>
                                     <li><p><b>Integrated Imaging Systems: </b>These systems combine extraoral cameras with other dental equipment, such as digital scanners or CAD/CAM systems, to offer a comprehensive imaging solution.</p></li>
@@ -58,9 +62,14 @@ const Understandingextra = () => {
                                             <div className="threeparameter-item">
                                                 <img src={Aftercomp} alt="Shallow Dof" className="threeparameter-image" />
                                             </div>
+                            
                                         </div>
+                                        <br></br>
+                                    <div style={{ display: "flex", justifyContent: "center" }}>
+                                        <p style={{ textAlign: "center", color: "#036534" }}>Before-and-After Comparison of Dental Procedures</p>
                                     </div>
-                                </ul>                               <br></br>
+                                    </div>
+                                </ul>
                                 <h3>2. Comprehensive Documentation</h3>
                                 <ul>
                                     <li><p><b>Treatment Records: </b>Detailed images serve as a visual record of the patient’s oral and facial structures at various stages of treatment. This documentation is valuable for tracking progress, legal records, and future reference.</p></li>
@@ -85,28 +94,27 @@ const Understandingextra = () => {
                                 </ul>
                                 <p>In summary, extraoral cameras play a crucial role in modern dental practices by providing detailed imaging that enhances diagnosis, patient communication, and overall workflow. Their ability to capture comprehensive views of the oral and facial structures makes them invaluable tools for effective dental care and treatment planning.</p>
                                 <p><a href="">Check out all our dental cameras</a></p>
-      <p><a href="">Explore all our medical cameras</a></p> 
-       <p>Use our <a href="">Camera Selector Page</a> to find the best-fit camera for your product.</p>  
-         <p>If you need help integrating camera solutions into your dental loupes or other medical devices, please email us at <a href="">camerasolutions@e-consystems.com</a>.</p>
+                                <p><a href="">Explore all our medical cameras</a></p>
+                                <p>Use our <a href="">Camera Selector Page</a> to find the best-fit camera for your product.</p>
                             </div>
                         </div>
                         <div className="Blog-right-column">
                             <div className="Blogrelated-articles">
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
-                                <div className="CardBlogs" onClick={() => navigate('/Threeimportant')} style={{cursor:"pointer"}}>
+                                <div className="CardBlogs" onClick={() => navigate('/Threeimportant')} style={{ cursor: "pointer" }}>
                                     <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
                                     <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality—impact intra-oral camera device performance. In this blog, we dive into the technical details of how these factors can be fine-tuned for accurate dental diagnosis.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{cursor:"pointer"}}>
+                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{ cursor: "pointer" }}>
                                     <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
                                     <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient experience. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs" onClick={() => navigate('/AGuidTochoose')} style={{cursor:"pointer"}}>
+                                <div className="CardBlogs" onClick={() => navigate('/AGuidTochoose')} style={{ cursor: "pointer" }}>
                                     <img src={Aguidtochoose} alt="Camera Model 3" className="Cardrelated-image" />
                                     <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
                                     <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>

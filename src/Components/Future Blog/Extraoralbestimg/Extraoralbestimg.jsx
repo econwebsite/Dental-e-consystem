@@ -44,12 +44,18 @@ const HowIspHelp = () => {
                                 <div class="futureblog-imgcenter">
                                     <img src={IspBlog} alt="Image" />
                                 </div>
+                                <div className="threeparameter-title">
+                                    <p>Illustration of the ISP tuning workflow from capture to processed image</p>
+                                </div>
                                 <br></br>
                                 <h3>White balance adjustment</h3>
                                 <p>In a dental clinic with varying lighting conditions, white balance adjustment is crucial for accurate color reproduction. This feature enables ISPs to automatically detect the light source and adjust colors to maintain a natural appearance. It ensures that whites in an image appear true to life, regardless of the lighting conditions. This process involves capturing images at different color temperatures and applying an AWB algorithm. The algorithm identifies the white point in the image and adjusts the color temperature until the white point resembles actual white, effectively neutralizing any color casts from various light sources. As a result, white balance adjustment maintains consistent image quality across various environments.</p>
                                 <br></br>
                                 <div class="futureblog-imgcenter">
                                     <img src={differentlighting} alt="Image" />
+                                </div>
+                                <div className="threeparameter-title">
+                                    <p>Image of a tooth under varying lights</p>
                                 </div>
                                 <br></br>
                                 <h3>Exposure control</h3>
@@ -66,6 +72,9 @@ const HowIspHelp = () => {
                                 <div class="futureblog-imgcenter">
                                     <img src={colorcorrecmatrix} alt="Image" />
                                 </div>
+                                <div className="threeparameter-title">
+                                    <p>A color correction matrix used for Accurate color reproduction</p>
+                                </div>
                                 <br></br>
                                 <h3>Contrast</h3>
                                 <p>The absence of contrast in extraoral imaging can make it difficult to distinguish between different structures in the image, leading to poor visibility of critical details. Contrast enhancement is achieved through the camera’s ISP (Image Signal Processor) by adjusting the brightness difference between light and dark areas of the image. Techniques such as histogram equalization or gamma correction or adaptive algorithms are applied to enhance the image’s contrast. Implementing contrast enhancement improves the visibility of subtle details.</p>
@@ -79,6 +88,9 @@ const HowIspHelp = () => {
                                             <img src={Ispprocess} alt="Shallow Dof" className="threeparameter-image" />
                                         </div>
                                     </div>
+                                </div>
+                                <div className="threeparameter-title">
+                                    <p>Before De-Mosaicing vs. After De-Mosaicing</p>
                                 </div>
                                 <br></br>
                                 <p>In extraoral imaging, de-mosaicing is crucial because it reconstructs a full-color image from the incomplete color samples captured by a camera sensor using a color filter array (CFA), typically a Bayer filter. Without proper de-mosaicing, the image may suffer from color artifacts, incorrect color representation, and reduced image clarity. De-mosaicing is performed by interpolating the missing color information for each pixel based on neighboring pixels, effectively filling in the gaps to produce a complete image. Advanced algorithms, such as bilinear interpolation or more complex edge-detection methods, are used to enhance color accuracy and reduce artifacts. Implementing de-mosaicing ensures that extraoral images have accurate color representation and high resolution.</p>
@@ -95,29 +107,26 @@ const HowIspHelp = () => {
                                 <p>e-con Systems' camera solutions also come equipped with inbuilt ISPs for each sensor, which ensures superior image quality, optimal color accuracy, and more.</p>
                                 <p>Additionally, we offer miniaturization services to customize the camera form factor to meet the specifications of your dental device.</p>
                                 <p><a href="">View all our dental cameras</a></p>
-                                <p>If you need help integrating camera solutions into your extraoral devices, please write to <a href="">camerasolutions@e-consystems.com</a>.</p>
-
-
                             </div>
                         </div>
                         <div className="Blog-right-column">
                             <div className="Blogrelated-articles">
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
-                                <div className="CardBlogs" onClick={() => navigate('/Threeimportant')} style={{cursor:"pointer"}}>
+                                <div className="CardBlogs" onClick={() => navigate('/Threeimportant')} style={{ cursor: "pointer" }}>
                                     <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
                                     <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality—impact intra-oral camera device performance. In this blog, we dive into the technical details of how these factors can be fine-tuned for accurate dental diagnosis.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs" onClick={() => navigate('/CapturingDentists')} style={{cursor:"pointer"}}>
+                                <div className="CardBlogs" onClick={() => navigate('/CapturingDentists')} style={{ cursor: "pointer" }}>
                                     <img src={Capturing} alt="Camera Model 1" className="Cardrelated-image" />
                                     <h2>Capturing the Dentists’ POV with Dental Loupe Cameras</h2>
                                     <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
                                 </div>
 
-                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{cursor:"pointer"}}>
+                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{ cursor: "pointer" }}>
                                     <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
                                     <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient experience. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>

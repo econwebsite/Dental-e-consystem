@@ -63,7 +63,11 @@ ul {
 
 .threeparameter-title {
   margin-top: 20px;
-  /* Space above the title */
+}
+.threeparameter-title p{
+  color:#036534 !important;
+  font-size: 1em !important;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -91,6 +95,13 @@ ul {
   .threeparameter-item-text {
     font-size: 0.9em;
   }
+}
+.threeparameter-title {
+  margin-top: 20px;
+}
+.threeparameter-title p{
+  color:#036534 !important;
+  font-size: 0.9em !important;
 }
 
 .blog-breadcrumb {

@@ -5,7 +5,6 @@ import Intraoralcam from "../../../assets/Future Blog/Intraoral-cam.jpg"
 import shallowdof from "../../../assets/Future Blog/shallowdof.jpg"
 import largedof from "../../../assets/Future Blog/largedof.jpg"
 import Aperturerange from "../../../assets/Future Blog/Aperture-range.jpg"
-import shalldeepcomp from "../../../assets/Future Blog/shallodeep-comp.jpg"
 import Narrowangle from "../../../assets/Future Blog/Narrow-angle.jpg"
 import Difflights from "../../../assets/Future Blog/diff-lights.jpg"
 import shadingflat from "../../../assets/Future Blog/shadingflat.jpg"
@@ -47,6 +46,9 @@ const Threeimportant = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="threeparameter-title">
+                                    <p>A Dental Mirror and an Intraoral Camera in use.</p>
+                                </div>
                                 <br></br>
                                 <p>Intra-oral cameras overcome these. It can capture high-resolution images on screen, which helps dentists see details better than with a magnifying glass. Plus, with intra-oral devices, images can also be saved for later reference and shared with patients for improved communication.  </p>
                                 <p>Inside an intraoral camera, several aspects play critical roles, but the most important among them are the Depth of Field, Field of View, and Image Quality.  In this blog, we will discuss about them in detail.</p>
@@ -63,6 +65,9 @@ const Threeimportant = () => {
                                 <div class="futureblog-imgcenter">
                                     <img src={Aperturerange} alt="Image" />
                                 </div>
+                                <div className="threeparameter-title">
+                                    <p>Depth of Field decreases as Aperture Size increases.</p>
+                                </div>
                                 <br></br>
 
                                 <p><b>Focal Length:</b>The focal length of a lens also affects DoF. Lenses with shorter focal lengths (wide-angle lenses) generally have a deeper DoF compared to lenses with longer focal lengths (narrow-angle lenses).</p>
@@ -70,11 +75,7 @@ const Threeimportant = () => {
                                 <p><b>Distance to the Subject:</b>The closer the camera is to the subject, the shallower the DoF. This is particularly relevant in intraoral cameras due to the close-up nature of dental imaging.</p>
                                 <p>Let’s now see the challenges faced with a shallow DoF and how a deep DoF helps overcome these.</p>
                                 <p><b>Focus Area: </b>A shallow DoF results in a narrow band of focus, meaning only a small portion of the image will be sharp while other areas remain blurred. This can obscure important details in the surrounding regions, complicating accurate diagnosis. This is where a deep DoF proves to be useful by ensuring that a larger portion of the image is in sharp focus. This broad focus range captures all relevant details throughout the oral cavity, enhancing the clarity of both near and distant structures.</p>
-                                <br></br>
-                                <div class="futureblog-imgcenter">
-                                    <img src={shalldeepcomp} alt="Image" />
-                                </div>
-                                <br></br>
+
                                 <p><b>Re-focusing: </b>With narrow DoF, frequent adjustments are often needed to refocus on different areas, which can be time-consuming and uncomfortable for patients. The limited focus range necessitates repositioning the camera to capture various parts of the mouth clearly. This can be solved with a broader focus range, which reduces the need for frequent camera adjustments. This streamlines the imaging process, speeds up procedures, and improves patient comfort by reducing the need for constant repositioning.
                                 </p>
                                 <p><b>Imaging Consistency: </b>Images may lack consistency, with some parts of the oral cavity in sharp focus while others are blurred. This variability can make it difficult to compare images over time and track changes in dental conditions accurately. A deep DoF provides consistent image quality across the entire field of view. This uniformity simplifies the comparison of images over time and helps in effectively tracking changes in dental conditions.</p>
@@ -84,16 +85,16 @@ const Threeimportant = () => {
                                     <div className="threeparameter-content">
                                         <div className="threeparameter-item">
                                             <div className="threeparameter-item-text"><b>Shallow DoF</b></div>
-                                            <img src={shallowdof} alt="Shallow Dof" className="threeparameter-image" />
+                                            <img src={largedof} alt="Shallow Dof" className="threeparameter-image" />
 
                                         </div>
                                         <div className="threeparameter-item">
                                             <div className="threeparameter-item-text"><b>Large DoF</b></div>
-                                            <img src={largedof} alt="Large Dof" className="threeparameter-image" />
+                                            <img src={shallowdof} alt="Large Dof" className="threeparameter-image" />
                                         </div>
                                     </div>
                                     <div className="threeparameter-title">
-                                        <p>Depth of Field Shots</p>
+                                        <p>A comparison between Narrow Depth of Field and High Depth of Field</p>
                                     </div>
                                 </div>
                                 <br></br>
@@ -119,6 +120,9 @@ const Threeimportant = () => {
                                 <div class="futureblog-imgcenter">
                                     <img src={Narrowangle} alt="Image" />
                                 </div>
+                                <div className="threeparameter-title">
+                                        <p>Full Dental Arch captured using a wide field of view camera</p>
+                                    </div>
                                 <br></br>
 
 
@@ -134,6 +138,9 @@ const Threeimportant = () => {
                                 <div class="futureblog-imgcenter">
                                     <img src={Difflights} alt="Image" />
                                 </div>
+                                <div className="threeparameter-title">
+                                        <p>Capture of dental structure under varying light settings</p>
+                                    </div>
                                 <br></br>
                                 <ul>
                                     <li><p><b>Auto Exposure (AE): </b>AE automatically adjusts exposure settings to maintain optimal brightness, ensuring clear, well-lit images under varying lighting conditions. It uses light sensors and algorithms to adjust shutter speed, aperture, and ISO, capturing intricate details consistently.</p></li>
@@ -145,14 +152,15 @@ const Threeimportant = () => {
                                 <div class="futureblog-imgcenter">
                                     <img src={shadingflat} alt="Image" />
                                 </div>
+                                <div className="threeparameter-title">
+                                        <p>Sample image outputs without lens shading correction (left)  <br></br> and after lens shading correction(right).</p>
+                                    </div>
                                 <br></br>
-
-<p>By prioritizing these parameters, we can significantly enhance the functionality and effectiveness of intraoral cameras, ultimately leading to greater patient satisfaction and smoother clinical procedures. As technology continues to evolve, maintaining a focus on field of view, depth of field, and image quality will remain essential for advancing the capabilities of intraoral imaging solutions.</p>
-<h3>Cameras for Intraoral Cameras Offered by e-con Systems</h3>
-<p>e-con Systems has 20+ years of designing, developing, and manufacturing OEM camera solutions. We also have deep expertise as an Original Design Manufacturer (ODM), which equips us to offer superior plug-and-play cameras customized for intraoral. These camera solutions come with dedicated Image Signal Processors (ISPs) for each sensor to achieve optimal color accuracy.</p>
-<p>e-con Systems™ also provides customization services to meet exact requirements.</p>
-<p><a href="">Check out all our dental cameras</a></p>
-<p>If you need help integrating camera solutions into your dental loupes or other medical devices, please email us at <a href="">camerasolutions@e-consystems.com</a>.</p>
+                                <p>By prioritizing these parameters, we can significantly enhance the functionality and effectiveness of intraoral cameras, ultimately leading to greater patient satisfaction and smoother clinical procedures. As technology continues to evolve, maintaining a focus on field of view, depth of field, and image quality will remain essential for advancing the capabilities of intraoral imaging solutions.</p>
+                                <h3>Cameras for Intraoral Cameras Offered by e-con Systems</h3>
+                                <p>e-con Systems has 20+ years of designing, developing, and manufacturing OEM camera solutions. We also have deep expertise as an Original Design Manufacturer (ODM), which equips us to offer superior plug-and-play cameras customized for intraoral. These camera solutions come with dedicated Image Signal Processors (ISPs) for each sensor to achieve optimal color accuracy.</p>
+                                <p>e-con Systems™ also provides customization services to meet exact requirements.</p>
+                                <p><a href="">Check out all our dental cameras</a></p>
 
 
 
@@ -165,19 +173,19 @@ const Threeimportant = () => {
                             <div className="Blogrelated-articles">
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
-                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{cursor:"pointer"}}>
+                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{ cursor: "pointer" }}>
                                     <img src={Autofocus} alt="Camera Model 1" className="Cardrelated-image" />
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose for Intraoral Cameras?</h2>
                                     <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient experience. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs" onClick={() => navigate('/CapturingDentists')} style={{cursor:"pointer"}}>
+                                <div className="CardBlogs" onClick={() => navigate('/CapturingDentists')} style={{ cursor: "pointer" }}>
                                     <img src={Capturing} alt="Camera Model 2" className="Cardrelated-image" />
                                     <h2>Capturing the Dentists' POV with Dental Loupe Cameras</h2>
                                     <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
                                     <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs" onClick={() => navigate('/howtoovercome')} style={{cursor:"pointer"}}>
+                                <div className="CardBlogs" onClick={() => navigate('/howtoovercome')} style={{ cursor: "pointer" }}>
                                     <img src={howtoovercome} alt="Camera Model 3" className="Cardrelated-image" />
                                     <h2>How to Overcome Imaging-Related Manufacturing Challenges of Dental Loupes</h2>
                                     <p>Dental loupes have gained a lot of traction among healthcare professionals, with more than 50% of American dentists incorporating them into their routine practice. Learn how overcoming issues like thermal dissipation, image stabilization, and lightweight design is crucial for creating comfortable loupe devices for dentists.</p>

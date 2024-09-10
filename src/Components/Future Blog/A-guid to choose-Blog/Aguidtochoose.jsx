@@ -2,8 +2,8 @@ import React from "react";
 import "../Blogcommon.css"
 import guideimg1 from "../../../assets/Future Blog/future-aguidtochoose.jpg"
 import intraoral from "../../../assets/Future Blog/future-intraoral-cam.jpg"
-import Teethimg from '../../../assets/Future Blog/future-teeth.jpg';
-import teethblur from '../../../assets/Future Blog/future-teethblur.jpg';
+import shallowdof from "../../../assets/Future Blog/shallowdof.jpg"
+import largedof from "../../../assets/Future Blog/largedof.jpg"
 import temprature from '../../../assets/Future Blog/future-temprature.jpg';
 import focallength from '../../../assets/Future Blog/focal&fieldof view.jpg';
 import autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jpg";
@@ -36,39 +36,47 @@ const Aguidtochoose = () => {
                                 <p>The adoption of intraoral cameras in dental clinics around the globe has greatly enhanced the capabilities of dental professionals. Along with offering them clear insights into the dental conditions at hand, they also help patients understand their oral concerns in a better way.</p>
                                 <p>That is why selecting the appropriate intraoral camera becomes crucial. </p>
                                 <p>In this blog, we explore the key camera specifications required for intraoral cameras and how they play a major role in boosting dental care efficiency.</p>
-
-                                <div class="futureblog-imgcenter">
-                                    <img src={guideimg1} alt="Image" />
-                                </div>
-                                <br></br>
                                 <h3>How Does an Intraoral Camera Work?</h3>
                                 <p>Most intraoral cameras tend to resemble electric toothbrushes. They are designed for easy navigation and patient comfort during dental diagnosis and treatment.</p>
                                 <p>The head region of an intraoral camera, housing the lens and an array of LED lights, plays a crucial role. As the dentist moves around the oral region, the lens directs the light onto the CMOS sensor. This sensor, a key component, converts the incoming photons into electric signals, resulting in highly detailed images of the oral cavity.</p>
                                 <div class="futureblog-imgcenter">
                                     <img src={intraoral} alt="Image" />
                                 </div>
+                                <div className="threeparameter-title">
+                                        <p>Rear and Front View of an Intraoral Camera</p>
+                                    </div>
                                 <br></br>
                                 <p>Every intraoral camera has a freeze/capture button that allows dentists to capture images and videos as per their requirements. </p>
                                 <p>Intraoral cameras come in wired and wireless versions. Wireless intraoral cameras transmit image data via Bluetooth or Wi-Fi. The transmitted images or videos are integrated with dental management software for documentation purposes.</p>
                                 <h3>What Are the Key Features of Intraoral Cameras?</h3>
                                 <h3>Macro imaging </h3>
                                 <p>When using intraoral cameras, dentists often need to get very close to the molar and internal gum regions. This necessitates capturing close-up images of the inner areas of the oral area at a shorter distance.</p>
-                                <div className="threeparameter-container">
-                                    <div className="threeparameter-content">
-                                        <div className="threeparameter-item">
-                                            <img src={Teethimg} alt="Large Dof" className="threeparameter-image" />
-                                        </div>
-                                        <div className="threeparameter-item">
-                                            <img src={guideimg1} alt="Shallow Dof" className="threeparameter-image" />
-                                        </div>
-                                    </div>
+                                <div class="futureblog-imgcenter">
+                                    <img src={guideimg1} alt="Image" />
                                 </div>
+                                <div className="threeparameter-title">
+                                        <p>Capturing close-up images of the teeth with macro-imaging</p>
+                                    </div>
+                                <br></br>
                                 <p>Macro imaging refers to the process of capturing detailed, close-up images of small target objects such as the structure of teeth and gums in dental imaging. In macro imaging, the subject appears as large or larger in the image as it does in real life. With macro imaging enabled, it becomes easy to capture the inner regions of the mouth. </p>
                                 <p>Macro imaging is enabled in intraoral cameras with the use of appropriate macro lenses. Sensors of sufficient resolution paired with suitable lens systems capture images with uniform sharpness and clarity. An Intraoral camera with a working distance of 5 mm or less would be an ideal choice.</p>
                                 <h3>High Depth of Field</h3>
                                 <p>Intraoral cameras with a narrow depth of field, may only capture a small part of the image sharply, requiring constant adjustment of its position to view both close-up and distant regions within the oral cavity. Also, important details may appear blurred, if they fall outside the narrow focus range, potentially leading to missed diagnoses or inadequate assessments.</p>
-                                <div class="futureblog-imgcenter">
-                                    <img src={teethblur} alt="Image" />
+                                <div className="threeparameter-container">
+                                    <div className="threeparameter-content">
+                                        <div className="threeparameter-item">
+                                            <div className="threeparameter-item-text"><b>Shallow DoF</b></div>
+                                            <img src={shallowdof} alt="Shallow Dof" className="threeparameter-image" />
+
+                                        </div>
+                                        <div className="threeparameter-item">
+                                            <div className="threeparameter-item-text"><b>Large DoF</b></div>
+                                            <img src={largedof} alt="Large Dof" className="threeparameter-image" />
+                                        </div>
+                                    </div>
+                                    <div className="threeparameter-title">
+                                        <p>A comparison between Narrow Depth of Field and High Depth of Field</p>
+                                    </div>
                                 </div>
                                 <br></br>
                                 <p>A high Depth of Field (DoF) ensures that a larger area of the target is in sharp focus. In the context of intraoral cameras, it ensures that both the close-up and distant regions of the oral cavity are viewed with accurate sharpness.</p>
@@ -81,6 +89,9 @@ const Aguidtochoose = () => {
                                 <div class="futureblog-imgcenter">
                                     <img src={temprature} alt="Image" />
                                 </div>
+                                <div className="threeparameter-title">
+                                        <p>Colour Temperatures of Different Light Sources</p>
+                                    </div>
                                 <br></br>
                                 <p>To address this challenge, an inbuilt image signal processor (ISP) with advanced auto white balance (AWB) capabilities is crucial. The ISP dynamically adjusts the camera's color settings in real-time by measuring the scene's color temperature against a reference point and then adjusting the red, blue, and green gains accordingly to achieve balanced color reproduction. </p>
                                 <p>This process helps to neutralize the color cast caused by different light sources, such as incandescent, fluorescent, or natural daylight, ensuring that white objects appear white in the final image, and other colors are rendered accurately. </p>
@@ -92,6 +103,9 @@ const Aguidtochoose = () => {
                                 <div class="futureblog-imgcenter">
                                     <img src={focallength} alt="Image" />
                                 </div>
+                                    <div className="threeparameter-title">
+                                        <p>Focal length vs Field of View</p>
+                                    </div>
                                 <br></br>
 
                                 <h3>High-Definition resolution</h3>
@@ -108,7 +122,6 @@ const Aguidtochoose = () => {
 
                                 <p>e-con Systems™ also provides customization services to meet exact requirements.</p>
                                 <p><a href="">Check out all our dental cameras</a></p>
-                                <p>If you need help integrating camera solutions into your dental loupes or other medical devices, please email us at <a href="">camerasolutions@e-consystems.com</a>.</p>
 
                             </div>
                         </div>
