@@ -11,6 +11,7 @@ const Modelbutton =({
   className = '',
   productName = null,
   docName = null,
+  title = null,
   }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
@@ -43,6 +44,7 @@ const Modelbutton =({
         type = {text === 'Contact Us'?`contact`:`download`}
         productName={productName || null}
         docName={docName || null}
+        title = {title || null}
       />
     </div>
   );

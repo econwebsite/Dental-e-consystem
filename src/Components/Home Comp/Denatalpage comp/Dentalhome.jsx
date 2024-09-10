@@ -1,7 +1,7 @@
 import React from 'react';
 import './Dentalhome.css';
 import { Carousel } from 'antd';
-import dentalimg2 from "../../../assets/home images/Homebanner.jpg";
+import dentalimg2 from "../../../assets/home images/Homebanner.png";
 import AnimatedButton from '../../Button comp/AnimatedButton';
 import Modelbutton from '../../Button comp/Modelbutton';
 const Dentalhome = () => {

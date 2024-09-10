@@ -66,12 +66,12 @@ const Aguidtochoose = () => {
                                     <div className="threeparameter-content">
                                         <div className="threeparameter-item">
                                             <div className="threeparameter-item-text"><b>Shallow DoF</b></div>
-                                            <img src={shallowdof} alt="Shallow Dof" className="threeparameter-image" />
+                                            <img src={largedof} alt="large Dof" className="threeparameter-image" />
 
                                         </div>
                                         <div className="threeparameter-item">
                                             <div className="threeparameter-item-text"><b>Large DoF</b></div>
-                                            <img src={largedof} alt="Large Dof" className="threeparameter-image" />
+                                            <img src={shallowdof} alt="shallow Dof" className="threeparameter-image" />
                                         </div>
                                     </div>
                                     <div className="threeparameter-title">

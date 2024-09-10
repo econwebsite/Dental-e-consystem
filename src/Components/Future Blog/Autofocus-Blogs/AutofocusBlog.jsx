@@ -32,8 +32,6 @@ const AutofocusBlog = () => {
                 </p>
 
                 <p>Product developers and decision-makers must grasp these differences so that dental professionals get the most suitable option for their specific intraoral needs.</p>
-                <h3>Image: Different lenses</h3>
-                <p>In this blog, you’ll discover why lenses are an integral part of intraoral cameras, the pros and cons of autofocus and fixed-focus lenses, and finally – how to select the best-fit one.</p>
                 <h3>Role of Lenses in Intraoral Cameras</h3>
                 <p>Intraoral cameras capture clear images of the oral cavity. These images play a crucial role in analyzing dental conditions, planning treatments, and monitoring patient progress. The type of lens used in these cameras directly impacts their ability to deliver clear, accurate visuals. After all, high-quality lenses are required to minimize distortion and aberrations, which can otherwise compromise image clarity.</p>
                 <p>Furthermore, these lenses in the cameras must be able to handle the challenging lighting conditions often found within the oral cavity. This is how intraoral cameras empower dental professionals to make accurate assessments and provide proper treatments.

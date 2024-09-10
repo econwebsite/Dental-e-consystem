@@ -5,6 +5,7 @@ import Autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jp
 import CMOS from "../../../assets/Future Blog/Rightsidecards/the-right-CMOS.jpg";
 import Aguidtochoose from "../../../assets/Future Blog/Rightsidecards/Guide-tochoose.jpg";
 import Loupecamera from "../../../assets/Future Blog/Loupe-camera.jpg"
+import accuratecolor from "../../../assets/Future Blog/accurate-colour.jpg"
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import BlogArtical from "../BlogArtical"
 import { Link } from 'react-router-dom';
@@ -59,7 +60,7 @@ const CapturingDentists = () => {
                 <p>Inaccurate color representation in dental images can lead to misdiagnosis or improper treatment planning, as dentists rely on realistic colors to assess the condition of tissues and teeth. Subtle color variations in oral tissues can indicate underlying conditions like inflammation, infection, etc. </p>
                 <p>Accurate color reproduction in dental loupe cameras is achieved through a combination of high-quality image sensors with color filter arrays, and sophisticated color correction algorithms. The sensors, typically CMOS, capture light intensity across different wavelengths, while the color filter array separates the light into red, green, and blue components. Advanced image processing algorithms then correct any color deviations, ensuring true-to-life hues. </p>
                 <div class="futureblog-imgcenter">
-                  <img src={dentalloupe} alt="Image" />
+                  <img src={accuratecolor} alt="Image" />
                 </div>
                 <div className="threeparameter-title">
                   <p>Dental Images With and without accurate colour reproduction</p>

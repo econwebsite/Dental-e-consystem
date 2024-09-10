@@ -91,7 +91,7 @@ const usaStates = [
   { code: 'WI', name: 'Wisconsin' },
   { code: 'WY', name: 'Wyoming' },
 ];
-function Modelform({ visible, onClose, type, docName, productName }) {
+function Modelform({ visible, onClose, type, docName, productName,title }) {
   const [form] = Form.useForm();
   const [selectedCountry, setSelectedCountry] = useState('United States');
   const [showStates, setShowStates] = useState(true);
@@ -172,7 +172,7 @@ function Modelform({ visible, onClose, type, docName, productName }) {
   };
   return (
     <Modal 
-      title={type === 'download' ? "Download Form":"Contact Form"}
+      title={type === 'download' ? `Download - ${title}` :"Contact Form"}
       visible={visible}
       onCancel={onClose}
       footer={null}
