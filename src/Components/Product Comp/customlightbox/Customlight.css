@@ -111,7 +111,7 @@
     }
 
     .custom-close-button {
-        font-size: 1.8rem;
+        font-size: 1.8em;
     }
     .custom-lightbox-title {
         font-size: 1em;
@@ -133,10 +133,10 @@
         height: 70%;
     }
     .custom-nav-button {
-        font-size: 1rem;
+        font-size: 1em;
     }
     .custom-lightbox-title {
-        font-size: 0.9em;
+        font-size: 1em;
     }
     .custom-close-button {
         font-size: 1.2rem;
