@@ -3,7 +3,7 @@ import { Button } from 'antd';
 const DownloadButton = (value) => {
 const handleDownload = async () => {
     console.log(value, "venkat value")
-    const response = await fetch('http://192.168.9.82:3001/download', {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/download`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',

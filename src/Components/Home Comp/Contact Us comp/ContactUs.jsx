@@ -100,7 +100,7 @@ const ContactUs = () => {
   const onFinish = (values) => {
     console.log('Form values:', values);
     form.resetFields();
-    axios.post('http://192.168.9.82:3001/api/contactusform', { values })
+    axios.post(`${import.meta.env.VITE_API_URL}/api/contactusform`, { values })
       .then(result => {
         message.success('Message sent successfully!');
         //onClose();

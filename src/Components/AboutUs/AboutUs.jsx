@@ -32,7 +32,7 @@ export default function AboutUs() {
             </div>
             <div className="aboutus-image-text-pair">
               <img src={loupe} alt="Dental Loupe" className="aboutus-img-thumbnail" />
-              <p>Formulated the integration of our cameras into the dental surgical lights</p>
+              <p>Formulating the integration of our cameras into the dental surgical lights</p>
             </div>
             <div className="aboutus-image-text-pair">
               <img src={surgical} alt="Surgical Lights" className="aboutus-img-thumbnail" />

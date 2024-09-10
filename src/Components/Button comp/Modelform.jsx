@@ -103,7 +103,7 @@ function Modelform({ visible, onClose, type, docName, productName }) {
     if(type ==='download'){
       values.productName=productName;
       values.documentName=docName;
-      axios.post('http://192.168.9.82:3001/api/downloadform', { values })
+      axios.post(`${import.meta.env.VITE_API_URL}/api/downloadform`, { values })
       .then(result => {
         //message.success('Message sent successfully!');
         console.log(result, ' Result');
@@ -118,7 +118,7 @@ function Modelform({ visible, onClose, type, docName, productName }) {
     else{
       values.productName=productName;
       values.documentName=docName;
-      axios.post('http://192.168.9.82:3001/api/contactusform', { values })
+      axios.post(`${import.meta.env.VITE_API_URL}/api/contactusform`, { values })
       .then(result => {
         message.success('Message sent successfully!');
         onClose();
@@ -136,7 +136,40 @@ function Modelform({ visible, onClose, type, docName, productName }) {
       form.setFieldsValue({ state: undefined });
     }
   };
+  const handleEmailValidate = async (e) => {
+    const email = e.target.value;
+    console.log(email, "email");
+    if (email) {
+   axios.post(`${import.meta.env.VITE_API_URL}/api/validateEmail`, { email })
+    .then(result => {
+      console.log(result, 'zerobounce response');
+      if(result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based'){
+        if(!result.data.free_email){
+          return true
+        } 
+        else{
+          form.setFields([
+            {
+            name: 'email',
+            errors: ["Please enter valid email ID"],
+            },
+            ]);
+        }
+      }
+      else{
+        form.setFields([
+          {
+          name: 'email',
+          errors: ["Please enter valid email ID"],
+          },
+          ]);
+      }
+      
+    })
+    .catch(err => console.log(err));
 
+    }
+  };
   return (
     <Modal 
       title={type === 'download' ? "Download Form":"Contact Form"}
@@ -169,7 +202,7 @@ function Modelform({ visible, onClose, type, docName, productName }) {
               name="name"
               rules={[{ required: true, message: 'Please enter your name' }]}
             >
-              <Input placeholder="Name" />
+              <Input placeholder="Name *" />
             </Form.Item>
           </Col>
           <Col span={12}>
@@ -177,7 +210,7 @@ function Modelform({ visible, onClose, type, docName, productName }) {
               name="companyName"
               rules={[{ required: true, message: 'Please enter your company name' }]}
             >
-              <Input placeholder="Company Name" />
+              <Input placeholder="Company Name*" />
             </Form.Item>
           </Col>
         </Row>
@@ -191,7 +224,7 @@ function Modelform({ visible, onClose, type, docName, productName }) {
                 { type: 'email', message: 'Please enter a valid email' },
               ]}
             >
-              <Input placeholder="Email" />
+              <Input placeholder="Email*" onBlur={handleEmailValidate} />
             </Form.Item>
           </Col>
           <Col span={12}>

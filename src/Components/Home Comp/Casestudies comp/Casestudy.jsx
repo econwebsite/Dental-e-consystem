@@ -20,8 +20,8 @@ const Casestudy = () => {
               <img src={Roadmap} alt="Full Image" className="casestudy-full-image" />
               <div className="casestudy-box-content">
                 <h4>The Roadmap of Dual Ethernet Camera Integration in Dental Operatory Lights</h4>
-                <p>Explore how we successfully integrated dual 4K cameras into dental operatory lights for a leading European dental device manufacturer. In this case study, we discuss the challenges we faced during the prototyping phase. Read how we customized the camera architecture and implemented other enhanced modifications, such as reduced latency and lens shading correction, to achieve superior image quality in brightly illuminated dental environment.</p>
-                <Modelbutton className="casestudy-btn1" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/" />
+                <p>Explore how we successfully integrated dual 4K cameras into dental operatory lights for a leading European dental device manufacturer. In this case study, we discuss the challenges we faced during the prototyping phase. Read how we customized the camera architecture and implemented other enhanced modifications, such as reduced latency and lens shading correction, to achieve superior image quality in brightly illuminated dental environments.</p>
+                <Modelbutton className="casestudy-btn1" text="Know more" backgroundColor="#00aeef" animationColor="#344ea1" hoverColor="#344ea1" to="/" productName="IntraOral" docName="IntraOral User Manual"/>
               </div>
             </div>
           </div>
