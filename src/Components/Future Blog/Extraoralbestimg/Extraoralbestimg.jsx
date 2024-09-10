@@ -106,7 +106,7 @@ const HowIspHelp = () => {
                                 <p>e-con Systems has 20+ years of experience designing, developing, and manufacturing OEM camera solutions. Our specialized expertise as an Original Design Manufacturer (ODM) enables us to provide high-quality plug-and-play cameras, especially for extraoral devices.</p>
                                 <p>e-con Systems' camera solutions also come equipped with inbuilt ISPs for each sensor, which ensures superior image quality, optimal color accuracy, and more.</p>
                                 <p>Additionally, we offer miniaturization services to customize the camera form factor to meet the specifications of your dental device.</p>
-                                <p><a href="">View all our dental cameras</a></p>
+                                {/* <p><a href="">View all our dental cameras</a></p> */}
                             </div>
                         </div>
                         <div className="Blog-right-column">

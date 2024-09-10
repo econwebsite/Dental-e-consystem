@@ -94,9 +94,9 @@ const CapturingDentists = () => {
                 <h3>Cameras for Dental Loupes Offered by e-con Systems</h3>
                 <p>e-con Systems has 20+ years of designing, developing, and manufacturing OEM camera solutions. We also have deep expertise as an Original Design Manufacturer (ODM), which equips us to offer superior plug-and-play cameras customized for dental loupes. These camera solutions come with dedicated Image Signal Processors (ISPs) for each sensor to achieve optimal color accuracy.</p>
                 <p>e-con Systems™ also provides miniaturization services to adjust the camera form factor to meet exact requirements.</p>
-                <p><a href="">Check out all our dental cameras</a></p>
-                <p><a href="">Explore all our medical cameras</a></p>
-                <p>Use our <a href="">Camera Selector Page</a> to find the best-fit camera for your product.</p>
+                {/* <p><a href="">Check out all our dental cameras</a></p> */}
+                {/* <p><a href="">Explore all our medical cameras</a></p> */}
+                <p>Use our <a href="https://www.e-consystems.com/camera-selector.asp">Camera Selector Page</a> to find the best-fit camera for your product.</p>
               </div>
             </div>
             <div className="Blog-right-column">

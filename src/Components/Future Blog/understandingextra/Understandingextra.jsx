@@ -93,9 +93,9 @@ const Understandingextra = () => {
                                     <li><p><b>Enhanced Collaboration:</b> Facilitates sharing of images and data with other specialists, improving interdisciplinary treatment planning.</p></li>
                                 </ul>
                                 <p>In summary, extraoral cameras play a crucial role in modern dental practices by providing detailed imaging that enhances diagnosis, patient communication, and overall workflow. Their ability to capture comprehensive views of the oral and facial structures makes them invaluable tools for effective dental care and treatment planning.</p>
-                                <p><a href="">Check out all our dental cameras</a></p>
-                                <p><a href="">Explore all our medical cameras</a></p>
-                                <p>Use our <a href="">Camera Selector Page</a> to find the best-fit camera for your product.</p>
+                                {/* <p><a href="">Check out all our dental cameras</a></p> */}
+                                {/* <p><a href="">Explore all our medical cameras</a></p> */}
+                                <p>Use our <a href="https://www.e-consystems.com/camera-selector.asp">Camera Selector Page</a> to find the best-fit camera for your product.</p>
                             </div>
                         </div>
                         <div className="Blog-right-column">

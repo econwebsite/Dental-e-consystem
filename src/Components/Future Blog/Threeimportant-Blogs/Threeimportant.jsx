@@ -160,11 +160,7 @@ const Threeimportant = () => {
                                 <h3>Cameras for Intraoral Cameras Offered by e-con Systems</h3>
                                 <p>e-con Systems has 20+ years of designing, developing, and manufacturing OEM camera solutions. We also have deep expertise as an Original Design Manufacturer (ODM), which equips us to offer superior plug-and-play cameras customized for intraoral. These camera solutions come with dedicated Image Signal Processors (ISPs) for each sensor to achieve optimal color accuracy.</p>
                                 <p>e-con Systems™ also provides customization services to meet exact requirements.</p>
-                                <p><a href="">Check out all our dental cameras</a></p>
-
-
-
-
+                                {/* <p><a href="">Check out all our dental cameras</a></p> */}
 
                             </div>
 
