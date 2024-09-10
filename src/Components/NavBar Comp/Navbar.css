@@ -22,7 +22,7 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
-color: white;
+color:white;
 font-weight: 600;
 width: 95% !important;
 }
@@ -241,3 +241,6 @@ width: 95% !important;
   color: #ffffff; 
 }
 
+.offcanvas-header .btn-close{
+  background-color:white !important;
+}
