@@ -44,7 +44,7 @@ const Productboderbox = () => {
             <FsLightbox
               toggler={toggler}
               sources={[
-                "https://www.youtube.com/embed/wPdvM_xv-tg?autoplay=1"
+                "https://www.youtube.com/embed/Bpg4bHDLZsY?autoplay=1" 
               ]}
             />
           </div>

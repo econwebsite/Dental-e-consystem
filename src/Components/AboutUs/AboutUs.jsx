@@ -21,7 +21,7 @@ export default function AboutUs() {
           <div className="aboutus-left-content">
             <p className="aboutus-heading">About e-con Systems Dental</p>
             <p className="aboutus-paragraph">
-              e-con Systems Dental is a specialized division focused on providing Original Design Manufacturing (ODM) solutions for dental imaging. At e-con Systems – Dental, we leverage our extensive expertise to meet the unique needs of the dental industry. Having collaborated with leading dental device manufacturers for more than 20 years, from ideation to market launch, we understand the challenges and intricacies of dental imaging. To address these challenges, we offer comprehensive ODM designs for dental imaging solutions, including intraoral cameras, extraoral cameras, and dental loupe cameras. Our solutions allow manufacturers to seamlessly integrate and rebrand these products into their portfolios, ensuring high-quality imaging with reduced time to market and cost efficiency.
+              e-con Systems Dental is a specialized division focused on providing Original Design Manufacturing (ODM) solutions for dental imaging. At e-con Systems – Dental, we leverage our extensive expertise to meet the unique needs of the dental industry. Having collaborated with leading dental device manufacturers for more than 20 years, from ideation to market launch, we understand the challenges and intricacies of dental imaging. To address these challenges, we offer comprehensive ODM designs for dental imaging solutions, including intraoral cameras, extraoral cameras, and dental loupe cameras.Our solutions enable manufacturers to seamlessly integrate and rebrand these products into their portfolios, ensuring high-quality imaging with reduced time to market and cost efficiency.
             </p>
           </div>
           <div className="aboutus-right-images">
@@ -63,14 +63,13 @@ export default function AboutUs() {
             e-con Systems® designs, manufactures, and delivers quality products to its customers and strives consistently to excel through continual improvement.
           </p>
           <p className="aboutus-paragraph">
-            Our camera products provide lifetime support to your end applications with state-of-the-art manufacturing, design, and quality processes in place. We also extend a 3-year warranty period on all our camera products, which speaks for our commitment to ensuring product quality and standing by our customers.
+            Our camera products provide lifetime support to your end applications with state-of-the-art manufacturing, design, and quality processes in place. We also provide a 3-years warranty period on all our camera products, which speaks for our commitment to ensuring product quality and standing by our customers.
           </p>
           <p className="aboutus-paragraph">
             As an ISO 9001:2015 certified company, e-con Systems® is aware of the need for regulatory compliance with regards to its products sold globally. Please visit our Product Compliance Declaration for more details.
           </p>
           <p className="aboutus-paragraph">
-            Following are the certifications and quality standards e-con follows:
-          </p>
+          Following are the certifications and quality standards e-con Systems® adheres to:          </p>
 <br></br>
           <div className="aboutus-image-row">
             <div className="aboutus-image-wrapper">

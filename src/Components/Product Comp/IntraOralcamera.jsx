@@ -64,7 +64,7 @@ const IntraOralcamera = () => {
                     <div className='col-lg-8 col-sm-12 productRightSide'>
                         <h2 className='productIntraTitle'>Full HD IntraOral Camera</h2>
                         <p className='productIntraDescription'>
-                            Our intraOral camera is engineered to meet the highest standards of dental imaging, combines cutting-edge Full HD imaging with advanced optics to deliver exceptionally clear and detailed images, enabling precise diagnostics and treatment planning. Engineered for superior ergonomics, this intraoral camera ensures a comfortable, user-friendly experience during image acquisition.
+                            Our intraOral camera is engineered to meet the highest standards of dental imaging, combines cutting-edge Full HD imaging with advanced optics to deliver exceptionally clear and detailed images, enabling precise diagnostics and treatment planning. Engineered for superior ergonomics, this intraoral camera ensures a comfortable, user-friendly experience during image capture.
                         </p>
                         <br />
                         <div className='productIntraFlexEndRow'>
