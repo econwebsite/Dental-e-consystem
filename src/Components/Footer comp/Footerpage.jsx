@@ -27,7 +27,9 @@ const Footerpage = () => {
             <p><RiPhoneFill className='footer-con-icon' /> +1 408 766 7503</p>
           </div>
           <div className="footer-contact-item">
-            <p><RiMailFill className='footer-con-icon'/> customersupport@e-consystems.com</p>
+            <p><RiMailFill className='footer-con-icon'/> <a style={{textDecoration:"none",color:"#003873"}} href="mailto:camerasolutions@e-consystems.com">
+    camerasolutions@e-consystems.com
+  </a></p>
           </div>
         </div>
         <div className="footer-divider" />

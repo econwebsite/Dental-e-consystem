@@ -9,8 +9,12 @@ const BlogArtical = () => {
       
       <div className="Artical-paragraphs">
         <p>If you need assistance with lens selection or integrating camera solutions into any of your medical or life sciences devices</p>
-        <p>please write to <span className='mail-color'>camerasolutions@e-consystems.com</span></p>
-      </div>
+        <p>
+  Please write to{' '}
+  <a className="mail-color" href="mailto:camerasolutions@e-consystems.com">
+    camerasolutions@e-consystems.com
+  </a>
+</p>      </div>
       <div className="Artical-person">
         <div className="Articalleft-side">
           <img src={Balajiimg} alt="Person" className="Articalperson-photo" />

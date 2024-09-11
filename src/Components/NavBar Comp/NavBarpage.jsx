@@ -95,8 +95,8 @@ const NavBarpage = () => {
             placement="end"
             ref={offcanvasRef}
           >
-            <Offcanvas.Header closeButton style={{color:"white!important"}}> 
-              <Offcanvas.Title id="offcanvasNavbarLabel">
+            <Offcanvas.Header closeButton> 
+              <Offcanvas.Title id="offcanvasNavbarLabel" style={{color:"#69ba2f"}}>
                 Menu
               </Offcanvas.Title>
             </Offcanvas.Header>
