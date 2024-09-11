@@ -96,7 +96,7 @@ const NavBarpage = () => {
             ref={offcanvasRef}
           >
             <Offcanvas.Header closeButton> 
-              <Offcanvas.Title id="offcanvasNavbarLabel" style={{color:"#69ba2f"}}>
+              <Offcanvas.Title id="offcanvasNavbarLabel">
                 Menu
               </Offcanvas.Title>
             </Offcanvas.Header>
