@@ -9,9 +9,9 @@ import AnimatedButton from "../Button comp/AnimatedButton";
 import Modelbutton from "../Button comp/Modelbutton";
 
 const images = [
-    { src: image1, title: "Image 1 Title" },
-    { src: image2, title: "Image 2 Title" },
-    { src: image3, title: "Image 3 Title" }
+    { src: image1, title: "Front View of our IntraOral Camera with enclosure" },
+    { src: image2, title: "Front View of our IntraOral Camera without enclosure" },
+    { src: image3, title: "Back View of our IntraOral Camera with enclosure" }
 ];
 
 const IntraOralcamera = () => {
