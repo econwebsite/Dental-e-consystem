@@ -3,7 +3,7 @@ import './Productboderbox.css';
 import Boderimg1 from "../../../assets/Product images/produc-hd.png";
 import Boderimg2 from "../../../assets/Product images/product-photo.png";
 import Boderimg3 from "../../../assets/Product images/product-gallary.png";
-import Vediothumbnail2 from "../../../assets/Product images/Tumbnail.jpg"; 
+import Vediothumbnail2 from "../../../assets/Product images/Productthumbnail.jpg"; 
 
 import FsLightbox from "fslightbox-react";
 
