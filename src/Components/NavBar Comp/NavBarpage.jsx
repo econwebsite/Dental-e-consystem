@@ -67,7 +67,7 @@ const NavBarpage = () => {
               <Link to="/AboutUs" className="navbarpage-navLink">About Us</Link>
             </div>
             <div className="navbarpage-rightColumn">
-              <input type="text" placeholder="Search.." className="navbarpage-searchInput" />
+              {/* <input type="text" placeholder="Search.." className="navbarpage-searchInput" /> */}
               <div className="navbarpage-contact">
                 <i className="ri-phone-fill navbarpage-phoneIcon"></i>
                 <div className="navbarpage-contactDetails">

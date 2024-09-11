@@ -160,6 +160,9 @@
   .spec-image {
     object-fit: contain;
   }
+  .spec-title {
+    font-size: 2em;
+  }
 }
 
 

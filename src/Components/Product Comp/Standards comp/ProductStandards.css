@@ -82,4 +82,11 @@
     .product-standard-box {
         max-width: 100%;
     }
+    .Product-standards{
+      font-size: 2em;
+    }
+    .product-standparagraphtext {
+      font-size: 1.1em; 
+      padding: 10px;
+    }
 }
