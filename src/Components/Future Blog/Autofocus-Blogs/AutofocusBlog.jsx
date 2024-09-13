@@ -1,6 +1,6 @@
 import React from "react";
 import "../Blogcommon.css"
-import Fixedfocus from "../../../assets/Future Blog/fixed-focus.png";
+import Fixedfocus from "../../../assets/Future Blog/fixed-focus.jpg";
 import Aguidtochoose from "../../../assets/Future Blog/Rightsidecards/Guide-tochoose.jpg"
 import Capturing from "../../../assets/Future Blog/Rightsidecards/Capturing-the-Dentists.jpg"
 import Understanding from "../../../assets/Future Blog/Rightsidecards/UnderstandingExtraoral.jpg"

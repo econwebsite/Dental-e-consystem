@@ -1,9 +1,9 @@
 import React from 'react';
 import './ProductTechnical.css';
 
-import aguid from "../../../assets/Product images/product-blog-aguid.jpg"
+import threeimp from "../../../assets/Product images/product-blog-aguid.jpg"
 import autofocus from "../../../assets/Product images/productblog-autofocus.png"
-import threeimp from "../../../assets/Product images/productblog-threeimp.png"
+import aguid from "../../../assets/Product images/a-guide-to-choose-the-right-dental-camera.jpg"
 import Capturing from "../../../assets/Product images/product-Capturing.jpg";
 import AnimatedButton from "../../Button comp/AnimatedButton";
 import { useNavigate } from 'react-router-dom';

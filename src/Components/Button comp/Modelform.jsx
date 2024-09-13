@@ -105,15 +105,12 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
     }));
     }, []);
   const onFinish = (values) => {
-    console.log('Form values:', values);
     form.resetFields();
     if(type ==='download'){
       values.productName=productName;
       values.documentName=docName;
-      axios.post(`${import.meta.env.VITE_API_URL}/api/downloadform`, { values })
+      axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values })
       .then(result => {
-        //message.success('Message sent successfully!');
-        console.log(result, ' Result');
         if(result.status === 200){
           setIsSuccess(true);
           setDownloadUrl(result.data[0].docName);
@@ -125,7 +122,7 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
     else{
       values.productName=productName;
       values.documentName=docName;
-      axios.post(`${import.meta.env.VITE_API_URL}/api/contactusform`, { values })
+      axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
       .then(result => {
         message.success('Message sent successfully!');
         onClose();
@@ -145,11 +142,9 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
   };
   const handleEmailValidate = async (e) => {
     const email = e.target.value;
-    console.log(email, "email");
     if (email) {
-   axios.post(`${import.meta.env.VITE_API_URL}/api/validateEmail`, { email })
+   axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
     .then(result => {
-      console.log(result, 'zerobounce response');
       if(result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based'){
         if(!result.data.free_email){
           return true

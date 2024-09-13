@@ -2,7 +2,7 @@ import React from 'react';
 import './Blogspage.css'; // Ensure this is the correct CSS file path
 import Autofocusvsfixed from "../../../assets/home images/Autofocusvsfixed.jpg";
 import CMOS from "../../../assets/home images/CMOS.jpg" ;
-import ThreeImportant from "../../../assets/home images/Three-Important.png" ;
+import ThreeImportant from "../../../assets/home images/Three-Important.jpg" ;
 import Capturing from "../../../assets/home images/blog-choose-right-camera.jpg"
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import { useNavigate } from 'react-router-dom';

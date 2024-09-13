@@ -2,22 +2,27 @@ import React from 'react';
 import { Button } from 'antd';
 const DownloadButton = (value) => {
 const handleDownload = async () => {
-    console.log(value, "venkat value")
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/download`, {
+    const response = await fetch(`https://api.dental.e-consystems.com/download`, {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json',
         },
         body: JSON.stringify({ param: value.url }),
         });
-        const blob = await response.blob();
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'intra-oral-spec.pdf';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
+        if(response.status === 200){
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${value.url}.pdf`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        }
+        else{
+            alert(response.statusText);
+        }
+        
 };
 
 return (

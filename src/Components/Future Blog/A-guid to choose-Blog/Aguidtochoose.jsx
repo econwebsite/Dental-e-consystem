@@ -5,7 +5,7 @@ import intraoral from "../../../assets/Future Blog/future-intraoral-cam.jpg"
 import shallowdof from "../../../assets/Future Blog/shallowdof.jpg"
 import largedof from "../../../assets/Future Blog/largedof.jpg"
 import temprature from '../../../assets/Future Blog/future-temprature.jpg';
-import focallength from '../../../assets/Future Blog/focal&fieldof view.jpg';
+import focallength from '../../../assets/Future Blog/focal-field-of-view.jpg';
 import autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jpg";
 import Understanding from "../../../assets/Future Blog/Rightsidecards/UnderstandingExtraoral.jpg";
 import howtoovercome from "../../../assets/Future Blog/Rightsidecards/How-to-Overcome.jpg";
