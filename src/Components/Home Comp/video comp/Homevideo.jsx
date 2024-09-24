@@ -10,7 +10,6 @@ function Dentalvideopg() {
     <>
       <div className="tot-denvedio">
       <div className='mainContainer'>
-
         <h2>Videos</h2>
         <div className="video-title-container">
           <div className="home-thumbnail">

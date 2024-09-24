@@ -9,11 +9,16 @@ import fc from '../../assets/home images/certificates-02.png';
 import rohs from '../../assets/home images/certificates-03.png';
 import tic from '../../assets/home images/certificates-04.png';
 
+import { Helmet } from 'react-helmet-async';
 
 
 export default function AboutUs() {
   return (
     <div className="aboutus-container">
+      <Helmet>
+<title>About Us</title>
+<meta name='description' content='Learn about e-con Systems Dental’s 20+ years in ODM for dental imaging. We offer solutions for intraoral, extraoral, and loupe cameras, ensuring quality and efficiency.' />
+</Helmet>
       <div className="mainContainer">
         <div className="aboutus-header-image"></div>
         <Aboutboderbox />
@@ -31,11 +36,11 @@ export default function AboutUs() {
               <p>Developing an AI-driven and Portable Oral Pre-Cancer Screening Device</p>
             </div>
             <div className="aboutus-image-text-pair">
-              <img src={loupe} alt="Dental Loupe" className="aboutus-img-thumbnail" />
+              <img src={surgical} alt="Dental Loupe" className="aboutus-img-thumbnail" />
               <p>Formulating the integration of our cameras into the dental surgical lights</p>
             </div>
             <div className="aboutus-image-text-pair">
-              <img src={surgical} alt="Surgical Lights" className="aboutus-img-thumbnail" />
+              <img src={loupe} alt="Surgical Lights" className="aboutus-img-thumbnail" />
               <p>Designing a lightweight and low-heat Dental Loupe Camera Solution</p>
             </div>
           </div>
@@ -60,16 +65,16 @@ export default function AboutUs() {
         <div className="aboutus-econ-systems">
           <p className="aboutus-heading">Quality policy</p>
           <p className="aboutus-paragraph">
-            e-con Systems® designs, manufactures, and delivers quality products to its customers and strives consistently to excel through continual improvement.
+            e-con Systems&reg; designs, manufactures, and delivers quality products to its customers and strives consistently to excel through continual improvement.
           </p>
           <p className="aboutus-paragraph">
             Our camera products provide lifetime support to your end applications with state-of-the-art manufacturing, design, and quality processes in place. We also provide a 3-years warranty period on all our camera products, which speaks for our commitment to ensuring product quality and standing by our customers.
           </p>
           <p className="aboutus-paragraph">
-            As an ISO 9001:2015 certified company, e-con Systems® is aware of the need for regulatory compliance with regards to its products sold globally. Please visit our Product Compliance Declaration for more details.
+            As an ISO 9001:2015 certified company, e-con Systems&reg; is aware of the need for regulatory compliance with regards to its products sold globally. Please visit our Product Compliance Declaration for more details.
           </p>
           <p className="aboutus-paragraph">
-          Following are the certifications and quality standards e-con Systems® adheres to:          </p>
+          Our products are compliant with key industry standards and certifications, including          </p>
 <br></br>
           <div className="aboutus-image-row">
             <div className="aboutus-image-wrapper">

@@ -12,21 +12,23 @@ import Autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jp
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import BlogArtical from "../BlogArtical"
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const HowIspHelp = () => {
-    const navigate = useNavigate();
-
     return (
         <div>
+            <Helmet>
+<title>How e-con Systems Optimizes Extraoral Cameras for Superior Image Quality</title>
+<meta name='description' content=' Discover how e-con Systems enhances extraoral camera image quality with expert ISP tuning. Learn about key features like white balance, exposure control, & more for precise dental imaging.' />
+</Helmet>
             <div className="Blogpage-cointainer">
                 <div className='mainContainer'>
                     <div className="content-Blog">
                         <div className="Blog-left-column">
                             <div className="blog-breadcrumb">
                                 <Link to="/">Home</Link> {' > '}
-                                <Link to="/blogsHubPage">Blogs</Link>  {' > '}
-                                <Link>Extraoral cameras are tuned to bring best image quality</Link>
+                                <Link to="/blogs">Blogs</Link>  {' > '}
+                                <Link style={{color:"grey", cursor:"default"}}>How Our Extraoral Cameras Achieve Top Image Quality</Link>
 
                             </div>
                             <h2>How our extraoral cameras are tuned to bring best image quality?</h2>
@@ -113,24 +115,36 @@ const HowIspHelp = () => {
                             <div className="Blogrelated-articles">
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
-                                <div className="CardBlogs" onClick={() => navigate('/Threeimportant')} style={{ cursor: "pointer" }}>
+                                <div className="CardBlogs">
+                                <Link className="cardImgLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
                                     <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
+                                    </Link>
+                                    <Link className="cardTitleLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
                                     <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
+                                    </Link>
                                     <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality—impact intra-oral camera device performance. In this blog, we dive into the technical details of how these factors can be fine-tuned for accurate dental diagnosis.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/three-important-parameters-in-intraoral-camera-technology"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs" onClick={() => navigate('/CapturingDentists')} style={{ cursor: "pointer" }}>
+                                <div className="CardBlogs">
+                                <Link className="cardImgLink" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" style={{ textDecoration: "none" }}>
                                     <img src={Capturing} alt="Camera Model 1" className="Cardrelated-image" />
+                                    </Link>
+                                    <Link className="cardTitleLink" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" style={{ textDecoration: "none" }}>
                                     <h2>Capturing the Dentists’ POV with Dental Loupe Cameras</h2>
+                                    </Link>
                                     <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras"></AnimatedButton>
                                 </div>
 
-                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{ cursor: "pointer" }}>
+                                <div className="CardBlogs">
+                                <Link className="cardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                                     <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
+                                    </Link>
+                                    <Link className="cardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
+                                    </Link>
                                     <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient experience. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras"></AnimatedButton>
                                 </div>
                             </div>
                         </div>

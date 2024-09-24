@@ -17,10 +17,10 @@ const NavBarpage = () => {
   const resourceMenu = (
     <Menu>
       <Menu.Item key="1">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/blogsHubPage" onClick={handleNavLinkClick}>Blogs</Link>
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/blogs" onClick={handleNavLinkClick}>Blogs</Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/casestudyHubPage" onClick={handleNavLinkClick}>Case Studies</Link>
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/case-studies" onClick={handleNavLinkClick}>Case Studies</Link>
       </Menu.Item>
     </Menu>
   );
@@ -28,10 +28,10 @@ const NavBarpage = () => {
   // const productMenu = (
   //   <Menu>
   //     <Menu.Item key="1">
-  //       <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/Intraoralcamera" onClick={handleNavLinkClick}>IntraOral camera</Link>
+  //       <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/product/intraoral-cameras" onClick={handleNavLinkClick}>Intraoral camera</Link>
   //     </Menu.Item>
   //     <Menu.Item key="2">
-  //       <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/Extraoral" onClick={handleNavLinkClick}>ExtraOral camera</Link>
+  //       <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/Extraoral" onClick={handleNavLinkClick}>Extraoral camera</Link>
   //     </Menu.Item>
   //     <Menu.Item key="3">
   //       <Link style={{textDecoration:"none",color:"#344ea1",fontSize:"medium"}} to="/product" onClick={handleNavLinkClick}>Loupe camera</Link>
@@ -47,7 +47,7 @@ const NavBarpage = () => {
           <div className="navbarpage-header">
             <div className="navbarpage-logoContainer">
               <Link  to="/">
-              <img src={dentallogo} alt="Dental Logo" className="navbarpage-logo" onClick={() => navigate('/Aguidtochoose')} style={{cursor:"pointer"}}/>
+              <img src={dentallogo} alt="Dental Logo" className="navbarpage-logo" onClick={() => navigate('/blogs/choosing-best-dental-intraoral-camera')} style={{cursor:"pointer"}}/>
               </Link>
             </div>
             <div className="navbarpage-navItems">
@@ -56,23 +56,25 @@ const NavBarpage = () => {
               {/* <Dropdown overlay={productMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Products</Link>
               </Dropdown> */}
-              <Link to="/Intraoralcamera" className="navbarpage-navLink">IntraOral Camera</Link>
+              <Link to="/product/intraoral-cameras" className="navbarpage-navLink">Intraoral Camera</Link>
               <div className="navbarpage-divider"></div>
               <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
                 <Link className="navbarpage-navLink">Resources</Link>
               </Dropdown>
               <div className="navbarpage-divider"></div>
-              <Link to="/ContactUs" className="navbarpage-navLink">Contact Us</Link>
+              <Link to="/company/contact-us" className="navbarpage-navLink">Contact Us</Link>
               <div className="navbarpage-divider"></div>
-              <Link to="/AboutUs" className="navbarpage-navLink">About Us</Link>
+              <Link to="/company/about-us" className="navbarpage-navLink">About Us</Link>
             </div>
             <div className="navbarpage-rightColumn">
               {/* <input type="text" placeholder="Search.." className="navbarpage-searchInput" /> */}
               <div className="navbarpage-contact">
                 <i className="ri-phone-fill navbarpage-phoneIcon"></i>
                 <div className="navbarpage-contactDetails">
+                <a style={{textDecoration:"none",color:"#003873"}} href="tel:+14087667503">
                   <p className="navbarpage-tellUs">Call us</p>
                   <p className="navbarpage-phoneNumber">+1 408 766 7503</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -95,8 +97,8 @@ const NavBarpage = () => {
             placement="end"
             ref={offcanvasRef}
           >
-            <Offcanvas.Header closeButton> 
-              <Offcanvas.Title id="offcanvasNavbarLabel">
+            <Offcanvas.Header closeButton style={{borderBottom:"1px solid #fff"}}> 
+              <Offcanvas.Title id="offcanvasNavbarLabel" >
                 Menu
               </Offcanvas.Title>
             </Offcanvas.Header>
@@ -106,12 +108,12 @@ const NavBarpage = () => {
                 {/* <Dropdown overlay={productMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Products</a>
                 </Dropdown> */}
-                <Link className="nav-link" to="/Intraoralcamera" onClick={handleNavLinkClick}>IntraOral camera</Link>
+                <Link className="nav-link" to="/product/intraoral-cameras" onClick={handleNavLinkClick}>Intraoral camera</Link>
                 <Dropdown overlay={resourceMenu} placement="bottomLeft" className="nav-link">
                   <a className="nav-link">Resources</a>
                 </Dropdown>
-                <Link className="nav-link" to="/ContactUs" onClick={handleNavLinkClick}>Contact Us</Link>
-                <Link className="nav-link" to="/AboutUs" onClick={handleNavLinkClick}>About Us</Link>
+                <Link className="nav-link" to="/company/contact-us" onClick={handleNavLinkClick}>Contact Us</Link>
+                <Link className="nav-link" to="/company/about-us" onClick={handleNavLinkClick}>About Us</Link>
               </Nav>
               {/* <Form className="d-flex mt-3">
                 <Form.Control

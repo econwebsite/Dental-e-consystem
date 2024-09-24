@@ -12,6 +12,7 @@ import howtoovercome from "../../../assets/Future Blog/Rightsidecards/How-to-Ove
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import BlogArtical from "../BlogArtical"
 const Aguidtochoose = () => {
@@ -19,14 +20,18 @@ const Aguidtochoose = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Choosing the Best Dental Intraoral Camera: A Complete Guide</title>
+                <meta name='description' content='Explore our guide to choosing the best dental intraoral camera. Learn about key features like macro imaging, depth of field, & HD resolution for optimal diagnostics.' />
+            </Helmet>
             <div className="Blogpage-cointainer">
                 <div className='mainContainer'>
                     <div className="content-Blog">
                         <div className="Blog-left-column">
                             <div className="blog-breadcrumb">
                                 <Link to="/">Home</Link> {' > '}
-                                <Link to="/blogsHubPage">Blogs</Link>  {' > '}
-                                <Link>Right Dental Intraoral Camera</Link>
+                                <Link to="/blogs">Blogs</Link>  {' > '}
+                                <Link style={{ color: "grey", cursor: "default" }}>Choosing the Right Dental Intraoral Camera</Link>
 
                             </div>
                             <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
@@ -43,8 +48,8 @@ const Aguidtochoose = () => {
                                     <img src={intraoral} alt="Image" />
                                 </div>
                                 <div className="threeparameter-title">
-                                        <p>Rear and Front View of an Intraoral Camera</p>
-                                    </div>
+                                    <p>Rear and Front View of an Intraoral Camera</p>
+                                </div>
                                 <br></br>
                                 <p>Every intraoral camera has a freeze/capture button that allows dentists to capture images and videos as per their requirements. </p>
                                 <p>Intraoral cameras come in wired and wireless versions. Wireless intraoral cameras transmit image data via Bluetooth or Wi-Fi. The transmitted images or videos are integrated with dental management software for documentation purposes.</p>
@@ -55,8 +60,8 @@ const Aguidtochoose = () => {
                                     <img src={guideimg1} alt="Image" />
                                 </div>
                                 <div className="threeparameter-title">
-                                        <p>Capturing close-up images of the teeth with macro-imaging</p>
-                                    </div>
+                                    <p>Capturing close-up images of the teeth with macro-imaging</p>
+                                </div>
                                 <br></br>
                                 <p>Macro imaging refers to the process of capturing detailed, close-up images of small target objects such as the structure of teeth and gums in dental imaging. In macro imaging, the subject appears as large or larger in the image as it does in real life. With macro imaging enabled, it becomes easy to capture the inner regions of the mouth. </p>
                                 <p>Macro imaging is enabled in intraoral cameras with the use of appropriate macro lenses. Sensors of sufficient resolution paired with suitable lens systems capture images with uniform sharpness and clarity. An Intraoral camera with a working distance of 5 mm or less would be an ideal choice.</p>
@@ -90,8 +95,8 @@ const Aguidtochoose = () => {
                                     <img src={temprature} alt="Image" />
                                 </div>
                                 <div className="threeparameter-title">
-                                        <p>Colour Temperatures of Different Light Sources</p>
-                                    </div>
+                                    <p>Colour Temperatures of Different Light Sources</p>
+                                </div>
                                 <br></br>
                                 <p>To address this challenge, an inbuilt image signal processor (ISP) with advanced auto white balance (AWB) capabilities is crucial. The ISP dynamically adjusts the camera's color settings in real-time by measuring the scene's color temperature against a reference point and then adjusting the red, blue, and green gains accordingly to achieve balanced color reproduction. </p>
                                 <p>This process helps to neutralize the color cast caused by different light sources, such as incandescent, fluorescent, or natural daylight, ensuring that white objects appear white in the final image, and other colors are rendered accurately. </p>
@@ -103,9 +108,9 @@ const Aguidtochoose = () => {
                                 <div class="futureblog-imgcenter">
                                     <img src={focallength} alt="Image" />
                                 </div>
-                                    <div className="threeparameter-title">
-                                        <p>Focal length vs Field of View</p>
-                                    </div>
+                                <div className="threeparameter-title">
+                                    <p>Focal length vs Field of View</p>
+                                </div>
                                 <br></br>
 
                                 <h3>High-Definition resolution</h3>
@@ -121,7 +126,7 @@ const Aguidtochoose = () => {
                                 <p>e-con Systems has 20+ years of designing, developing, and manufacturing OEM camera solutions. We also have deep expertise as an Original Design Manufacturer (ODM), which equips us to offer superior plug-and-play cameras customized for intraoral. These camera solutions come with dedicated Image Signal Processors (ISPs) for each sensor to achieve optimal color accuracy.</p>
 
                                 <p>e-con Systems™ also provides customization services to meet exact requirements.</p>
-                                {/* <p><a href="/Intraoralcamera">Check out all our dental cameras</a></p> */}
+                                {/* <p><a href="/product/intraoral-cameras">Check out all our dental cameras</a></p> */}
 
                             </div>
                         </div>
@@ -129,24 +134,36 @@ const Aguidtochoose = () => {
                             <div className="Blogrelated-articles">
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
-                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{cursor:"pointer"}}>
-                                    <img src={autofocus} alt="Camera Model 1" className="Cardrelated-image" />
+                                <div className="CardBlogs">
+                                    <Link className="cardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
+                                        <img src={autofocus} alt="Camera Model 1" className="Cardrelated-image" />
+                                    </Link>
+                                    <Link className="cardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
+                                    </Link>
                                     <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient experience. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras"></AnimatedButton>
 
                                 </div>
-                                <div className="CardBlogs" onClick={() => navigate('/Understandingextra')} style={{cursor:"pointer"}}>
-                                    <img src={Understanding} alt="Camera Model 2" className="Cardrelated-image" />
+                                <div className="CardBlogs">
+                                    <Link className="cardImgLink" to="/blogs/understanding-extraoral-cameras-dentistry" style={{ textDecoration: "none" }}>
+                                        <img src={Understanding} alt="Camera Model 2" className="Cardrelated-image" />
+                                    </Link>
+                                    <Link className="cardTitleLink" to="/blogs/understanding-extraoral-cameras-dentistry" style={{ textDecoration: "none" }}>
                                     <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>
+                                    </Link>
                                     <p>Unlike intraoral cameras, which are inserted into the oral cavity, extraoral cameras are positioned externally to take comprehensive views of the jaw, teeth, and surrounding areas. In this blog, we explore the types of extraoral cameras, such as surgical light-mounted cameras, dental chair-mounted cameras, and handheld extraoral cameras, and their benefits.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Understandingextra"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/understanding-extraoral-cameras-dentistry"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs" onClick={() => navigate('/HowToOvercome')} style={{cursor:"pointer"}}>
+                                <div className="CardBlogs">
+                                <Link className="cardImgLink" to="/blogs/imaging-challenges-dental-loupes-manufacturing" style={{ textDecoration: "none" }}>
                                     <img src={howtoovercome} alt="Camera Model 3" className="Cardrelated-image" />
+                                    </Link>
+                                    <Link className="cardTitleLink" to="/blogs/imaging-challenges-dental-loupes-manufacturing" style={{ textDecoration: "none" }}>
                                     <h2>How to Overcome Imaging-Related Manufacturing Challenges of Dental Loupes</h2>
+                                    </Link>
                                     <p>Dental loupes have gained a lot of traction among healthcare professionals, with more than 50% of American dentists incorporating them into their routine practice. Learn how overcoming issues like thermal dissipation, image stabilization, and lightweight design is crucial for creating comfortable loupe devices for dentists.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/HowToOvercome"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/imaging-challenges-dental-loupes-manufacturing"></AnimatedButton>
                                 </div>
                             </div>
                         </div>

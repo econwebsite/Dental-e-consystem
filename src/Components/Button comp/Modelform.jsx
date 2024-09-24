@@ -1,5 +1,5 @@
-import React, { useState,useMemo } from 'react';
-import { Form, Input, Select, Button, Row, Col, message, Modal,Result } from 'antd';
+import React, { useState, useMemo } from 'react';
+import { Form, Input, Select, Button, Row, Col, message, Modal, Result } from 'antd';
 import axios from 'axios';
 import "./Modelbutton.css";
 import countryList from 'react-select-country-list';
@@ -92,44 +92,44 @@ const usaStates = [
   { code: 'WI', name: 'Wisconsin' },
   { code: 'WY', name: 'Wyoming' },
 ];
-function Modelform({ visible, onClose, type, docName, productName,title }) {
+function Modelform({ visible, onClose, type, docName, productName, title }) {
   const [form] = Form.useForm();
   const [selectedCountry, setSelectedCountry] = useState('United States');
   const [showStates, setShowStates] = useState(true);
-  const [isSuccess,setIsSuccess] = useState(false);
-  const [downloadUrl,setDownloadUrl] = useState('');
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [downloadUrl, setDownloadUrl] = useState('');
   const countries = useMemo(() => {
     return countryList().getData().map(country => ({
-    value: country.value,
-    label: country.label
+      value: country.value,
+      label: country.label
     }));
-    }, []);
+  }, []);
   const onFinish = (values) => {
     form.resetFields();
-    if(type ==='download'){
-      values.productName=productName;
-      values.documentName=docName;
+    if (type === 'download') {
+      values.productName = productName;
+      values.documentName = docName;
       axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values })
-      .then(result => {
-        if(result.status === 200){
-          setIsSuccess(true);
-          setDownloadUrl(result.data[0].docName);
-        }
-        //onClose();
-      })
-      .catch(err => console.log(err));
+        .then(result => {
+          if (result.status === 200) {
+            setIsSuccess(true);
+            setDownloadUrl(result.data[0].docName);
+          }
+          //onClose();
+        })
+        .catch(err => console.log(err));
     }
-    else{
-      values.productName=productName;
-      values.documentName=docName;
+    else {
+      values.productName = productName;
+      values.documentName = docName;
       axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
-      .then(result => {
-        message.success('Message sent successfully!');
-        onClose();
-      })
-      .catch(err => console.log(err));
+        .then(result => {
+          message.success('Message sent successfully!');
+          onClose();
+        })
+        .catch(err => console.log(err));
     }
-    
+
   };
 
   const handleCountryChange = (value) => {
@@ -143,52 +143,52 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
   const handleEmailValidate = async (e) => {
     const email = e.target.value;
     if (email) {
-   axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
-    .then(result => {
-      if(result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based'){
-        if(!result.data.free_email){
-          return true
-        } 
-        else{
-          form.setFields([
-            {
-            name: 'email',
-            errors: ["Please enter valid email ID"],
-            },
+      axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
+        .then(result => {
+          if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
+            if (!result.data.free_email) {
+              return true
+            }
+            else {
+              form.setFields([
+                {
+                  name: 'email',
+                  errors: ["Please enter valid email ID"],
+                },
+              ]);
+            }
+          }
+          else {
+            form.setFields([
+              {
+                name: 'email',
+                errors: ["Please enter valid email ID"],
+              },
             ]);
-        }
-      }
-      else{
-        form.setFields([
-          {
-          name: 'email',
-          errors: ["Please enter valid email ID"],
-          },
-          ]);
-      }
-      
-    })
-    .catch(err => console.log(err));
+          }
+
+        })
+        .catch(err => console.log(err));
 
     }
   };
   return (
-    <Modal 
-      title={type === 'download' ? `Download - ${title}` :"Contact Form"}
+    <Modal
+      title={type === 'download' ? `Download - ${title}` : "Contact Form"}
       visible={visible}
       onCancel={onClose}
       footer={null}
       width={450}
       className="custom-modal"
     >
-     {isSuccess?  <Result
-    status="success"
-    title="Ready to Download"
-    subTitle="Please click below button to downlaod"
-    extra={[
-      <DownloadButton url={downloadUrl} />
-    ]}
-  /> : <Form
+      {isSuccess ? <Result
+        status="success"
+        title="Ready to Download"
+        subTitle="Please click below button to downlaod"
+        extra={[
+          <DownloadButton url={downloadUrl} />
+        ]}
+      /> : <Form
         form={form}
         name="contactForm"
         onFinish={onFinish}
@@ -226,7 +226,10 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
                 { type: 'email', message: 'Please enter a valid email' },
               ]}
             >
-              <Input placeholder="Email*" onBlur={handleEmailValidate} />
+              <Input placeholder="Email*" onPaste={(e) => {
+                e.preventDefault()
+                return false;
+              }} autoComplete='off' onBlur={handleEmailValidate} />
             </Form.Item>
           </Col>
           <Col span={12}>
@@ -236,7 +239,7 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
             >
               <Input
                 placeholder="Contact Number"
-                // addonBefore={selectedCountry ? countries.find(c => c.value === selectedCountry)?.code : ''}
+              // addonBefore={selectedCountry ? countries.find(c => c.value === selectedCountry)?.code : ''}
               />
             </Form.Item>
           </Col>
@@ -249,6 +252,7 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
               rules={[{ required: true, message: 'Please select your country' }]}
             >
               <Select
+              showSearch
                 placeholder="Select country"
                 onChange={handleCountryChange}
               >
@@ -305,7 +309,7 @@ function Modelform({ visible, onClose, type, docName, productName,title }) {
           </Col>
         </Row>
       </Form>
-}
+      }
     </Modal>
   );
 }

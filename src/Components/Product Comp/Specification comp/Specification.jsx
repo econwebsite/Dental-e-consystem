@@ -15,7 +15,7 @@ const rightBoxes = [
   { label: 'Depth of Field (DOF)', value: '5 – 70 mm', bgColor: '#def9fc' },
   { label: 'Focus Type', value: 'Fixed Focus', bgColor: '#caf5fc' },
   { label: 'Angle of View (FOV)', value: '90 deg', bgColor: '#caf5fc' },
-  { label: 'Illumination', value: '6 LEDS with adjustable brightness', bgColor: '#b8f2ff' },
+  { label: 'Illumination', value: 'LEDS with adjustable brightness', bgColor: '#b8f2ff' },
   { label: 'LEDS', value: 'Reduced glare and reflection', bgColor: '#def9fc' },
   { label: 'Housing', value: 'Scratch proof and sterilizable', bgColor: '#f0feff' },
 ];

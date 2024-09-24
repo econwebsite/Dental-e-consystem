@@ -9,24 +9,27 @@ import accuratecolor from "../../../assets/Future Blog/accurate-colour.jpg"
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import BlogArtical from "../BlogArtical"
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const CapturingDentists = () => {
-  const navigate = useNavigate();
 
   return (
     <div>
+      <Helmet>
+<title>Capturing Dentists' POV: Essential Features of Dental Loupe Cameras</title>
+<meta name='description' content='Explore key features of dental loupe cameras including lightweight design, accurate color reproduction, & image stabilization. Enhance your dental imaging today!' />
+</Helmet>
       <div className="Blogpage-cointainer">
         <div className='mainContainer'>
           <div className="content-Blog">
             <div className="Blog-left-column">
               <div className="blog-breadcrumb">
                 <Link to="/">Home</Link> {' > '}
-                <Link to="/blogsHubPage">Blogs</Link>  {' > '}
-                <Link>Capturing the Dentists</Link>
+                <Link to="/blogs">Blogs</Link>  {' > '}
+                <Link style={{color:"grey", cursor:"default"}}>Capturing the Dentist's POV with Loupe Cameras</Link>
 
               </div>
-              <h2>Capturing the Dentists’ POV with Dental Loupe Cameras </h2>
+              <h2>Capturing the Dentists' POV with Dental Loupe Cameras </h2>
               <p>By Balaji S, July 16, 2024</p>
 
               <div className="blogborder-box">
@@ -34,7 +37,7 @@ const CapturingDentists = () => {
                 <p>Dental loupes are used by dentists and dental hygienists to magnify the view of the oral cavity, allowing for more precise and detailed examination, diagnosis, and treatment of dental conditions. It enhances visibility, accuracy, and overall efficiency in dental procedures.</p>
 
                 <div class="futureblog-imgcenter">
-                  <img src={dentalloupe} alt="Image" />
+                  <img src={Loupecamera} alt="Image" />
                 </div>
                 <div className="threeparameter-title">
                   <p>A dental loupe in use</p>
@@ -47,20 +50,20 @@ const CapturingDentists = () => {
                 <h3>✓ Light Weight and Small Form Factor</h3>
                 <p>Heavy dental loupes used during procedures can be cumbersome, especially during long sessions, causing strain on the dentist’s neck and shoulders. Additionally, larger cameras can obstruct the dentist's view, making it difficult to maintain focus. Integrating these cameras with dental loupes presents an additional challenge, as larger cameras can disrupt the loupe's form factor.</p>
                 <div class="futureblog-imgcenter">
-                  <img src={Loupecamera} alt="Image" />
+                <img src={dentalloupe} alt="Image" />
                 </div>
                 <div className="threeparameter-title">
                   <p> Camera mounted on dental loupe</p>
                 </div>
                 <br></br>
-                <p>The dental loupe camera’s lightweight design and small form factor significantly reduces the physical burden on the dentist and can be perfectly integrated into the loupes. This is achieved by using a lightweight camera body and a compact design. This ensures the loupe camera maintains its form factor without obstructing the dentist's view.</p>
+                <p>The dental loupe camera's lightweight design and small form factor significantly reduces the physical burden on the dentist and can be perfectly integrated into the loupes. This is achieved by using a lightweight camera body and a compact design. This ensures the loupe camera maintains its form factor without obstructing the dentist's view.</p>
                 <p>The use of smaller lenses and sensors helps reduce the form factor. A compact camera design that utilizes space more efficiently involves the strategic arrangement and miniaturization of components to maximize functionality. This includes using smaller electronic parts and advanced manufacturing techniques, integrating multiple functions into single chips, and designing multi-functional components to reduce the number of individual parts. </p>
                 <p>These combined strategies create a highly functional, space-efficient camera ideal for applications like dental loupe cameras. It is ideal for dental loupe cameras to weigh less than 15 grams and have a form factor of 20 x 20 mm.</p>
                 <h3>✓ Accurate Color Reproduction</h3>
                 <p>Inaccurate color representation in dental images can lead to misdiagnosis or improper treatment planning, as dentists rely on realistic colors to assess the condition of tissues and teeth. Subtle color variations in oral tissues can indicate underlying conditions like inflammation, infection, etc. </p>
                 <p>Accurate color reproduction in dental loupe cameras is achieved through a combination of high-quality image sensors with color filter arrays, and sophisticated color correction algorithms. The sensors, typically CMOS, capture light intensity across different wavelengths, while the color filter array separates the light into red, green, and blue components. Advanced image processing algorithms then correct any color deviations, ensuring true-to-life hues. </p>
                 <div class="futureblog-imgcenter">
-                  <img src={accuratecolor} alt="Image" />
+                <img src={accuratecolor} alt="Image" />
                 </div>
                 <div className="threeparameter-title">
                   <p>Dental Images With and without accurate colour reproduction</p>
@@ -74,13 +77,13 @@ const CapturingDentists = () => {
                 <h3>✓ Image Stabilization Capabilities</h3>
                 <p>During patient examinations, dentists tend to move their heads constantly, leading to blurriness in the images produced. Also, while performing intricate dental procedures, head movements or vibrations can lead to unclear images when using dental loupes. Therefore, loupe cameras require robust image stabilization technology to produce sharp, clear visuals during dental procedures.</p>
 
-                <div class="futureblog-imgcenter">
+                {/* <div class="futureblog-imgcenter">
                   <img src={dentalloupe} alt="Image" />
                 </div>
                 <div className="threeparameter-title">
                   <p>Image Stabilization Capabilities</p>
-                </div>
-                <br></br>
+                </div> */}
+                <br/>
 
                 <p>Image stabilization is a technology designed to reduce blurring associated with the motion of a camera during exposure, ensuring clear and sharp images. In dental loupe cameras, image stabilization is implemented through a combination of sensors and algorithms. </p>
                 <p>Often sensors are used in dental loupes to detect motion and adjust the camera lens to counteract the real-time movement. Also, algorithms are used to analyze the captured image and correct any detected motion blur. Together, these technologies enable dental loupe cameras to produce steady, high-quality images even in the presence of minor movements.</p>
@@ -106,23 +109,35 @@ const CapturingDentists = () => {
                 <hr />
 
 
-                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{ cursor: "pointer" }}>
+                <div className="CardBlogs">
+                <Link className="cardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                   <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
+                  </Link>
+                  <Link className="cardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                   <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
+                  </Link>
                   <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient experience. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
-                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
+                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras"></AnimatedButton>
                 </div>
-                <div className="CardBlogs" onClick={() => navigate('/RightforExtraoral')} style={{ cursor: "pointer" }}>
+                <div className="CardBlogs">
+                <Link className="cardImgLink" to="/blogs/choosing-the-right-cmos-cameras-for-extraoral-imaging" style={{ textDecoration: "none" }}>
                   <img src={CMOS} alt="Camera Model 1" className="Cardrelated-image" />
+                  </Link>
+                  <Link className="cardTitleLink" to="/blogs/choosing-the-right-cmos-cameras-for-extraoral-imaging" style={{ textDecoration: "none" }}>
                   <h2>Choosing the right CMOS cameras for Extraoral Imaging</h2>
+                  </Link>
                   <p>High-performance extraoral cameras are integral in dentistry. Read on to learn more about key features like 4K resolution, autofocus capabilities, and HDR imaging that enhance diagnostic accuracy and patient communication in extraoral devices.</p>
-                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/RightforExtraoral"></AnimatedButton>
+                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/choosing-the-right-cmos-cameras-for-extraoral-imaging"></AnimatedButton>
                 </div>
-                <div className="CardBlogs" onClick={() => navigate('/AGuidTochoose')} style={{ cursor: "pointer" }}>
+                <div className="CardBlogs">
+                <Link className="cardImgLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
                   <img src={Aguidtochoose} alt="Camera Model 3" className="Cardrelated-image" />
+                  </Link>
+                  <Link className="cardTitleLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
                   <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
+                  </Link>
                   <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
-                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AGuidTochoose"></AnimatedButton>
+                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/choosing-best-dental-intraoral-camera"></AnimatedButton>
                 </div>
               </div>
             </div>

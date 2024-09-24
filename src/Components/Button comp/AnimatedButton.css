@@ -37,6 +37,14 @@
 .newanimation:hover::before {
   left: 0;
 }
+.buttonLink{
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .buttonLink{
+    text-align: center;
+  }
+}
 @media (max-width: 600px) {
   .newanimation {
     padding: 8px 20px; /* Reduce padding for smaller screens */

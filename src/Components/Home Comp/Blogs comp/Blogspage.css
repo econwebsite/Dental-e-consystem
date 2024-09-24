@@ -66,7 +66,9 @@
   gap: 30px;
   height: auto;
 }
-
+.homeblog-component-container a{
+  width: 100%;
+}
 .homeblog-full-image {
   width: 100%;
   max-height: 700px; 

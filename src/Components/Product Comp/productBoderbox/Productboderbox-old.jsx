@@ -16,9 +16,9 @@ const Productboderbox = () => {
     <div className='Productboderbox-Total'>
       <div className='mainContainer'>
         <div className='Productboderbox-container'>
-          <h1>Why choose our intraOral camera?</h1>
+          <h1>Why choose our Intraoral camera?</h1>
           <p className="Productboderbox-description">
-            Many brands have shared the manufacturing of intraOral cameras, which often lead to market delays and increased costs.
+            Many brands have shared the manufacturing of Intraoral cameras, which often lead to market delays and increased costs.
           </p>
 
           {/* Video thumbnails */}

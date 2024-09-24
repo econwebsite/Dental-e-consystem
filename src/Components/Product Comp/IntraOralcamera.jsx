@@ -9,9 +9,9 @@ import AnimatedButton from "../Button comp/AnimatedButton";
 import Modelbutton from "../Button comp/Modelbutton";
 
 const images = [
-    { src: image1, title: "Front View of our IntraOral Camera with enclosure" },
-    { src: image2, title: "Front View of our IntraOral Camera without enclosure" },
-    { src: image3, title: "Back View of our IntraOral Camera with enclosure" }
+    { src: image1, title: "Front View of our Intraoral Camera with enclosure" },
+    { src: image2, title: "Front View of our Intraoral Camera without enclosure" },
+    { src: image3, title: "Back View of our Intraoral Camera with enclosure" }
 ];
 
 const IntraOralcamera = () => {
@@ -62,9 +62,9 @@ const IntraOralcamera = () => {
                     </div>
 
                     <div className='col-lg-8 col-sm-12 productRightSide'>
-                        <h2 className='productIntraTitle'>Full HD IntraOral Camera</h2>
+                        <h2 className='productIntraTitle'>Full HD Intraoral Camera</h2>
                         <p className='productIntraDescription'>
-                            Our intraOral camera is engineered to meet the highest standards of dental imaging, combines cutting-edge Full HD imaging with advanced optics to deliver exceptionally clear and detailed images, enabling precise diagnostics and treatment planning. Engineered for superior ergonomics, this intraoral camera ensures a comfortable, user-friendly experience during image capture.
+                            Our Intraoral camera is engineered to meet the highest standards of dental imaging, combines cutting-edge Full HD imaging with advanced optics to deliver exceptionally clear and detailed images, enabling precise diagnostics and treatment planning. Engineered for superior ergonomics, this intraoral camera ensures a comfortable, user-friendly experience during image capture.
                         </p>
                         <br />
                         <div className='productIntraFlexEndRow'>

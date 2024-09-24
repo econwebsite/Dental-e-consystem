@@ -13,7 +13,7 @@ const Productboderbox = () => {
     <div className='Productboderbox-Total'>
                     <div className='mainContainer'>
       <div className="Productboderbox-container">
-        <h1>Why choose our intraOral camera?</h1>
+        <h1>Why choose our Intraoral camera?</h1>
         <p className="Productboderbox-description">
         With over 20 years of camera engineering experience, we’ve perfected a solution that meets and exceeds the industry's highest standards:</p>
         <div className="Productboderbox-content">

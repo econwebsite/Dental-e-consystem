@@ -5,24 +5,26 @@ import Integration from '../../../assets/Future Blog/integration-dental.jpg';
 import Threeimp from "../../../assets/Future Blog/Rightsidecards/Three-Important-Parameters.jpg";
 import Howextraoral from "../../../assets/Future Blog/Rightsidecards/How-our-extraoral.jpg";
 import Autofocus from "../../../assets/Future Blog/Rightsidecards/Autovsfixed.jpg";
-import { useNavigate } from 'react-router-dom';
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import BlogArtical from "../BlogArtical"
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const RightCMOS = () => {
-  const navigate = useNavigate();
-
   return (
     <div>
+      <Helmet>
+<title>Choosing the Right CMOS Cameras for Extraoral Imaging</title>
+<meta name='description' content='Explore key features of CMOS cameras for extraoral imaging. Learn about resolution, autofocus, HDR, and color accuracy to enhance dental imaging quality.' />
+</Helmet>
       <div className="Blogpage-cointainer">
         <div className='mainContainer'>
           <div className="content-Blog">
             <div className="Blog-left-column">
               <div className="blog-breadcrumb">
                 <Link to="/">Home</Link> {' > '}
-                <Link to="/blogsHubPage">Blogs</Link>  {' > '}
-                <Link>Right Camera for Extraoral Imaging</Link>
+                <Link to="/blogs">Blogs</Link>  {' > '}
+                <Link style={{color:"grey", cursor:"default"}}>Choosing CMOS Cameras for Extraoral Imaging</Link>
 
               </div>
               <h2>Choosing the right CMOS cameras for Extraoral Imaging</h2>
@@ -86,24 +88,36 @@ const RightCMOS = () => {
               <div className="Blogrelated-articles">
                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                 <hr />
-                <div className="CardBlogs" onClick={() => navigate('/Threeimportant')} style={{ cursor: "pointer" }}>
+                <div className="CardBlogs">
+                <Link className="cardImgLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
                   <img src={Threeimp} alt="Camera Model 1" className="Cardrelated-image" />
+                  </Link>
+                  <Link className="cardTitleLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
                   <h2>Three Important Parameters in Intra Oral Camera Technology</h2>
+                  </Link>
                   <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality—impact intra-oral camera device performance. In this blog, we dive into the technical details of how these factors can be fine-tuned for accurate dental diagnosis.</p>
-                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
+                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/three-important-parameters-in-intraoral-camera-technology"></AnimatedButton>
                 </div>
-                <div className="CardBlogs" onClick={() => navigate('/Extraoralbestimg')} style={{ cursor: "pointer" }}>
+                <div className="CardBlogs">
+                <Link className="cardImgLink" to="/blogs/extraoral-cameras-image-quality-tuning" style={{ textDecoration: "none" }}>
                   <img src={Howextraoral} alt="Camera Model 2" className="Cardrelated-image" />
+                  </Link>
+                  <Link className="cardTitleLink" to="/blogs/extraoral-cameras-image-quality-tuning" style={{ textDecoration: "none" }}>
                   <h2>How our extraoral cameras are tuned to bring best image quality?</h2>
+                  </Link>
                   <p>Extra-oral cameras are cameras that get integrated into dental equipment, such as surgical lights, dental chairs, and handheld devices. These cameras help acquire high-quality images that are documented for procedures such as insurance claim verification, etc. In this blog, we explore the ISP features that enhance the image quality of extra oral cameras.</p>
-                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Extraoralbestimg"></AnimatedButton>
+                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/extraoral-cameras-image-quality-tuning"></AnimatedButton>
                 </div>
 
-                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{ cursor: "pointer" }}>
+                <div className="CardBlogs">
+                <Link className="cardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                   <img src={Autofocus} alt="Camera Model 3" className="Cardrelated-image" />
+                  </Link>
+                  <Link className="cardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                   <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
+                  </Link>
                   <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient experience. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
-                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
+                  <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras"></AnimatedButton>
                 </div>
               </div>
             </div>

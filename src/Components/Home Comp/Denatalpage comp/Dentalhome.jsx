@@ -1,14 +1,14 @@
 import React from 'react';
 import './Dentalhome.css';
 import { Carousel } from 'antd';
-import dentalimg2 from "../../../assets/home images/Homebanner.png";
+import dentalimg2 from "../../../assets/home images/Homebanner.jpg";
 import AnimatedButton from '../../Button comp/AnimatedButton';
 import Modelbutton from '../../Button comp/Modelbutton';
+
 const Dentalhome = () => {
     return (
         <div className='carouselContainer'>
                 <div className="mainContainer">
-
             {/* <Carousel autoplay>
                 <div className="carousel-slide"> */}
                 <div className='homeBanner'>

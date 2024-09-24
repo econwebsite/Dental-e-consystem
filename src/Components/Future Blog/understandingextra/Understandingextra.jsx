@@ -9,21 +9,24 @@ import Aguidtochoose from "../../../assets/Future Blog/Rightsidecards/Guide-toch
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import { Link } from 'react-router-dom';
 import BlogArtical from "../BlogArtical"
-import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const Understandingextra = () => {
-    const navigate = useNavigate();
 
     return (
         <div>
+            <Helmet>
+<title>Understanding Extraoral Cameras and Their Role in Modern Dentistry</title>
+<meta name='description' content='Explore the benefits and types of extraoral cameras used in dentistry. Learn how they enhance patient communication, diagnostic accuracy, and workflow efficiency.' />
+</Helmet>
             <div className="Blogpage-cointainer">
                 <div className='mainContainer'>
                     <div className="content-Blog">
                         <div className="Blog-left-column">
                             <div className="blog-breadcrumb">
                                 <Link to="/">Home</Link> {' > '}
-                                <Link to="/blogsHubPage">Blogs</Link>  {' > '}
-                                <Link>Understanding Extraoral Cameras</Link>
+                                <Link to="/blogs">Blogs</Link>  {' > '}
+                                <Link style={{color:"grey", cursor:"default"}}>Understanding Extraoral Cameras in Dentistry</Link>
 
                             </div>
                             <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>
@@ -41,7 +44,7 @@ const Understandingextra = () => {
                                     </div>
                                     <br></br>
                                     <div style={{ display: "flex", justifyContent: "center" }}>
-                                        <p style={{ textAlign: "center", color: "#036534" }}>A dental loupe in use</p>
+                                        <p style={{ textAlign: "center", color: "#036534" }}>Integration of camera in Dental Surgical light</p>
                                     </div>
                                     <br></br>
                                     <li><p><b>Dental Chair-Mounted Cameras:</b>Mounted on the dental chair or its armrest, these cameras offer a fixed position to capture images of the patient’s face, jaw, and teeth.</p></li>
@@ -102,23 +105,35 @@ const Understandingextra = () => {
                             <div className="Blogrelated-articles">
                                 <p style={{ "font-weight": "bold" }}>Related Blogs</p>
                                 <hr />
-                                <div className="CardBlogs" onClick={() => navigate('/Threeimportant')} style={{ cursor: "pointer" }}>
+                                <div className="CardBlogs">
+                                <Link className="cardImgLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
                                     <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
+                                    </Link>
+                                    <Link className="cardTitleLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
                                     <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
+                                    </Link>
                                     <p>Learn how three important parameters—Depth of Field, Field of View, and Image Quality—impact intra-oral camera device performance. In this blog, we dive into the technical details of how these factors can be fine-tuned for accurate dental diagnosis.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/Threeimportant"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/three-important-parameters-in-intraoral-camera-technology"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs" onClick={() => navigate('/AutofocusBlog')} style={{ cursor: "pointer" }}>
+                                <div className="CardBlogs">
+                                <Link className="cardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                                     <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
+                                    </Link>
+                                    <Link className="cardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
+                                    </Link>
                                     <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient experience. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras"></AnimatedButton>
                                 </div>
-                                <div className="CardBlogs" onClick={() => navigate('/AGuidTochoose')} style={{ cursor: "pointer" }}>
+                                <div className="CardBlogs">
+                                <Link className="cardImgLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
                                     <img src={Aguidtochoose} alt="Camera Model 3" className="Cardrelated-image" />
+                                    </Link>
+                                    <Link className="cardTitleLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
                                     <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
+                                    </Link>
                                     <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
-                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AGuidTochoose"></AnimatedButton>
+                                    <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/choosing-best-dental-intraoral-camera"></AnimatedButton>
                                 </div>
                             </div>
                         </div>

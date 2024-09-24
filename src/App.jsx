@@ -10,7 +10,7 @@ import Totalproducts1 from "./Components/Product Comp/Totalproducts1"
 import Hubpageblog from "./Components/Hubpage Comp/Bloghubpages/Hubpageblog"
 import Casehubpage from "./Components/Hubpage Comp/Casestudyhubpage/Casehubpage";
 import AboutUs from "./Components/AboutUs/AboutUs";
-import ContactUs from './Components/Home Comp/Contact Us comp/ContactUs';
+import ContactUs from './Components/Home Comp/Homecontactus/ContactUs';
 import Threeimportant from "./Components/Future Blog/Threeimportant-Blogs/Threeimportant";
 import AutofocusBlog from "./Components/Future Blog/Autofocus-Blogs/AutofocusBlog";
 import CapturingDentists from "./Components/Future Blog/Capturing the Dentists/CapturingDentists";
@@ -19,35 +19,44 @@ import Aguidtochoose from './Components/Future Blog/A-guid to choose-Blog/Aguidt
 import HowToOvercome from "./Components/Future Blog/HowToOvercome/HowToOvercome";
 import Extraoralbestimg from "./Components/Future Blog/Extraoralbestimg/Extraoralbestimg";
 import Understandingextra from "./Components/Future Blog/understandingextra/Understandingextra";
-
+import Aidriven from "./Components/FutureCasestudy/Aidriven";
+import Improvingdental from "./Components/FutureCasestudy/Improvingdental";
+import Roadmapofdual from './Components/FutureCasestudy/Roadmapofdual';
+import { HelmetProvider } from 'react-helmet-async';
 const App = () => {
   return (
     <BrowserRouter>
+          <HelmetProvider>
+
     <ScrollToTop /> 
     <div className='fixed-container'>
       <NavBarpage />
       <Routes>
         <Route path="/" element={<TotalHome />} />
-        <Route path="/Intraoralcamera" element={<Totalproducts1 />} />
-        <Route path="/blogsHubPage" element={<Hubpageblog />} />
-        <Route path="/casestudyHubPage" element={<Casehubpage />} />
-        <Route path="/ContactUs" element={<ContactUs />} />
-        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/product/intraoral-cameras/" element={<Totalproducts1 />} />
+        <Route path="/blogs" element={<Hubpageblog />} />
+        <Route path="/case-studies" element={<Casehubpage />} />
+        <Route path="/company/contact-us" element={<ContactUs />} />
+        <Route path="/company/about-us" element={<AboutUs />} />
 
-        <Route path="/AGuidTochoose" element={< Aguidtochoose/>} />
-        <Route path="/Threeimportant" element={<Threeimportant/>} />
-        <Route path="/AutofocusBlog" element={<AutofocusBlog />} />
-        <Route path="/CapturingDentists" element={<CapturingDentists />} />
-        <Route path="/RightforExtraoral" element={<RightCMOS />} />
-        <Route path="/howtoovercome" element={<HowToOvercome />} />
-        <Route path="/Extraoralbestimg" element={<Extraoralbestimg />} />
-        <Route path="/Understandingextra" element={<Understandingextra />} />
+        <Route path="//blogs/choosing-best-dental-intraoral-camera" element={< Aguidtochoose/>} />
+        <Route path="/blogs/three-important-parameters-in-intraoral-camera-technology" element={<Threeimportant/>} />
+        <Route path="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" element={<AutofocusBlog />} />
+        <Route path="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" element={<CapturingDentists />} />
+        <Route path="/blogs/choosing-the-right-cmos-cameras-for-extraoral-imaging" element={<RightCMOS />} />
+        <Route path="/blogs/imaging-challenges-dental-loupes-manufacturing" element={<HowToOvercome />} />
+        <Route path="/blogs/extraoral-cameras-image-quality-tuning" element={<Extraoralbestimg />} />
+        <Route path="/blogs/understanding-extraoral-cameras-dentistry" element={<Understandingextra />} />
      
+        <Route path="/case-studies/ai-portable-point-of-care-device" element={<Aidriven />} />
+        <Route path="/case-studies/dual-ethernet-camera-integration" element={<Roadmapofdual />} />
+        <Route path="/case-studies/4k-dental-loupe-camera-improvement" element={<Improvingdental />} />
 
-        
+
         </Routes>
         <Footerpage />
       </div>
+      </HelmetProvider>
     </BrowserRouter>
 
   );
