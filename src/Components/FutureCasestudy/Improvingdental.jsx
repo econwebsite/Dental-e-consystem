@@ -1,9 +1,11 @@
 import React from "react";
 import './Futurecase.css';
-import caseimg from "../../assets/Futurecasestudy/sports-analytics-banner-en.jpg";
-import caseicon from "../../assets/Futurecasestudy/caseicons.png";
+import caseimg from "../../assets/Futurecasestudy/improving-banner.jpg";
+import impicon1 from "../../assets/Futurecasestudy/improvingicon1.png";
+import impicon2 from "../../assets/Futurecasestudy/improvingicon2.png";
+import impicon3 from "../../assets/Futurecasestudy/improvingicon3.png";
+import dualethernet from "../../assets/Futurecasestudy/Dual-ethrnet-cam.jpg"
 import relatedCaseImg1 from "../../assets/Futurecasestudy/AI-driven.jpg";
-import relatedCaseImg2 from "../../assets/Futurecasestudy/Improving-Dental.jpg";
 import Modelbutton from "../Button comp/Modelbutton";
 import AnimatedButton from "../Button comp/AnimatedButton";
 import { Helmet } from 'react-helmet-async';
@@ -33,15 +35,15 @@ const Improvingdental = () => {
         <h2 className="future-case-sub-heading">Key Challenges Faced by the Client</h2>
         <div className="future-case-image-row">
           <div className="future-case-challenge">
-            <img src={caseicon} alt="Challenge 1" className="future-case-challenge-image" />
+            <img src={impicon1} alt="Challenge 1" className="future-case-challenge-image" />
             <p>Loupe mount camera to overcome heavy intraoral sensors that have limited positioning</p>
           </div>
           <div className="future-case-challenge">
-            <img src={caseicon} alt="Challenge 2" className="future-case-challenge-image" />
+            <img src={impicon2} alt="Challenge 2" className="future-case-challenge-image" />
             <p>Seamless LED lighting with perfect focus and detail</p>
           </div>
           <div className="future-case-challenge">
-            <img src={caseicon} alt="Challenge 3" className="future-case-challenge-image" />
+            <img src={impicon3} alt="Challenge 3" className="future-case-challenge-image" />
             <p>Low heat iHDR camera for dentistry that produces high-quality videos</p>
           </div>
         </div>
@@ -80,7 +82,7 @@ const Improvingdental = () => {
           </div>
           <div className="related-case-card">
           <Link className="fuCaseIMGLINK" to="/case-studies/dual-ethernet-camera-integration" style={{ textDecoration: "none" }}>
-            <img src={relatedCaseImg2} alt="Case Study 2" className="related-case-image" />
+            <img src={dualethernet} alt="Case Study 2" className="related-case-image" />
             </Link>
             <div className="related-case-details">
             <Link className="fuCaseTitleLINK" to="/case-studies/dual-ethernet-camera-integration" style={{ textDecoration: "none" }}>

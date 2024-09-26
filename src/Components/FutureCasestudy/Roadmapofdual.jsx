@@ -1,9 +1,12 @@
 import React from "react";
 import './Futurecase.css';
-import caseimg from "../../assets/Futurecasestudy/sports-analytics-banner-en.jpg";
-import caseicon from "../../assets/Futurecasestudy/caseicons.png";
+import caseimg from "../../assets/Futurecasestudy/dualethernet-banner.jpg";
+import dualicon1 from "../../assets/Futurecasestudy/dualicon-1.png"
+import dualicon2 from "../../assets/Futurecasestudy/dualicon-2.png"
+import dualicon3 from "../../assets/Futurecasestudy/dualicon-3.png"
 import relatedCaseImg1 from "../../assets/Futurecasestudy/AI-driven.jpg";
 import relatedCaseImg2 from "../../assets/Futurecasestudy/Improving-Dental.jpg";
+import benifitsdual from "../../assets/Futurecasestudy/benifits-dualethernet.jpg"
 import Modelbutton from "../Button comp/Modelbutton";
 import AnimatedButton from "../Button comp/AnimatedButton";
 import { Helmet } from 'react-helmet-async';
@@ -32,15 +35,15 @@ const Roadmapofdual = () => {
         <h2 className="future-case-sub-heading">Key Challenges Faced by the Client</h2>
         <div className="future-case-image-row">
           <div className="future-case-challenge">
-            <img src={caseicon} alt="Challenge 1" className="future-case-challenge-image" />
+            <img src={dualicon1} alt="Challenge 1" className="future-case-challenge-image" />
             <p>Attaining faster data transmission with low latency</p>
           </div>
           <div className="future-case-challenge">
-            <img src={caseicon} alt="Challenge 2" className="future-case-challenge-image" />
+            <img src={dualicon2} alt="Challenge 2" className="future-case-challenge-image" />
             <p>Overcoming artifacts caused by bright illumination in dental clinic environments</p>
           </div>
           <div className="future-case-challenge">
-            <img src={caseicon} alt="Challenge 3" className="future-case-challenge-image" />
+            <img src={dualicon3} alt="Challenge 3" className="future-case-challenge-image" />
             <p>Customization of the camera architecture to increase the ease of use of the system while switching between the cameras with uninterrupted data flow</p>
           </div>
         </div>
@@ -48,7 +51,7 @@ const Roadmapofdual = () => {
         {/* Benefits Section */}
         <h2 className="future-case-benefits-title">Benefits of the Solution</h2>
         <div className="future-case-benefits-container">
-          <img src={caseimg} alt="Benefits" className="future-case-benefits-image" />
+          <img src={benifitsdual} alt="Benefits" className="future-case-benefits-image" />
           <div className="future-case-benefits-details">
             <ul>
               <li>Introduced additional processing algorithms to streamline the encoding and decoding processes, helping reduce the latency</li>

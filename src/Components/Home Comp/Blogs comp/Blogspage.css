@@ -95,7 +95,9 @@
   font-size: 1.3em;
   text-align: justify; 
 }
-
+.cardImgLink{
+  width: 100%;
+}
 .homeblog-box-content p {
   margin: 0;
   text-align: justify; 

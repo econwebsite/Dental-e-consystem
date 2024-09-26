@@ -1,9 +1,12 @@
 import React from "react";
 import './Futurecase.css';
-import caseimg from "../../assets/Futurecasestudy/sports-analytics-banner-en.jpg";
-import caseicon from "../../assets/Futurecasestudy/caseicons.png";
-import relatedCaseImg1 from "../../assets/Futurecasestudy/AI-driven.jpg";
+import caseimg from "../../assets/Futurecasestudy/aidriven-banner.jpg";
+import aiicon1 from "../../assets/Futurecasestudy/aiicon1.png";
+import aiicon2 from "../../assets/Futurecasestudy/aiicon2.png";
+import aiicon3 from "../../assets/Futurecasestudy/aiicon3.png";
 import relatedCaseImg2 from "../../assets/Futurecasestudy/Improving-Dental.jpg";
+import dualethernet from "../../assets/Futurecasestudy/Dual-ethrnet-cam.jpg";
+import benifit from "../../assets/Futurecasestudy/AI-driven.jpg"
 import Modelbutton from "../Button comp/Modelbutton";
 import AnimatedButton from "../Button comp/AnimatedButton";
 import { Helmet } from 'react-helmet-async';
@@ -34,15 +37,15 @@ const Aidriven = () => {
         <h2 className="future-case-sub-heading">Key Challenges Faced by the Client</h2>
         <div className="future-case-image-row">
           <div className="future-case-challenge">
-            <img src={caseicon} alt="Challenge 1" className="future-case-challenge-image" />
+            <img src={aiicon1} alt="Challenge 1" className="future-case-challenge-image" />
             <p>Minimum working distance of 10 to 150 mm</p>
           </div>
           <div className="future-case-challenge">
-            <img src={caseicon} alt="Challenge 2" className="future-case-challenge-image" />
+            <img src={aiicon2} alt="Challenge 2" className="future-case-challenge-image" />
             <p>Android support with full access to the camera controls</p>
           </div>
           <div className="future-case-challenge">
-            <img src={caseicon} alt="Challenge 3" className="future-case-challenge-image" />
+            <img src={aiicon3} alt="Challenge 3" className="future-case-challenge-image" />
             <p>Unique form factor to fit into the application</p>
           </div>
         </div>
@@ -50,7 +53,7 @@ const Aidriven = () => {
         {/* Benefits Section */}
         <h2 className="future-case-benefits-title">Benefits of the Solution</h2>
         <div className="future-case-benefits-container">
-          <img src={caseimg} alt="Benefits" className="future-case-benefits-image" />
+          <img src={benifit} alt="Benefits" className="future-case-benefits-image" />
           <div className="future-case-benefits-details">
             <ul>
               <li>Customized liquid lens and lens mount holder to meet the required working distance range</li>
@@ -66,7 +69,7 @@ const Aidriven = () => {
         <div className="related-case-container">
           <div className="related-case-card">
           <Link className="fuCaseIMGLINK" to="/case-studies/dual-ethernet-camera-integration" style={{ textDecoration: "none" }}>
-            <img src={relatedCaseImg1} alt="Case Study 1" className="related-case-image" />
+            <img src={dualethernet} alt="Case Study 1" className="related-case-image" />
             </Link>
             <div className="related-case-details">
             <Link className="fuCaseTitleLINK" to="/case-studies/dual-ethernet-camera-integration" style={{ textDecoration: "none" }}>
@@ -78,6 +81,7 @@ const Aidriven = () => {
               </div>
             </div>
           </div>
+          
           <div className="related-case-card">
           <Link className="fuCaseIMGLINK" to="/case-studies/4k-dental-loupe-camera-improvement" style={{ textDecoration: "none" }}>
             <img src={relatedCaseImg2} alt="Case Study 2" className="related-case-image" />
