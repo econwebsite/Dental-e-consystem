@@ -22,6 +22,7 @@ import Understandingextra from "./Components/Future Blog/understandingextra/Unde
 import Aidriven from "./Components/FutureCasestudy/Aidriven";
 import Improvingdental from "./Components/FutureCasestudy/Improvingdental";
 import Roadmapofdual from './Components/FutureCasestudy/Roadmapofdual';
+import Notfoundpage from "./Components/Notfoundpage"
 import { HelmetProvider } from 'react-helmet-async';
 const App = () => {
   return (
@@ -52,6 +53,7 @@ const App = () => {
         <Route path="/case-studies/dual-ethernet-camera-integration" element={<Roadmapofdual />} />
         <Route path="/case-studies/4k-dental-loupe-camera-improvement" element={<Improvingdental />} />
 
+        <Route path="*" element={<Notfoundpage />} />
 
         </Routes>
         <Footerpage />
