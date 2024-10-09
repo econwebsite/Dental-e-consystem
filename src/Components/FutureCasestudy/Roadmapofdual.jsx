@@ -6,7 +6,7 @@ import dualicon2 from "../../assets/Futurecasestudy/dualicon-2.png"
 import dualicon3 from "../../assets/Futurecasestudy/dualicon-3.png"
 import relatedCaseImg1 from "../../assets/Futurecasestudy/AI-driven.jpg";
 import relatedCaseImg2 from "../../assets/Futurecasestudy/Improving-Dental.jpg";
-import benifitsdual from "../../assets/Futurecasestudy/benifits-dualethernet.jpg"
+import benifitsdual from "../../assets/Futurecasestudy/benifit-dentalloupe.jpg"
 import Modelbutton from "../Button comp/Modelbutton";
 import AnimatedButton from "../Button comp/AnimatedButton";
 import { Helmet } from 'react-helmet-async';

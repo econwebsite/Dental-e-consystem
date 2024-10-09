@@ -109,7 +109,8 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
     if (type === 'download') {
       values.productName = productName;
       values.documentName = docName;
-      axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values })
+      //axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values })
+      axios.post(`http://localhost:3001/api/downloadform`, { values }, { withCredentials: true })
         .then(result => {
           if (result.status === 200) {
             setIsSuccess(true);

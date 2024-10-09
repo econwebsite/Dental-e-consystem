@@ -4,6 +4,7 @@ import caseimg from "../../assets/Futurecasestudy/improving-banner.jpg";
 import impicon1 from "../../assets/Futurecasestudy/improvingicon1.png";
 import impicon2 from "../../assets/Futurecasestudy/improvingicon2.png";
 import impicon3 from "../../assets/Futurecasestudy/improvingicon3.png";
+import benifits from "../../assets/Futurecasestudy/benifit-improving.jpg"
 import dualethernet from "../../assets/Futurecasestudy/Dual-ethrnet-cam.jpg"
 import relatedCaseImg1 from "../../assets/Futurecasestudy/AI-driven.jpg";
 import Modelbutton from "../Button comp/Modelbutton";
@@ -51,7 +52,7 @@ const Improvingdental = () => {
         {/* Benefits Section */}
         <h2 className="future-case-benefits-title">Benefits of the Solution</h2>
         <div className="future-case-benefits-container">
-          <img src={caseimg} alt="Benefits" className="future-case-benefits-image" />
+          <img src={benifits} alt="Benefits" className="future-case-benefits-image" />
           <div className="future-case-benefits-details">
             <ul>
               <li>High resolution, as well as high-quality videos and images from the dental loupes</li>
