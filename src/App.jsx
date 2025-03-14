@@ -22,7 +22,6 @@ import Understandingextra from "./Components/Future Blog/understandingextra/Unde
 import Aidriven from "./Components/FutureCasestudy/Aidriven";
 import Improvingdental from "./Components/FutureCasestudy/Improvingdental";
 import Roadmapofdual from './Components/FutureCasestudy/Roadmapofdual';
-import Notfoundpage from "./Components/Notfoundpage"
 import { HelmetProvider } from 'react-helmet-async';
 import NotFoundPage from './Components/Notfoundpage';
 const App = () => {
