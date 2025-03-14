@@ -54,7 +54,7 @@ const Dentalhome = () => {
                     beforeChange={(from, to) => setActiveIndex(to)} // Update active dot
                 >
                     <div className="carousel-slide">
-                        <a href="https://www.e-consystems.com/events/gtc-2025.asp" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.e-consystems.com/events/ids-2025.asp" target="_blank" rel="noopener noreferrer">
                             <div className='homeBanner'>
                                 <img src={banner1} alt="Slide 1" className="carousel-image" />
                             </div>
