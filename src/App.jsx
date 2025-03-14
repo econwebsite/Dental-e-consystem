@@ -24,7 +24,7 @@ import Improvingdental from "./Components/FutureCasestudy/Improvingdental";
 import Roadmapofdual from './Components/FutureCasestudy/Roadmapofdual';
 import Notfoundpage from "./Components/Notfoundpage"
 import { HelmetProvider } from 'react-helmet-async';
-import NotFoundPage from './Components/NotFoundPage';
+import NotFoundPage from './Components/Notfoundpage';
 const App = () => {
   return (
     <BrowserRouter>
@@ -50,15 +50,9 @@ const App = () => {
         <Route path="/blogs/extraoral-cameras-image-quality-tuning" element={<Extraoralbestimg />} />
         <Route path="/blogs/understanding-extraoral-cameras-dentistry" element={<Understandingextra />} />
      
-        {/* <Route path="/case-studies/ai-portable-point-of-care-device" element={<Aidriven />} />
+        <Route path="/case-studies/ai-portable-point-of-care-device" element={<Aidriven />} />
         <Route path="/case-studies/dual-ethernet-camera-integration" element={<Roadmapofdual />} />
-<<<<<<< HEAD
         <Route path="/case-studies/4k-dental-loupe-camera-improvement" element={<Improvingdental />} />
-
-        <Route path="*" element={<Notfoundpage />} />
-=======
-        <Route path="/case-studies/4k-dental-loupe-camera-improvement" element={<Improvingdental />} /> */}
->>>>>>> 51393226aaf2474b372ebfb8a07d8732377bb613
 
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
