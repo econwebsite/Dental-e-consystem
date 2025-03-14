@@ -1,12 +1,10 @@
-/* Main container styling */
-.carouselContainer {
+/* .carouselContainer {
     width: 100%;
     height: auto;
     position: relative;
     margin-bottom: 2em;
 }
 
-/* Carousel slide styling */
 .carousel-slide {
     display: flex;
     justify-content: center;
@@ -14,7 +12,6 @@
     height: auto; 
 }
 
-/* Image styling */
 .carousel-image {
     width: 100%;
     height: auto; 
@@ -68,6 +65,72 @@ bottom: 10%;
     }
 
     .ant-carousel .slick-dots {
+        display: none !important;
+    }
+} */
+.carouselContainer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.carousel-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.homeBanner {
+    position: relative;
+}
+
+.homeBanner .homeButton {
+    position: absolute;
+    display: flex;
+    width: max-content;
+    gap: 1em;
+    left: 5%;
+    bottom: 10%;
+}
+
+.custom-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.custom-dots .dot {
+    width: 40px;
+    height: 3px;
+    background-color: #344ea1;
+    transition: background 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.custom-dots .dot:hover {
+    background: #69ba2f;
+}
+.custom-dots .dot.active {
+    background: #69ba2f !important; 
+}
+
+@media (max-width: 800px) {
+    .homeBanner .homeButton {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .custom-dots {
         display: none !important;
     }
 }
