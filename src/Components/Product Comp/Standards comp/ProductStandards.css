@@ -1,92 +1,147 @@
-.product-standard-container {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    overflow-x: hidden;
-}
-.product-standard-title {
-   padding: 1em 0 .5em 0;
-    text-align: center;
-    font-size: 3em;
-    color: #344ea1;
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
+.ProductStandards-container {
+  padding: 2rem;
+  background-color: white;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
-.product-standard-box-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-    padding: 30px;
-}
+.ProductStandards-title {
 
-.product-standard-box {
-    flex: 1;
-    max-width: 30%;
-    padding: 0;
-    border: 1px solid #344ea1;
-}
-
-.product-standard-box-image {
-    width: 45%;
-    height: auto;
-}
-/* Paragraph.css */
-
-.product-containerparagraph {
-    width: 100%;
-    background-color:#f1f2f2 ;
-    margin: 0 auto;
-    padding: 1em;
-  }
-  
-  .product-standparagraphtext {
-    text-align: center;
-    padding: 2em;
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
+  text-align: center;
+    font-size: 2.3em;
     color: #003873;
-    font-size: 1.1em;
-    line-height: 2em;
-  }
-  .Product-standards{
-    text-align: center; 
-    font-size: 2.5em;
-    color: #344ea1;
     font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    padding: 0.5em;
+    font-weight: 600;
+    padding: 1em;
     font-style: normal;
-  }
-  
-  /* Mobile responsiveness */
-  @media (max-width: 600px) {
-    .product-containerparagraph {
-      width: 100%;
-      padding: 10px;
-    }
-  
-    .product-standparagraphtext {
-      font-size: 1em; /* Adjust font size if needed */
-      padding: 10px;
-      text-align: justify;
-    }
-  }
-  
+}
 
+.ProductStandards-subtitle {
+  font-size: 2rem;
+  color: #003873;
+  padding: 10px;
+}
+
+.ProductStandards-paragraph {
+  font-size: 0.95rem;
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.7em;
+  color: #344ea1;
+}
+
+.ProductStandards-button {
+  background-color: #003873;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  transition: background-color 0.3s;
+}
+
+.ProductStandards-button:hover {
+  background-color: #003873;
+}
+
+.ProductStandards-imageRow {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.ProductStandards-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.ProductStandards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.ProductStandards-item {
+  text-align: center;
+}
+
+.ProductStandards-gridImage {
+width: 180px;
+  height: 150px;
+  object-fit: cover;
+  display: block; 
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+.ProductStandards-sampletitle{
+  color: #003873;
+  font-weight: 300;
+  font-size: 1.5em;
+  padding: 20px;
+}
+
+.ProductStandards-imageTitle {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #003873;
+}
 
 @media (max-width: 768px) {
-    .product-standard-box {
-        max-width: 100%;
-    }
-    .Product-standards{
-      font-size: 2em;
-    }
-    .product-standparagraphtext {
-      font-size: 1.1em; 
-      padding: 10px;
-    }
+  .ProductStandards-container {
+    padding: 1rem;
+  }
+
+  .ProductStandards-title,
+  .ProductStandards-subtitle {
+    font-size: 1.6em;
+    padding: 0.5em;
+  }
+
+  .ProductStandards-paragraph {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+    text-align: justify;
+  }
+
+  .ProductStandards-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .ProductStandards-imageRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .ProductStandards-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .ProductStandards-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .ProductStandards-gridImage {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .ProductStandards-imageTitle {
+    font-size: 1rem;
+  }
 }

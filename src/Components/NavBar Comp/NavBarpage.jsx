@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 import { Dropdown, Menu } from 'antd';
 import { Navbar, Nav, Container, Offcanvas, Form, Button } from 'react-bootstrap';
 import './Navbar.css';
-import dentallogo from '../../assets/home images/NewDentallogo.png'; // Import your logo image
+import dentallogo from '../../assets/home images/NewDentallogo.png'; 
 
 const NavBarpage = () => {
   const offcanvasRef = useRef(null);
 
   const handleNavLinkClick = () => {
     if (offcanvasRef.current) {
-      offcanvasRef.current.hide(); // Hide Offcanvas when a nav link is clicked
+      offcanvasRef.current.hide(); 
     }
   };
 

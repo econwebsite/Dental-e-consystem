@@ -4,11 +4,10 @@ import ProductCaseStudy from './RelatedCaseStudiesComp/ProductCaseStudy';
 import ProductTechnicalBlog from "./ProductTechnicalArtical/ProductTechnicalBlog"
 import Specification from './Specification comp/Specification';
 import Productboderbox from "./productBoderbox/Productboderbox"
-// import ProductCard from "./ProductCard comp/ProductCard"
-// import KeyHighlights from "./KeyHighlights comp/KeyHighlights"
 import ProductStandards from "./Standards comp/ProductStandards"
 import ImageProduct from "./ImageProduct comp/ImageProduct";
 import { Helmet } from 'react-helmet-async';
+import Diagnostics from './Diagnosticscomp/Diagnostics';
 
 const Totalproducts1 = () => {
     return (
@@ -19,11 +18,9 @@ const Totalproducts1 = () => {
 </Helmet>
             <IntraOralcamera/>
             <Productboderbox/>
-            {/* <ProductCard/> */}
             <Specification/>
-            {/* <KeyHighlights/> */}
             <ImageProduct/>
-
+            <Diagnostics/>
           <ProductStandards title="Enhanced Features"/>
             <ProductCaseStudy/>
             <ProductTechnicalBlog/>

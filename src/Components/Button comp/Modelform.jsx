@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Form, Input, Select, Button, Row, Col, message, Modal, Result } from 'antd';
+import { Form, Input, Select, Button, Row, Col, message, Modal, Result,Spin } from 'antd';
 import axios from 'axios';
 import "./Modelbutton.css";
 import countryList from 'react-select-country-list';
@@ -8,37 +8,6 @@ import DownloadButton from './DownloadButton';
 
 const { TextArea } = Input;
 const { Option } = Select;
-
-
-const countries1 = [
-  { code: '+1', name: 'United States' },
-  { code: '+1', name: 'Canada' },
-  { code: '+52', name: 'Mexico' },
-  { code: '+44', name: 'United Kingdom' },
-  { code: '+61', name: 'Australia' },
-  { code: '+91', name: 'India' },
-  { code: '+49', name: 'Germany' },
-  { code: '+33', name: 'France' },
-  { code: '+39', name: 'Italy' },
-  { code: '+34', name: 'Spain' },
-  { code: '+55', name: 'Brazil' },
-  { code: '+81', name: 'Japan' },
-  { code: '+86', name: 'China' },
-  { code: '+82', name: 'South Korea' },
-  { code: '+27', name: 'South Africa' },
-  { code: '+7', name: 'Russia' },
-  { code: '+90', name: 'Turkey' },
-  { code: '+966', name: 'Saudi Arabia' },
-  { code: '+54', name: 'Argentina' },
-  { code: '+56', name: 'Chile' },
-  { code: '+57', name: 'Colombia' },
-  { code: '+51', name: 'Peru' },
-  { code: '+66', name: 'Thailand' },
-  { code: '+84', name: 'Vietnam' },
-  { code: '+65', name: 'Singapore' },
-];
-
-
 
 const usaStates = [
   { code: 'AL', name: 'Alabama' },
@@ -94,45 +63,101 @@ const usaStates = [
 ];
 function Modelform({ visible, onClose, type, docName, productName, title }) {
   const [form] = Form.useForm();
-  const [selectedCountry, setSelectedCountry] = useState('United States');
+  const [selectedCountry, setSelectedCountry] = useState('US');
   const [showStates, setShowStates] = useState(true);
   const [isSuccess, setIsSuccess] = useState(false);
   const [downloadUrl, setDownloadUrl] = useState('');
+  const [isLoading, setIsLoading] = useState(false); 
+  const [isError, setIsError] = useState(true); 
+  const blockedProviders  = [
+    'gmail.com',
+    'yahoo.com',
+    'outlook.com',
+    'hotmail.com',
+    'protonmail.com',
+    'zoho.com',
+    'aol.com',
+    'gmx.com',
+    'mail.com',
+    'icloud.com',
+    'yandex.com'
+  ];
+    const overlayStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1000,
+    borderRadius: 8
+  };
+
   const countries = useMemo(() => {
     return countryList().getData().map(country => ({
       value: country.value,
       label: country.label
     }));
   }, []);
+
   const onFinish = (values) => {
-    form.resetFields();
+  if(isError){
+    setIsLoading(true);
+    
+    const trackingData = {
+      email: values.email,
+      company_name: values.companyName,
+      phone_number: values.contactNumber,
+      country: values.country,
+      state: values.state || '',
+      queries: values.queries || ''
+    };
+  
+  
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'contact_form_submit',
+      ...trackingData
+    });
+  
+
     if (type === 'download') {
       values.productName = productName;
       values.documentName = docName;
-      axios.post(`http://localhost:3001/api/downloadform`, { values }, { withCredentials: true })
-      //axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values })
+      axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values }, { withCredentials: true })
         .then(result => {
           if (result.status === 200) {
+            console.log(result,"result");
+            
             setIsSuccess(true);
-            setDownloadUrl(result.data[0].docName);
+            setDownloadUrl(result.data.docName);
           }
-          //onClose();
+          form.resetFields();
         })
-        .catch(err => console.log(err));
+        .catch(err => console.log(err))
+        .finally(() => setIsLoading(false));
     }
     else {
       values.productName = productName;
       values.documentName = docName;
-      axios.post(`http://localhost:3001/api/contactusform`, { values })
-      //axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
+       axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
         .then(result => {
-          message.success('Message sent successfully!');
-          onClose();
+          message.success({
+            content: 'Message sent successfully!',
+            placement: 'top', 
+            style: { textAlign: 'center' } 
+          });
+                    onClose();
         })
-        .catch(err => console.log(err));
+        .catch(err => console.log(err))
+        .finally(() => setIsLoading(false));
     }
 
-  };
+  }
+};
 
   const handleCountryChange = (value) => {
     const country = countries.find(c => c.value === value);
@@ -142,17 +167,58 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
       form.setFieldsValue({ state: undefined });
     }
   };
+  
+  const emailValidator = (_, value) => {
+    if (value) {
+      const domain = value.split('@')[1]?.toLowerCase();
+      if (domain && blockedProviders.includes(domain)) {
+        setIsError(false);
+        return Promise.reject('Please enter your company email');
+      }
+    
+    }
+    return Promise.resolve();
+  };
+
   const handleEmailValidate = async (e) => {
     const email = e.target.value;
     if (email) {
-      axios.post(`http://localhost:3001/api/validateEmail`, { email })
-      //axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
+      const domain = email.split('@')[1]?.toLowerCase();
+      if (domain && blockedProviders.includes(domain)) {
+        setIsError(false);
+        form.setFields([
+          {
+            name: 'email',
+            errors: ["Please enter your company email"],
+          },
+        ]);
+        return;
+      }
+
+      // Proceed with API validation only if domain is not blocked
+      axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
         .then(result => {
+          if(result.data.isValid === true){
+            setIsError(true);
+            return true;
+          }
+          else if(result.data.isValid === false){
+            setIsError(false);
+            form.setFields([
+              {
+                name: 'email',
+                errors: ["Please enter valid email ID"],
+              },
+            ]);
+          }
+          else if (result.data.isValid === null || result.data.isValid === undefined) {
           if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
             if (!result.data.free_email) {
+              setIsError(true);
               return true
             }
             else {
+              setIsError(false);
               form.setFields([
                 {
                   name: 'email',
@@ -162,6 +228,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
             }
           }
           else {
+            setIsError(false);
             form.setFields([
               {
                 name: 'email',
@@ -169,12 +236,12 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
               },
             ]);
           }
-
+        }
         })
         .catch(err => console.log(err));
-
     }
   };
+
   return (
     <Modal
       title={type === 'download' ? `Download - ${title}` : "Contact Form"}
@@ -184,20 +251,22 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
       width={450}
       className="custom-modal"
     >
-      {isSuccess ? <Result
+      {isSuccess ?( <Result
         status="success"
         title="Ready to Download"
         subTitle="Please click below button to downlaod"
         extra={[
-          <DownloadButton url={downloadUrl} />
+          <DownloadButton documentName={docName} />
         ]}
-      /> : <Form
+      /> ): (
+        <div style={{ position: 'relative' }}>
+      <Form
         form={form}
         name="contactForm"
         onFinish={onFinish}
         layout="vertical"
         initialValues={{
-          country: 'United States',
+          country: 'US',
           state: 'AL',
         }}
       >
@@ -227,9 +296,10 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
               rules={[
                 { required: true, message: 'Please enter your email' },
                 { type: 'email', message: 'Please enter a valid email' },
+                { validator: emailValidator }, 
               ]}
             >
-              <Input placeholder="Email*" onPaste={(e) => {
+              <Input placeholder="name@yourcompany.com*" onPaste={(e) => {
                 e.preventDefault()
                 return false;
               }} autoComplete='off' onBlur={handleEmailValidate} />
@@ -312,7 +382,13 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
           </Col>
         </Row>
       </Form>
-      }
+      {isLoading && (
+          <div style={overlayStyle}>
+            <Spin size="large" />
+          </div>
+        )}
+      </div>
+    )}
     </Modal>
   );
 }

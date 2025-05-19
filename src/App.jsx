@@ -19,11 +19,8 @@ import Aguidtochoose from './Components/Future Blog/A-guid to choose-Blog/Aguidt
 import HowToOvercome from "./Components/Future Blog/HowToOvercome/HowToOvercome";
 import Extraoralbestimg from "./Components/Future Blog/Extraoralbestimg/Extraoralbestimg";
 import Understandingextra from "./Components/Future Blog/understandingextra/Understandingextra";
-import Aidriven from "./Components/FutureCasestudy/Aidriven";
-import Improvingdental from "./Components/FutureCasestudy/Improvingdental";
-import Roadmapofdual from './Components/FutureCasestudy/Roadmapofdual';
+import Notfoundpage from "./Components/Notfoundpage"
 import { HelmetProvider } from 'react-helmet-async';
-import NotFoundPage from './Components/Notfoundpage';
 const App = () => {
   return (
     <BrowserRouter>
@@ -34,13 +31,13 @@ const App = () => {
       <NavBarpage />
       <Routes>
         <Route path="/" element={<TotalHome />} />
-        <Route path="/product/intraoral-cameras/" element={<Totalproducts1 />} />
+        <Route path="/product/intraoral-cameras" element={<Totalproducts1 />} />
         <Route path="/blogs" element={<Hubpageblog />} />
         <Route path="/case-studies" element={<Casehubpage />} />
         <Route path="/company/contact-us" element={<ContactUs />} />
         <Route path="/company/about-us" element={<AboutUs />} />
 
-        <Route path="//blogs/choosing-best-dental-intraoral-camera" element={< Aguidtochoose/>} />
+        <Route path="/blogs/choosing-best-dental-intraoral-camera" element={< Aguidtochoose/>} />
         <Route path="/blogs/three-important-parameters-in-intraoral-camera-technology" element={<Threeimportant/>} />
         <Route path="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" element={<AutofocusBlog />} />
         <Route path="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" element={<CapturingDentists />} />
@@ -48,12 +45,9 @@ const App = () => {
         <Route path="/blogs/imaging-challenges-dental-loupes-manufacturing" element={<HowToOvercome />} />
         <Route path="/blogs/extraoral-cameras-image-quality-tuning" element={<Extraoralbestimg />} />
         <Route path="/blogs/understanding-extraoral-cameras-dentistry" element={<Understandingextra />} />
-     
-        <Route path="/case-studies/ai-portable-point-of-care-device" element={<Aidriven />} />
-        <Route path="/case-studies/dual-ethernet-camera-integration" element={<Roadmapofdual />} />
-        <Route path="/case-studies/4k-dental-loupe-camera-improvement" element={<Improvingdental />} />
 
-          <Route path="*" element={<NotFoundPage />} />
+        <Route path="*" element={<Notfoundpage />} />
+
         </Routes>
         <Footerpage />
       </div>

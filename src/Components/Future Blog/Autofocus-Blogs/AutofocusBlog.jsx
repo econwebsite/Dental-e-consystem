@@ -78,7 +78,7 @@ const AutofocusBlog = () => {
                 </p>
                 <p>Ultimately, the selection of the lens should be based on balancing the need for image quality, operational simplicity, and budget considerations.</p>
                 <h3>Intraoral Cameras by e-con Systems</h3>
-                <p>e-con Systems is backed by 20+ years of designing, developing, and manufacturing OEM camera solutions. We also have specialized experience as an Original Design Manufacturer (ODM), offering world-class plug-and-play cameras designed for both extraoral and intraoral dental procedures. These cameras come with dedicated Image Signal Processors (ISPs) customized to each sensor, ensuring optimal color accuracy. e-con Systems™ also provides miniaturization services to customize the camera form factor to meet specific requirements.</p>
+                <p>e-con Systems is backed by 20+ years of designing, developing, and manufacturing OEM camera solutions. <b>We offer world-class plug-and-play cameras</b> designed for both extraoral and intraoral dental procedures. These cameras come with dedicated Image Signal Processors (ISPs) customized to each sensor, ensuring optimal color accuracy. e-con Systems also provides miniaturization services to customize the camera form factor to meet specific requirements.</p>
                 {/* <p><a href="">Explore our fixed-focus cameras</a></p> */}
                 <p><a href="https://www.e-consystems.com/camera-category/autofocus-usb-mipi-cameras.asp">Explore our autofocus cameras</a></p>
               </div>

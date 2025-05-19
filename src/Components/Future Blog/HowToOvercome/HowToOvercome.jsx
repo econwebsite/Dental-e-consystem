@@ -71,9 +71,8 @@ const HowToOvercome = () => {
                 <p>Compression algorithms can reduce the bandwidth required for transmitting high-resolution images and videos without affecting quality. Also, incorporating encryption protocols ensures that patient data remains secure during transmission.</p>
                 <p>That way, manufacturers can provide dentists with real-time access to high-quality visual data for better diagnostic outcomes and more procedural accuracy.</p>
                 <h3>Cameras for Dental Loupes Offered by e-con Systems</h3>
-                <p>e-con Systems has 20+ years of designing, developing, and manufacturing OEM camera solutions. We also have deep expertise as an Original Design Manufacturer (ODM), which equips us to offer superior plug-and-play cameras customized for dental loupes. These camera solutions come with dedicated Image Signal Processors (ISPs) for each sensor to achieve optimal color accuracy.</p>
-                <p>e-con Systems™ also provides miniaturization services to adjust the camera form factor to meet exact requirements.</p>
-                {/* <p><a href="">Check out all our dental cameras</a></p> */}
+                <p>e-con Systems is backed by 20+ years of designing, developing, and manufacturing OEM camera solutions. <b>We offer world-class plug-and-play cameras</b> designed for both extraoral and intraoral dental procedures. These cameras come with dedicated Image Signal Processors (ISPs) customized to each sensor, ensuring optimal color accuracy. e-con Systems also provides miniaturization services to customize the camera form factor to meet specific requirements.</p>
+               
               </div>
             </div>
             <div className="Blog-right-column">

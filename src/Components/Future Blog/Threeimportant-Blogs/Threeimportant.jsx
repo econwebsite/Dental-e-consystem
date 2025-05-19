@@ -161,8 +161,7 @@ const Threeimportant = () => {
                                 <br></br>
                                 <p>By prioritizing these parameters, we can significantly enhance the functionality and effectiveness of intraoral cameras, ultimately leading to greater patient satisfaction and smoother clinical procedures. As technology continues to evolve, maintaining a focus on field of view, depth of field, and image quality will remain essential for advancing the capabilities of intraoral imaging solutions.</p>
                                 <h3>Cameras for Intraoral Cameras Offered by e-con Systems</h3>
-                                <p>e-con Systems has 20+ years of designing, developing, and manufacturing OEM camera solutions. We also have deep expertise as an Original Design Manufacturer (ODM), which equips us to offer superior plug-and-play cameras customized for intraoral. These camera solutions come with dedicated Image Signal Processors (ISPs) for each sensor to achieve optimal color accuracy.</p>
-                                <p>e-con Systems™ also provides customization services to meet exact requirements.</p>
+                                <p>e-con Systems is backed by 20+ years of designing, developing, and manufacturing OEM camera solutions. <b>We offer world-class plug-and-play cameras</b> designed for both extraoral and intraoral dental procedures. These cameras come with dedicated Image Signal Processors (ISPs) customized to each sensor, ensuring optimal color accuracy. e-con Systems also provides miniaturization services to customize the camera form factor to meet specific requirements.</p>
                                 {/* <p><a href="">Check out all our dental cameras</a></p> */}
 
                             </div>

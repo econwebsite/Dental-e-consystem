@@ -68,9 +68,7 @@ const RightforExtraoral = () => {
 </div>
 <br></br>
 <h3>Cameras Offered by e-con Systems for Extraoral Devices</h3>
-<p>e-con Systems has 20+ years of designing, developing, and manufacturing OEM camera solutions. We also have deep expertise as an Original Design Manufacturer (ODM), which equips us to offer superior plug-and-play cameras customized for dental loupes. These camera solutions come with dedicated Image Signal Processors (ISPs) for each sensor to achieve optimal color accuracy.</p>
-<p>e-con Systems™ also provides miniaturization services to adjust the camera form factor to meet exact requirements.
-</p>
+<p>e-con Systems is backed by 20+ years of designing, developing, and manufacturing OEM camera solutions. <b>We offer world-class plug-and-play cameras</b> designed for both extraoral and intraoral dental procedures. These cameras come with dedicated Image Signal Processors (ISPs) customized to each sensor, ensuring optimal color accuracy. e-con Systems also provides miniaturization services to customize the camera form factor to meet specific requirements.</p>
 <p><a href="">Check out all our dental cameras</a></p>
 <p><a>Explore all our medical cameras</a></p>
 <p>Use our <a href="">Camera Selector Page </a>to find the best-fit camera for your product.</p>

@@ -123,10 +123,9 @@ const Aguidtochoose = () => {
                                 <p>Not only does it increase the efficiency of the dental practice, but it also keeps the patient and medical records safe and secure. This confidential data also plays a key role in insurance claims.</p>
                                 <h3>Camera Solutions for Intraoral Devices by e-con Systems</h3>
 
-                                <p>e-con Systems has 20+ years of designing, developing, and manufacturing OEM camera solutions. We also have deep expertise as an Original Design Manufacturer (ODM), which equips us to offer superior plug-and-play cameras customized for intraoral. These camera solutions come with dedicated Image Signal Processors (ISPs) for each sensor to achieve optimal color accuracy.</p>
+                                <p>e-con Systems has 20+ years of designing, developing, and manufacturing OEM camera solutions. <b>Our deep expertise equips us to offer superior</b> plug-and-play cameras customized for intraoral. These camera solutions come with dedicated Image Signal Processors (ISPs) for each sensor to achieve optimal color accuracy.</p>
 
-                                <p>e-con Systems™ also provides customization services to meet exact requirements.</p>
-                                {/* <p><a href="/product/intraoral-cameras">Check out all our dental cameras</a></p> */}
+                                <p>e-con Systems also provides customization services to meet exact requirements.</p>
 
                             </div>
                         </div>

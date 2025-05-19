@@ -105,7 +105,7 @@ const HowIspHelp = () => {
                                     <li><p><b> Diagnosis and Treatment Planning: </b> ISP tuning enhances image quality, making it easier to identify subtle oral issues, which is crucial for accurate diagnosis and effective treatment planning.</p></li>
                                 </ol>
                                 <h3>Dental Cameras with Inbuilt ISPs Offered by e-con Systems</h3>
-                                <p>e-con Systems has 20+ years of experience designing, developing, and manufacturing OEM camera solutions. Our specialized expertise as an Original Design Manufacturer (ODM) enables us to provide high-quality plug-and-play cameras, especially for extraoral devices.</p>
+                                <p>e-con Systems has 20+ years of experience designing, developing, and manufacturing OEM camera solutions. <b>Our specialized expertise enables</b> us to provide high-quality plug-and-play cameras, especially for extraoral devices.</p>
                                 <p>e-con Systems' camera solutions also come equipped with inbuilt ISPs for each sensor, which ensures superior image quality, optimal color accuracy, and more.</p>
                                 <p>Additionally, we offer miniaturization services to customize the camera form factor to meet the specifications of your dental device.</p>
                                 {/* <p><a href="">View all our dental cameras</a></p> */}

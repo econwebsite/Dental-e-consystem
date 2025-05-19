@@ -17,7 +17,7 @@ export default function AboutUs() {
     <div className="aboutus-container">
       <Helmet>
 <title>About Us</title>
-<meta name='description' content='Learn about e-con Systems Dental’s 20+ years in ODM for dental imaging. We offer solutions for intraoral, extraoral, and loupe cameras, ensuring quality and efficiency.' />
+<meta name='description' content='Learn about e-con Systems Dental’s 20+ years in dental imaging. We offer solutions for intraoral, extraoral, and loupe cameras, ensuring quality and efficiency.' />
 </Helmet>
       <div className="mainContainer">
         <div className="aboutus-header-image"></div>
@@ -26,7 +26,7 @@ export default function AboutUs() {
           <div className="aboutus-left-content">
             <p className="aboutus-heading">About e-con Systems Dental</p>
             <p className="aboutus-paragraph">
-              e-con Systems Dental is a specialized division focused on providing Original Design Manufacturing (ODM) solutions for dental imaging. At e-con Systems – Dental, we leverage our extensive expertise to meet the unique needs of the dental industry. Having collaborated with leading dental device manufacturers for more than 20 years, from ideation to market launch, we understand the challenges and intricacies of dental imaging. To address these challenges, we offer comprehensive ODM designs for dental imaging solutions, including intraoral cameras, extraoral cameras, and dental loupe cameras.Our solutions enable manufacturers to seamlessly integrate and rebrand these products into their portfolios, ensuring high-quality imaging with reduced time to market and cost efficiency.
+            e-con Systems Dental is a specialized division focused on providing <b>end&#8209;to&#8209;end design and manufacturing solutions</b> for dental imaging. At e&#8209;con Systems - Dental, we leverage our extensive expertise to meet the unique needs of the dental industry. Having collaborated with leading dental device manufacturers for more than 20 years, from ideation to market launch, we understand the challenges and intricacies of dental imaging. To address these challenges, we offer <b>comprehensive designs</b> for dental imaging solutions, including intraoral cameras, extraoral cameras, and dental loupe cameras. Our solutions enable manufacturers to seamlessly integrate and rebrand these products into their portfolios, ensuring high-quality imaging with reduced time to market and cost efficiency.
             </p>
           </div>
           <div className="aboutus-right-images">

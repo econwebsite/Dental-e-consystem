@@ -1,0 +1,137 @@
+.diagnostic-ad-container {
+  background-color: #344ea1;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.diagnostic-ad-content {
+  position: relative;
+  color: white;
+  max-width: 1100px;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.corner {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-color: #f0feff;
+  border-style: solid;
+}
+
+.corner.tl {
+  top: 0;
+  left: 0;
+  border-width: 8px 0 0 8px;
+  border-top-left-radius: 4px;
+}
+
+.corner.tr {
+  top: 0;
+  right: 0;
+  border-width: 8px 8px 0 0;
+  border-top-right-radius: 4px;
+}
+
+.corner.bl {
+  bottom: 0;
+  left: 0;
+  border-width: 0 0 8px 8px;
+  border-bottom-left-radius: 5px;
+}
+
+.corner.br {
+  bottom: 0;
+  right: 0;
+  border-width: 0 8px 8px 0;
+  border-bottom-right-radius: 4px;
+}
+
+
+.diagnostic-title {
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+  color: white;
+}
+
+.diagnostic-paragraph {
+  font-size: 1.2rem;
+  max-width: 850px;
+  line-height: 1.6em;
+  margin-bottom: 30px;
+  color: #f0feff;
+}
+
+.diagnostic-button {
+  background-color: #69ba2f;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.diagnostic-button:hover {
+  background-color: #007bb3;
+}
+@media (max-width: 768px) {
+  .diagnostic-ad-container {
+    padding: 30px 10px;
+  }
+
+  .diagnostic-ad-content {
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
+
+  .corner {
+    width: 30px;
+    height: 30px;
+    border-width: 5px;
+  }
+
+  .diagnostic-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8em;
+  }
+
+  .diagnostic-paragraph {
+    font-size: 1rem;
+    line-height: 1.4em;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+
+  .diagnostic-button {
+    font-size: 0.95rem;
+    /* padding: 10px 24px; */
+  }
+}
+
+@media (max-width: 480px) {
+  .diagnostic-title {
+    font-size: 1.5rem;
+  }
+
+  .diagnostic-paragraph {
+    font-size: 0.95rem;
+  }
+
+  .diagnostic-button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .corner {
+    width: 20px;
+    height: 20px;
+    border-width: 4px;
+  }
+}

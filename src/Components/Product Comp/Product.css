@@ -119,9 +119,8 @@
 
 .productIntraFlexEndRow {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 30px;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
 }
 
 .productIntraButtonEnd {

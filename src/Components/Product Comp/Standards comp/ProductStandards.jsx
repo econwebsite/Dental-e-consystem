@@ -1,49 +1,36 @@
 import React from 'react';
-import "./ProductStandards.css";
-// import Standards1 from "../../../assets/Product images/Standards1.png";
-// import Standards2 from "../../../assets/Product images/Standards2.png";
-// import Standards3 from "../../../assets/Product images/Standards3.png";
-import Modelbutton from "../../Button comp/Modelbutton"
-const ProductStandards = ({title}) => {
-    return (
-        <div className="product-standard-container">
-        <div className="product-containerparagraph">
-                          <div className='mainContainer'>
-            {/* <h1 className="product-standard-title">{title}</h1> */}
-            {/* <div className="product-standard-box-container"> */}
-                {/* <div className="product-standard-box">
-                    <img
-                        src={Standards1}
-                        alt="Box 1"
-                        className="product-standard-box-image"
-                    />
-                </div> */}
-                {/* <div className="product-standard-box">
-                    <img
-                        src={Standards2}
-                        alt="Box 2"
-                        className="product-standard-box-image"
-                    />
-                </div> */}
-                {/* <div className="product-standard-box">
-                    <img
-                        src={Standards3}
-                        alt="Box 3"
-                        className="product-standard-box-image"
-                    />
-                </div> */}
-                   
-        <h1 className='Product-standards'>Fully Customizable</h1>
-        <p className="product-standparagraphtext">
-        We offer complete customization options, allowing you to tailor the lens, camera, and design to your specific needs. Whether you require unique lens specifications, bespoke camera features, or a fully custom design, we can accommodate your preferences to ensure it meets all your operational requirements.</p>      
-       
-        </div>
-        <Modelbutton />
+import './ProductStandards.css';
+
+const ProductStandards = () => {
+  return (
+    <div className="ProductStandards-container">
+     
+      <h2 className="ProductStandards-title">Sample Images Taken from the Camera</h2>
+
+      <div className="ProductStandards-imageRow">
+        <img src="https://via.placeholder.com/200x150" alt="Sample 1" className="ProductStandards-image" />
+        <img src="https://via.placeholder.com/200x150" alt="Sample 2" className="ProductStandards-image" />
+        <img src="https://via.placeholder.com/200x150" alt="Sample 3" className="ProductStandards-image" />
+      </div>
+
+      <h2 className="ProductStandards-subtitle">Fully Customizable for OEMs</h2>
+      <p className="ProductStandards-paragraph">
+We offer a wide range of customization options, enabling OEM partners to tailor the camera to their unique needs — whether it's enclosure design, camera settings, or user controls. With our extensive experience in camera customization, we ensure smooth adaptation to your product roadmap.      </p>
+
+      <div className="ProductStandards-grid">
+        {["Enclosure", "User Button", "User Control", "Form Factor", "Cable Interface"].map((title, index) => (
+          <div key={index} className="ProductStandards-item">
+            <img
+              src="https://via.placeholder.com/250x200"
+              alt={title}
+              className="ProductStandards-gridImage"
+            />
+            <p className="ProductStandards-imageTitle">{title}</p>
+          </div>
+        ))}
+      </div>
     </div>
-             </div>
-           
-        
-    );
-}
+  );
+};
 
 export default ProductStandards;

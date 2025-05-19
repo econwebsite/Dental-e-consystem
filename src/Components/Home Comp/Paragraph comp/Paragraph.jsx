@@ -6,7 +6,8 @@ const Paragraph = () => {
     <div className="containerparagraph">
       <div className="mainContainer">
         <p className="paragraphtext">
-          e-con Systems Dental specializes in ODM solutions for dental imaging, with over 20 years of experience collaborating with leading manufacturers. We offer comprehensive designs for Intraoral and Extraoral cameras, ensuring high-quality imaging with reduced time to market and cost efficiency.      </p>
+          At e-con Systems Dental, we specialize in delivering imaging solutions tailored for the dental industry. Backed by 20+ years of expertise in embedded vision and trusted by leading dental equipment manufacturers, we design and manufacture both Intraoral and Extraoral cameras optimized for high-quality imaging. Our end-to-end OEM solutions help you bring innovative dental imaging products to market faster and more cost-effectively, without compromising on performance or reliability.
+          </p>
       </div>
     </div>
   );

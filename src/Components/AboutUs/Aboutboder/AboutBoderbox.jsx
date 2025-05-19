@@ -5,7 +5,7 @@ import quoteup from "../../../assets/home images/quotes-02.png";
 
 const Aboutboderbox = () => {
   const boxes = [
-    { id: 1, circleColor: '#def9fc', text1: "Who?", boxColor: '#344ea1', text: "Customized ODM solutions provider for your dental imaging specifications." },
+    { id: 1, circleColor: '#def9fc', text1: "Who?", boxColor: '#344ea1', text: "Customized solutions provider for your dental imaging specifications." },
     { id: 2, circleColor: '#b8f2ff', text1: "Why?", boxColor: '#4fcce0', text: "To reduce your products' time to market and cut down on development costs." },
     { id: 3, circleColor: '#caf5fc', text1: "What?", boxColor: '#344ea1', text: "End-to-end solutions for your intraoral, extraoral and loupe camera requirements." },
     { id: 4, circleColor: '#def9fc', text1: "How?", boxColor: '#4fcce0', text: "Driven by our vast experience in dental cameras and dedicated team of engineers." },

@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Form, Input, Select, Row, Col, message } from 'antd'; // Make sure Select is imported
+import { Form, Input, Select, Row, Col, message, Spin } from 'antd';
 import axios from 'axios';
-import './Contactus.css'; // Import custom CSS for styling
+import './Contactus.css';
 import AnimatedButton from "../../Button comp/AnimatedButton"
 import countryList from 'react-select-country-list';
 import { Helmet } from 'react-helmet-async';
@@ -9,33 +9,7 @@ import { Helmet } from 'react-helmet-async';
 const { TextArea } = Input;
 const { Option } = Select;
 
-const countries1 = [
-  { code: '+1', name: 'United States' },
-  { code: '+1', name: 'Canada' },
-  { code: '+52', name: 'Mexico' },
-  { code: '+44', name: 'United Kingdom' },
-  { code: '+61', name: 'Australia' },
-  { code: '+91', name: 'India' },
-  { code: '+49', name: 'Germany' },
-  { code: '+33', name: 'France' },
-  { code: '+39', name: 'Italy' },
-  { code: '+34', name: 'Spain' },
-  { code: '+55', name: 'Brazil' },
-  { code: '+81', name: 'Japan' },
-  { code: '+86', name: 'China' },
-  { code: '+82', name: 'South Korea' },
-  { code: '+27', name: 'South Africa' },
-  { code: '+7', name: 'Russia' },
-  { code: '+90', name: 'Turkey' },
-  { code: '+966', name: 'Saudi Arabia' },
-  { code: '+54', name: 'Argentina' },
-  { code: '+56', name: 'Chile' },
-  { code: '+57', name: 'Colombia' },
-  { code: '+51', name: 'Peru' },
-  { code: '+66', name: 'Thailand' },
-  { code: '+84', name: 'Vietnam' },
-  { code: '+65', name: 'Singapore' },
-];
+
 
 
 
@@ -96,25 +70,77 @@ const usaStates = [
 const ContactUs = () => {
 
   const [form] = Form.useForm();
-  const [selectedCountry, setSelectedCountry] = useState('United States');
+  const [selectedCountry, setSelectedCountry] = useState('US');
   const [showStates, setShowStates] = useState(true);
   const [isContactPage, setIsContactPage] = useState(false);
 
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(true);
+  const blockedProviders = [
+    'gmail.com',
+    'yahoo.com',
+    'outlook.com',
+    'hotmail.com',
+    'protonmail.com',
+    'zoho.com',
+    'aol.com',
+    'gmx.com',
+    'mail.com',
+    'icloud.com',
+    'yandex.com'
+  ];
+
+  const overlayStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    zIndex: 1000,
+    borderRadius: 8
+  };
 
   const countries = useMemo(() => {
     return countryList().getData().map(country => ({
-    value: country.value,
-    label: country.label
+      value: country.value,
+      label: country.label
     }));
-    }, []);
+  }, []);
   const onFinish = (values) => {
-    form.resetFields();
-    axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
-      .then(result => {
-        message.success('Message sent successfully!');
-        //onClose();
-      })
-      .catch(err => console.log(err));
+    if (isError) {
+      setIsLoading(true);
+
+      const trackingData = {
+        email: values.email,
+        company_name: values.companyName,
+        phone_number: values.contactNumber,
+        country: values.country,
+        state: values.state || '',
+        queries: values.queries || ''
+      };
+    
+    
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'contact_form_submit',
+        ...trackingData
+      });
+
+      axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
+        .then(result => {
+          message.success('Message sent successfully!');
+          form.resetFields();
+        })
+        .catch(err => {
+          console.error(err);
+          message.error('Failed to send message. Please try again.');
+        })
+        .finally(() => setIsLoading(false));
+    }
   };
 
   const handleCountryChange = (value) => {
@@ -125,17 +151,65 @@ const ContactUs = () => {
       form.setFieldsValue({ state: undefined });
     }
   };
+  const emailValidator = (_, value) => {
+    if (value) {
+      const domain = value.split('@')[1]?.toLowerCase();
+      if (domain && blockedProviders.includes(domain)) {
+        setIsError(false);
+        return Promise.reject('Please enter your company email');
+      }
+
+    }
+    return Promise.resolve();
+  };
 
   const handleEmailValidate = async (e) => {
     const email = e.target.value;
     if (email) {
+      const domain = email.split('@')[1]?.toLowerCase();
+      if (domain && blockedProviders.includes(domain)) {
+        setIsError(false);
+        form.setFields([
+          {
+            name: 'email',
+            errors: ["Please enter your company email"],
+          },
+        ]);
+        return;
+      }
       axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
         .then(result => {
-          if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
-            if (!result.data.free_email) {
-              return true
+          if (result.data.isValid === true) {
+            setIsError(true);
+            return true;
+          }
+          else if (result.data.isValid === false) {
+            setIsError(false);
+            form.setFields([
+              {
+                name: 'email',
+                errors: ["Please enter valid email ID"],
+              },
+            ]);
+          }
+          else if (result.data.isValid === null || result.data.isValid === undefined) {
+            if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
+              if (!result.data.free_email) {
+                setIsError(true);
+                return true
+              }
+              else {
+                setIsError(false);
+                form.setFields([
+                  {
+                    name: 'email',
+                    errors: ["Please enter valid email ID"],
+                  },
+                ]);
+              }
             }
             else {
+              setIsError(false);
               form.setFields([
                 {
                   name: 'email',
@@ -144,15 +218,6 @@ const ContactUs = () => {
               ]);
             }
           }
-          else {
-            form.setFields([
-              {
-                name: 'email',
-                errors: ["Please enter valid email ID"],
-              },
-            ]);
-          }
-
         })
         .catch(err => console.log(err));
 
@@ -175,14 +240,18 @@ const ContactUs = () => {
       <span className='Spam-questions'>Do You Have Any Questions?</span>
 
       <div className="Contact-ted">
-        <div className="mainContainer">
-          <Form
+        <div className="mainContainer" style={{ position: 'relative' }}>
+          {isLoading && (
+            <div style={overlayStyle}>
+              <Spin size="large" />
+            </div>
+          )}          <Form
             form={form}
             name="contactForm"
             onFinish={onFinish}
             layout="vertical"
             initialValues={{
-              country: 'United States',
+              country: 'US',
               state: 'AL',
             }}
           >
@@ -212,9 +281,10 @@ const ContactUs = () => {
                   rules={[
                     { required: true, message: 'Please enter your email' },
                     { type: 'email', message: 'Please enter a valid email' },
+                    { validator: emailValidator },
                   ]}
                 >
-                  <Input placeholder="Email*" autoComplete='off' onPaste={(e) => {
+                  <Input placeholder="name@yourcompany.com*" autoComplete='off' onPaste={(e) => {
                     e.preventDefault()
                     return false;
                   }} onBlur={handleEmailValidate} />
@@ -241,15 +311,15 @@ const ContactUs = () => {
                   rules={[{ required: true, message: 'Please select your country' }]}
                 >
                   <Select
-                   showSearch
-                   placeholder="Select country"
-                   onChange={handleCountryChange}
+                    showSearch
+                    placeholder="Select country"
+                    onChange={handleCountryChange}
                   >
-                   {countries.map(country => (
-<Option key={country.value} value={country.value}>
-{country.label}
-</Option>
-))}
+                    {countries.map(country => (
+                      <Option key={country.value} value={country.value}>
+                        {country.label}
+                      </Option>
+                    ))}
                   </Select>
                 </Form.Item>
               </Col>

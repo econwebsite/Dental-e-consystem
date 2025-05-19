@@ -28,7 +28,10 @@
     transition: left 0.4s ease;
     z-index: -1;
   }
-  
+  .ant-message {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
   .modelaclass:hover {
     background-color: #344ea1;
     color: white; 

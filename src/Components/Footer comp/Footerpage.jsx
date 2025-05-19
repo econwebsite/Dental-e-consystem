@@ -34,7 +34,7 @@ const Footerpage = () => {
         return false;
       }
     }
-    return false; // Return false if isValid is not true
+    return false;
   };
   const validateEmailId = (email) => {
     const regex = /^\S+@\S+\.\S+$/;
@@ -108,7 +108,7 @@ const Footerpage = () => {
                 <img src={econlogo} alt="e-con Logo" style={{ width: "300px" }} /></a>
             </div>
             <div className="footer-bottom-text">
-              <p><span style={{ color: "#003873" }}>e-con Systems</span> 2025, all rights reserved.</p>
+              <p><span style={{ color: "#003873" }}>e-con Systems&reg;</span> 2025, all rights reserved.</p>
             </div>
           </div>
         </div>

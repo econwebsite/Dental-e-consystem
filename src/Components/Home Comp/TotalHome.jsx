@@ -11,8 +11,8 @@ const TotalHome = () => {
     return (
         <div>
             <Helmet>
-<title>e-con Systems: ODM Solutions for Dental Cameras</title>
-<meta name='description' content='e-con Systems Dental offers ODM solutions for Intraoral, Extraoral, and loupe cameras, ensuring high-quality imaging, faster time to market, & cost efficiency.' />
+<title>Intraoral Camera Dental Solutions | e-con Systems</title>
+<meta name='description' content="Explore e-con Systems' intraoral camera dental solutions designed for superior image quality, compact form factor, and faster integration into dental devices." />
 </Helmet>
             <Dentalhome />
             <Paragraph />
