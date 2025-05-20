@@ -1,29 +1,31 @@
 import React from 'react';
 import './ImageProduct.css';
-import Imagetaken1 from '../../../assets/Product images/Image-taken1.jpg';
-import Imagetaken2 from '../../../assets/Product images/Image-taken2.jpg';
-import img3 from '../../../assets/Product images/Imageproduct.jpg';
+import defaultmode from '../../../assets/Product images/default-mode.jpg';
+import color from '../../../assets/Product images/color-mode-enhancement.jpg';
+import sharpness from '../../../assets/Product images/sharpness-enhanement.jpg';
+import fullface from '../../../assets/Product images/full-face.jpg';
+
 
 const imagingData = [
   {
     title: 'Default Mode',
     description: 'Provides True-to-life colors reproduction for general dental examination and imaging',
-    image: Imagetaken1,
+    image: defaultmode,
   },
   {
     title: 'Color Enhancement Mode',
     description: 'Amplifies red purplish tones to highlight inflamed or infected gum tissue.',
-    image: Imagetaken2,
+    image: color,
   },
   {
     title: 'Sharpness Enhancement Mode',
     description: 'Enhances dark lines or subtle fractures within the tooth structure',
-    image: img3,
+    image: sharpness,
   },
   {
     title: 'Full Face',
     description: 'Provides the focus range to capture even the full face for documentation',
-    image: img3,
+    image: fullface,
   }
 ];
 
