@@ -3,7 +3,7 @@ import './Specification.css'; // Import CSS for styling
 import specificaionimg from "../../../assets/Product images/Specimg.png";
 import Modelbutton from "../../Button comp/Modelbutton"
 const leftBoxes = [
-  { label: 'Resolution', value: '1920 x 1080',des:"MJPEG and YUV", bgColor: '#f0feff' },
+  { label: 'Resolution', value: '1920 x 1080', bgColor: '#f0feff' },
   { label: 'Frame Rate', value: '30 fps', bgColor: '#def9fc' },
   { label: 'Interface', value: 'Plug and play USB 2.0 and USB 3.0', bgColor: '#b8f2ff' },
   { label: 'Output Format', value: 'MJPEG and YUV', bgColor: '#caf5fc' },

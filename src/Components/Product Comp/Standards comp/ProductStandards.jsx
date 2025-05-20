@@ -1,6 +1,8 @@
 import React from 'react';
 import './ProductStandards.css';
-
+import Imagetaken1 from '../../../assets/Product images/Image-taken1.jpg';
+import Imagetaken2 from '../../../assets/Product images/Image-taken2.jpg';
+import img3 from '../../../assets/Product images/Imageproduct.jpg';
 const ProductStandards = () => {
   return (
     <div className="ProductStandards-container">
@@ -8,9 +10,9 @@ const ProductStandards = () => {
       <h2 className="ProductStandards-title">Sample Images Taken from the Camera</h2>
 
       <div className="ProductStandards-imageRow">
-        <img src="https://via.placeholder.com/200x150" alt="Sample 1" className="ProductStandards-image" />
-        <img src="https://via.placeholder.com/200x150" alt="Sample 2" className="ProductStandards-image" />
-        <img src="https://via.placeholder.com/200x150" alt="Sample 3" className="ProductStandards-image" />
+        <img src={Imagetaken1} alt="Sample 1" className="ProductStandards-image" />
+        <img src={Imagetaken2} alt="Sample 2" className="ProductStandards-image" />
+        <img src={img3} alt="Sample 3" className="ProductStandards-image" />
       </div>
 
       <h2 className="ProductStandards-subtitle">Fully Customizable for OEMs</h2>
