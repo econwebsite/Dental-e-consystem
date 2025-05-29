@@ -1,7 +1,7 @@
 import React from "react";
 import "../Blogcommon.css"
 import guideimg1 from "../../../assets/Future Blog/future-aguidtochoose.jpg"
-import intraoral from "../../../assets/Future Blog/future-intraoral-cam.jpg"
+import intraoral from "../../../assets/Future Blog/future-intraoral-cam.png"
 import shallowdof from "../../../assets/Future Blog/shallowdof.jpg"
 import largedof from "../../../assets/Future Blog/largedof.jpg"
 import temprature from '../../../assets/Future Blog/future-temprature.jpg';

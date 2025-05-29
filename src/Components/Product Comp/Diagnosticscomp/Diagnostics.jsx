@@ -17,7 +17,6 @@ const Diagnostics = () => {
                     enable the detection of key dental conditions such as caries, plaque,
                     gingival inflammation, and tooth fractures.
                 </p>
-                <h3>(Contact us for more information)</h3>
                 <br></br>
 
                 <Modelbutton className="diagnostic-button" text="Contact Us" backgroundColor="#69ba2f" animationColor="#00aeef" hoverColor="#00aeef" />

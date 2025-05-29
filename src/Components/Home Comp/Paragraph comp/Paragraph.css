@@ -2,25 +2,36 @@
   width: 100%;
   background-color:#f1f2f2 ;
   margin: 0 auto;
+    padding: 2.1em;
+
 }
 
 .paragraphtext {
-  text-align: center;
-  padding: 3.5em;
+  text-align: justify;
+  padding: 0.5em;
   font-family: "Poppins", sans-serif;
   font-weight: 100;
   font-style: normal;
-  color: #003873;
+  color: #344ea1;
   font-size: 1.1em;
   line-height: 2em;
 }
+.containerparagraph h1{
+  text-align: center;
+    padding: 0.5em;
+    font-size: 2em;
+    color: #003873;
 
+}
 @media (max-width: 600px) {
   .containerparagraph {
     width: 100%;
     padding: 10px;
   }
+.containerparagraph h1{
+font-size: 1.5em;
 
+}
   .paragraphtext {
     font-size: 1em; 
     padding: 10px;

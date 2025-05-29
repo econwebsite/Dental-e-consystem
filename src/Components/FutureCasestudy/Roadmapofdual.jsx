@@ -24,7 +24,7 @@ const Roadmapofdual = () => {
           <img src={caseimg} alt="Banner" className="w-100" />
           <h1 className="future-case-heading">
             The Roadmap of Dual Ethernet Camera Integration in Dental Operatory Lights</h1>
-          <Modelbutton className="future-case-button" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="integrating-of-dual-ethernet-camera" title="Case Study" />
+          <Modelbutton className="future-case-button" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="e-con_integrating-dual-ethernet-cameras" title="Case Study" />
 
         </div>
 
@@ -57,7 +57,7 @@ const Roadmapofdual = () => {
               <li>Introduced additional processing algorithms to streamline the encoding and decoding processes, helping reduce the latency</li>
               <li>We tackled lens compatibility and uneven illumination with lens shading correction. Correction maps were applied to each image captured by the camera to regulate the brightness and color variations across frames, enabling uniform vignette-free image capture.</li>
 
-              <Modelbutton className="future-case-btn" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="integrating-of-dual-ethernet-camera" title="Case Study" />
+              <Modelbutton className="future-case-btn" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="e-con_integrating-dual-ethernet-cameras" title="Case Study" />
 
             </ul>
           </div>

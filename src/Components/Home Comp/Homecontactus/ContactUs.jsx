@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Form, Input, Select, Row, Col, message, Spin } from 'antd';
 import axios from 'axios';
 import './Contactus.css';
@@ -68,7 +68,6 @@ const usaStates = [
 
 
 const ContactUs = () => {
-
   const [form] = Form.useForm();
   const [selectedCountry, setSelectedCountry] = useState('US');
   const [showStates, setShowStates] = useState(true);
@@ -110,10 +109,22 @@ const ContactUs = () => {
       label: country.label
     }));
   }, []);
+  const trackVisitor = () => {
+    try {
+      if (window.$zoho && $zoho.salesiq) {
+        const { name, email } = form.getFieldsValue();
+  
+        if (name) $zoho.salesiq.visitor.name(name);
+        if (email) $zoho.salesiq.visitor.email(email);
+  
+        const uniqueId = $zoho.salesiq.visitor.uniqueid();
+        form.setFieldsValue({ LDTuvid: uniqueId });
+      }
+    } catch (e) {}
+  };
   const onFinish = (values) => {
     if (isError) {
       setIsLoading(true);
-
       const trackingData = {
         email: values.email,
         company_name: values.companyName,
@@ -129,7 +140,7 @@ const ContactUs = () => {
         event: 'contact_form_submit',
         ...trackingData
       });
-
+      trackVisitor();
       axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
         .then(result => {
           message.success('Message sent successfully!');
@@ -255,6 +266,9 @@ const ContactUs = () => {
               state: 'AL',
             }}
           >
+            <Form.Item name="LDTuvid" hidden>
+  <Input type="hidden" />
+</Form.Item>
             <Row gutter={8}>
               <Col span={12}>
                 <Form.Item

@@ -25,7 +25,7 @@ const Improvingdental = () => {
           <h1 className="future-case-heading">
             Improving Dental Documentation Using 4k Dental Loupe Camera for a Leading Europe Based Dental Imaging Solutions Provider        </h1>
       
-          <Modelbutton className="future-case-button" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="improving-dental-documentation" title="Case Study" />
+          <Modelbutton className="future-case-button" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="e-con_improving-dental-documentation-using-4k" title="Case Study" />
 
         </div>
 
@@ -58,7 +58,7 @@ const Improvingdental = () => {
               <li>High resolution, as well as high-quality videos and images from the dental loupes</li>
               <li>Miniaturized board to meet unique dental loupe requirements</li>
               <li>Aluminum heatsinks to reduce heat dissipation</li>
-              <Modelbutton className="future-case-btn" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="improving-dental-documentation" title="Case Study" />
+              <Modelbutton className="future-case-btn" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="e-con_improving-dental-documentation-using-4k" title="Case Study" />
 
             </ul>
           </div>

@@ -25,7 +25,7 @@ const Aidriven = () => {
           <h1 className="future-case-heading">
             AI-driven and Portable Point-Of-Care Device for Pre-Cancer Screening for a US Medical Device Manufacturer
           </h1>
-          <Modelbutton className="future-case-button" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="point-of-care-device" title="Case Study" />
+          <Modelbutton className="future-case-button" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="e-con_ai-driven-and-portable-point-of-care" title="Case Study" />
 
         </div>
 
@@ -58,7 +58,7 @@ const Aidriven = () => {
             <ul>
               <li>Customized liquid lens and lens mount holder to meet the required working distance range</li>
               <li>Android interface support with our proprietary Android SDK and video streaming application WebeeCAM</li>
-              <Modelbutton className="future-case-btn" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="point-of-care-device" title="Case Study"/>
+              <Modelbutton className="future-case-btn" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="e-con_ai-driven-and-portable-point-of-care" title="Case Study"/>
 
             </ul>
           </div>

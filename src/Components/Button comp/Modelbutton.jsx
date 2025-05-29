@@ -11,10 +11,12 @@ const Modelbutton =({
   className = '',
   productName = null,
   docName = null,
+   type: overrideType = null,
   title = null,
   }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
+  const modalType = overrideType || (text === 'Contact Us' ? 'contact' : 'download');
   const showModal = () => {
     setIsModalVisible(true);
   };
@@ -41,9 +43,10 @@ const Modelbutton =({
       <Modelform
         visible={isModalVisible}
         onClose={handleCancel}
-        type = {text === 'Contact Us'?`contact`:`download`}
+        type = {modalType}
         productName={productName || null}
         docName={docName || null}
+        buttonText={text}
         title = {title || null}
       />
     </div>

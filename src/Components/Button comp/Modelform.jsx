@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Form, Input, Select, Button, Row, Col, message, Modal, Result,Spin } from 'antd';
+import { Form, Input, Select, Button, Row, Col, message, Modal, Result, Spin } from 'antd';
 import axios from 'axios';
 import "./Modelbutton.css";
 import countryList from 'react-select-country-list';
@@ -61,15 +61,16 @@ const usaStates = [
   { code: 'WI', name: 'Wisconsin' },
   { code: 'WY', name: 'Wyoming' },
 ];
-function Modelform({ visible, onClose, type, docName, productName, title }) {
+function Modelform({ visible, onClose, type, docName, productName, title,buttonText  }) {
   const [form] = Form.useForm();
   const [selectedCountry, setSelectedCountry] = useState('US');
   const [showStates, setShowStates] = useState(true);
   const [isSuccess, setIsSuccess] = useState(false);
   const [downloadUrl, setDownloadUrl] = useState('');
-  const [isLoading, setIsLoading] = useState(false); 
-  const [isError, setIsError] = useState(true); 
-  const blockedProviders  = [
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(true);
+  
+  const blockedProviders = [
     'gmail.com',
     'yahoo.com',
     'outlook.com',
@@ -82,7 +83,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
     'icloud.com',
     'yandex.com'
   ];
-    const overlayStyle = {
+  const overlayStyle = {
     position: 'absolute',
     top: 0,
     left: 0,
@@ -102,62 +103,76 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
       label: country.label
     }));
   }, []);
-
+  const trackVisitor = () => {
+    try {
+      if (window.$zoho && $zoho.salesiq) {
+        const { name, email } = form.getFieldsValue();
+  
+        if (name) $zoho.salesiq.visitor.name(name);
+        if (email) $zoho.salesiq.visitor.email(email);
+  
+        const uniqueId = $zoho.salesiq.visitor.uniqueid();
+        form.setFieldsValue({ LDTuvid: uniqueId });
+      }
+    } catch (e) {}
+  };
   const onFinish = (values) => {
-  if(isError){
-    setIsLoading(true);
-    
-    const trackingData = {
-      email: values.email,
-      company_name: values.companyName,
-      phone_number: values.contactNumber,
-      country: values.country,
-      state: values.state || '',
-      queries: values.queries || ''
-    };
-  
-  
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'contact_form_submit',
-      ...trackingData
-    });
-  
+    if (isError) {
+      setIsLoading(true);
 
-    if (type === 'download') {
-      values.productName = productName;
-      values.documentName = docName;
-      axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values }, { withCredentials: true })
-        .then(result => {
-          if (result.status === 200) {
-            console.log(result,"result");
-            
-            setIsSuccess(true);
-            setDownloadUrl(result.data.docName);
-          }
-          form.resetFields();
-        })
-        .catch(err => console.log(err))
-        .finally(() => setIsLoading(false));
-    }
-    else {
-      values.productName = productName;
-      values.documentName = docName;
-       axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
-        .then(result => {
-          message.success({
-            content: 'Message sent successfully!',
-            placement: 'top', 
-            style: { textAlign: 'center' } 
-          });
-                    onClose();
-        })
-        .catch(err => console.log(err))
-        .finally(() => setIsLoading(false));
-    }
+      const trackingData = {
+        email: values.email,
+        company_name: values.companyName,
+        phone_number: values.contactNumber,
+        country: values.country,
+        state: values.state || '',
+        queries: values.queries || ''
+      };
 
-  }
-};
+
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'contact_form_submit',
+        ...trackingData
+      });
+      trackVisitor();
+
+      if (type === 'download') {
+        values.productName = productName;
+        values.documentName = docName;
+        axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values }, { withCredentials: true })
+          .then(result => {
+            if (result.status === 200) {
+              console.log(result, "result");
+
+              setIsSuccess(true);
+              setDownloadUrl(result.data.docName);
+            }
+            form.resetFields();
+          })
+          .catch(err => console.log(err))
+          .finally(() => setIsLoading(false));
+      }
+      else {
+        values.productName = productName;
+        values.documentName = docName;
+        values.buttonText=buttonText
+        
+        axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
+          .then(result => {
+            message.success({
+              content: 'Message sent successfully!',
+              placement: 'top',
+              style: { textAlign: 'center' }
+            });
+            onClose();
+          })
+          .catch(err => console.log(err))
+          .finally(() => setIsLoading(false));
+      }
+
+    }
+  };
 
   const handleCountryChange = (value) => {
     const country = countries.find(c => c.value === value);
@@ -167,7 +182,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
       form.setFieldsValue({ state: undefined });
     }
   };
-  
+
   const emailValidator = (_, value) => {
     if (value) {
       const domain = value.split('@')[1]?.toLowerCase();
@@ -175,7 +190,7 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
         setIsError(false);
         return Promise.reject('Please enter your company email');
       }
-    
+
     }
     return Promise.resolve();
   };
@@ -198,11 +213,11 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
       // Proceed with API validation only if domain is not blocked
       axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
         .then(result => {
-          if(result.data.isValid === true){
+          if (result.data.isValid === true) {
             setIsError(true);
             return true;
           }
-          else if(result.data.isValid === false){
+          else if (result.data.isValid === false) {
             setIsError(false);
             form.setFields([
               {
@@ -212,10 +227,20 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
             ]);
           }
           else if (result.data.isValid === null || result.data.isValid === undefined) {
-          if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
-            if (!result.data.free_email) {
-              setIsError(true);
-              return true
+            if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
+              if (!result.data.free_email) {
+                setIsError(true);
+                return true
+              }
+              else {
+                setIsError(false);
+                form.setFields([
+                  {
+                    name: 'email',
+                    errors: ["Please enter valid email ID"],
+                  },
+                ]);
+              }
             }
             else {
               setIsError(false);
@@ -227,16 +252,6 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
               ]);
             }
           }
-          else {
-            setIsError(false);
-            form.setFields([
-              {
-                name: 'email',
-                errors: ["Please enter valid email ID"],
-              },
-            ]);
-          }
-        }
         })
         .catch(err => console.log(err));
     }
@@ -251,144 +266,147 @@ function Modelform({ visible, onClose, type, docName, productName, title }) {
       width={450}
       className="custom-modal"
     >
-      {isSuccess ?( <Result
+      {isSuccess ? (<Result
         status="success"
         title="Ready to Download"
         subTitle="Please click below button to downlaod"
         extra={[
           <DownloadButton documentName={docName} />
         ]}
-      /> ): (
+      />) : (
         <div style={{ position: 'relative' }}>
-      <Form
-        form={form}
-        name="contactForm"
-        onFinish={onFinish}
-        layout="vertical"
-        initialValues={{
-          country: 'US',
-          state: 'AL',
-        }}
-      >
-        <Row gutter={8}>
-          <Col span={12}>
-            <Form.Item
-              name="name"
-              rules={[{ required: true, message: 'Please enter your name' }]}
-            >
-              <Input placeholder="Name *" />
+          <Form
+            form={form}
+            name="contactForm"
+            onFinish={onFinish}
+            layout="vertical"
+            initialValues={{
+              country: 'US',
+              state: 'AL',
+            }}
+          >
+            <Form.Item name="LDTuvid" hidden>
+              <Input type="hidden" />
             </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              name="companyName"
-              rules={[{ required: true, message: 'Please enter your company name' }]}
-            >
-              <Input placeholder="Company Name*" />
-            </Form.Item>
-          </Col>
-        </Row>
+            <Row gutter={8}>
+              <Col span={12}>
+                <Form.Item
+                  name="name"
+                  rules={[{ required: true, message: 'Please enter your name' }]}
+                >
+                  <Input placeholder="Name *" />
+                </Form.Item>
+              </Col>
+              <Col span={12}>
+                <Form.Item
+                  name="companyName"
+                  rules={[{ required: true, message: 'Please enter your company name' }]}
+                >
+                  <Input placeholder="Company Name*" />
+                </Form.Item>
+              </Col>
+            </Row>
 
-        <Row gutter={8}>
-          <Col span={12}>
-            <Form.Item
-              name="email"
-              rules={[
-                { required: true, message: 'Please enter your email' },
-                { type: 'email', message: 'Please enter a valid email' },
-                { validator: emailValidator }, 
-              ]}
-            >
-              <Input placeholder="name@yourcompany.com*" onPaste={(e) => {
-                e.preventDefault()
-                return false;
-              }} autoComplete='off' onBlur={handleEmailValidate} />
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            <Form.Item
-              name="contactNumber"
-              rules={[{ message: 'Please enter your phone number' }]}
-            >
-              <Input
-                placeholder="Contact Number"
-              // addonBefore={selectedCountry ? countries.find(c => c.value === selectedCountry)?.code : ''}
-              />
-            </Form.Item>
-          </Col>
-        </Row>
+            <Row gutter={8}>
+              <Col span={12}>
+                <Form.Item
+                  name="email"
+                  rules={[
+                    { required: true, message: 'Please enter your email' },
+                    { type: 'email', message: 'Please enter a valid email' },
+                    { validator: emailValidator },
+                  ]}
+                >
+                  <Input placeholder="name@yourcompany.com*" onPaste={(e) => {
+                    e.preventDefault()
+                    return false;
+                  }} autoComplete='off' onBlur={handleEmailValidate} />
+                </Form.Item>
+              </Col>
+              <Col span={12}>
+                <Form.Item
+                  name="contactNumber"
+                  rules={[{ message: 'Please enter your phone number' }]}
+                >
+                  <Input
+                    placeholder="Contact Number"
+                  // addonBefore={selectedCountry ? countries.find(c => c.value === selectedCountry)?.code : ''}
+                  />
+                </Form.Item>
+              </Col>
+            </Row>
 
-        <Row gutter={8}>
-          <Col span={12}>
-            <Form.Item
-              name="country"
-              rules={[{ required: true, message: 'Please select your country' }]}
-            >
-              <Select
-              showSearch
-                placeholder="Select country"
-                onChange={handleCountryChange}
-              >
-                {countries.map((country) => (
-                  <Option key={country.value} value={country.value}>
-                    {country.label}
-                  </Option>
-                ))}
-              </Select>
-            </Form.Item>
-          </Col>
-          <Col span={12}>
-            {showStates && (
-              <Form.Item
-                name="state"
-                rules={[{ required: showStates, message: 'Please select your state' }]}
-              >
-                <Select placeholder="Select state">
-                  {usaStates.map((state) => (
-                    <Option key={state.code} value={state.code}>
-                      {state.name}
-                    </Option>
-                  ))}
-                </Select>
-              </Form.Item>
-            )}
-          </Col>
-        </Row>
+            <Row gutter={8}>
+              <Col span={12}>
+                <Form.Item
+                  name="country"
+                  rules={[{ required: true, message: 'Please select your country' }]}
+                >
+                  <Select
+                    showSearch
+                    placeholder="Select country"
+                    onChange={handleCountryChange}
+                  >
+                    {countries.map((country) => (
+                      <Option key={country.value} value={country.value}>
+                        {country.label}
+                      </Option>
+                    ))}
+                  </Select>
+                </Form.Item>
+              </Col>
+              <Col span={12}>
+                {showStates && (
+                  <Form.Item
+                    name="state"
+                    rules={[{ required: showStates, message: 'Please select your state' }]}
+                  >
+                    <Select placeholder="Select state">
+                      {usaStates.map((state) => (
+                        <Option key={state.code} value={state.code}>
+                          {state.name}
+                        </Option>
+                      ))}
+                    </Select>
+                  </Form.Item>
+                )}
+              </Col>
+            </Row>
 
-        <Row gutter={8}>
-          <Col span={24}>
-            <Form.Item
-              name="queries"
-              rules={[{ message: 'Please describe your queries' }]}
-            >
-              <TextArea placeholder="Describe Your Queries" rows={5} />
-            </Form.Item>
-          </Col>
-        </Row>
+            <Row gutter={8}>
+              <Col span={24}>
+                <Form.Item
+                  name="queries"
+                  rules={[{ message: 'Please describe your queries' }]}
+                >
+                  <TextArea placeholder="Describe Your Queries" rows={5} />
+                </Form.Item>
+              </Col>
+            </Row>
 
-        <Row justify="center">
-          <Col>
-            <Form.Item>
-              <AnimatedButton
-                type="primary"
-                htmlType="submit"
-                className="Contacts-btn"
-                text="Submit"
-                backgroundColor="#344ea1"
-                animationColor="#69ba2f"
-                hoverColor="yellow"
-              />
-            </Form.Item>
-          </Col>
-        </Row>
-      </Form>
-      {isLoading && (
-          <div style={overlayStyle}>
-            <Spin size="large" />
-          </div>
-        )}
-      </div>
-    )}
+            <Row justify="center">
+              <Col>
+                <Form.Item>
+                  <AnimatedButton
+                    type="primary"
+                    htmlType="submit"
+                    className="Contacts-btn"
+                    text="Submit"
+                    backgroundColor="#344ea1"
+                    animationColor="#69ba2f"
+                    hoverColor="yellow"
+                  />
+                </Form.Item>
+              </Col>
+            </Row>
+          </Form>
+          {isLoading && (
+            <div style={overlayStyle}>
+              <Spin size="large" />
+            </div>
+          )}
+        </div>
+      )}
     </Modal>
   );
 }
