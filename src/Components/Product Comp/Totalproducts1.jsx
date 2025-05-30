@@ -7,7 +7,6 @@ import Productboderbox from "./productBoderbox/Productboderbox"
 import ProductStandards from "./Standards comp/ProductStandards"
 import ImageProduct from "./ImageProduct comp/ImageProduct";
 import { Helmet } from 'react-helmet-async';
-import Diagnostics from './Diagnosticscomp/Diagnostics';
 
 const Totalproducts1 = () => {
     return (
@@ -20,7 +19,6 @@ const Totalproducts1 = () => {
             <Productboderbox/>
             <Specification/>
             <ImageProduct/>
-            <Diagnostics/>
           <ProductStandards title="Enhanced Features"/>
             <ProductCaseStudy/>
             <ProductTechnicalBlog/>
