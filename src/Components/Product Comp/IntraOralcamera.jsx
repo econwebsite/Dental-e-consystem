@@ -5,12 +5,12 @@ import './Product.css';
 import image1 from '../../assets/Product images/productcarousel1.png';
 import image2 from '../../assets/Product images/productcarousel2.png';
 import image3 from '../../assets/Product images/productcarousel3.png';
-import AnimatedButton from "../Button comp/AnimatedButton";
+// import AnimatedButton from "../Button comp/AnimatedButton";
 import Modelbutton from "../Button comp/Modelbutton";
 
 const images = [
     { src: image1, title: "Front View of our Intraoral Camera with enclosure" },
-    { src: image2, title: "Front View of our Intraoral Camera without enclosure" },
+    // { src: image2, title: "Front View of our Intraoral Camera without enclosure" },
     { src: image3, title: "Back View of our Intraoral Camera with enclosure" }
 ];
 

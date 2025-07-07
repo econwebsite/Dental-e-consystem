@@ -62,7 +62,6 @@ const AdvancedImagingWithDiagnostics = () => {
 
       </div>
 
-      {/* Right Section: Diagnostics */}
       <div className="Advancing-Img-right">
                 <div className='Advancing-Img-diagnostic-total'>
 

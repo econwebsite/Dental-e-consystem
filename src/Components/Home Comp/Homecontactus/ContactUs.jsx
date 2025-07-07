@@ -109,6 +109,7 @@ const ContactUs = () => {
       label: country.label
     }));
   }, []);
+
   const trackVisitor = () => {
     try {
       if (window.$zoho && $zoho.salesiq) {
@@ -122,6 +123,7 @@ const ContactUs = () => {
       }
     } catch (e) {}
   };
+
   const onFinish = (values) => {
     if (isError) {
       setIsLoading(true);
@@ -131,7 +133,8 @@ const ContactUs = () => {
         phone_number: values.contactNumber,
         country: values.country,
         state: values.state || '',
-        queries: values.queries || ''
+        queries: values.queries || '',
+        heardAboutUs : values.heardAboutUs
       };
     
     
@@ -141,14 +144,24 @@ const ContactUs = () => {
         ...trackingData
       });
       trackVisitor();
-      axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
+       const valuesToSend = {
+      ...values,
+      productName: null,      
+      documentName: null,      
+      buttonText: "Contact us" 
+    };
+      axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values:valuesToSend })
         .then(result => {
           message.success('Message sent successfully!');
           form.resetFields();
-        })
+        const url = new URL(window.location);
+    url.searchParams.set('contact', 'success');
+    window.history.replaceState({}, '', url);
+  })
         .catch(err => {
           console.error(err);
           message.error('Failed to send message. Please try again.');
+          
         })
         .finally(() => setIsLoading(false));
     }
@@ -234,6 +247,7 @@ const ContactUs = () => {
 
     }
   };
+  
   useEffect(() => {
     let url = window.location.pathname.replace('/', '');
     if (url === "company/contact-us") {
@@ -354,7 +368,16 @@ const ContactUs = () => {
                 )}
               </Col>
             </Row>
-
+<Row gutter={8}>
+  <Col span={24}>
+    <Form.Item
+      name="heardAboutUs"
+      rules={[{ message: 'Please let us know how you heard about us' }]}
+    >
+      <Input placeholder="How did you hear about us?" />
+    </Form.Item>
+  </Col>
+</Row>
             <Row gutter={8}>
               <Col span={24}>
                 <Form.Item

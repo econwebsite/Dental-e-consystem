@@ -12,7 +12,7 @@ const leftBoxes = [
 ];
 
 const rightBoxes = [
-  { label: 'Depth of Field (DOF)', value: '5 – 70 mm',des:"extends to capture full-face", bgColor: '#def9fc' },
+  { label: 'Depth of Field (DOF)', value: '5 – 80 mm',des:"extends to capture full-face", bgColor: '#def9fc' },
   { label: 'Focus Type', value: 'Fixed Focus', bgColor: '#caf5fc' },
   { label: 'Angle of View (FOV)', value: '85 deg', bgColor: '#caf5fc' },
   { label: 'Illumination', value: '45K lux at a distance of 15mm', bgColor: '#b8f2ff' },

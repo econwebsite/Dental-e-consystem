@@ -23,7 +23,7 @@ const Productboderbox = () => {
             </div>
            <p>The high pixel density ensures that images remain crisp and detailed even when zoomed in. This clarity allows identification of even the smallest imperfections, such as micro-fractures and early-stage lesions.</p>
             <div className='Productboder-imges'>
-            <h4><img src={Boderimg2} className='pro-Boderimg'></img>5mm – 70mm Depth of Field</h4>
+            <h4><img src={Boderimg2} className='pro-Boderimg'></img>5mm – 80mm Depth of Field</h4>
             </div>
             <p>The camera integrates a custom-designed fixed focus lens, engineered with high-quality materials to minimize distortion and aberrations. Optimum aperture ensures image clarity throughout the focal range.</p>
           <div className='Productboder-imges'>

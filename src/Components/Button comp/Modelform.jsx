@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo,useEffect } from 'react';
 import { Form, Input, Select, Button, Row, Col, message, Modal, Result, Spin } from 'antd';
 import axios from 'axios';
 import "./Modelbutton.css";
@@ -96,6 +96,36 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
     zIndex: 1000,
     borderRadius: 8
   };
+  
+useEffect(() => {
+  const url = new URL(window.location);
+  const original = url.toString();
+
+  const downloadStatus = url.searchParams.get('download');
+  const contactStatus = url.searchParams.get('contact');
+
+  if (visible) {
+    if (type === 'download') {
+      if (downloadStatus !== 'success') {
+        url.searchParams.set('download', 'init');
+        url.searchParams.delete('contact'); 
+      }
+    } else if (type === 'contact') {
+      if (contactStatus !== 'success') {
+        url.searchParams.set('contact', 'init');
+        url.searchParams.delete('download');
+      }
+    }
+  } else {
+    if (downloadStatus !== 'success') url.searchParams.delete('download');
+    if (contactStatus !== 'success') url.searchParams.delete('contact');
+  }
+
+  if (url.toString() !== original) {
+    window.history.replaceState({}, '', url);
+  }
+}, [visible, type]);
+
 
   const countries = useMemo(() => {
     return countryList().getData().map(country => ({
@@ -103,6 +133,7 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
       label: country.label
     }));
   }, []);
+
   const trackVisitor = () => {
     try {
       if (window.$zoho && $zoho.salesiq) {
@@ -116,6 +147,7 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
       }
     } catch (e) {}
   };
+
   const onFinish = (values) => {
     if (isError) {
       setIsLoading(true);
@@ -126,7 +158,8 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
         phone_number: values.contactNumber,
         country: values.country,
         state: values.state || '',
-        queries: values.queries || ''
+        queries: values.queries || '',
+        heardAboutUs:values.heardAboutUs
       };
 
 
@@ -140,6 +173,8 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
       if (type === 'download') {
         values.productName = productName;
         values.documentName = docName;
+        values.buttonText=buttonText;
+
         axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values }, { withCredentials: true })
           .then(result => {
             if (result.status === 200) {
@@ -149,6 +184,9 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
               setDownloadUrl(result.data.docName);
             }
             form.resetFields();
+            const url = new URL(window.location);
+    url.searchParams.set('download', 'success');
+    window.history.replaceState({}, '', url);
           })
           .catch(err => console.log(err))
           .finally(() => setIsLoading(false));
@@ -156,7 +194,8 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
       else {
         values.productName = productName;
         values.documentName = docName;
-        values.buttonText=buttonText
+        values.buttonText=buttonText;
+
         
         axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
           .then(result => {
@@ -165,7 +204,11 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
               placement: 'top',
               style: { textAlign: 'center' }
             });
-            onClose();
+             const url = new URL(window.location);
+    url.searchParams.set('contact', 'success');
+    window.history.replaceState({}, '', url);
+                onClose();
+
           })
           .catch(err => console.log(err))
           .finally(() => setIsLoading(false));
@@ -210,7 +253,6 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
         return;
       }
 
-      // Proceed with API validation only if domain is not blocked
       axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
         .then(result => {
           if (result.data.isValid === true) {
@@ -261,6 +303,7 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
     <Modal
       title={type === 'download' ? `Download - ${title}` : "Contact Form"}
       visible={visible}
+       style={{ top:"20px" }} 
       onCancel={onClose}
       footer={null}
       width={450}
@@ -372,7 +415,16 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
                 )}
               </Col>
             </Row>
-
+<Row gutter={8}>
+  <Col span={24}>
+    <Form.Item
+      name="heardAboutUs"
+      rules={[{ message: 'Please let us know how you heard about us' }]}
+    >
+      <Input placeholder="How did you hear about us?" />
+    </Form.Item>
+  </Col>
+</Row>
             <Row gutter={8}>
               <Col span={24}>
                 <Form.Item

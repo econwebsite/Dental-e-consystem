@@ -11,12 +11,12 @@ const Modelbutton =({
   className = '',
   productName = null,
   docName = null,
-   type: overrideType = null,
+   type: formType = null,
   title = null,
   }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const modalType = overrideType || (text === 'Contact Us' ? 'contact' : 'download');
+  const modalType = formType || (text === 'Contact Us' ? 'contact' : 'download');
   const showModal = () => {
     setIsModalVisible(true);
   };
