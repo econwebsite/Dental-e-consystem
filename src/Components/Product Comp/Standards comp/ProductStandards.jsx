@@ -21,7 +21,7 @@ const items = [
   return (
     <div className="ProductStandards-container">
      
-      <h2 className="ProductStandards-title">Sample Images Taken from the Camera</h2>
+      <h2 className="ProductStandards-title">Sample Images Taken from the DensiCAM</h2>
 
       <div className="ProductStandards-imageRow">
         <img src={Imagetaken1} alt="Sample 1" className="ProductStandards-image" />
