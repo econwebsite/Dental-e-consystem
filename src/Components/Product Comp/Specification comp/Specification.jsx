@@ -14,7 +14,7 @@ const leftBoxes = [
 const rightBoxes = [
   { label: 'Depth of Field (DOF)', value: '5 – 80 mm',des:"extends to capture full-face", bgColor: '#def9fc' },
   { label: 'Focus Type', value: 'Fixed Focus', bgColor: '#caf5fc' },
-  { label: 'Angle of View (FOV)', value: '87 deg', bgColor: '#caf5fc' },
+  { label: 'Angle of View (FOV)', value: '90 deg', bgColor: '#caf5fc' },
   { label: 'Illumination', value: '45K lux at a distance of 15mm', bgColor: '#b8f2ff' },
   { label: 'LEDS', value: 'White and UV Led', bgColor: '#def9fc' },
   { label: 'TWAIN Support', value: 'Integration with multiple software', bgColor: '#f0feff' },

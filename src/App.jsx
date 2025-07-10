@@ -22,6 +22,7 @@ import Understandingextra from "./Components/Future Blog/understandingextra/Unde
 import Notfoundpage from "./Components/Notfoundpage"
 import { HelmetProvider } from 'react-helmet-async';
 import FAQ from './Components/Faqcomp/Faq';
+import PressReleases from "./Components/Pressreleasecomp/pressRelease"
 
 const App = () => {
   return (
@@ -48,6 +49,8 @@ const App = () => {
         <Route path="/blogs/extraoral-cameras-image-quality-tuning" element={<Extraoralbestimg />} />
         <Route path="/blogs/understanding-extraoral-cameras-dentistry" element={<Understandingextra />} />
        <Route path="/faq" element={<FAQ />} />
+       <Route path="/pressrelease" element={<PressReleases />} />
+
 
 
         <Route path="*" element={<Notfoundpage />} />
