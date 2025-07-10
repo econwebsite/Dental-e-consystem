@@ -21,7 +21,6 @@ const Productboderbox = () => {
             Many brands have shared the manufacturing of Intraoral cameras, which often lead to market delays and increased costs.
           </p>
 
-          {/* Video thumbnails */}
           <div className="video-title-container">
             <div className="product-thumbnail">
               <img
@@ -74,7 +73,6 @@ const Productboderbox = () => {
           <br />
           <br />
 
-          {/* Final paragraph */}
           <p className="Productboderbox-description">
             Our cameras are designed with the latest technology to ensure superior image quality, reliability, and ease of use for dental professionals.
           </p>

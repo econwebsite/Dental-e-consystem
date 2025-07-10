@@ -21,7 +21,6 @@
   font-weight: 900;
 }
 
-/* Description styling */
 .Productboderbox-description {
   text-align: center;
   margin-bottom: 40px;
@@ -29,7 +28,6 @@
   font-size: 1.2em;
 }
 
-/* Content container styling */
 .Productboderbox-content {
   display: flex;
   gap: 18px;
@@ -37,7 +35,6 @@
   flex-wrap: wrap;
 }
 
-/* Border box styling */
 .Productboderbox-border-box {
   display: flex;
   flex-direction: column;
@@ -52,7 +49,6 @@
   box-sizing: border-box;
 }
 
-/* Icon image styling */
 .Productboderbox-icon-image {
   width: 60px;
   height: 50px;
@@ -89,7 +85,6 @@
   border: 1px solid #ccc; 
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .Productboderbox-container {
     padding: 2px;

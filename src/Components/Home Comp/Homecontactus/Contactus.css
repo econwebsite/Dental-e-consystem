@@ -18,10 +18,10 @@
 }
 
 .Spam-questions {
-    font-size: 1rem; /* Adjusted font size */
+    font-size: 1rem; 
     color: #344ea1;
-    margin-bottom: 20px; /* Reduced bottom margin */
-    text-align: center; /* Center aligned */
+    margin-bottom: 20px; 
+    text-align: center; 
     display: block;
     width: 100%;
 }
@@ -58,51 +58,46 @@
     background-color: #002751;
     border-color: #002751;
 }
-/* Placeholder color for all inputs and text areas */
 input::placeholder,
 textarea::placeholder {
     color: #344ea1;
-    opacity: 1; /* Ensure opacity is set to 1 for consistency */
+    opacity: 1; 
 }
 
-/* Placeholder color for Ant Design inputs */
 .ant-input::placeholder,
 .ant-input-textarea::placeholder {
     color: #003873 !important;
     opacity: 1; 
 }
-/* Targeting the placeholder text of Ant Design Select */
 .ant-select .ant-select-selector .ant-select-selection-placeholder {
-    color: #344ea1; /* Placeholder color */
+    color: #344ea1; 
 }
 
-/* For dropdown items, if needed */
 .ant-select-item-option-content {
-    color: #344ea1; /* Item text color */
+    color: #344ea1; 
 }
 
-/* Additional styling if necessary */
 .ant-select-selector .ant-select-selection-item {
-    color: #344ea1; /* Text color for selected item (which might also affect the placeholder) */
+    color: #344ea1; 
 }
 
 @media (max-width: 768px) {
     .total-contact {
-        padding: 10px; /* Reduced padding on smaller screens */
+        padding: 10px; 
     }
 
     .Contact-us {
-        font-size: 2rem; /* Adjusted font size */
+        font-size: 2rem; 
     }
 
     .Contact-ted {
-        padding: 15px; /* Reduced padding */
-        max-width: none; /* Full width on small screens */
+        padding: 15px; 
+        max-width: none; 
     }
 
     .Contacts-btn {
-        padding: 6px 15px; /* Adjusted button padding */
-        font-size: 0.8em; /* Adjusted button font size */
+        padding: 6px 15px;
+        font-size: 0.8em;
     }
 }
 

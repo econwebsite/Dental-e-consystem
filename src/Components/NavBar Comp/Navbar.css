@@ -27,7 +27,6 @@ font-weight: 600;
 width: 95% !important;
 }
 
-/* Desktop and large tablet view styling */
 @media (min-width: 1024px) {
   .desktop-view {
     display: flex;
@@ -138,10 +137,9 @@ width: 95% !important;
 
   
   .dropdown-toggle::after {
-    color: #003873; /* Arrow color */
+    color: #003873;
   }
 
-  /* Customize Bootstrap dropdown menu */
   .dropdown-menu {
     background-color: #f1f2f2;
     border: 1px solid #69ba2f; 
@@ -162,7 +160,6 @@ width: 95% !important;
   }
 }
 
-/* Mobile view styling */
 @media (max-width: 1023px) {
   .desktop-view {
     display: none;
@@ -193,7 +190,6 @@ width: 95% !important;
   }
 }
 
-/* Customize Ant Design dropdown menu colors */
 .ant-dropdown-menu {
   background-color: #003873;
   border: 1px solid #69ba2f; 
@@ -218,7 +214,6 @@ width: 95% !important;
 }
 
 
-/* Desktop Dropdown Hover */
 .desktop-view .ant-dropdown-menu {
   display: none;
 }

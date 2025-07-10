@@ -67,6 +67,7 @@
   flex-direction: column;
   gap: 45px;
   height: auto;
+  
 }
 
 .casestudy-full-image {
@@ -74,6 +75,7 @@
   max-height: 442px; 
   object-fit: cover;
   border-radius: 15px;
+  cursor: default;
 }
 
 
@@ -100,6 +102,8 @@
   font-size: 1.1em;
   line-height: normal;
   text-align: justify; 
+    cursor:default;
+
 }
 
 .casestudy-box-content p {
@@ -131,45 +135,47 @@
   box-sizing: border-box;
   padding: 20px;
   width: 100%;
+    cursor:default;
+
   height: auto;
 }
 
 .casestudy-box-image {
   width: 100%;
-  max-height: 255px; /* Adjusted to ensure proper aspect ratio */
+  max-height: 255px;
+    cursor:default;
   object-fit: cover;
   border-radius: 15px;
   margin-bottom: 10px;
 }
 
-/* Media Queries */
 @media (max-width: 968px) {
   .casestudy-title h1 {
     font-size: 1.7em;
   }
 
   .casestudy-component-container {
-    flex-wrap: wrap; /* Allow columns to wrap on mobile */
+    flex-wrap: wrap; 
   }
 
   .casestudy-left-column, .casestudy-right-column {
-    width: 100%; /* Full width on mobile */
+    width: 100%; 
   }
 
   .casestudy-left-column {
-    order: 1; /* Display left column first */
+    order: 1; 
   }
 
   .casestudy-right-column {
-    order: 2; /* Display right column second */
+    order: 2;
   }
 
   .casestudy-full-image {
     width: 100%;
-    max-height: 300px; /* Adjust height for mobile */
+    max-height: 300px; 
     object-fit: contain;
     display: block;
-    margin: 0 auto; /* Center image */
+    margin: 0 auto; 
   }
 
   .casestudy-box-image {
@@ -179,12 +185,12 @@
   .casestudy-box-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the content */
+    align-items: center; 
     text-align: justify;
   }
 
   .casestudy-btn, .casestudy-btn1 {
-    margin: 15px auto 0; /* Ensure button is centered horizontally */
+    margin: 15px auto 0; 
   }
 }
 
@@ -221,12 +227,10 @@
     max-width: 1200px; 
   }
   
-  /* Left column */
   .casestudy-left-column {
     width: 60%;
   }
   
-  /* Merged box styling */
   .casestudy-merged-box {
     width: 100%;
     background-color: white;
@@ -239,17 +243,15 @@
   
   .casestudy-full-image {
     width: 100%;
-    max-height: 600px; /* Adjust to ensure proper aspect ratio */
+    max-height: 600px; 
     object-fit: cover;
   }
   
-  /* Right column */
   .casestudy-right-column {
     width: 50%;
     gap: 20px; 
   }
   
-  /* Box styling */
   .casestudy-box {
     padding: 30px;
   }

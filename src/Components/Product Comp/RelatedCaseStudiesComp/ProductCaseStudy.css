@@ -60,7 +60,6 @@
   text-align: justify;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .productcase-card {
     flex-direction: column;

@@ -303,7 +303,7 @@ useEffect(() => {
     <Modal
       title={type === 'download' ? `Download - ${title}` : "Contact Form"}
       visible={visible}
-       style={{ top:"20px" }} 
+       style={{ top:"40px" }} 
       onCancel={onClose}
       footer={null}
       width={450}

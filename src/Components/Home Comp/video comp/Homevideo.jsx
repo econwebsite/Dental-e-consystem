@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Homevideo.css';
-import Vediothumbnail from "../../../assets/home images/Tumbnail.jpg"; // Correct path to your image
+import Vediothumbnail from "../../../assets/home images/thumbnail.jpg";
 import FsLightbox from "fslightbox-react";
 
 function Dentalvideopg() {
@@ -33,7 +33,7 @@ function Dentalvideopg() {
           <FsLightbox
             toggler={toggler}
             sources={[
-              "https://www.youtube.com/embed/Bpg4bHDLZsY?autoplay=1" 
+              "https://www.youtube.com/embed/_Cwz6Nv-xZA?autoplay=1" 
             ]}
           />
         </div>

@@ -21,6 +21,8 @@ import Extraoralbestimg from "./Components/Future Blog/Extraoralbestimg/Extraora
 import Understandingextra from "./Components/Future Blog/understandingextra/Understandingextra";
 import Notfoundpage from "./Components/Notfoundpage"
 import { HelmetProvider } from 'react-helmet-async';
+import FAQ from './Components/Faqcomp/Faq';
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -45,6 +47,8 @@ const App = () => {
         <Route path="/blogs/imaging-challenges-dental-loupes-manufacturing" element={<HowToOvercome />} />
         <Route path="/blogs/extraoral-cameras-image-quality-tuning" element={<Extraoralbestimg />} />
         <Route path="/blogs/understanding-extraoral-cameras-dentistry" element={<Understandingextra />} />
+       <Route path="/faq" element={<FAQ />} />
+
 
         <Route path="*" element={<Notfoundpage />} />
 

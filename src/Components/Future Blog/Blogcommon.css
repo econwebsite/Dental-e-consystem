@@ -118,12 +118,10 @@ ul {
 .blog-breadcrumb a {
   text-decoration: none;
   color: #003873;
-  /* Optional: Set color for better visibility */
 }
 
 .blog-breadcrumb a:hover {
   color: #69ba2f;
-  /* Optional: Change color on hover */
 }
 
 .content-Blog {
@@ -221,9 +219,7 @@ ul {
 .blog-medicalimage {
   height: auto;
   width: 600px;
-  /* Make the image responsive */
   object-fit: contain;
-  /* Maintain aspect ratio */
   margin: 20px 0;
 }
 
@@ -280,7 +276,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Adjust based on the container's height */
+  height: 100%; 
 }
 
 .futureblog-imgcenter img {
@@ -290,11 +286,10 @@ ul {
   object-fit: cover;
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .futureblog-imgcenter img {
-      height: auto; /* Adjusts height for mobile screens */
-      width: 100%;  /* Takes full width of the container */
+      height: auto; 
+      width: 100%;  
   }
 }
 

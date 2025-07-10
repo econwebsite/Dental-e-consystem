@@ -106,7 +106,6 @@
   margin-top: 5px;
 }
 
-/* Laptop and larger screens */
 @media (min-width: 1024px) {
   .spec-leftColumn, .spec-rightColumn {
     width: calc(30.5%); 
@@ -125,7 +124,6 @@
   }
 }
 
-/* Tablet and smaller screens */
 @media (max-width: 1024px) {
   .spec-content {
     flex-direction: column;

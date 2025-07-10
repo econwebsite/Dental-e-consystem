@@ -103,7 +103,7 @@
 }
 
 .productIntraImageItem {
-    width: 100px; /* Adjust as needed */
+    width: 100px; 
     height: auto;
     margin-bottom: 10px;
 }
@@ -126,7 +126,6 @@
 .productIntraButtonEnd {
     padding: 10px 20px;
 }
-/* Mobile Styles */
 @media (max-width: 768px) {
     .carouselCustom {
         height: 420px; 
@@ -193,7 +192,6 @@
     }
 }
 
-/* Tablet Styles */
 @media (min-width: 769px) and (max-width: 1024px) {
     .carouselCustom {
         height: 400px; 
@@ -246,7 +244,6 @@
     }
 }
 
-/* Desktop Styles */
 @media (min-width: 1025px) {
     .productSection {
         padding: 20px; 

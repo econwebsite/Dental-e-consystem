@@ -111,7 +111,7 @@
   .future-case-btn {
     margin-top: 20px;
     text-align: center;
-    align-self: center; /* Center the button horizontally */
+    align-self: center; 
   }
 
  /* .buttonLink{
@@ -120,11 +120,11 @@ justify-content: flex-start;
  } */
   @media (max-width: 768px) {
     .future-case-banner {
-      display: none; /* Hide banner on mobile */
+      display: none; 
     }
   
     .future-case-button {
-      display: none; /* Hide button on mobile */
+      display: none; 
     }
     .future-case-sub-heading {
         margin-top: 20px;
@@ -138,26 +138,26 @@ justify-content: flex-start;
         padding: 0.5em;
       }
     .future-case-image-row {
-      flex-direction: column; /* Stack challenges in a column */
-      align-items: center; /* Center items */
-      gap: 20px; /* Adjust spacing between challenges */
+      flex-direction: column; 
+      align-items: center; 
+      gap: 20px;
     }
   
     .future-case-challenge {
-      width: 80%; /* Adjust width for mobile */
+      width: 80%;
     }
   
     .future-case-benefits-container {
-      flex-direction: column; /* Stack items vertically */
+      flex-direction: column; 
       align-items: center;
       padding: 0 1em;
 
     }
   
     .future-case-benefits-image {
-      width: 100%; /* Full width on mobile */
+      width: 100%;
       height: 250px;
-      margin-right: 0; /* Remove margin */
+      margin-right: 0; 
       margin-bottom: 15px;
     }
     .future-case-benefits-details {
@@ -166,9 +166,6 @@ justify-content: flex-start;
     }
   }
 
-  
-
-/* //////////////////////////////////////////////////// */
 
 @media (min-width:1024px) {
   .related-case-studies-title{
@@ -289,8 +286,8 @@ margin-top: 20px;
 @media (max-width: 1300px) { 
    .related-case-container {
   display: flex;
-  justify-content: center; /* Space between cards */
-  gap: 10px; /* Space between cards */
-  flex-wrap: nowrap; /* Allow wrapping */
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap; 
 }
 }

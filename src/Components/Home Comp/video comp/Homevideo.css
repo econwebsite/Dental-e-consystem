@@ -1,4 +1,3 @@
-/* Main container styling */
 .tot-denvedio {
   display: flex;
   justify-content: center;
@@ -22,7 +21,6 @@
   text-align: center;
 }
 
-/* Video title container */
 .video-title-container {
   display: flex;
   justify-content: space-evenly; 
@@ -45,15 +43,14 @@
   border: 1px solid #ccc; 
 }
 
-/* Mobile responsiveness */
 @media (max-width: 768px) {
   .video-title-container {
     flex-direction: column;
   }
 
   .home-thumbnail {
-    max-width: 100%; /* Full-width on smaller screens */
-    margin: 10px auto; /* Center images */
+    max-width: 100%; 
+    margin: 10px auto; 
   }
 
   .tot-denvedio h2 {

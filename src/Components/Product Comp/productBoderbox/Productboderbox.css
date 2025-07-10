@@ -63,22 +63,30 @@
 .Productboderbox-right-column {
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%; 
 }
 
 .product-thumbnail {
-  width: auto;
-  height: 450px; 
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 16 / 9; 
+  overflow: hidden;
+  border-radius: 8px;
+  margin: auto;
   cursor: pointer;
 }
 
-.product-thumbnail IMG {
+.product-thumbnail img {
   width: 100%;
-  height: 100%; 
-  object-fit: cover; 
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
 }
+
 
 .Productboderbox-border-box {
   border: 1px solid #ccc;
@@ -143,10 +151,16 @@ iframe {
   .Productboderbox-container {
     padding: 0.5em;
   }
-  .product-thumbnail {
-    width: auto;
-    height: auto; 
-    cursor: pointer;
+ .product-thumbnail {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .product-thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
   .pro-Boderimg {
     width: 40px;

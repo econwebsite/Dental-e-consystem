@@ -68,9 +68,7 @@
     margin-top: 15px;
   }
   
-  /* Media Queries */
   
-  /* Tablets and small desktops */
   @media screen and (max-width: 1024px) {
     .productcards-content-container {
       flex-direction: column; 
@@ -86,7 +84,6 @@
     }
   }
   
-  /* Mobile phones */
   @media screen and (max-width: 768px) {
     #productcards-design-title {
       font-size: 2em;

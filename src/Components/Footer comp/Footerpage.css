@@ -21,33 +21,33 @@
 .footer-column-contact{
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: center; 
 }
 .footer-column-subscribe {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: center; 
 }
 
 .footer-column-logo {
   display: flex;
   flex-direction: row;
-  align-items: center; /* Center items vertically */
+  align-items: center; 
 }
 
 .footer-logo {
-  margin-right: 20px; /* Space between logo and links */
+  margin-right: 20px; 
 }
 
 .footer-logo img {
   display: block;
-  max-height: 50px; /* Adjust height as needed */
+  max-height: 50px; 
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Aligns links to the start (left side) */
+  align-items: flex-start; 
 }
 
 .footer-links a {
@@ -61,7 +61,7 @@
 
 .footer-divider {
   width: 1px;
-  background-color: #ffffff; /* White color for dividers */
+  background-color: #ffffff; 
   height: 150px;
   margin: 0px; 
 }
@@ -128,10 +128,10 @@
 .footer-icon-button {
   background: none;
   border: none;
-  font-size: 24px; /* Adjust icon size */
-  color: #003873; /* Adjust color as needed */
-  margin-right: 10px; /* Space between icons */
-  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 24px; 
+  color: #003873; 
+  margin-right: 10px; 
+  cursor: pointer; 
 }
 
 .footer-bottom-text {
@@ -143,56 +143,56 @@
   font-style: normal;
 }
 
-/* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   .footer-container {
     margin-top: 10px;
   }
   .footer-inner {
-    flex-direction: column; /* Stack columns vertically on mobile */
+    flex-direction: column; 
   }
 
   .footer-column {
-    width: 100%; /* Each column takes full width on mobile */
-    margin-bottom: 20px; /* Space between columns */
+    width: 100%;
+    margin-bottom: 20px; 
   }
 
   .footer-divider {
-    display: none; /* Hide dividers on mobile */
+    display: none; 
   }
 
   .footer-column-logo {
-    flex-direction: column; /* Stack logo and links vertically on mobile */
+    flex-direction: column;
     align-items: center;
   }
 
   .footer-logo {
-    margin-right: 0; /* Remove right margin on mobile */
-    margin-bottom: 10px; /* Space between logo and links on mobile */
+    margin-right: 0; 
+    margin-bottom: 10px; 
   }
 
   .footer-links {
-    align-items: center; /* Center links horizontally on mobile */
-    text-align: center; /* Center text for links */
+    align-items: center; 
+    text-align: center; 
   }
 
   .footer-links a {
-    margin-bottom: 8px; /* Adjust spacing between links on mobile */
+    margin-bottom: 8px; 
   }
 
   .footer-contact-item {
-    flex-direction: row; /* Align icon and text horizontally on mobile */
-    justify-content: center; /* Center items horizontally */
+    flex-direction: row; 
+    justify-content: center; 
     margin-bottom: 10px;
   }
 
   .footer-contact-item p {
-    margin: 0; /* Ensure text has no extra margin */
-    font-size: 14px; /* Adjust font size for small screens */
+    margin: 0; 
+    
+    font-size: 14px; 
   }
 
   .footer-subscribe-input {
-    flex-direction: row; /* Stack input and button horizontally on mobile */
+    flex-direction: row; 
     justify-content: center; 
     align-items: center;
   }
@@ -203,14 +203,14 @@
   }
 
   .footer-social-icons {
-    flex-direction: row; /* Align social icons in a row on mobile */
+    flex-direction: row;
   }
 
   .footer-icon-button {
-    margin-right: 8px; /* Adjust spacing between social icons */
+    margin-right: 8px; 
   }
   .footer-column-subscribe {
-    align-items: center; /* Center content horizontally */
+    align-items: center; 
   }
   .footer-container {
     padding: 15px;
@@ -219,16 +219,16 @@
 
 @media (max-width: 400px) {
   .footer-contact-item {
-    flex-direction: row; /* Align icon and text horizontally on mobile */
-    justify-content: center; /* Center items horizontally */
-    text-align: center; /* Center text alignment */
+    flex-direction: row; 
+    justify-content: center; 
+    text-align: center; 
   }
 
   .footer-icon-button {
-    font-size: 20px; /* Adjust icon size for very small screens */
+    font-size: 20px; 
   }
   .footer-column-subscribe {
-    align-items: center; /* Center content horizontally */
+    align-items: center; 
   }
 
 }
