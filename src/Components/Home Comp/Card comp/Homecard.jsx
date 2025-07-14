@@ -35,7 +35,7 @@ const Homecard = () => {
               Our 4K Extraoral cameras can be mounted to any dental lights or dental chairs to capture every treatment.
             </p>
             <button 
-              className="second-home-button" 
+              className="second-home-button2" 
              
               style={{backgroundColor:"#00aeef",border:"none",color:"white",borderRadius:"5px",cursor:"auto"}} 
               // animationColor="#344ea1" 
@@ -51,7 +51,7 @@ const Homecard = () => {
               Our compact and lightweight loupe camera helps to bring our best quality images.
             </p>
             <button 
-              className="second-home-button" 
+              className="second-home-button2" 
              
               style={{backgroundColor:"#00aeef",border:"none",color:"white",borderRadius:"5px",cursor:"auto"}} 
               // animationColor="#344ea1" 

@@ -118,13 +118,30 @@
 }
 
 .productIntraFlexEndRow {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+   display: flex;
+  flex-wrap: nowrap; 
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .productIntraButtonEnd {
-    padding: 10px 20px;
+display: inline-block;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: white;
+  background-color: #344ea1; 
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  min-width: 160px;
 }
 @media (max-width: 768px) {
     .carouselCustom {
@@ -235,9 +252,7 @@
         font-size: 14px; 
     }
 
-    .productIntraFlexEndRow {
-        flex-direction: row;
-    }
+   
 
     .productIntraButtonEnd {
         width: auto; 
@@ -270,7 +285,5 @@
         flex-direction: row; 
     }
 
-    .productIntraButtonEnd {
-        width: auto; 
-    }
+   
 }

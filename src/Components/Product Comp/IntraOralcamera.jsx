@@ -5,7 +5,7 @@ import './Product.css';
 import image1 from '../../assets/Product images/productcarousel1.png';
 import image2 from '../../assets/Product images/productcarousel2.png';
 import image3 from '../../assets/Product images/productcarousel3.png';
-// import AnimatedButton from "../Button comp/AnimatedButton";
+import AnimatedButton from "../Button comp/AnimatedButton";
 import Modelbutton from "../Button comp/Modelbutton";
 
 const images = [
@@ -86,7 +86,8 @@ const IntraOralcamera = () => {
                                  type="contact"
                                 animationColor="#344ea1"
                                 hoverColor="#344ea1"
-                            /><Modelbutton
+                            />
+                            <Modelbutton
                                 className="productIntraButtonEnd"
                                 text="Request IQ report"
                                  type="contact"
@@ -94,6 +95,15 @@ const IntraOralcamera = () => {
                                 animationColor="#344ea1"
                                 hoverColor="#344ea1"
                             />
+                            <AnimatedButton
+                                className="productIntraButtonEnd"
+                                text="FAQ"
+                                backgroundColor="#344ea1" 
+              animationColor="#00aeef" 
+              hoverColor="#69ba2f"
+              to="/faq"
+                            />
+                            
                         </div>
                     </div>
                 </div>

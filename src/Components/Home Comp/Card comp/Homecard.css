@@ -68,8 +68,11 @@
   padding: 10px 15px;  
   width: 100%;
 }
-.second-home-card2:hover,
-.second-home-card3:hover {
+.second-home-button2 {
+  padding: 10px 15px;  
+  width: 100%;
+}
+.second-home-button2:hover {
   filter: blur(1px);
 }
 
