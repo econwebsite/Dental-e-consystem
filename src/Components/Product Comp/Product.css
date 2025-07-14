@@ -119,11 +119,11 @@
 
 .productIntraFlexEndRow {
    display: flex;
-  flex-wrap: nowrap; 
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
+  align-self: center;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .productIntraButtonEnd {
@@ -141,7 +141,7 @@ display: inline-block;
   white-space: nowrap;
   transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
-  min-width: 160px;
+  min-width: 130px;
 }
 @media (max-width: 768px) {
     .carouselCustom {
@@ -281,9 +281,9 @@ display: inline-block;
         font-size: 16px; 
     }
 
-    .productIntraFlexEndRow {
+    /* .productIntraFlexEndRow {
         flex-direction: row; 
-    }
+    } */
 
    
 }

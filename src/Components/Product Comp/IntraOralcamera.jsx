@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import CustomlightBox from './customlightbox/CustomlightBox'; 
+import CustomlightBox from './customlightbox/CustomlightBox';
 import './Product.css';
 import image1 from '../../assets/Product images/productcarousel1.png';
 import image2 from '../../assets/Product images/productcarousel2.png';
@@ -16,7 +16,7 @@ const images = [
 
 const IntraOralcamera = () => {
     const [selectedImage, setSelectedImage] = useState(null);
-    const [isLightboxOpen, setIsLightboxOpen] = useState(false); 
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const openLightbox = (image, index) => {
@@ -44,7 +44,7 @@ const IntraOralcamera = () => {
         <div className='col-12 productSection'>
             <div className='mainContainer'>
                 <div className='row'>
-    
+
                     <div className='col-lg-4 col-sm-12 productLeftSide'>
                         <Carousel className='carouselCustom'>
                             {images.map((image, index) => (
@@ -53,7 +53,7 @@ const IntraOralcamera = () => {
                                         className="d-block w-100"
                                         src={image.src}
                                         alt={`Slide ${index + 1}`}
-                                        onClick={() => openLightbox(image.src, index)} 
+                                        onClick={() => openLightbox(image.src, index)}
                                         style={{ cursor: 'pointer' }}
                                     />
                                 </Carousel.Item>
@@ -72,8 +72,8 @@ const IntraOralcamera = () => {
                             <Modelbutton
                                 className="productIntraButtonEnd"
                                 text="Download Datasheet"
-                                 docName="e-con_DensiCAM-Datasheet"
-                                  title="DensiCAM"
+                                docName="e-con_DensiCAM-Datasheet"
+                                title="DensiCAM"
                                 productName="Datasheet"
                                 backgroundColor="#344ea1"
                                 animationColor="#69ba2f"
@@ -83,14 +83,14 @@ const IntraOralcamera = () => {
                                 className="productIntraButtonEnd"
                                 text="Contact to Buy"
                                 backgroundColor="#00aeef"
-                                 type="contact"
+                                type="contact"
                                 animationColor="#344ea1"
                                 hoverColor="#344ea1"
                             />
                             <Modelbutton
                                 className="productIntraButtonEnd"
                                 text="Request IQ report"
-                                 type="contact"
+                                type="contact"
                                 backgroundColor="#69ba2f"
                                 animationColor="#344ea1"
                                 hoverColor="#344ea1"
@@ -98,23 +98,23 @@ const IntraOralcamera = () => {
                             <AnimatedButton
                                 className="productIntraButtonEnd"
                                 text="FAQ"
-                                backgroundColor="#344ea1" 
-              animationColor="#00aeef" 
-              hoverColor="#69ba2f"
-              to="/faq"
+                                backgroundColor="#344ea1"
+                                animationColor="#00aeef"
+                                hoverColor="#69ba2f"
+                                to="/faq"
                             />
-                            
+
                         </div>
                     </div>
                 </div>
             </div>
             <CustomlightBox
-                image={selectedImage} 
-                isOpen={isLightboxOpen} 
-                onClose={closeLightbox} 
-                onNext={showNext} 
-                onPrev={showPrev} 
-                title={images[currentIndex]?.title} 
+                image={selectedImage}
+                isOpen={isLightboxOpen}
+                onClose={closeLightbox}
+                onNext={showNext}
+                onPrev={showPrev}
+                title={images[currentIndex]?.title}
             />
         </div>
     );
