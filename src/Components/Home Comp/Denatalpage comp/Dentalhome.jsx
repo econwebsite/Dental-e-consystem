@@ -2,9 +2,8 @@ import React, { useRef, useState } from 'react';
 import './Dentalhome.css';
 import { Carousel } from 'antd';
 import dentalimg2 from "../../../assets/home images/Homebanner.jpg";
-// import banner1 from "../../../assets/home images/bannerone.jpg";
 
-import Modelbutton from '../../Button comp/Modelbutton';
+import AnimatedButton from '../../Button comp/AnimatedButton';
 
 const Dentalhome = () => {
     const carouselRef = useRef(); 
@@ -31,13 +30,15 @@ const Dentalhome = () => {
                         <div className='homeBanner'>
                             <img src={dentalimg2} alt="Slide 2" className="carousel-image" />
                             <div className='homeButton'>
-                                <Modelbutton 
+                                {/* <Modelbutton 
                                     className="productIntraButtonEnd" 
                                     text="Contact Us" 
                                     backgroundColor="#69ba2f" 
                                     animationColor="#344ea1" 
                                     hoverColor="#344ea1"
-                                />
+                                /> */}
+<AnimatedButton className="productIntraButtonEnd" text="Know more" backgroundColor="#69ba2f" animationColor="#344ea1" hoverColor="#344ea1" to="/product/intraoral-cameras"></AnimatedButton>
+
                             </div>
                         </div>
                     </div>

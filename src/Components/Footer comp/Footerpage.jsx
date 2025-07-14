@@ -4,11 +4,11 @@ import './Footerpage.css';
 import { message } from 'antd';
 import dentallogo from "../../assets/home images/NewDentallogo.png";
 import econlogo from "../../assets/home images/footerlogo-1.svg"
-import { RiPhoneFill, RiMailFill } from 'react-icons/ri';
+import { RiPhoneFill, RiMailFill,RiArrowDownSLine  } from 'react-icons/ri';
 import AnimatedButton from "../Button comp/AnimatedButton"
 import { Link } from 'react-router-dom';
 const Footerpage = () => {
-  const [email, setEmail] = useState(null);
+  const [email, setEmail] = useState('');
   const [isValid, setIsValid] = useState(true);
   const validateEmail = async () => {
     if (isValid && email.length > 0) {
@@ -47,11 +47,11 @@ const Footerpage = () => {
     setIsValid(validateEmailId(newEmail));
   };
   const handelSubscribtion = async () => {
-    if(email === null){
+    if (email === null) {
       setIsValid(false);
       return;
     }
-    const valid = isValid? await validateEmail():false;
+    const valid = isValid ? await validateEmail() : false;
     console.log(valid, "emailvalid");
     if (valid) {
       try {
@@ -73,13 +73,27 @@ const Footerpage = () => {
             <div className="footer-logo">
               <img src={dentallogo} alt="Company Logo" />
             </div>
-            <div className="footer-links">
-              <Link to="/">Home</Link>
-              <Link to="/product/intraoral-cameras">Intraoral Camera</Link>
-              <Link to="/case-studies">Case Studies</Link>
-              <Link to="/blogs">Blogs</Link>
-              <Link to="/company/about-us">About Us</Link>
-            </div>
+        <div className="footer-links">
+  <Link to="/">Home</Link>
+  <Link to="/product/intraoral-cameras">Intraoral Camera</Link>
+
+  <div className="footer-dropdown-wrapper">
+    <div className="footer-link footer-link-dropdown">
+  <span>Resources</span>
+  <RiArrowDownSLine className="footer-arrow" />
+</div>
+
+    <div className="footer-dropdown-links">
+      <Link to="/blogs">Blog</Link>
+      <Link to="/case-studies">Case Study</Link>
+      <Link to="/faq">FAQ</Link>
+      <Link to="/pressrelease">Press Releases</Link>
+    </div>
+  </div>
+  <Link to="/company/contact-us">Contact Us</Link>
+  <Link to="/company/about-us">About Us</Link>
+</div>
+
           </div>
           <div className="footer-divider" />
           <div className="footer-column footer-column-contact">
@@ -101,7 +115,7 @@ const Footerpage = () => {
                 return false;
               }} placeholder="Email id" value={email} onChange={handleChange} />
               <AnimatedButton className="footerproceed-btn" text="Proceed" backgroundColor="#003873" animationColor="#69ba2f" hoverColor="#69ba2f" onClick={handelSubscribtion}></AnimatedButton>
-              {!isValid && <p style={{ color: 'red', margin: '0px',textAlign:"center",width:"100%" }}>Invalid email address</p>}
+              {!isValid && <p style={{ color: 'red', margin: '0px', textAlign: "center", width: "100%" }}>Invalid email address</p>}
             </div>
             <div className="footer-social-icons">
               <a href='https://www.e-consystems.com/'>

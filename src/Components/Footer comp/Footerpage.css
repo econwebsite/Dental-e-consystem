@@ -232,3 +232,75 @@
   }
 
 }
+.footer-dropdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+   justify-content: space-between;
+  margin-bottom: 10px;
+  position: relative;
+  color: #003873;
+}
+
+.footer-link-label-with-arrow {
+  color: #003873;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 5px 10px;
+  text-align: left;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.footer-link-label-with-arrow:hover {
+  background-color: #e6e6e6;
+}
+
+.footer-arrow {
+  font-size: 16px;
+  color: #003873;
+  margin-left: 5px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.footer-dropdown-wrapper:hover .footer-arrow {
+  transform: rotate(180deg);
+}
+
+.footer-dropdown-links {
+  display: none;
+  flex-direction: column;
+  background-color: #f1f2f2;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-top: 5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.footer-dropdown-wrapper:hover .footer-dropdown-links {
+  display: flex;
+}
+
+.footer-dropdown-links a {
+  color: #003873;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-family: "Poppins", sans-serif;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+}
+
+.footer-dropdown-links a:hover {
+  color: #69ba2f;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -68,8 +68,11 @@
   padding: 10px 15px;  
   width: 100%;
 }
+.second-home-card2:hover,
+.second-home-card3:hover {
+  filter: blur(1px);
+}
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .second-home-card-container {
     padding: 20px;

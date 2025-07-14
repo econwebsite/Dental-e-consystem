@@ -212,8 +212,8 @@ const FAQ = () => {
   };
 
   return (
-     <div className="faq-container">
-      <div className="faq-header">
+    <div className="Faq-container">
+      <div className="Faq-header">
         <h2>Frequently Asked Questions</h2>
       </div>
       
@@ -221,37 +221,31 @@ const FAQ = () => {
         accordion
         bordered={false}
         expandIcon={({ isActive }) => (
-          <div className="faq-icon-container">
+          <div className="Faq-icon-container">
             {isActive ? (
-              <CloseOutlined 
-                className="faq-icon close-icon"
-                style={{ transition: 'all 0.3s ease' }}
-              />
+              <CloseOutlined className="Faq-icon Faq-close-icon" />
             ) : (
-              <QuestionCircleOutlined 
-                className="faq-icon plus-icon"
-                style={{ transition: 'all 0.3s ease' }}
-              />
+              <QuestionCircleOutlined className="Faq-icon Faq-plus-icon" />
             )}
           </div>
         )}
         expandIconPosition="end"
         activeKey={activeKey}
         onChange={handlePanelChange}
-        className="faq-collapse"
+        className="Faq-collapse"
       >
         {faqs.map((faq, index) => (
           <Panel 
             header={
-              <div className={`faq-question ${activeKey === index.toString() ? 'active' : ''}`}>
-                <div className="question-number">{index + 1}</div>
+              <div className={`Faq-question ${activeKey === index.toString() ? 'active' : ''}`}>
+                <div className="Faq-question-number">{index + 1}</div>
                 {faq.question}
               </div>
             } 
             key={index} 
-            className={`faq-panel ${activeKey === index.toString() ? 'active' : ''}`}
+            className={`Faq-panel ${activeKey === index.toString() ? 'active' : ''}`}
           >
-            <div className="faq-answer">
+            <div className="Faq-answer">
               {faq.answer}
             </div>
           </Panel>
