@@ -33,7 +33,7 @@ function Dentalvideopg() {
           <FsLightbox
             toggler={toggler}
             sources={[
-              "https://www.youtube.com/embed/_Cwz6Nv-xZA?autoplay=1" 
+              "https://www.youtube.com/embed/qfmwMkSypo4?autoplay=1" 
             ]}
           />
         </div>

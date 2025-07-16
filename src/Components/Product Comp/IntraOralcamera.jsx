@@ -62,7 +62,7 @@ const IntraOralcamera = () => {
                     </div>
 
                     <div className='col-lg-8 col-sm-12 productRightSide'>
-                        <h2 className='productIntraTitle'>DensiCAM - Full HD Intraoral Camera for OEM</h2>
+                        <h2 className='productIntraTitle'>DensiCAM - Full HD Intraoral Camera for OEMs</h2>
                         <p className='productIntraDescription'>
                             DensiCAM, an Intraoral camera is engineered to meet the highest standards of dental imaging, combining cutting-edge Full HD imaging with advanced optics to deliver exceptionally clear and detailed images, enabling precise diagnostics and treatment planning. Engineered for superior ergonomics, this intraoral camera ensures a comfortable, user-friendly experience during image capture. As a complete OEM intraoral camera, perfectly suited for dental device manufacturers seeking to integrate or white-label it for their specific application or brand requirements. Full customization options are available to help you achieve a seamless fit into your product line.
                         </p>
@@ -71,20 +71,20 @@ const IntraOralcamera = () => {
 
                             <Modelbutton
                                 className="productIntraButtonEnd"
-                                text="Download Datasheet"
-                                docName="e-con_DensiCAM-Datasheet"
+                                text="Download Tech document"
+                                docName="e-con-Densicam-technical-documents.zip"
                                 title="DensiCAM"
-                                productName="Datasheet"
-                                backgroundColor="#344ea1"
+                                productName="ProductDocument"
+                                backgroundColor="#00aeef"
                                 animationColor="#69ba2f"
                                 hoverColor="#344ea1"
                             />
                             <Modelbutton
                                 className="productIntraButtonEnd"
                                 text="Contact to Buy"
-                                backgroundColor="#00aeef"
+                                backgroundColor="#344ea1"
                                 type="contact"
-                                animationColor="#344ea1"
+                                animationColor="#00aeef"
                                 hoverColor="#344ea1"
                             />
                             <Modelbutton

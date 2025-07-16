@@ -25,7 +25,7 @@ const NavBarpage = () => {
       <Menu.Item key="3">
         <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/pressrelease" onClick={handleNavLinkClick}>Press Release</Link>
       </Menu.Item>
-       <Menu.Item key="4">
+       <Menu.Item key="3">
         <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/faq" onClick={handleNavLinkClick}>FAQ</Link>
       </Menu.Item> 
       

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 const DownloadButton = ({documentName}) => {
-    console.log(documentName,"va;uekdkdk");
+    // console.log(documentName,"va;uekdkdk");
     
 const handleDownload = async () => {
     const response = await fetch(`https://api.dental.e-consystems.com/download`, {

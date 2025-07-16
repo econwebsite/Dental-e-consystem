@@ -4,7 +4,7 @@ import thumb from "../../assets/pressrelease-thumb.png";
 import prdoc from "../../assets/e-con-systems-launches-Densicam-pr.pdf"
 const pressRelease = {
   title: "e-con Systems® Launches DensiCAM - Full HD Intraoral Camera for OEM",
-  date: "July 15, 2025",
+  date: "July 16, 2025",
   pdfUrl: prdoc,
   previewImg: thumb,
 };

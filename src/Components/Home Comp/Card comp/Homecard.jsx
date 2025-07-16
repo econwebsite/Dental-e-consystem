@@ -4,6 +4,7 @@ import Cardimg1 from "../../../assets/home images/Intraoral.jpg";
 import Cardimg2 from "../../../assets/home images/Extraoral.jpg";
 import Cardimg3 from "../../../assets/home images/Loupecamera.jpg";
 import AnimatedButton from "../../Button comp/AnimatedButton";
+import newicon from "../../../assets/home images/new-icon.png"
 import { Link } from 'react-router-dom';
 
 const Homecard = () => {
@@ -11,6 +12,7 @@ const Homecard = () => {
     <div className="mainContainer">
       <div className="second-home-card-container">
         <div className="second-home-card1" style={{cursor:"pointer"}}>
+          <img src={newicon} alt="New" className="new-badge" />
           <div className="second-home-card-inner">
           <Link className="cardImgLink" to="/product/intraoral-cameras" style={{textDecoration:"none"}}><img src={Cardimg1} alt="Intraoral Camera" className="second-home-card-img" /></Link>
           <Link className="cardImgLink" to="/product/intraoral-cameras" style={{textDecoration:"none"}}><h2 className="second-home-card-title">Intraoral Camera</h2></Link>
