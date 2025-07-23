@@ -61,17 +61,21 @@
 }
 
 .Productboderbox-right-column {
-  flex: 1;
-  display: flex;
+ display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%; 
 }
-
+.product-video-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
 .product-thumbnail {
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   aspect-ratio: 16 / 9; 
   overflow: hidden;
   border-radius: 8px;
@@ -80,10 +84,9 @@
 }
 
 .product-thumbnail img {
-  width: 100%;
+   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
   border-radius: 8px;
 }
 

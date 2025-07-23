@@ -82,7 +82,7 @@ const Threeimportant = () => {
                                 <p><b>Re-focusing: </b>With narrow DoF, frequent adjustments are often needed to refocus on different areas, which can be time-consuming and uncomfortable for patients. The limited focus range necessitates repositioning the camera to capture various parts of the mouth clearly. This can be solved with a broader focus range, which reduces the need for frequent camera adjustments. This streamlines the imaging process, speeds up procedures, and improves patient comfort by reducing the need for constant repositioning.
                                 </p>
                                 <p><b>Imaging Consistency: </b>Images may lack consistency, with some parts of the oral cavity in sharp focus while others are blurred. This variability can make it difficult to compare images over time and track changes in dental conditions accurately. A deep DoF provides consistent image quality across the entire field of view. This uniformity simplifies the comparison of images over time and helps in effectively tracking changes in dental conditions.</p>
-                                <p>Below are the images taken by two intraoral cameras at different depths of Field. On the left is an image with a shallow Depth of Field (20 mm–40 mm), while the right shows an image with a broader DoF (5 mm–70 mm).</p>
+                                <p>Below are the images taken by two intraoral cameras at different depths of Field. On the left is an image with a shallow Depth of Field (20 mm–40 mm), while the right shows an image with a broader DoF (5 mm–80 mm).</p>
 
                                 <div className="threeparameter-container">
                                     <div className="threeparameter-content">

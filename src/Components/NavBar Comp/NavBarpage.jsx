@@ -22,12 +22,13 @@ const NavBarpage = () => {
       <Menu.Item key="2">
         <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/case-studies" onClick={handleNavLinkClick}>Case Studies</Link>
       </Menu.Item>
-      <Menu.Item key="3">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/pressrelease" onClick={handleNavLinkClick}>Press Release</Link>
-      </Menu.Item>
+     
        <Menu.Item key="3">
         <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/faq" onClick={handleNavLinkClick}>FAQ</Link>
       </Menu.Item> 
+       <Menu.Item key="4">
+        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/pressrelease" onClick={handleNavLinkClick}>Press Releases</Link>
+      </Menu.Item>
       
     </Menu>
   );

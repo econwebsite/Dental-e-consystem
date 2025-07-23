@@ -86,7 +86,7 @@ const Aguidtochoose = () => {
                                 <br></br>
                                 <p>A high Depth of Field (DoF) ensures that a larger area of the target is in sharp focus. In the context of intraoral cameras, it ensures that both the close-up and distant regions of the oral cavity are viewed with accurate sharpness.</p>
 
-                                <p>It helps dentists examine the target regions and their surrounding areas without constantly adjusting the focus. High DoF in cameras can be achieved by using lenses with smaller apertures and shorter focal lengths.  A depth of field range of 5 mm to 70 mm is recommended for effective intraoral imaging.</p>
+                                <p>It helps dentists examine the target regions and their surrounding areas without constantly adjusting the focus. High DoF in cameras can be achieved by using lenses with smaller apertures and shorter focal lengths.  A depth of field range of 5 mm to 80 mm is recommended for effective intraoral imaging.</p>
 
                                 <h3>White balance adjustments for different lighting conditions</h3>
                                 <p>Dentists typically utilize intraoral cameras within their clinical environments, where multiple light sources such as operating lights, room lights, and headlamp lights can significantly impact the camera's color reproduction due to variations in color temperature. These diverse lighting conditions can cause inconsistencies in the captured images, leading to inaccurate color representation of the oral cavity.</p>
