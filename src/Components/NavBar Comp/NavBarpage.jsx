@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Dropdown, Menu } from 'antd';
 import { Navbar, Nav, Container, Offcanvas, Form, Button } from 'react-bootstrap';
-import './navbar.css';
+import './Navbar.css';
 import dentallogo from '../../assets/home-images/NewDentallogo.png'; 
 
 const NavBarpage = () => {
