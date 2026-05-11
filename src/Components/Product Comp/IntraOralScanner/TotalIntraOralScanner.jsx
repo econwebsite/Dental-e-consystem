@@ -25,7 +25,7 @@ const TotalIntraOralScanner = () => {
             <ScannerSpecification />
             <ScannerCompliance />
             <ScannerStandards title="Enhanced Features" />
-            <Dentalvideopg bgColor='#fff' />
+            {/* <Dentalvideopg bgColor='#fff' /> */}
             <ScannerCaseStudy />
             <ScannerTechnicalBlog />
             <Faq count={3} />
