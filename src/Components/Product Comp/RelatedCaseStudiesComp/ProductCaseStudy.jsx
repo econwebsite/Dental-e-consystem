@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProductCaseStudy.css';
-import productcase from "../../../assets/Product images/product-casestudy.jpg"
+import productcase from "../../../assets/product-images/product-casestudy.jpg"
 import Modelbutton from "../../Button comp/Modelbutton";
 import { Link } from 'react-router-dom';
 

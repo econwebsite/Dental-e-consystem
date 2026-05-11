@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react';
 import './Dentalhome.css';
 import { Carousel } from 'antd';
-import dentalimg2 from "../../../assets/home images/Homebanner.jpg";
+import dentalimg2 from "../../../assets/home-images/dental-Homebanner-en.jpg";
+import banner1 from "../../../assets/home-images/adf-event-banner.jpg";
 
 import AnimatedButton from '../../Button comp/AnimatedButton';
 
@@ -16,17 +17,18 @@ const Dentalhome = () => {
                     ref={carouselRef} 
                     autoplay 
                     dots={false} 
+                    className='width-100'
                     beforeChange={(from, to) => setActiveIndex(to)} // Update active dot
                 > */}
-                    {/* <div className="carousel-slide">
-                        <a href="https://www.e-consystems.com/events/ids-2025.asp" target="_blank" rel="noopener noreferrer">
+               {/* <div className="carousel-slide width-100">
+                        <a href="https://www.e-consystems.com/events/adf-2025.asp" target="_blank" rel="noopener noreferrer">
                             <div className='homeBanner'>
                                 <img src={banner1} alt="Slide 1" className="carousel-image" />
                             </div>
                         </a>
                     </div> */}
 
-                    <div className="carousel-slide">
+                    <div className="carousel-slide width-100"> 
                         <div className='homeBanner'>
                             <img src={dentalimg2} alt="Slide 2" className="carousel-image" />
                             <div className='homeButton'>
@@ -41,10 +43,10 @@ const Dentalhome = () => {
 
                             </div>
                         </div>
-                    </div>
+                     </div>
                 {/* </Carousel> */}
 
-                {/* <div className="custom-dots">
+               {/* <div className="custom-dots">
                     <div 
                         className={`dot ${activeIndex === 0 ? 'active' : ''}`} 
                         onClick={() => carouselRef.current.goTo(0)}
@@ -53,7 +55,7 @@ const Dentalhome = () => {
                         className={`dot ${activeIndex === 1 ? 'active' : ''}`} 
                         onClick={() => carouselRef.current.goTo(1)}
                     ></div>
-                </div> */}
+                </div>  */}
             </div>
         </div>
     );

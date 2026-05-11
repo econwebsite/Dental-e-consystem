@@ -1,13 +1,13 @@
 import React from 'react';
 import './AboutUs.css';
-import Intraoral from '../../assets/home images/about-intraoral.png';
-import loupe from '../../assets/home images/about-dentloupe.png';
-import surgical from '../../assets/home images/about-surgical-lights.png';
+import Intraoral from '../../assets/home-images/about-intraoral.png';
+import loupe from '../../assets/home-images/about-dentloupe.png';
+import surgical from '../../assets/home-images/about-surgical-lights.png';
 import Aboutboderbox from './Aboutboder/AboutBoderbox';
-import ce from '../../assets/home images/certificates-01.png';
-import fc from '../../assets/home images/certificates-02.png';
-import rohs from '../../assets/home images/certificates-03.png';
-import tic from '../../assets/home images/certificates-04.png';
+import ce from '../../assets/home-images/certificates-01.png';
+import fc from '../../assets/home-images/certificates-02.png';
+import rohs from '../../assets/home-images/certificates-03.png';
+import tic from '../../assets/home-images/certificates-04.png';
 
 import { Helmet } from 'react-helmet-async';
 

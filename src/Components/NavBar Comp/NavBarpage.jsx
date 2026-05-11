@@ -1,12 +1,13 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Dropdown, Menu } from 'antd';
 import { Navbar, Nav, Container, Offcanvas, Form, Button } from 'react-bootstrap';
-import './Navbar.css';
-import dentallogo from '../../assets/home images/NewDentallogo.png'; 
+import './navbar.css';
+import dentallogo from '../../assets/home-images/NewDentallogo.png'; 
 
 const NavBarpage = () => {
   const offcanvasRef = useRef(null);
+  const navigate = useNavigate();
 
   const handleNavLinkClick = () => {
     if (offcanvasRef.current) {
@@ -14,24 +15,38 @@ const NavBarpage = () => {
     }
   };
 
-  const resourceMenu = (
-    <Menu>
-      <Menu.Item key="1">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/blogs" onClick={handleNavLinkClick}>Blogs</Link>
-      </Menu.Item>
-      <Menu.Item key="2">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/case-studies" onClick={handleNavLinkClick}>Case Studies</Link>
-      </Menu.Item>
-     
-       <Menu.Item key="3">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/faq" onClick={handleNavLinkClick}>FAQ</Link>
-      </Menu.Item> 
-       <Menu.Item key="4">
-        <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/pressrelease" onClick={handleNavLinkClick}>Press Releases</Link>
-      </Menu.Item>
-      
-    </Menu>
-  );
+  const resourceMenuItems = [
+    {
+      key: "1",
+      label: "Blogs",
+      onClick: () => { navigate("/blogs"); handleNavLinkClick(); }
+    },
+    {
+      key: "2",
+      label: "Case Studies",
+      onClick: () => { navigate("/case-studies"); handleNavLinkClick(); }
+    },
+    {
+      key: "3",
+      label: "Videos",
+      onClick: () => { navigate("/videos"); handleNavLinkClick(); }
+    },
+    {
+      key: "4",
+      label: "Webinars",
+      onClick: () => { navigate("/webinars"); handleNavLinkClick(); }
+    },
+    {
+      key: "5",
+      label: "FAQ",
+      onClick: () => { navigate("/faq"); handleNavLinkClick(); }
+    },
+    {
+      key: "6",
+      label: "Press Releases",
+      onClick: () => { navigate("/pressrelease"); handleNavLinkClick(); }
+    }
+  ];
 
   // const productMenu = (
   //   <Menu>
@@ -66,8 +81,8 @@ const NavBarpage = () => {
               </Dropdown> */}
               <Link to="/product/intraoral-cameras" className="navbarpage-navLink">Intraoral Camera</Link>
               <div className="navbarpage-divider"></div>
-              <Dropdown overlay={resourceMenu} placement="bottomLeft" trigger={['hover']}>
-                <Link className="navbarpage-navLink">Resources</Link>
+              <Dropdown menu={{ items: resourceMenuItems }} placement="bottomLeft" trigger={['hover']}>
+                <span className="navbarpage-navLink">Resources</span>
               </Dropdown>
               <div className="navbarpage-divider"></div>
               <Link to="/company/contact-us" className="navbarpage-navLink">Contact Us</Link>
@@ -117,8 +132,8 @@ const NavBarpage = () => {
                   <a className="nav-link">Products</a>
                 </Dropdown> */}
                 <Link className="nav-link" to="/product/intraoral-cameras" onClick={handleNavLinkClick}>Intraoral camera</Link>
-                <Dropdown overlay={resourceMenu} placement="bottomLeft" className="nav-link">
-                  <a className="nav-link">Resources</a>
+                <Dropdown menu={{ items: resourceMenuItems }} placement="bottomLeft" className="nav-link">
+                  <span className="nav-link">Resources</span>
                 </Dropdown>
                 <Link className="nav-link" to="/company/contact-us" onClick={handleNavLinkClick}>Contact Us</Link>
                 <Link className="nav-link" to="/company/about-us" onClick={handleNavLinkClick}>About Us</Link>

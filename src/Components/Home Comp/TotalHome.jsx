@@ -1,6 +1,7 @@
 import React from 'react';
 import Dentalhome from "./Denatalpage comp/Dentalhome";
 import Blogspage from "./Blogs comp/Blogspage";
+import Testimonial from './testimonial/testimonial';
 import Casestudy from "./Casestudies comp/Casestudy"
 import Paragraph from './Paragraph comp/Paragraph';
 import Homevideo from "./video comp/Homevideo"
@@ -17,7 +18,8 @@ const TotalHome = () => {
             <Dentalhome />
             <Paragraph />
             <Homecard />
-            <Homevideo />
+            <Testimonial />
+            {/* <Homevideo /> */}
             <Casestudy />
             <Blogspage />
             <ContactUs />

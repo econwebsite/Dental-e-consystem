@@ -44,7 +44,7 @@ const HowIspHelp = () => {
                                 <h3>ISP Features That Enhance Image Quality of Extraoral Cameras</h3>
                                 <br></br>
                                 <div class="futureblog-imgcenter">
-                                    <img src={IspBlog} alt="Image" />
+                                    <img src={IspBlog} alt="ISP tuning workflow" />
                                 </div>
                                 <div className="threeparameter-title">
                                     <p>Illustration of the ISP tuning workflow from capture to processed image</p>
@@ -54,7 +54,7 @@ const HowIspHelp = () => {
                                 <p>In a dental clinic with varying lighting conditions, white balance adjustment is crucial for accurate color reproduction. This feature enables ISPs to automatically detect the light source and adjust colors to maintain a natural appearance. It ensures that whites in an image appear true to life, regardless of the lighting conditions. This process involves capturing images at different color temperatures and applying an AWB algorithm. The algorithm identifies the white point in the image and adjusts the color temperature until the white point resembles actual white, effectively neutralizing any color casts from various light sources. As a result, white balance adjustment maintains consistent image quality across various environments.</p>
                                 <br></br>
                                 <div class="futureblog-imgcenter">
-                                    <img src={differentlighting} alt="Image" />
+                                    <img src={differentlighting} alt="tooth under varying lights" />
                                 </div>
                                 <div className="threeparameter-title">
                                     <p>Image of a tooth under varying lights</p>
@@ -72,7 +72,7 @@ const HowIspHelp = () => {
                                 <p>Inaccurate color reproduction in dental imaging can lead to misinterpretation as subtle color variations are crucial for identifying issues like inflammation or early-stage caries. Accurate color reproduction is achieved through color calibration, where the camera's ISP (Image Signal Processor) adjusts the red, green, and blue channels to ensure the colors in the image match real-world conditions. ISPs use a combination of color correction matrices and look-up tables to fine-tune the color output. This ensures that the colors in the final image are as close as possible to the actual scene. By implementing accurate color reproduction, extraoral imaging systems ensure that the images reflect true colors.</p>
                                 <br></br>
                                 <div class="futureblog-imgcenter">
-                                    <img src={colorcorrecmatrix} alt="Image" />
+                                    <img src={colorcorrecmatrix} alt="color correction matrix" />
                                 </div>
                                 <div className="threeparameter-title">
                                     <p>A color correction matrix used for Accurate color reproduction</p>
@@ -117,7 +117,7 @@ const HowIspHelp = () => {
                                 <hr />
                                 <div className="CardBlogs">
                                 <Link className="cardImgLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
-                                    <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
+                                    <img src={threeimp} alt="Intra Oral Camera Technology" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
                                     <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
@@ -127,7 +127,7 @@ const HowIspHelp = () => {
                                 </div>
                                 <div className="CardBlogs">
                                 <Link className="cardImgLink" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" style={{ textDecoration: "none" }}>
-                                    <img src={Capturing} alt="Camera Model 1" className="Cardrelated-image" />
+                                    <img src={Capturing} alt="POV with Dental Loupe Cameras" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" style={{ textDecoration: "none" }}>
                                     <h2>Capturing the Dentists’ POV with Dental Loupe Cameras</h2>
@@ -138,7 +138,7 @@ const HowIspHelp = () => {
 
                                 <div className="CardBlogs">
                                 <Link className="cardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
-                                    <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
+                                    <img src={Autofocus} alt="Autofocus vs. Fixed focus" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>

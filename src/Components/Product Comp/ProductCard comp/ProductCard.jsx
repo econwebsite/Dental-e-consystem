@@ -1,8 +1,8 @@
 import React from 'react';
 import './ProductCard.css';
-import Productcard1 from "../../../assets/Product images/Productcard1.jpg";
-import Productcard2 from "../../../assets/Product images/Productcard2.jpg";
-import Productcard3 from "../../../assets/Product images/productcard3.jpg";
+import Productcard1 from "../../../assets/product-images/Productcard1.jpg";
+import Productcard2 from "../../../assets/product-images/Productcard2.jpg";
+import Productcard3 from "../../../assets/product-images/productcard3.jpg";
 
 const ProductCard = () => {
   return (

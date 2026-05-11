@@ -268,8 +268,7 @@ const ContactUs = () => {
           <Col>
             <Form.Item>
               <AnimatedButton
-                type="primary"
-                htmlType="submit"
+                type="submit"
                 className="Contacts-btn"
                 text="Submit"
                 backgroundColor="#344ea1"

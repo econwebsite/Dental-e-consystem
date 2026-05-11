@@ -1,4 +1,4 @@
-import React, { useState, useMemo,useEffect } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Form, Input, Select, Button, Row, Col, message, Modal, Result, Spin } from 'antd';
 import axios from 'axios';
 import "./Modelbutton.css";
@@ -61,15 +61,15 @@ const usaStates = [
   { code: 'WI', name: 'Wisconsin' },
   { code: 'WY', name: 'Wyoming' },
 ];
-function Modelform({ visible, onClose, type, docName, productName, title,buttonText  }) {
+function Modelform({ open, onClose, type, docName, productName, title, buttonText }) {
   const [form] = Form.useForm();
   const [selectedCountry, setSelectedCountry] = useState('US');
   const [showStates, setShowStates] = useState(true);
   const [isSuccess, setIsSuccess] = useState(false);
   const [downloadUrl, setDownloadUrl] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(true);
-  
+  const [isError, setIsError] = useState(false);
+
   const blockedProviders = [
     'gmail.com',
     'yahoo.com',
@@ -96,35 +96,35 @@ function Modelform({ visible, onClose, type, docName, productName, title,buttonT
     zIndex: 1000,
     borderRadius: 8
   };
-  
-useEffect(() => {
-  const url = new URL(window.location);
-  const original = url.toString();
 
-  const downloadStatus = url.searchParams.get('download');
-  const contactStatus = url.searchParams.get('contact');
+  useEffect(() => {
+    const url = new URL(window.location);
+    const original = url.toString();
 
-  if (visible) {
-    if (type === 'download') {
-      if (downloadStatus !== 'success') {
-        url.searchParams.set('download', 'init');
-        url.searchParams.delete('contact'); 
+    const downloadStatus = url.searchParams.get('download');
+    const contactStatus = url.searchParams.get('contact');
+
+    if (open) {
+      if (type === 'download') {
+        if (downloadStatus !== 'success') {
+          url.searchParams.set('download', 'init');
+          url.searchParams.delete('contact');
+        }
+      } else if (type === 'contact') {
+        if (contactStatus !== 'success') {
+          url.searchParams.set('contact', 'init');
+          url.searchParams.delete('download');
+        }
       }
-    } else if (type === 'contact') {
-      if (contactStatus !== 'success') {
-        url.searchParams.set('contact', 'init');
-        url.searchParams.delete('download');
-      }
+    } else {
+      if (downloadStatus !== 'success') url.searchParams.delete('download');
+      if (contactStatus !== 'success') url.searchParams.delete('contact');
     }
-  } else {
-    if (downloadStatus !== 'success') url.searchParams.delete('download');
-    if (contactStatus !== 'success') url.searchParams.delete('contact');
-  }
 
-  if (url.toString() !== original) {
-    window.history.replaceState({}, '', url);
-  }
-}, [visible, type]);
+    if (url.toString() !== original) {
+      window.history.replaceState({}, '', url);
+    }
+  }, [open, type]);
 
 
   const countries = useMemo(() => {
@@ -138,14 +138,14 @@ useEffect(() => {
     try {
       if (window.$zoho && $zoho.salesiq) {
         const { name, email } = form.getFieldsValue();
-  
+
         if (name) $zoho.salesiq.visitor.name(name);
         if (email) $zoho.salesiq.visitor.email(email);
-  
+
         const uniqueId = $zoho.salesiq.visitor.uniqueid();
         form.setFieldsValue({ LDTuvid: uniqueId });
       }
-    } catch (e) {}
+    } catch (e) { }
   };
 
   const onFinish = (values) => {
@@ -159,7 +159,7 @@ useEffect(() => {
         country: values.country,
         state: values.state || '',
         queries: values.queries || '',
-        heardAboutUs:values.heardAboutUs
+        heardAboutUs: values.heardAboutUs
       };
 
 
@@ -173,7 +173,7 @@ useEffect(() => {
       if (type === 'download') {
         values.productName = productName;
         values.documentName = docName;
-        values.buttonText=buttonText;
+        values.buttonText = buttonText;
 
         axios.post(`https://api.dental.e-consystems.com/api/downloadform`, { values }, { withCredentials: true })
           .then(result => {
@@ -184,9 +184,10 @@ useEffect(() => {
               setDownloadUrl(result.data.docName);
             }
             form.resetFields();
+            setShowStates(true);
             const url = new URL(window.location);
-    url.searchParams.set('download', 'success');
-    window.history.replaceState({}, '', url);
+            url.searchParams.set('download', 'success');
+            window.history.replaceState({}, '', url);
           })
           .catch(err => console.log(err))
           .finally(() => setIsLoading(false));
@@ -194,9 +195,9 @@ useEffect(() => {
       else {
         values.productName = productName;
         values.documentName = docName;
-        values.buttonText=buttonText;
+        values.buttonText = buttonText;
 
-        
+
         axios.post(`https://api.dental.e-consystems.com/api/contactusform`, { values })
           .then(result => {
             message.success({
@@ -204,10 +205,10 @@ useEffect(() => {
               placement: 'top',
               style: { textAlign: 'center' }
             });
-             const url = new URL(window.location);
-    url.searchParams.set('contact', 'success');
-    window.history.replaceState({}, '', url);
-                onClose();
+            const url = new URL(window.location);
+            url.searchParams.set('contact', 'success');
+            window.history.replaceState({}, '', url);
+            onClose();
 
           })
           .catch(err => console.log(err))
@@ -240,6 +241,28 @@ useEffect(() => {
 
   const handleEmailValidate = async (e) => {
     const email = e.target.value;
+    if (!email) {
+      setIsError(false);
+      form.setFields([
+        {
+          name: 'email',
+          errors: ['Please enter a valid email address'],
+        },
+      ]);
+      return;
+    };
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setIsError(false);
+      form.setFields([
+        {
+          name: 'email',
+          errors: ['Please enter a valid email address'],
+        },
+      ]);
+      return;
+    }
     if (email) {
       const domain = email.split('@')[1]?.toLowerCase();
       if (domain && blockedProviders.includes(domain)) {
@@ -302,8 +325,8 @@ useEffect(() => {
   return (
     <Modal
       title={type === 'download' ? `Download - ${title}` : "Contact Form"}
-      visible={visible}
-       style={{ top:"40px" }} 
+      open={open}
+      style={{ top: "40px" }}
       onCancel={onClose}
       footer={null}
       width={450}
@@ -415,16 +438,16 @@ useEffect(() => {
                 )}
               </Col>
             </Row>
-<Row gutter={8}>
-  <Col span={24}>
-    <Form.Item
-      name="heardAboutUs"
-      rules={[{ message: 'Please let us know how you heard about us' }]}
-    >
-      <Input placeholder="How did you hear about us?" />
-    </Form.Item>
-  </Col>
-</Row>
+            <Row gutter={8}>
+              <Col span={24}>
+                <Form.Item
+                  name="heardAboutUs"
+                  rules={[{ message: 'Please let us know how you heard about us' }]}
+                >
+                  <Input placeholder="How did you hear about us?" />
+                </Form.Item>
+              </Col>
+            </Row>
             <Row gutter={8}>
               <Col span={24}>
                 <Form.Item

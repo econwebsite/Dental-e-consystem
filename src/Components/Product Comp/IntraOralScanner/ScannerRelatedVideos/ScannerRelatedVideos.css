@@ -1,0 +1,18 @@
+.productRelatedVideoSection{
+text-align: center;
+margin: 0 auto;
+padding: 20px;
+overflow-x: hidden;
+
+}
+.productSection .productRelatedVideos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .productSection .productRelatedVideoCard {
+    padding: 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }

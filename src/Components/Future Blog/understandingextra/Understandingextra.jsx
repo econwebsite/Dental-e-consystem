@@ -40,7 +40,7 @@ const Understandingextra = () => {
                                 <ul>
                                     <li><p><b>Surgical Light-Mounted Cameras: </b>These cameras are integrated into the surgical lights used during dental procedures. They capture high-resolution images of the oral cavity and surrounding areas without obstructing the view of the dentist. </p></li>
                                     <div class="futureblog-imgcenter">
-                                        <img src={surgical} alt="Image" />
+                                        <img src={surgical} alt="Surgical Light-Mounted Cameras" />
                                     </div>
                                     <br></br>
                                     <div style={{ display: "flex", justifyContent: "center" }}>
@@ -107,7 +107,7 @@ const Understandingextra = () => {
                                 <hr />
                                 <div className="CardBlogs">
                                 <Link className="cardImgLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
-                                    <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
+                                    <img src={threeimp} alt="Parameters in Intra Oral Camera" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
                                     <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
@@ -117,7 +117,7 @@ const Understandingextra = () => {
                                 </div>
                                 <div className="CardBlogs">
                                 <Link className="cardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
-                                    <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
+                                    <img src={Autofocus} alt="Autofocus vs. Fixed focus" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
@@ -127,7 +127,7 @@ const Understandingextra = () => {
                                 </div>
                                 <div className="CardBlogs">
                                 <Link className="cardImgLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
-                                    <img src={Aguidtochoose} alt="Camera Model 3" className="Cardrelated-image" />
+                                    <img src={Aguidtochoose} alt="Choosing the Right Dental Intraoral" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
                                     <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>

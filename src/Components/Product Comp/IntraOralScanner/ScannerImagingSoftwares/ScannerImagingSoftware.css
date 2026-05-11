@@ -1,0 +1,86 @@
+/* Add this CSS to your global stylesheet to fix arrow positioning */
+
+/* General Placeholder Styling */
+.card-image-placeholder {
+    /* Define the area for your image */
+    width: 100%;
+    padding-top: 75%; /* Example: 4:3 aspect ratio */
+    background-color: #f0f2f5; 
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #8c8c8c;
+    border: 1px solid #d9d9d9;
+}
+
+/* Customizing Slick Arrows */
+.slick-slider {
+    
+    margin: 0 40px; 
+}
+
+
+.custom-slick-arrow.slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100; 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+    cursor: pointer;
+    border: 1px solid #d9d9d9;
+    font-size: 0; 
+    line-height: 1; 
+}
+
+.custom-slick-arrow.slick-arrow .anticon {
+    font-size: 16px;
+    color: #000; 
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.slick-prev:before, .slick-next:before{
+    display:none; 
+}
+
+.custom-slick-arrow.slick-prev {
+    left: -40px; 
+}
+
+.custom-slick-arrow.slick-next {
+    right: -40px;
+}
+.imagingContainer h1 {
+      text-align: center;
+    font-size: 2.3em;
+    color: #003873;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    padding: 1em;
+    font-style: normal;
+}
+
+.imagingContainer .description {
+      font-size: 0.95rem;
+    max-width: 1000px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.7em;
+    color: #344ea1;
+}
+.slick-slide {
+    /* Sets 10px spacing on the left and right of every card, creating a 20px visible gap between them. */
+    padding: 0 10px; 
+}
+.software-image{
+    width: max-content;
+    max-width: 100%;
+}

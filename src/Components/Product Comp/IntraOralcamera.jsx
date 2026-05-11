@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import CustomlightBox from './customlightbox/CustomlightBox';
 import './Product.css';
-import image1 from '../../assets/Product images/productcarousel1.png';
-import image2 from '../../assets/Product images/productcarousel2.png';
-import image3 from '../../assets/Product images/productcarousel3.png';
+import image1 from '../../assets/product-images/productcarousel-image-1.png';
+import image2 from '../../assets/product-images/productcarousel2.png';
+import image3 from '../../assets/product-images/productcarousel-image-2.png';
 import AnimatedButton from "../Button comp/AnimatedButton";
 import Modelbutton from "../Button comp/Modelbutton";
 
@@ -67,11 +67,12 @@ const IntraOralcamera = () => {
                             DensiCAM, an Intraoral camera is engineered to meet the highest standards of dental imaging, combining cutting-edge Full HD imaging with advanced optics to deliver exceptionally clear and detailed images, enabling precise diagnostics and treatment planning. Engineered for superior ergonomics, this intraoral camera ensures a comfortable, user-friendly experience during image capture. As a complete OEM intraoral camera, perfectly suited for dental device manufacturers seeking to integrate or white-label it for their specific application or brand requirements. Full customization options are available to help you achieve a seamless fit into your product line.
                         </p>
                         <br />
-                        <div className='productIntraFlexEndRow'>
-
-                            <Modelbutton
+                        <div className='productIntraFlexEndRow d-flex flex-wrap gap-8 justify-content-evenly w-100'>
+                            <div className='productButtonWrap d-flex flex-column align-items-center'>
+                                <p style={{color:'#344ea1',fontWeight:'bold'}}>Tech Document</p>
+                                <Modelbutton
                                 className="productIntraButtonEnd"
-                                text="Download Tech document"
+                                text="Download"
                                 docName="e-con-Densicam-technical-documents.zip"
                                 title="DensiCAM"
                                 productName="ProductDocument"
@@ -79,15 +80,19 @@ const IntraOralcamera = () => {
                                 animationColor="#69ba2f"
                                 hoverColor="#344ea1"
                             />
+                                </div>
+                             <div className='productButtonWrap d-flex flex-column align-items-center'>
+                                 <p style={{color:'#344ea1',fontWeight:'bold'}}>Request Free Evaluation Sample</p>
                             <Modelbutton
                                 className="productIntraButtonEnd"
-                                text="Contact to Buy"
+                                text="Contact Us"
                                 backgroundColor="#344ea1"
                                 type="contact"
                                 animationColor="#00aeef"
                                 hoverColor="#344ea1"
                             />
-                            <Modelbutton
+                            </div>
+                            {/* <Modelbutton
                                 className="productIntraButtonEnd"
                                 text="Request IQ report"
                                 type="contact"
@@ -102,7 +107,7 @@ const IntraOralcamera = () => {
                                 animationColor="#00aeef"
                                 hoverColor="#69ba2f"
                                 to="/faq"
-                            />
+                            /> */}
 
                         </div>
                     </div>

@@ -21,7 +21,7 @@ const Roadmapofdual = () => {
             </Helmet>
       <div className='mainContainer'>
         <div className="future-case-banner">
-          <img src={caseimg} alt="Banner" className="w-100" />
+          <img src={caseimg} alt="Roadmap of Dual Ethernet Camera" className="w-100" />
           <h1 className="future-case-heading">
             The Roadmap of Dual Ethernet Camera Integration in Dental Operatory Lights</h1>
           <Modelbutton className="future-case-button" text="Download casestudy" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" productName="CaseStudy" docName="e-con_integrating-dual-ethernet-cameras" title="Case Study" />
@@ -35,15 +35,15 @@ const Roadmapofdual = () => {
         <h2 className="future-case-sub-heading">Key Challenges Faced by the Client</h2>
         <div className="future-case-image-row">
           <div className="future-case-challenge">
-            <img src={dualicon1} alt="Challenge 1" className="future-case-challenge-image" />
+            <img src={dualicon1} alt="Attaining faster data transmission" className="future-case-challenge-image" />
             <p>Attaining faster data transmission with low latency</p>
           </div>
           <div className="future-case-challenge">
-            <img src={dualicon2} alt="Challenge 2" className="future-case-challenge-image" />
+            <img src={dualicon2} alt="illumination in dental clinic environments" className="future-case-challenge-image" />
             <p>Overcoming artifacts caused by bright illumination in dental clinic environments</p>
           </div>
           <div className="future-case-challenge">
-            <img src={dualicon3} alt="Challenge 3" className="future-case-challenge-image" />
+            <img src={dualicon3} alt="Customization of the camera architecture" className="future-case-challenge-image" />
             <p>Customization of the camera architecture to increase the ease of use of the system while switching between the cameras with uninterrupted data flow</p>
           </div>
         </div>
@@ -68,7 +68,7 @@ const Roadmapofdual = () => {
         <div className="related-case-container">
           <div className="related-case-card">
           <Link className="fuCaseIMGLINK" to="/case-studies/ai-portable-point-of-care-device" style={{ textDecoration: "none" }}>
-            <img src={relatedCaseImg1} alt="Case Study 1" className="related-case-image" />
+            <img src={relatedCaseImg1} alt="AI-driven and Portable Point-Of-Care Device" className="related-case-image" />
             </Link>
             <div className="related-case-details">
             <Link className="fuCaseTitleLINK" to="/case-studies/ai-portable-point-of-care-device" style={{ textDecoration: "none" }}>
@@ -82,7 +82,7 @@ const Roadmapofdual = () => {
           </div>
           <div className="related-case-card">
           <Link className="fuCaseIMGLINK" to="/case-studies/4k-dental-loupe-camera-improvement" style={{ textDecoration: "none" }}>
-            <img src={relatedCaseImg2} alt="Case Study 2" className="related-case-image" />
+            <img src={relatedCaseImg2} alt="4k Dental Loupe Camera" className="related-case-image" />
             </Link>
             <div className="related-case-details">
             <Link className="fuCaseTitleLINK" to="/case-studies/4k-dental-loupe-camera-improvement" style={{ textDecoration: "none" }}>

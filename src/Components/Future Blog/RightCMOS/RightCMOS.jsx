@@ -41,7 +41,7 @@ const RightCMOS = () => {
                 <p>In the context of extraoral cameras, this means that 4K resolution allows for precise sampling of even the finest details, reducing the risk of aliasing and ensuring that critical features are not missed. For dental professionals, this capability translates into more accurate diagnoses and better treatment planning. Additionally, with 4K and higher resolution, extraoral cameras can zoom in on specific areas without significant loss of quality, maintaining sharpness and clarity even under magnification. This is particularly valuable during complex dental procedures where detailed visualization is crucial for precise examination and treatment.</p>
 
                 <div class="futureblog-imgcenter">
-                  <img src={Sampling} alt="Image" />
+                  <img src={Sampling} alt="Sampling Requirements of a Sensor" />
                 </div>
                 <div className="threeparameter-title">
                   <p>Sampling Requirements of a Sensor</p>
@@ -51,7 +51,7 @@ const RightCMOS = () => {
                 <h3>HDR capability</h3>
                 <br></br>
                 <div class="futureblog-imgcenter">
-                  <img src={Hdrimg} alt="Image" />
+                  <img src={Hdrimg} alt="Non HDR vs HDR Image" />
                 </div>
                 <div className="threeparameter-title">
                   <p>Non HDR vs HDR Image </p>
@@ -68,7 +68,7 @@ const RightCMOS = () => {
                 <h3>Seamless Integration with dental software</h3>
                 <p>Hassle-free integration of extraoral cameras into dental-specific software ensures easy storage and retrieval of images within patient management systems, as well as analysis. It plays a huge role in strengthening case documentation and treatment planning. For example, software integration allows clinicians to annotate images, compare pre- and post-treatment photos, and share images with patients to enhance understanding and communication.</p>
                 <div class="futureblog-imgcenter">
-                  <img src={Integration} alt="Image" />
+                  <img src={Integration} alt="Integration with Dental Management" />
                 </div>
                 <div className="threeparameter-title">
                   <p>Integration with Dental Management Software</p>
@@ -88,7 +88,7 @@ const RightCMOS = () => {
                 <hr />
                 <div className="CardBlogs">
                 <Link className="cardImgLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
-                  <img src={Threeimp} alt="Camera Model 1" className="Cardrelated-image" />
+                  <img src={Threeimp} alt="Intra Oral Camera Technology" className="Cardrelated-image" />
                   </Link>
                   <Link className="cardTitleLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
                   <h2>Three Important Parameters in Intra Oral Camera Technology</h2>
@@ -98,7 +98,7 @@ const RightCMOS = () => {
                 </div>
                 <div className="CardBlogs">
                 <Link className="cardImgLink" to="/blogs/extraoral-cameras-image-quality-tuning" style={{ textDecoration: "none" }}>
-                  <img src={Howextraoral} alt="Camera Model 2" className="Cardrelated-image" />
+                  <img src={Howextraoral} alt="best image quality" className="Cardrelated-image" />
                   </Link>
                   <Link className="cardTitleLink" to="/blogs/extraoral-cameras-image-quality-tuning" style={{ textDecoration: "none" }}>
                   <h2>How our extraoral cameras are tuned to bring best image quality?</h2>
@@ -109,7 +109,7 @@ const RightCMOS = () => {
 
                 <div className="CardBlogs">
                 <Link className="cardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
-                  <img src={Autofocus} alt="Camera Model 3" className="Cardrelated-image" />
+                  <img src={Autofocus} alt="Autofocus vs. Fixed focus" className="Cardrelated-image" />
                   </Link>
                   <Link className="cardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                   <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>

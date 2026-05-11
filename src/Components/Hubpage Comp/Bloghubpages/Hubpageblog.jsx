@@ -25,7 +25,7 @@ const Hubpageblog = () => {
       <div className="hubblog-column hubblog-left" data-aos="zoom-in-right" data-aos-duration="1000">
         <div className="hubblog-border-box">
         <Link className="HUBcardImgLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
-          <img src={Aguidtochoose} alt="Image Description" />
+          <img src={Aguidtochoose} alt="Choosing the Right Dental Intraoral" />
           </Link>
           <Link className="HUBcardTitleLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
           <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>
@@ -40,7 +40,7 @@ const Hubpageblog = () => {
         <div className="hubblog-card-row" >
           <div className="hubblog-card">
           <Link className="HUBcardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
-            <img src={Autovsfixed} alt="Card Image 2" />
+            <img src={Autovsfixed} alt="Autofocus vs. Fixed focus" />
             </Link>
             <Link className="HUBcardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
             <h6>Autofocus vs. Fixed focus: Which Lens to Choose?</h6>
@@ -50,7 +50,7 @@ const Hubpageblog = () => {
             </div>
             <div className="hubblog-card">
             <Link className="HUBcardImgLink" to="/blogs/choosing-the-right-cmos-cameras-for-extraoral-imaging" style={{ textDecoration: "none" }}>
-            <img src={CMOS} alt="Card Image 1" />
+            <img src={CMOS} alt="Choosing the right CMOS cameras" />
             </Link>
             <Link className="HUBcardTitleLink" to="/blogs/choosing-the-right-cmos-cameras-for-extraoral-imaging" style={{ textDecoration: "none" }}>
             <h6>Choosing the right CMOS cameras for Extraoral Imaging</h6>
@@ -63,7 +63,7 @@ const Hubpageblog = () => {
          
           <div className="hubblog-card">
           <Link className="HUBcardImgLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
-            <img src={Threeimp} alt="Card Image 2"/>
+            <img src={Threeimp} alt="Three Important Parameters in Intra Oral"/>
             </Link>
             <Link className="HUBcardTitleLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
             <h6>Three Important Parameters in Intra Oral Camera Technology</h6>
@@ -73,7 +73,7 @@ const Hubpageblog = () => {
             </div>
             <div className="hubblog-card">
             <Link className="HUBcardImgLink" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" style={{ textDecoration: "none" }}>
-            <img src={Capturing} alt="Card Image 1" />
+            <img src={Capturing} alt="Dental Loupe Cameras" />
             </Link>
             <Link className="HUBcardTitleLink" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" style={{ textDecoration: "none" }}>
             <h6>Capturing the Dentists’ POV with Dental Loupe Cameras</h6>

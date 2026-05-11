@@ -47,7 +47,7 @@ const AutofocusBlog = () => {
                 <p>The formation of the image in fixed-focus cameras relies on accurate optical calculations to ensure that objects within the desired range appear sharp. The fixed-focus lens directs light rays from the scene through the lens elements to converge on the camera’s image sensor. The focal length and aperture size are carefully chosen to maximize the depth of field, ensuring that a wide range of distances is in acceptable focus. </p>
 
                 <div class="futureblog-imgcenter">
-                  <img src={Fixedfocus} alt="Image" />
+                  <img src={Fixedfocus} alt="Fixed-focus camera" />
                 </div>
                 <div className="threeparameter-title">
                   <p>Fixed-focus camera lens with defined back-focal length.</p>
@@ -89,7 +89,7 @@ const AutofocusBlog = () => {
                 <hr />
                 <div className="CardBlogs" style={{ cursor: "pointer" }}>
                   <Link className="cardImgLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
-                  <img src={Aguidtochoose} alt="Camera Model 1" className="Cardrelated-image" /></Link>
+                  <img src={Aguidtochoose} alt="Dental Intraoral Camera" className="Cardrelated-image" /></Link>
                   <Link className="cardTitleLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
                   <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2></Link>
                   <p>The adoption of intraoral cameras in dental clinics around the globe has enhanced the capabilities of dental professionals. Learn about the key features that make a dental intraoral camera truly effective. From macro imaging capabilities to high-resolution and wide-angle views, understand how these specifications enhance dental diagnostics and patient care.</p>
@@ -97,7 +97,7 @@ const AutofocusBlog = () => {
                 </div>
                 <div className="CardBlogs">
                   <Link className="cardImgLink" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" style={{ textDecoration: "none" }}> 
-                  <img src={Capturing} alt="Camera Model 2" className="Cardrelated-image" /></Link>
+                  <img src={Capturing} alt="Dental Loupe Cameras" className="Cardrelated-image" /></Link>
                   <Link className="cardTitleLink" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" style={{ textDecoration: "none" }}> 
                    <h2>Capturing the Dentists' POV with Dental Loupe Cameras</h2></Link>
                   <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
@@ -105,7 +105,7 @@ const AutofocusBlog = () => {
                 </div>
                 <div className="CardBlogs">
                 <Link className="cardImgLink" to="/blogs/understanding-extraoral-cameras-dentistry" style={{ textDecoration: "none" }}>
-                  <img src={Understanding} alt="Camera Model 3" className="Cardrelated-image" /></Link>
+                  <img src={Understanding} alt="Understanding Extraoral Cameras" className="Cardrelated-image" /></Link>
                   <Link className="cardTitleLink" to="/blogs/understanding-extraoral-cameras-dentistry" style={{ textDecoration: "none" }}>
                   <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>
                   </Link>

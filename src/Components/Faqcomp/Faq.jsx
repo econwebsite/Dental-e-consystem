@@ -3,6 +3,7 @@ import { Collapse } from 'antd';
 // import { QuestionCircleOutlined } from '@ant-design/icons';
 import { QuestionCircleOutlined, CloseOutlined } from '@ant-design/icons';
 import './faq.css';
+import AnimatedButton from '../Button comp/AnimatedButton';
 
 const { Panel } = Collapse;
 
@@ -204,9 +205,11 @@ answer: (
   
 ];
 
-const FAQ = () => {
+const FAQ = ({count=null}) => {
   const [activeKey, setActiveKey] = useState(null);
-  
+  const visibleFaqs = count !== null && typeof count === 'number' && count >= 0
+    ? faqs.slice(0, count) // If count is valid, slice the array
+    : faqs;                 // Otherwise, render the entire array
   const handlePanelChange = (key) => {
     setActiveKey(key[0]);
   };
@@ -234,7 +237,7 @@ const FAQ = () => {
         onChange={handlePanelChange}
         className="Faq-collapse"
       >
-        {faqs.map((faq, index) => (
+        {visibleFaqs.map((faq, index) => (
           <Panel 
             header={
               <div className={`Faq-question ${activeKey === index.toString() ? 'active' : ''}`}>
@@ -251,6 +254,10 @@ const FAQ = () => {
           </Panel>
         ))}
       </Collapse>
+      {count !== null && (typeof count !== 'number' || count < faqs.length) && (
+        <div className="Faq-button-container w-full text-center mt-1">
+          <AnimatedButton className="productIntraButtonEnd" text="More FAQs" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#344ea1" to="/faq"></AnimatedButton>
+          </div>)}
     </div>
   );
 };

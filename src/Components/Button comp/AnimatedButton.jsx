@@ -11,6 +11,7 @@ const AnimatedButton = ({
   className = '',
   onClick,
   to,
+  htmlType,
   ...props
 }) => {
   const navigate = useNavigate(); 
@@ -46,6 +47,7 @@ to?<Link to={to} className='buttonLink' style={{textDecoration:"none"}}>
       '--hover-color': hoverColor,
       color: 'white' 
     }}
+    type={htmlType || 'button'}
     onClick={onClick ? handleClick : undefined}
     {...props}
   >

@@ -1,10 +1,10 @@
 import React from 'react';
 import './Homecard.css';
-import Cardimg1 from "../../../assets/home images/Intraoral.jpg";
-import Cardimg2 from "../../../assets/home images/Extraoral.jpg";
-import Cardimg3 from "../../../assets/home images/Loupecamera.jpg";
+import Cardimg1 from "../../../assets/home-images/Intraoral.jpg";
+import Cardimg2 from "../../../assets/home-images/Extraoral.jpg";
+import Cardimg3 from "../../../assets/home-images/Loupecamera.jpg";
 import AnimatedButton from "../../Button comp/AnimatedButton";
-import newicon from "../../../assets/home images/new-icon.png"
+import newicon from "../../../assets/home-images/new-icon.png"
 import { Link } from 'react-router-dom';
 
 const Homecard = () => {

@@ -21,7 +21,7 @@ const Aidriven = () => {
             </Helmet>
       <div className='mainContainer'>
         <div className="future-case-banner">
-          <img src={caseimg} alt="Banner" className="w-100" />
+          <img src={caseimg} alt="Point-Of-Care Device" className="w-100" />
           <h1 className="future-case-heading">
             AI-driven and Portable Point-Of-Care Device for Pre-Cancer Screening for a US Medical Device Manufacturer
           </h1>
@@ -37,15 +37,15 @@ const Aidriven = () => {
         <h2 className="future-case-sub-heading">Key Challenges Faced by the Client</h2>
         <div className="future-case-image-row">
           <div className="future-case-challenge">
-            <img src={aiicon1} alt="Challenge 1" className="future-case-challenge-image" />
+            <img src={aiicon1} alt="Minimum working distance" className="future-case-challenge-image" />
             <p>Minimum working distance of 10 to 150 mm</p>
           </div>
           <div className="future-case-challenge">
-            <img src={aiicon2} alt="Challenge 2" className="future-case-challenge-image" />
+            <img src={aiicon2} alt="access to the camera controls" className="future-case-challenge-image" />
             <p>Android support with full access to the camera controls</p>
           </div>
           <div className="future-case-challenge">
-            <img src={aiicon3} alt="Challenge 3" className="future-case-challenge-image" />
+            <img src={aiicon3} alt="Unique form factor" className="future-case-challenge-image" />
             <p>Unique form factor to fit into the application</p>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Aidriven = () => {
         <div className="related-case-container">
           <div className="related-case-card">
           <Link className="fuCaseIMGLINK" to="/case-studies/dual-ethernet-camera-integration" style={{ textDecoration: "none" }}>
-            <img src={dualethernet} alt="Case Study 1" className="related-case-image" />
+            <img src={dualethernet} alt="Dual Ethernet Cameras" className="related-case-image" />
             </Link>
             <div className="related-case-details">
             <Link className="fuCaseTitleLINK" to="/case-studies/dual-ethernet-camera-integration" style={{ textDecoration: "none" }}>
@@ -84,7 +84,7 @@ const Aidriven = () => {
           
           <div className="related-case-card">
           <Link className="fuCaseIMGLINK" to="/case-studies/4k-dental-loupe-camera-improvement" style={{ textDecoration: "none" }}>
-            <img src={relatedCaseImg2} alt="Case Study 2" className="related-case-image" />
+            <img src={relatedCaseImg2} alt="4k Dental Loupe Camera" className="related-case-image" />
             </Link>
             <div className="related-case-details">
             <Link className="fuCaseTitleLINK" to="/case-studies/4k-dental-loupe-camera-improvement" style={{ textDecoration: "none" }}>

@@ -21,7 +21,7 @@ const Improvingdental = () => {
             </Helmet>
       <div className='mainContainer'>
         <div className="future-case-banner">
-          <img src={caseimg} alt="Banner" className="w-100" />
+          <img src={caseimg} alt="4k Dental Loupe Camera" className="w-100" />
           <h1 className="future-case-heading">
             Improving Dental Documentation Using 4k Dental Loupe Camera for a Leading Europe Based Dental Imaging Solutions Provider        </h1>
       
@@ -36,15 +36,15 @@ const Improvingdental = () => {
         <h2 className="future-case-sub-heading">Key Challenges Faced by the Client</h2>
         <div className="future-case-image-row">
           <div className="future-case-challenge">
-            <img src={impicon1} alt="Challenge 1" className="future-case-challenge-image" />
+            <img src={impicon1} alt="Loupe mount camera" className="future-case-challenge-image" />
             <p>Loupe mount camera to overcome heavy intraoral sensors that have limited positioning</p>
           </div>
           <div className="future-case-challenge">
-            <img src={impicon2} alt="Challenge 2" className="future-case-challenge-image" />
+            <img src={impicon2} alt="Seamless LED lighting" className="future-case-challenge-image" />
             <p>Seamless LED lighting with perfect focus and detail</p>
           </div>
           <div className="future-case-challenge">
-            <img src={impicon3} alt="Challenge 3" className="future-case-challenge-image" />
+            <img src={impicon3} alt="Low heat iHDR camera" className="future-case-challenge-image" />
             <p>Low heat iHDR camera for dentistry that produces high-quality videos</p>
           </div>
         </div>
@@ -69,7 +69,7 @@ const Improvingdental = () => {
         <div className="related-case-container">
           <div className="related-case-card">
           <Link className="fuCaseIMGLINK" to="/case-studies/ai-portable-point-of-care-device" style={{ textDecoration: "none" }}>
-            <img src={relatedCaseImg1} alt="Case Study 1" className="related-case-image" />
+            <img src={relatedCaseImg1} alt="Point-Of-Care Device" className="related-case-image" />
             </Link>
             <div className="related-case-details">
             <Link className="fuCaseTitleLINK" to="/case-studies/ai-portable-point-of-care-device" style={{ textDecoration: "none" }}>
@@ -83,7 +83,7 @@ const Improvingdental = () => {
           </div>
           <div className="related-case-card">
           <Link className="fuCaseIMGLINK" to="/case-studies/dual-ethernet-camera-integration" style={{ textDecoration: "none" }}>
-            <img src={dualethernet} alt="Case Study 2" className="related-case-image" />
+            <img src={dualethernet} alt="Integrating Dual Ethernet Cameras" className="related-case-image" />
             </Link>
             <div className="related-case-details">
             <Link className="fuCaseTitleLINK" to="/case-studies/dual-ethernet-camera-integration" style={{ textDecoration: "none" }}>

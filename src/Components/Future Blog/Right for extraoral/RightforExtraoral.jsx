@@ -43,14 +43,14 @@ const RightforExtraoral = () => {
 <p>In the context of extraoral cameras, this means that 4K resolution allows for precise sampling of even the finest details, reducing the risk of aliasing and ensuring that critical features are not missed. For dental professionals, this capability translates into more accurate diagnoses and better treatment planning. Additionally, with 4K and higher resolution, extraoral cameras can zoom in on specific areas without significant loss of quality, maintaining sharpness and clarity even under magnification. This is particularly valuable during complex dental procedures where detailed visualization is crucial for precise examination and treatment.</p>
 
 <div class="futureblog-imgcenter">
-    <img src={Sampling} alt="Image"/>
+    <img src={Sampling} alt="Autofocus or fixed focus"/>
 </div>
 <h3>Autofocus or fixed focus</h3>
 <p>Extraoral cameras are equipped with auto-focus or fixed-focus capabilities, each serving distinct needs in a dental practice. Auto-focus cameras adjust the lens automatically to maintain a sharp focus on the subject. This is useful in dynamic settings where the distance between the camera and the patient may change frequently. On the other hand, fixed-focus cameras are set to a specific focus range, which simplifies their use as there are no moving parts to adjust. The choice between auto-focus and fixed-focus depends on the specific requirements of the practice and the types of procedures performed. </p>
 <h3>HDR capability</h3>
 <br></br>
 <div class="futureblog-imgcenter">
-    <img src={Hdrimg} alt="Image"/>
+    <img src={Hdrimg} alt="Hdr"/>
 </div>
 <br></br>
 <p>Conventional cameras in extraoral imaging are often used with bright lights (of about 50000 lux) in dental clinics. This leads to overexposed images where fine details are lost due to light saturation. HDR cameras address this by capturing multiple images of the same scene at different exposures—low, medium, and high—and then merging them into a single image. This process mimics the dynamic range of the human eye, ensuring that the final image accurately reproduces the scene with enhanced detail and contrast, even in challenging lighting conditions.</p>
@@ -64,7 +64,7 @@ const RightforExtraoral = () => {
 <h3>Seamless Integration with dental software</h3>
 <p>Hassle-free integration of extraoral cameras into dental-specific software ensures easy storage and retrieval of images within patient management systems, as well as analysis. It plays a huge role in strengthening case documentation and treatment planning. For example, software integration allows clinicians to annotate images, compare pre- and post-treatment photos, and share images with patients to enhance understanding and communication.</p>
 <div class="futureblog-imgcenter">
-    <img src={Integration} alt="Image"/>
+    <img src={Integration} alt="Hassle-free integration of extraoral cameras"/>
 </div>
 <br></br>
 <h3>Cameras Offered by e-con Systems for Extraoral Devices</h3>
@@ -88,13 +88,13 @@ const RightforExtraoral = () => {
             <p style={{"font-weight":"bold"}}>Related Blogs</p>
             <hr/>
             <div className="CardBlogs">
-              <img src={right2} alt="Camera Model 1" className="Cardrelated-image" />
+              <img src={right2} alt="Dental Loupe Cameras" className="Cardrelated-image" />
               <h2>Capturing the Dentists' POV with Dental Loupe Cameras</h2>
               <p>Dental loupe cameras are an everyday tool in dentistry. This blog explores features that enable loupe cameras for precise diagnoses, enhanced patient communication, and seamless documentation. Find out why size, color accuracy, and stability are the deciding factors of the loupe camera performance index.</p>
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/CapturingDentists"></AnimatedButton>
             </div>
             <div className="CardBlogs">
-              <img src={right1} alt="Camera Model 2" className="Cardrelated-image" />
+              <img src={right1} alt="Dental Loupe Cameras" className="Cardrelated-image" />
               <h2>How to Overcome Imaging-Related Manufacturing Challenges of Dental Loupes</h2>
               <p>Dental loupes have gained a lot of traction among healthcare professionals, with more than 50% of American dentists incorporating them into their routine practice. Learn how overcoming issues like thermal dissipation, image stabilization, and lightweight design is crucial for creating comfortable loupe devices for dentists.</p>
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/howtoovercome"></AnimatedButton>
@@ -102,7 +102,7 @@ const RightforExtraoral = () => {
             </div>
            
             <div className="CardBlogs">
-              <img src={right3} alt="Camera Model 3" className="Cardrelated-image" />
+              <img src={right3} alt="Autofocus vs. Fixed focus" className="Cardrelated-image" />
               <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
               <p>Are you confused about choosing between autofocus and fixed-focus lenses for your intraoral camera device? Understand how these choices differentiate the dental imaging quality, device usability, and overall patient. Read on to understand the advantages of each lens type and learn why understanding their differences is important for dental professionals and product developers alike.</p>
               <AnimatedButton className="Blogreadmore-1" text="Read more" backgroundColor="#00aeef" animationColor="#69ba2f" hoverColor="#69ba2f" to="/AutofocusBlog"></AnimatedButton>

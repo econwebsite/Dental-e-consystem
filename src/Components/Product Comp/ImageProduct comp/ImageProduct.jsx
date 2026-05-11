@@ -1,9 +1,9 @@
 import React from 'react';
 import './ImageProduct.css';
-import defaultmode from '../../../assets/Product images/default-mode.jpg';
-import color from '../../../assets/Product images/color-mode-enhancement.jpg';
-import sharpness from '../../../assets/Product images/sharpness-enhanement.jpg';
-import fullface from '../../../assets/Product images/full-face.jpg';
+import defaultmode from '../../../assets/product-images/default-mode.jpg';
+import color from '../../../assets/product-images/color-mode-enhancement.jpg';
+import sharpness from '../../../assets/product-images/sharpness-enhanement.jpg';
+import fullface from '../../../assets/product-images/full-face.jpg';
 import Modelbutton from "../../Button comp/Modelbutton";
 
 const imagingData = [

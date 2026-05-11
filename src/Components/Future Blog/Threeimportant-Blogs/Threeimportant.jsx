@@ -66,7 +66,7 @@ const Threeimportant = () => {
                                 <p><b>Aperture Size:</b>The aperture is the opening in a camera lens through which light passes. It is measured in f-stops (e.g., f/2.8, f/16). A larger aperture (smaller f-stop number) allows more light to enter but results in a shallow DoF. Conversely, a smaller aperture (larger f-stop number) allows less light, resulting in a deeper DoF.</p>
 
                                 <div class="futureblog-imgcenter">
-                                    <img src={Aperturerange} alt="Image" />
+                                    <img src={Aperturerange} alt="Aperture Size increases" />
                                 </div>
                                 <div className="threeparameter-title">
                                     <p>Depth of Field decreases as Aperture Size increases.</p>
@@ -121,7 +121,7 @@ const Threeimportant = () => {
                                     <li><p><b>Diagnostic Details: </b>With a narrow field of view, critical peripheral details, such as the alignment of neighbouring teeth, may be overlooked. However, a wide field of view provides a broader context, enhancing diagnostic accuracy by allowing a more comprehensive view of the oral cavity.</p></li>
                                 </ul>
                                 <div class="futureblog-imgcenter">
-                                    <img src={Narrowangle} alt="Image" />
+                                    <img src={Narrowangle} alt="Full Dental Arch captured" />
                                 </div>
                                 <div className="threeparameter-title">
                                         <p>Full Dental Arch captured using a wide field of view camera</p>
@@ -139,7 +139,7 @@ const Threeimportant = () => {
                                 </ul>
 
                                 <div class="futureblog-imgcenter">
-                                    <img src={Difflights} alt="Image" />
+                                    <img src={Difflights} alt="varying light settings" />
                                 </div>
                                 <div className="threeparameter-title">
                                         <p>Capture of dental structure under varying light settings</p>
@@ -153,7 +153,7 @@ const Threeimportant = () => {
                                     <li><p><b>Lens Shading Correction: </b>Lens Shading Correction compensates for vignetting, where the corners of an image appear darker than the center. This correction technique compensates for illumination falloff at the image periphery, typically caused by the lens. By equalizing brightness across the entire image, lens shading correction improved image quality while reducing distortion.</p></li>
                                 </ul>
                                 <div class="futureblog-imgcenter">
-                                    <img src={shadingflat} alt="Image" />
+                                    <img src={shadingflat} alt="shading correction" />
                                 </div>
                                 <div className="threeparameter-title">
                                         <p>Sample image outputs without lens shading correction (left)  <br></br> and after lens shading correction(right).</p>
@@ -173,7 +173,7 @@ const Threeimportant = () => {
                                 <hr />
                                 <div className="CardBlogs">
                                 <Link className="cardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
-                                    <img src={Autofocus} alt="Camera Model 1" className="Cardrelated-image" />
+                                    <img src={Autofocus} alt="Autofocus vs. Fixed focus" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose for Intraoral Cameras?</h2>
@@ -183,7 +183,7 @@ const Threeimportant = () => {
                                 </div>
                                 <div className="CardBlogs">
                                 <Link className="cardImgLink" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" style={{ textDecoration: "none" }}>
-                                    <img src={Capturing} alt="Camera Model 2" className="Cardrelated-image" />
+                                    <img src={Capturing} alt="Capturing the Dentists" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras" style={{ textDecoration: "none" }}>
                                     <h2>Capturing the Dentists' POV with Dental Loupe Cameras</h2>
@@ -193,7 +193,7 @@ const Threeimportant = () => {
                                 </div>
                                 <div className="CardBlogs">
                                 <Link className="cardImgLink" to="/blogs/imaging-challenges-dental-loupes-manufacturing" style={{ textDecoration: "none" }}>
-                                    <img src={howtoovercome} alt="Camera Model 3" className="Cardrelated-image" />
+                                    <img src={howtoovercome} alt="Imaging-Related Manufacturing Challenges" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/imaging-challenges-dental-loupes-manufacturing" style={{ textDecoration: "none" }}>
                                     <h2>How to Overcome Imaging-Related Manufacturing Challenges of Dental Loupes</h2>

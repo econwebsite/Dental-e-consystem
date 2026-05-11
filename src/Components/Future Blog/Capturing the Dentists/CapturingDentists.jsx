@@ -37,7 +37,7 @@ const CapturingDentists = () => {
                 <p>Dental loupes are used by dentists and dental hygienists to magnify the view of the oral cavity, allowing for more precise and detailed examination, diagnosis, and treatment of dental conditions. It enhances visibility, accuracy, and overall efficiency in dental procedures.</p>
 
                 <div class="futureblog-imgcenter">
-                  <img src={Loupecamera} alt="Image" />
+                  <img src={Loupecamera} alt="Dental loupe camera" />
                 </div>
                 <div className="threeparameter-title">
                   <p>A dental loupe in use</p>
@@ -50,7 +50,7 @@ const CapturingDentists = () => {
                 <h3>✓ Light Weight and Small Form Factor</h3>
                 <p>Heavy dental loupes used during procedures can be cumbersome, especially during long sessions, causing strain on the dentist’s neck and shoulders. Additionally, larger cameras can obstruct the dentist's view, making it difficult to maintain focus. Integrating these cameras with dental loupes presents an additional challenge, as larger cameras can disrupt the loupe's form factor.</p>
                 <div class="futureblog-imgcenter">
-                <img src={dentalloupe} alt="Image" />
+                <img src={dentalloupe} alt="Dental loupes" />
                 </div>
                 <div className="threeparameter-title">
                   <p> Camera mounted on dental loupe</p>
@@ -63,7 +63,7 @@ const CapturingDentists = () => {
                 <p>Inaccurate color representation in dental images can lead to misdiagnosis or improper treatment planning, as dentists rely on realistic colors to assess the condition of tissues and teeth. Subtle color variations in oral tissues can indicate underlying conditions like inflammation, infection, etc. </p>
                 <p>Accurate color reproduction in dental loupe cameras is achieved through a combination of high-quality image sensors with color filter arrays, and sophisticated color correction algorithms. The sensors, typically CMOS, capture light intensity across different wavelengths, while the color filter array separates the light into red, green, and blue components. Advanced image processing algorithms then correct any color deviations, ensuring true-to-life hues. </p>
                 <div class="futureblog-imgcenter">
-                <img src={accuratecolor} alt="Image" />
+                <img src={accuratecolor} alt="accurate colour reproduction" />
                 </div>
                 <div className="threeparameter-title">
                   <p>Dental Images With and without accurate colour reproduction</p>
@@ -111,7 +111,7 @@ const CapturingDentists = () => {
 
                 <div className="CardBlogs">
                 <Link className="cardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
-                  <img src={Autofocus} alt="Camera Model 2" className="Cardrelated-image" />
+                  <img src={Autofocus} alt="Autofocus vs. Fixed focus" className="Cardrelated-image" />
                   </Link>
                   <Link className="cardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                   <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
@@ -121,7 +121,7 @@ const CapturingDentists = () => {
                 </div>
                 <div className="CardBlogs">
                 <Link className="cardImgLink" to="/blogs/choosing-the-right-cmos-cameras-for-extraoral-imaging" style={{ textDecoration: "none" }}>
-                  <img src={CMOS} alt="Camera Model 1" className="Cardrelated-image" />
+                  <img src={CMOS} alt="Extraoral Imaging" className="Cardrelated-image" />
                   </Link>
                   <Link className="cardTitleLink" to="/blogs/choosing-the-right-cmos-cameras-for-extraoral-imaging" style={{ textDecoration: "none" }}>
                   <h2>Choosing the right CMOS cameras for Extraoral Imaging</h2>
@@ -131,7 +131,7 @@ const CapturingDentists = () => {
                 </div>
                 <div className="CardBlogs">
                 <Link className="cardImgLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
-                  <img src={Aguidtochoose} alt="Camera Model 3" className="Cardrelated-image" />
+                  <img src={Aguidtochoose} alt="Choosing the Right Dental Intraoral" className="Cardrelated-image" />
                   </Link>
                   <Link className="cardTitleLink" to="/blogs/choosing-best-dental-intraoral-camera" style={{ textDecoration: "none" }}>
                   <h2>A Guide to Choosing the Right Dental Intraoral Camera</h2>

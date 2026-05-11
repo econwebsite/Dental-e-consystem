@@ -7,6 +7,10 @@ import Productboderbox from "./productBoderbox/Productboderbox"
 import ProductStandards from "./Standards comp/ProductStandards"
 import ImageProduct from "./ImageProduct comp/ImageProduct";
 import { Helmet } from 'react-helmet-async';
+import Testimonial from '../Home Comp/testimonial/testimonial';
+import ImagingSoftware from './ImagingSoftwares/ImagingSoftware';
+import Dentalvideopg from '../Home Comp/video comp/Homevideo';
+import Faq from '../Faqcomp/Faq';
 
 const Totalproducts1 = () => {
     return (
@@ -17,11 +21,15 @@ const Totalproducts1 = () => {
 </Helmet>
             <IntraOralcamera/>
             <Productboderbox/>
+            <Testimonial/>
             <Specification/>
             <ImageProduct/>
+             <ImagingSoftware/> 
           <ProductStandards title="Enhanced Features"/>
+            <Dentalvideopg bgColor='#fff'/>
             <ProductCaseStudy/>
             <ProductTechnicalBlog/>
+            <Faq count={3}/>
             </div> 
     );
 }

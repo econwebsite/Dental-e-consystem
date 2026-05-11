@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Productboderbox.css';
-import Boderimg1 from "../../../assets/Product images/produc-hd.png";
-import Boderimg2 from "../../../assets/Product images/product-photo.png";
-import Boderimg3 from "../../../assets/Product images/product-gallary.png";
-import Vediothumbnail1 from "../../../assets/Product images/thumbnail.jpg"; 
-import Vediothumbnail2 from "../../../assets/Product images/thumbnail2.jpg"; 
+import Boderimg1 from "../../../assets/product-images/full-hd-icon.png";
+import Boderimg2 from "../../../assets/product-images/depth-of-field-icon.png";
+import Boderimg3 from "../../../assets/product-images/image-quality-icon.png";
+import Vediothumbnail1 from "../../../assets/product-images/thumbnail.jpg"; 
+import Vediothumbnail2 from "../../../assets/product-images/thumbnail2.jpg"; 
 
 import FsLightbox from "fslightbox-react";
 
@@ -47,18 +47,18 @@ const Productboderbox = () => {
             <div className="Productboderbox-right-column">
               <div className="product-video-row">
                 <div className="product-thumbnail" onClick={() => handleVideoClick(0)}>
-                  <img src={Vediothumbnail1} alt="Video 1" className="productside-img" />
+                  <img src={Vediothumbnail1} alt="Video" className="productside-img" />
                 </div>
                 <div className="product-thumbnail" onClick={() => handleVideoClick(1)}>
-                  <img src={Vediothumbnail2} alt="Video 2" className="productside-img" />
+                  <img src={Vediothumbnail2} alt="Video" className="productside-img" />
                 </div>
               </div>
 
               <FsLightbox
                 toggler={toggler}
                 sources={[
-                  "https://www.youtube.com/embed/qfmwMkSypo4?autoplay=1",
-                  "https://www.youtube.com/embed/O35WqKAkJZo?autoplay=1"
+                  "https://www.youtube.com/embed/qfmwMkSypo4",
+                  "https://www.youtube.com/embed/O35WqKAkJZo"
                 ]}
                 slide={slideIndex + 1}
               />

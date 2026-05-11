@@ -9,10 +9,6 @@ import { Helmet } from 'react-helmet-async';
 const { TextArea } = Input;
 const { Option } = Select;
 
-
-
-
-
 const usaStates = [
   { code: 'AL', name: 'Alabama' },
   { code: 'AK', name: 'Alaska' },
@@ -74,7 +70,7 @@ const ContactUs = () => {
   const [isContactPage, setIsContactPage] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(true);
+  const [isError, setIsError] = useState(false);
   const blockedProviders = [
     'gmail.com',
     'yahoo.com',
@@ -154,6 +150,7 @@ const ContactUs = () => {
         .then(result => {
           message.success('Message sent successfully!');
           form.resetFields();
+          setShowStates(true);
         const url = new URL(window.location);
     url.searchParams.set('contact', 'success');
     window.history.replaceState({}, '', url);
@@ -189,6 +186,28 @@ const ContactUs = () => {
 
   const handleEmailValidate = async (e) => {
     const email = e.target.value;
+    if (!email) {
+      setIsError(false);
+      form.setFields([
+        {
+          name: 'email',
+          errors: ['Please enter a valid email address'],
+        },
+      ]);
+      return;
+    };
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setIsError(false);
+      form.setFields([
+        {
+          name: 'email',
+          errors: ['Please enter a valid email address'],
+        },
+      ]);
+      return;
+    }
     if (email) {
       const domain = email.split('@')[1]?.toLowerCase();
       if (domain && blockedProviders.includes(domain)) {

@@ -7,6 +7,7 @@ import TotalHome from "./Components/Home Comp/TotalHome"
 import ScrollToTop from "./Components/ScrollToTop"
 import Footerpage from "./Components/Footer comp/Footerpage"
 import Totalproducts1 from "./Components/Product Comp/Totalproducts1"
+import IntraOralScanner from "./Components/Product Comp/IntraOralScanner/TotalIntraOralScanner"
 import Hubpageblog from "./Components/Hubpage Comp/Bloghubpages/Hubpageblog"
 import Casehubpage from "./Components/Hubpage Comp/Casestudyhubpage/Casehubpage";
 import AboutUs from "./Components/AboutUs/AboutUs";
@@ -19,11 +20,15 @@ import Aguidtochoose from './Components/Future Blog/A-guid to choose-Blog/Aguidt
 import HowToOvercome from "./Components/Future Blog/HowToOvercome/HowToOvercome";
 import Extraoralbestimg from "./Components/Future Blog/Extraoralbestimg/Extraoralbestimg";
 import Understandingextra from "./Components/Future Blog/understandingextra/Understandingextra";
+import Webinars from "./Components/Hubpage Comp/Webinars/Webinars"
+import WebinarLandingPage from "./Components/Webinars/LandingPage";
 import Notfoundpage from "./Components/Notfoundpage"
 import { HelmetProvider } from 'react-helmet-async';
 import FAQ from './Components/Faqcomp/Faq';
 import PressReleases from "./Components/Pressreleasecomp/pressRelease"
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Videos from './Components/Hubpage Comp/Videos/Videos';
 const App = () => {
   return (
     <BrowserRouter>
@@ -35,6 +40,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<TotalHome />} />
         <Route path="/product/intraoral-cameras" element={<Totalproducts1 />} />
+        <Route path="/product/intraoral-scanners" element={<IntraOralScanner />} />
         <Route path="/blogs" element={<Hubpageblog />} />
         <Route path="/case-studies" element={<Casehubpage />} />
         <Route path="/company/contact-us" element={<ContactUs />} />
@@ -51,6 +57,10 @@ const App = () => {
        <Route path="/faq" element={<FAQ />} />
        <Route path="/pressrelease" element={<PressReleases />} />
 
+       <Route path="/videos" element={<Videos />} />
+
+      <Route path="/webinars" element={<Webinars />} />
+      <Route path="/webinars/:slug" element={<WebinarLandingPage />} />
 
 
         <Route path="*" element={<Notfoundpage />} />

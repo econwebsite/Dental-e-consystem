@@ -1,0 +1,152 @@
+.custom-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow-x: hidden;
+}
+.custom-lightbox-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #344ea1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+}
+
+.custom-lightbox-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 60%;
+    max-height: 90%;
+    width: 650px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-lightbox-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.custom-lightbox-image {
+    max-width: 100%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.custom-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #344ea1;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.custom-close-button:hover {
+    color: #69ba2f;
+}
+
+.custom-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #344ea1;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.custom-prev-button {
+    left: 10px;
+}
+
+.custom-next-button {
+    right: 10px;
+}
+
+.custom-nav-button:hover {
+    color: #69ba2f;
+}
+
+@media (max-width: 768px) {
+    .custom-lightbox-content {
+        width: 800px;
+        height: 700px;
+        max-width: 80%;
+        max-height: 90%;
+    }
+
+    .custom-lightbox-image {
+        max-width: 100%;
+        height: 70%;
+    }
+
+    .custom-nav-button {
+        font-size: 1.5em;
+    }
+
+    .custom-close-button {
+        font-size: 1.8em;
+    }
+    .custom-lightbox-title {
+        font-size: 1em;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .custom-lightbox-content {
+        width: 700px;
+        height: 700px;
+        max-width: 80%;
+        max-height: 53%;
+    }
+
+    .custom-lightbox-image {
+        max-width: 100%;
+        height: 60%;
+        margin-top: 40px;
+
+    }
+
+    .custom-nav-button {
+        font-size: 1em;
+    }
+
+    .custom-close-button {
+        font-size: 1.2em;
+    }
+    .custom-lightbox-title {
+        font-size: 0.9em;
+        margin-top: 15px;
+
+    }
+}

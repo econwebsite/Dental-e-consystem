@@ -1,7 +1,7 @@
 import React from 'react';
 import './Aboutboderbox.css';
-import quotedown from "../../../assets/home images/quotes-01.png";
-import quoteup from "../../../assets/home images/quotes-02.png";
+import quotedown from "../../../assets/home-images/quotes-01.png";
+import quoteup from "../../../assets/home-images/quotes-02.png";
 
 const Aboutboderbox = () => {
   const boxes = [

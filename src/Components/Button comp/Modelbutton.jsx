@@ -41,7 +41,7 @@ const Modelbutton =({
       </button>
 
       <Modelform
-        visible={isModalVisible}
+        open={isModalVisible}
         onClose={handleCancel}
         type = {modalType}
         productName={productName || null}

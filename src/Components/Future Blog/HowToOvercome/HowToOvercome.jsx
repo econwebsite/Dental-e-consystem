@@ -39,7 +39,7 @@ const HowToOvercome = () => {
                 <p>Dental loupes magnify the oral cavity with cameras that accurately stream their point of view during complex procedures. They enable dentists to observe and understand ongoing dental issues while ensuring the remote viewing of surgeries. Cameras are attached to the frames of the dental loupes or headbands so that the field of view corresponds with the dentist's line of sight.</p>
                 <br></br>
                 <div class="futureblog-imgcenter">
-                  <img src={dentalloupe} alt="Image" />
+                  <img src={dentalloupe} alt="Dental Loupes Work" />
                 </div>
                 <div className="threeparameter-title">
                   <p>A dental loupe in use</p>
@@ -81,7 +81,7 @@ const HowToOvercome = () => {
                 <hr />
                 <div className="CardBlogs">
                   <Link className="cardImgLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
-                    <img src={threeimp} alt="Camera Model 2" className="Cardrelated-image" />
+                    <img src={threeimp} alt="Important Parameters in Intra Oral" className="Cardrelated-image" />
                   </Link>
                   <Link className="cardTitleLink" to="/blogs/three-important-parameters-in-intraoral-camera-technology" style={{ textDecoration: "none" }}>
                     <h2>Three Important Parameters in Intra Oral Camera Technology: Depth of Field, Field of View, and Image Quality</h2>
@@ -91,7 +91,7 @@ const HowToOvercome = () => {
                 </div>
                 <div className="CardBlogs">
                   <Link className="cardImgLink" to="/blogs/choosing-the-right-cmos-cameras-for-extraoral-imaging" style={{ textDecoration: "none" }}>
-                    <img src={CMOS} alt="Camera Model 1" className="Cardrelated-image" />
+                    <img src={CMOS} alt="CMOS cameras" className="Cardrelated-image" />
                   </Link>
                   <Link className="cardTitleLink" to="/blogs/choosing-the-right-cmos-cameras-for-extraoral-imaging" style={{ textDecoration: "none" }}>
                     <h2>Choosing the right CMOS cameras for Extraoral Imaging</h2>
@@ -101,7 +101,7 @@ const HowToOvercome = () => {
                 </div>
                 <div className="CardBlogs">
                   <Link className="cardImgLink" to="/blogs/understanding-extraoral-cameras-dentistry" style={{ textDecoration: "none" }}>
-                    <img src={Understanding} alt="Camera Model 3" className="Cardrelated-image" />
+                    <img src={Understanding} alt="Extraoral Cameras" className="Cardrelated-image" />
                   </Link>
                   <Link className="cardTitleLink" to="/blogs/understanding-extraoral-cameras-dentistry" style={{ textDecoration: "none" }}>
                     <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>

@@ -45,7 +45,7 @@ const Aguidtochoose = () => {
                                 <p>Most intraoral cameras tend to resemble electric toothbrushes. They are designed for easy navigation and patient comfort during dental diagnosis and treatment.</p>
                                 <p>The head region of an intraoral camera, housing the lens and an array of LED lights, plays a crucial role. As the dentist moves around the oral region, the lens directs the light onto the CMOS sensor. This sensor, a key component, converts the incoming photons into electric signals, resulting in highly detailed images of the oral cavity.</p>
                                 <div class="futureblog-imgcenter">
-                                    <img src={intraoral} alt="Image" />
+                                    <img src={intraoral} alt="Rear and Front View of an Intraoral Camera" />
                                 </div>
                                 <div className="threeparameter-title">
                                     <p>Rear and Front View of an Intraoral Camera</p>
@@ -57,7 +57,7 @@ const Aguidtochoose = () => {
                                 <h3>Macro imaging </h3>
                                 <p>When using intraoral cameras, dentists often need to get very close to the molar and internal gum regions. This necessitates capturing close-up images of the inner areas of the oral area at a shorter distance.</p>
                                 <div class="futureblog-imgcenter">
-                                    <img src={guideimg1} alt="Image" />
+                                    <img src={guideimg1} alt="macro-imaging" />
                                 </div>
                                 <div className="threeparameter-title">
                                     <p>Capturing close-up images of the teeth with macro-imaging</p>
@@ -92,7 +92,7 @@ const Aguidtochoose = () => {
                                 <p>Dentists typically utilize intraoral cameras within their clinical environments, where multiple light sources such as operating lights, room lights, and headlamp lights can significantly impact the camera's color reproduction due to variations in color temperature. These diverse lighting conditions can cause inconsistencies in the captured images, leading to inaccurate color representation of the oral cavity.</p>
 
                                 <div class="futureblog-imgcenter">
-                                    <img src={temprature} alt="Image" />
+                                    <img src={temprature} alt="Different Light Sources" />
                                 </div>
                                 <div className="threeparameter-title">
                                     <p>Colour Temperatures of Different Light Sources</p>
@@ -106,7 +106,7 @@ const Aguidtochoose = () => {
                                 <p>A wide Field of View (FoV) helps dentists capture wide areas of the oral regions in a single image. This, in turn, reduces the need for multiple shots and minimizes the risk of missing critical areas. It also offers a complete view of the neighbouring teeth and surrounding anatomical structures for planning teeth alignment and other orthodontic procedures. </p>
                                 <p>The integration of a suitable lens with a camera sensor is essential for achieving a wide field of view (FOV). This involves selecting a lens with a shorter focal length that complement the sensor's size and resolution. A shorter focal length lens plays a crucial role in providing a wider FOV by capturing a larger portion of the scene. A field of view of about 90 degrees and above is preferred in intraoral cameras by the dentists.</p>
                                 <div class="futureblog-imgcenter">
-                                    <img src={focallength} alt="Image" />
+                                    <img src={focallength} alt="Focal length vs Field of View" />
                                 </div>
                                 <div className="threeparameter-title">
                                     <p>Focal length vs Field of View</p>
@@ -135,7 +135,7 @@ const Aguidtochoose = () => {
                                 <hr />
                                 <div className="CardBlogs">
                                     <Link className="cardImgLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
-                                        <img src={autofocus} alt="Camera Model 1" className="Cardrelated-image" />
+                                        <img src={autofocus} alt="Which Lens to Choose" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/autofocus-vs-fixed-focus-lenses-for-intraoral-cameras" style={{ textDecoration: "none" }}>
                                     <h2>Autofocus vs. Fixed focus: Which Lens to Choose?</h2>
@@ -146,7 +146,7 @@ const Aguidtochoose = () => {
                                 </div>
                                 <div className="CardBlogs">
                                     <Link className="cardImgLink" to="/blogs/understanding-extraoral-cameras-dentistry" style={{ textDecoration: "none" }}>
-                                        <img src={Understanding} alt="Camera Model 2" className="Cardrelated-image" />
+                                        <img src={Understanding} alt="Role in Dentistry" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/understanding-extraoral-cameras-dentistry" style={{ textDecoration: "none" }}>
                                     <h2>Understanding Extraoral Cameras and Their Role in Dentistry</h2>
@@ -156,7 +156,7 @@ const Aguidtochoose = () => {
                                 </div>
                                 <div className="CardBlogs">
                                 <Link className="cardImgLink" to="/blogs/imaging-challenges-dental-loupes-manufacturing" style={{ textDecoration: "none" }}>
-                                    <img src={howtoovercome} alt="Camera Model 3" className="Cardrelated-image" />
+                                    <img src={howtoovercome} alt="Challenges of Dental Loupes" className="Cardrelated-image" />
                                     </Link>
                                     <Link className="cardTitleLink" to="/blogs/imaging-challenges-dental-loupes-manufacturing" style={{ textDecoration: "none" }}>
                                     <h2>How to Overcome Imaging-Related Manufacturing Challenges of Dental Loupes</h2>

@@ -1,0 +1,357 @@
+
+import React, { useState, useMemo } from 'react';
+import { Form, Input, Select, Button, Row, Col, message, Result, Spin } from 'antd';
+import axios from 'axios';
+import countryList from 'react-select-country-list';
+import AnimatedButton from '../Button comp/AnimatedButton';
+import './LandingPage.css';
+
+const { TextArea } = Input;
+const { Option } = Select;
+
+const usaStates = [
+  { code: 'AL', name: 'Alabama' },
+  { code: 'AK', name: 'Alaska' },
+  { code: 'AZ', name: 'Arizona' },
+  { code: 'AR', name: 'Arkansas' },
+  { code: 'CA', name: 'California' },
+  { code: 'CO', name: 'Colorado' },
+  { code: 'CT', name: 'Connecticut' },
+  { code: 'DE', name: 'Delaware' },
+  { code: 'FL', name: 'Florida' },
+  { code: 'GA', name: 'Georgia' },
+  { code: 'HI', name: 'Hawaii' },
+  { code: 'ID', name: 'Idaho' },
+  { code: 'IL', name: 'Illinois' },
+  { code: 'IN', name: 'Indiana' },
+  { code: 'IA', name: 'Iowa' },
+  { code: 'KS', name: 'Kansas' },
+  { code: 'KY', name: 'Kentucky' },
+  { code: 'LA', name: 'Louisiana' },
+  { code: 'ME', name: 'Maine' },
+  { code: 'MD', name: 'Maryland' },
+  { code: 'MA', name: 'Massachusetts' },
+  { code: 'MI', name: 'Michigan' },
+  { code: 'MN', name: 'Minnesota' },
+  { code: 'MS', name: 'Mississippi' },
+  { code: 'MO', name: 'Missouri' },
+  { code: 'MT', name: 'Montana' },
+  { code: 'NE', name: 'Nebraska' },
+  { code: 'NV', name: 'Nevada' },
+  { code: 'NH', name: 'New Hampshire' },
+  { code: 'NJ', name: 'New Jersey' },
+  { code: 'NM', name: 'New Mexico' },
+  { code: 'NY', name: 'New York' },
+  { code: 'NC', name: 'North Carolina' },
+  { code: 'ND', name: 'North Dakota' },
+  { code: 'OH', name: 'Ohio' },
+  { code: 'OK', name: 'Oklahoma' },
+  { code: 'OR', name: 'Oregon' },
+  { code: 'PA', name: 'Pennsylvania' },
+  { code: 'RI', name: 'Rhode Island' },
+  { code: 'SC', name: 'South Carolina' },
+  { code: 'SD', name: 'South Dakota' },
+  { code: 'TN', name: 'Tennessee' },
+  { code: 'TX', name: 'Texas' },
+  { code: 'UT', name: 'Utah' },
+  { code: 'VT', name: 'Vermont' },
+  { code: 'VA', name: 'Virginia' },
+  { code: 'WA', name: 'Washington' },
+  { code: 'WV', name: 'West Virginia' },
+  { code: 'WI', name: 'Wisconsin' },
+  { code: 'WY', name: 'Wyoming' },
+];
+
+const WebinarDownloadForm = ({ webinarTitle, type = 'download' }) => {
+  const [form] = Form.useForm();
+  const [selectedCountry, setSelectedCountry] = useState('US');
+  const [showStates, setShowStates] = useState(true);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+
+  const blockedProviders = [
+    'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'protonmail.com',
+    'zoho.com', 'aol.com', 'gmx.com', 'mail.com', 'icloud.com', 'yandex.com'
+  ];
+
+  const countries = useMemo(() => {
+    return countryList().getData().map(country => ({
+      value: country.value,
+      label: country.label
+    }));
+  }, []);
+
+  const trackVisitor = () => {
+    try {
+      if (window.$zoho && $zoho.salesiq) {
+        const { name, email } = form.getFieldsValue();
+        if (name) $zoho.salesiq.visitor.name(name);
+        if (email) $zoho.salesiq.visitor.email(email);
+        const uniqueId = $zoho.salesiq.visitor.uniqueid();
+        form.setFieldsValue({ LDTuvid: uniqueId });
+      }
+    } catch (e) {}
+  };
+
+  const onFinish = (values) => {
+    if (isError) {
+      setIsLoading(true);
+      const trackingData = {
+        email: values.email,
+        company_name: values.companyName,
+        phone_number: values.contactNumber,
+        country: values.country,
+        state: values.state || '',
+        queries: values.queries || '',
+        heardAboutUs: values.heardAboutUs
+      };
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: `${type}_form_submit`, ...trackingData });
+      trackVisitor();
+      values.webinarName = webinarTitle;
+      values.buttonText = type;
+      let url = '';
+      if (type === 'download') {
+        url = 'https://api.dental.e-consystems.com/api/webinarDownload';
+        
+      } else if (type === 'contact') {
+        url = 'https://api.dental.e-consystems.com/api/contactform';
+      
+      }
+      axios.post(url, { values }, { withCredentials: true })
+        .then(result => {
+          if (result.status === 200) {
+            
+            setSuccessMessage(
+          type === 'download'
+            ? 'We sent the webinar video link to your given email.'
+            : 'Thank you for contacting us! We will get back to you soon.'
+        );
+            setTimeout(() => setIsSuccess(false), 10000); // 10 seconds
+            setIsSuccess(true);
+          }
+          form.resetFields();
+          setShowStates(true);
+        })
+        .catch(err => console.log(err))
+        .finally(() => setIsLoading(false));
+    }
+  };
+
+  const handleCountryChange = (value) => {
+    const country = countries.find(c => c.value === value);
+    setSelectedCountry(value);
+    setShowStates(country?.value === 'US');
+    if (country?.value !== 'US') {
+      form.setFieldsValue({ state: undefined });
+    }
+  };
+
+  const emailValidator = (_, value) => {
+    if (value) {
+      const domain = value.split('@')[1]?.toLowerCase();
+      if (domain && blockedProviders.includes(domain)) {
+        setIsError(false);
+        return Promise.reject('Please enter your company email');
+      }
+    }
+    return Promise.resolve();
+  };
+
+  const handleEmailValidate = async (e) => {
+    const email = e.target.value;
+    if (!email) {
+      setIsError(false);
+      form.setFields([
+        {
+          name: 'email',
+          errors: ['Please enter a valid email address'],
+        },
+      ]);
+      return;
+    };
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setIsError(false);
+      form.setFields([
+        {
+          name: 'email',
+          errors: ['Please enter a valid email address'],
+        },
+      ]);
+      return;
+    }
+    if (email) {
+      const domain = email.split('@')[1]?.toLowerCase();
+      if (domain && blockedProviders.includes(domain)) {
+        setIsError(false);
+        form.setFields([
+          { name: 'email', errors: ["Please enter your company email"] },
+        ]);
+        return;
+      }
+      axios.post(`https://api.dental.e-consystems.com/api/validateEmail`, { email })
+        .then(result => {
+          if (result.data.isValid === true) {
+            setIsError(true);
+            return true;
+          } else if (result.data.isValid === false) {
+            setIsError(false);
+            form.setFields([
+              { name: 'email', errors: ["Please enter valid email ID"] },
+            ]);
+          } else if (result.data.isValid === null || result.data.isValid === undefined) {
+            if (result.data.status === 'valid' || result.data.status === 'catch-all' || result.data.status === 'role_based') {
+              if (!result.data.free_email) {
+                setIsError(true);
+                return true;
+              } else {
+                setIsError(false);
+                form.setFields([
+                  { name: 'email', errors: ["Please enter valid email ID"] },
+                ]);
+              }
+            } else {
+              setIsError(false);
+              form.setFields([
+                { name: 'email', errors: ["Please enter valid email ID"] },
+              ]);
+            }
+          }
+        })
+        .catch(err => console.log(err));
+    }
+  };
+
+  return (
+    <div className="webinar-download-form-onpage">
+      {isSuccess ? (
+        <Result
+          status="success"
+          title="Thank you!"
+          subTitle={successMessage}
+        />
+      ) : (
+        <div style={{ position: 'relative' }}>
+          <Form
+            form={form}
+            name="webinarDownloadForm"
+            onFinish={onFinish}
+            layout="vertical"
+            initialValues={{ country: 'US', state: 'AL' }}
+          >
+            <Form.Item name="LDTuvid" hidden>
+              <Input type="hidden" />
+            </Form.Item>
+            <Row gutter={8}>
+              <Col span={12}>
+                <Form.Item
+                  name="name"
+                  rules={[{ required: true, message: 'Please enter your name' }]}
+                >
+                  <Input placeholder="Name *" />
+                </Form.Item>
+              </Col>
+              <Col span={12}>
+                <Form.Item
+                  name="companyName"
+                  rules={[{ required: true, message: 'Please enter your company name' }]}
+                >
+                  <Input placeholder="Company Name*" />
+                </Form.Item>
+              </Col>
+            </Row>
+            <Row gutter={8}>
+              <Col span={12}>
+                <Form.Item
+                  name="email"
+                  rules={[
+                    { required: true, message: 'Please enter your email' },
+                    { type: 'email', message: 'Please enter a valid email' },
+                    { validator: emailValidator },
+                  ]}
+                >
+                  <Input placeholder="name@yourcompany.com*" onPaste={e => { e.preventDefault(); return false; }} autoComplete='off' onBlur={handleEmailValidate} />
+                </Form.Item>
+              </Col>
+              <Col span={12}>
+                <Form.Item
+                  name="contactNumber"
+                  rules={[{ message: 'Please enter your phone number' }]}
+                >
+                  <Input placeholder="Contact Number" />
+                </Form.Item>
+              </Col>
+            </Row>
+            <Row gutter={8}>
+              <Col span={12}>
+                <Form.Item
+                  name="country"
+                  rules={[{ required: true, message: 'Please select your country' }]}
+                >
+                  <Select showSearch placeholder="Select country" onChange={handleCountryChange}>
+                    {countries.map(country => (
+                      <Option key={country.value} value={country.value}>{country.label}</Option>
+                    ))}
+                  </Select>
+                </Form.Item>
+              </Col>
+              <Col span={12}>
+                {showStates && (
+                  <Form.Item
+                    name="state"
+                    rules={[{ required: showStates, message: 'Please select your state' }]}
+                  >
+                    <Select placeholder="Select state">
+                      {usaStates.map(state => (
+                        <Option key={state.code} value={state.code}>{state.name}</Option>
+                      ))}
+                    </Select>
+                  </Form.Item>
+                )}
+              </Col>
+            </Row>
+            <Row gutter={8}>
+              <Col span={24}>
+                <Form.Item name="heardAboutUs" rules={[{ message: 'Please let us know how you heard about us' }]}> <Input placeholder="How did you hear about us?" /> </Form.Item>
+              </Col>
+            </Row>
+            <Row gutter={8}>
+              <Col span={24}>
+                <Form.Item name="queries" rules={[{ message: 'Please describe your queries' }]}> <TextArea placeholder="Describe Your Queries" rows={5} /> </Form.Item>
+              </Col>
+            </Row>
+            <Row justify="center">
+              <Col>
+                <Form.Item>
+                  <AnimatedButton
+                    type="primary"
+                    htmlType="submit"
+                    className="Contacts-btn"
+                    text="Submit"
+                    backgroundColor="#344ea1"
+                    animationColor="#69ba2f"
+                    hoverColor="yellow"
+                  />
+                </Form.Item>
+              </Col>
+            </Row>
+          </Form>
+          {isLoading && (
+            <div style={{
+              position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+              backgroundColor: 'rgba(255,255,255,0.8)', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: 1000, borderRadius: 8
+            }}>
+              <Spin size="large" />
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default WebinarDownloadForm;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Specification.css'; // Import CSS for styling
-import specificaionimg from "../../../assets/Product images/Specimg.png";
+import specificaionimg from "../../../assets/product-images/Specification-img.png";
 import Modelbutton from "../../Button comp/Modelbutton"
 const leftBoxes = [
   { label: 'Resolution', value: '1920 x 1080', bgColor: '#f0feff' },

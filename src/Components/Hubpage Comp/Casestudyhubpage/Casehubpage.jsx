@@ -24,7 +24,7 @@ const Casehubpage = () => {
             <div className="casehubpage-column casehubpage-left" data-aos="zoom-in-right" data-aos-duration="1000">
               <div className="casehubpage-border-box">
               
-                <img src={ethernetCameras} alt="Image Description" />
+                <img src={ethernetCameras} alt="Integrating Dual Ethernet Cameras" />
                 
                 <h2>Integrating Dual Ethernet Cameras into Dental Operatory Lights for Improved Functionality</h2>
                 
@@ -37,7 +37,7 @@ const Casehubpage = () => {
                 <div className="casehubpage-card">
                   <div className="casehubpage-card-left">
                   
-                    <img src={AIdriven} alt="Card Image 1" />
+                    <img src={AIdriven} alt="Point-Of-Care Device" />
                   </div>
                   <div className="casehubpage-card-right">
                     <h6>AI-driven and Portable Point-Of-Care Device for Pre-Cancer Screening for a US Medical Device Manufacturer</h6>
@@ -49,7 +49,7 @@ const Casehubpage = () => {
               <div className="casehubpage-card-row">
                 <div className="casehubpage-card">
                   <div className="casehubpage-card-left">
-                    <img src={Improving} alt="Card Image 2" />
+                    <img src={Improving} alt="4k Dental Loupe Camera" />
                   </div>
                   <div className="casehubpage-card-right">
                     <h6>Improving Dental Documentation using 4k Dental Loupe Camera for a Leading Europe Based Dental Imaging Solutions Provider</h6>
