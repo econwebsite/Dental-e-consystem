@@ -4,6 +4,7 @@ import { Dropdown, Menu } from 'antd';
 import { Navbar, Nav, Container, Offcanvas, Form, Button } from 'react-bootstrap';
 import './Navbar.css';
 import dentallogo from '../../assets/home-images/NewDentallogo.png'; 
+import Search from '../Searchcomp/Search';
 
 const NavBarpage = () => {
   const offcanvasRef = useRef(null);
@@ -34,6 +35,8 @@ const NavBarpage = () => {
       <Menu.Item key="6">
         <Link style={{ textDecoration: "none", color: "#344ea1", fontSize: "medium" }} to="/pressrelease" onClick={handleNavLinkClick}>Press Releases</Link>
       </Menu.Item>
+
+  
     </Menu>
   );
 
@@ -79,6 +82,7 @@ const NavBarpage = () => {
               <Link to="/company/contact-us" className="navbarpage-navLink">Contact Us</Link>
               <div className="navbarpage-divider"></div>
               <Link to="/company/about-us" className="navbarpage-navLink">About Us</Link>
+              <Search/>
             </div>
             <div className="navbarpage-rightColumn">
               {/* <input type="text" placeholder="Search.." className="navbarpage-searchInput" /> */}
@@ -129,7 +133,7 @@ const NavBarpage = () => {
                 </Dropdown>
                 <Link className="nav-link" to="/company/contact-us" onClick={handleNavLinkClick}>Contact Us</Link>
                 <Link className="nav-link" to="/company/about-us" onClick={handleNavLinkClick}>About Us</Link>
-                
+                <Search />
 
 
               </Nav>

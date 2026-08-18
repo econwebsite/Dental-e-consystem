@@ -1,0 +1,311 @@
+.search-wrapper {
+  position: relative;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Search Icon */
+
+.search-icon-button {
+  border: none;
+  background: transparent;
+  color: #0d5ca8;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* Full Screen Overlay */
+
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+/* Dark Background */
+
+.search-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* Search Content */
+
+.search-content {
+  position: relative;
+  z-index: 2;
+
+  width: 500px;
+  max-width: 90%;
+
+  margin: 0 auto;
+  padding-top: 15vh;
+}
+
+/* Search Input */
+
+.search-input-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  background: #ffffff;
+  border: 1px solid #c5d9ed;
+  border-radius: 999px;
+
+  padding: 3px 8px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.search-input-icon {
+  color: #0d5ca8;
+  font-size: 20px;
+  margin: 0 12px;
+  flex-shrink: 0;
+}
+
+.search-input-wrapper input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  padding: 10px 5px;
+
+  font-size: 17px;
+  color: #083b78;
+}
+
+/* Close Button */
+
+.search-close-button {
+  border: none;
+  background: transparent;
+
+  color: #0d5ca8;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  padding: 7px;
+
+  flex-shrink: 0;
+}
+
+/* Results Main Container */
+
+.search-results {
+  width: 100%;
+
+  max-height: 650px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  margin-top: 12px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Result Count */
+
+.search-count {
+  margin: 0 0 25px;
+
+  color: #4f5f70;
+
+  font-size: 16px;
+}
+
+/* Sections */
+
+.search-section {
+  margin-bottom: 30px;
+}
+
+.search-section:last-child {
+  margin-bottom: 0;
+}
+
+.search-section h2 {
+  margin: 0 0 15px;
+
+  color: #083b78;
+
+  font-size: 25px;
+
+  font-weight: 600;
+}
+
+/* Result Card */
+
+.search-result-card {
+  background: #ffffff;
+
+  border: 1px solid #d9e5f2;
+
+  border-radius: 12px;
+
+  padding: 18px 20px;
+
+  margin-bottom: 14px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.search-result-card:hover {
+  background: #f8fbfe;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 6px 18px rgba(0, 56, 115, 0.12);
+}
+
+.search-result-card h3 {
+  margin: 0 0 8px;
+
+  color: #083b78;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+}
+
+.search-result-card p {
+  margin: 0 0 14px;
+
+  color: #526477;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+/* Open Page */
+
+.search-result-card button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #0788bd;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+.search-result-card button:hover {
+  text-decoration: underline;
+}
+
+.search-result-card button svg {
+  font-size: 13px;
+}
+
+/* No Results */
+
+.no-results {
+  padding: 25px;
+
+  text-align: center;
+
+  color: #666666;
+
+  background: #ffffff;
+}
+
+/* Scrollbar */
+
+.search-results::-webkit-scrollbar {
+  width: 7px;
+}
+
+.search-results::-webkit-scrollbar-track {
+  background: #f1f4f7;
+
+  border-radius: 10px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background: #b5c7d9;
+
+  border-radius: 10px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+  background: #8fa8be;
+}
+
+/* Firefox */
+
+.search-results {
+  scrollbar-width: thin;
+  scrollbar-color: #b5c7d9 #f1f4f7;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .search-content {
+    width: 100%;
+
+    max-width: 92%;
+
+    padding-top: 12vh;
+  }
+
+  .search-results {
+    max-height: 550px;
+
+    padding: 15px;
+  }
+
+  .search-section h2 {
+    font-size: 22px;
+  }
+
+  .search-result-card {
+    padding: 15px;
+  }
+
+  .search-result-card h3 {
+    font-size: 16px;
+  }
+}

@@ -46,8 +46,8 @@ function Dentalvideopg({bgColor='#f1f2f2'}) {
   const settings = {
     dots: false,            // hide bottom indicators
     arrows: true,
-    prevArrow: PrevArrow,
-    nextArrow: NextArrow,
+    prevArrow: <PrevArrow />,
+    nextArrow: <PrevArrow />,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
