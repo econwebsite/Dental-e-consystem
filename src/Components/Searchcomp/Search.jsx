@@ -8,7 +8,7 @@ import "./Search.css";
 import { productSearchTerms } from "../../utils/productSearchTerms";
 import { blogSearchTerms } from "../../utils/blogSearchTerms";
 import { searchByKeywords } from "../../utils/searchUtils";
-
+import { videoSearchTerms } from "../../utils/videoSearchTerms";
 function Search() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
@@ -16,7 +16,7 @@ function Search() {
   const navigate = useNavigate();
 
   const searchData = useMemo(() => {
-    return [...productSearchTerms, ...blogSearchTerms];
+    return [...productSearchTerms, ...blogSearchTerms,...videoSearchTerms];
   }, []);
 
   const searchEngine = useMemo(() => {
@@ -45,9 +45,9 @@ function Search() {
     (item) => item.category === "Blogs"
   );
 
-  const caseStudyResults = searchResults.filter(
-    (item) => item.category === "Case Studies"
-  );
+const videoResults = searchResults.filter(
+  (item) => item.category === "Videos"
+);
 
   const closeSearch = () => {
     setSearchOpen(false);
@@ -145,7 +145,7 @@ function Search() {
                           }}
                         >
                           <FaArrowRight />
-                          <span>Open page</span>
+                          <span>Open Product</span>
                         </button>
                       </div>
                     ))}
@@ -176,43 +176,40 @@ function Search() {
                           }}
                         >
                           <FaArrowRight />
-                          <span>Open page</span>
+                          <span>Open blog</span>
                         </button>
                       </div>
                     ))}
                   </section>
                 )}
 
-                {/* Case Studies */}
-                {caseStudyResults.length > 0 && (
-                  <section className="search-section">
-                    <h2>Case Studies</h2>
+            {/* Videos */}
+{videoResults.length > 0 && (
+  <section className="search-section">
+    <h2>Related Videos</h2>
 
-                    {caseStudyResults.map((item) => (
-                      <div
-                        className="search-result-card"
-                        key={item.path}
-                        onClick={() =>
-                          handleResultClick(item.path)
-                        }
-                      >
-                        <h3>{item.title}</h3>
+    {videoResults.map((item) => (
+      <div
+        className="search-result-card"
+        key={item.path}
+      >
+        <h3>{item.title}</h3>
 
-                        <p>{item.description}</p>
+        <p>{item.description}</p>
 
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleResultClick(item.path);
-                          }}
-                        >
-                          <FaArrowRight />
-                          <span>Open page</span>
-                        </button>
-                      </div>
-                    ))}
-                  </section>
-                )}
+        <button
+          onClick={() => {
+            closeSearch();
+            window.open(item.path, "_blank");
+          }}
+        >
+          <FaArrowRight />
+          <span>Open video</span>
+        </button>
+      </div>
+    ))}
+  </section>
+)}
 
                 {/* No Results */}
                 {searchResults.length === 0 && (
