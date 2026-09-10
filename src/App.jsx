@@ -29,6 +29,7 @@ import PressReleases from "./Components/Pressreleasecomp/pressRelease"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Videos from './Components/Hubpage Comp/Videos/Videos';
+import Support from './Components/Support/Support';
 const App = () => {
   return (
     <BrowserRouter>
@@ -61,6 +62,10 @@ const App = () => {
 
       <Route path="/webinars" element={<Webinars />} />
       <Route path="/webinars/:slug" element={<WebinarLandingPage />} />
+
+      <Route path="/support" element={<Support />} />
+
+
 
 
         <Route path="*" element={<Notfoundpage />} />
