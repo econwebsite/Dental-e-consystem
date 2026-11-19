@@ -6,6 +6,8 @@ import Vediothumbnail3 from "../../../assets/videos/can-you-see-the-difference.j
 import Vediothumbnail4 from "../../../assets/videos/why-you-trust-this.jpg";
 import Vediothumbnail5 from "../../../assets/videos/sharper-dental-imaging.jpg";
 import Vediothumbnail6 from "../../../assets/videos/what-image-quality-really-means.png";
+import Vediothumbnail7 from "../../../assets/videos/what-new-in-densi-camera.jpg";
+
 import FsLightbox from "fslightbox-react";
 import { Helmet } from 'react-helmet-async';
 
@@ -21,6 +23,7 @@ const Videos = () => {
         { thumb: Vediothumbnail3, src: "https://www.youtube.com/embed/fwH4LAfKtMI", title: "Can You See The Difference?" },
     ];
     const podcastsVideos = [
+                 {thumb: Vediothumbnail7, src: "https://www.youtube.com/embed/rZoyiPzifYQ", title: "Spatial Resolution in Medical Imaging | Megapixels vs. lp/mm Explained" },
         { thumb: Vediothumbnail6, src: "https://www.youtube.com/embed/qaXd_W1GxrQ", title: "What Image Quality Really Means in Intraoral Cameras" },
         { thumb: Vediothumbnail4, src: "https://www.youtube.com/embed/FmgwmRtmA3k", title: "Why You Trust This" },
     ];

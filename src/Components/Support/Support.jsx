@@ -38,8 +38,8 @@ const Support = () => {
               Basic installation support is valid for 6 months from purchase.
               For further assistance, consider buying support hours. Please
               contact{" "}
-              <a href="mailto:sales@e-consystems.com">
-                sales@e-consystems.com
+              <a href="mailto:dentalimaging@e-consystems.com">
+                dentalimaging@e-consystems.com
               </a>
               .
             </p> */}
@@ -108,10 +108,10 @@ const Support = () => {
               <h2>Mail Support</h2>
 
               <p>
-                <a href="mailto:sales@e-consystems.com">
+                <a href="mailto:dentalimaging@e-consystems.com">
                   <span>For Pre-sales</span>
                   <br />
-                  sales@e-consystems.com
+                  dentalimaging@e-consystems.com
                 </a>
               </p>
 
@@ -196,10 +196,12 @@ const Support = () => {
       </section>
 
       {/* Bottom Support Features */}
+
+{/*  
       <section className="support-features-section">
         <div className="support-features">
 
-          {/* Get Quote */}
+     
           <div className="feature-item">
             <a href="https://www.e-consystems.com/getquote.asp">
               <img
@@ -222,7 +224,7 @@ const Support = () => {
             </p>
           </div>
 
-          {/* RMA / Warranty */}
+        
           <div className="feature-item">
             <a href="https://www.e-consystems.com/RMA-Policy.asp">
               <img
@@ -250,7 +252,6 @@ const Support = () => {
             </p>
           </div>
 
-          {/* Create a Ticket */}
           <div className="feature-item">
             <a href="https://www.e-consystems.com/create-ticket.asp">
               <img
@@ -276,6 +277,8 @@ const Support = () => {
 
         </div>
       </section>
+ */}
+
 
     </div>
   );

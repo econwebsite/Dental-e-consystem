@@ -21,6 +21,22 @@ const Hubpageblog = () => {
     <div className='hubtot-blog'>
     <div className='mainContainer'>
       <h1>Our Blog</h1>
+
+  <div className="hubpageblog hubfeature-row" data-aos="fade-up" data-aos-duration="1000">
+      <div className="hubfeature-card">
+        <div className="hubfeature-body">
+          <span className="hubfeature-tag">Featured</span>
+          <Link className="HUBcardTitleLink" to="/blogs/whats-new-in-densicam" style={{ textDecoration: "none" }}>
+            <h2>What's New in DensiCAM? A Closer Look at Our Enhanced Full HD Intraoral Camera</h2>
+          </Link>
+          <p>At e-con Systems, we continuously work to improve our dental imaging solutions based on evolving customer requirements and application needs. As part of these efforts, DensiCAM, our intraoral camera, has undergone several improvements to its physical design, imaging capabilities, and user interface. 
+</p>
+          <p className="hubfeature-meta">By Bharath Kumar <span aria-hidden="true">&bull;</span> 8 min read</p>
+          <AnimatedButton className="Hubread-more" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/whats-new-in-densicam"></AnimatedButton>
+        </div>
+      </div>
+    </div>
+      
     <div className="hubpageblog">
       <div className="hubblog-column hubblog-left" data-aos="zoom-in-right" data-aos-duration="1000">
         <div className="hubblog-border-box">
@@ -81,6 +97,20 @@ const Hubpageblog = () => {
               <p>This blog explores features that enable loupe cameras for precise diagnoses. Find out why size...</p>
             <AnimatedButton className="Hubread-more" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/capturing-dentists-pov-with-dental-loupe-cameras"></AnimatedButton>
             </div>
+        </div>
+      </div>
+    </div>
+
+     <div className="hubpageblog hubfeature-row" data-aos="fade-up" data-aos-duration="1000">
+      <div className="hubfeature-card">
+        <div className="hubfeature-body">
+         
+          <Link className="HUBcardTitleLink" to="/blogs/veterinary-intraoral-imaging-with-densicam" style={{ textDecoration: "none" }}>
+            <h2>From Human Dentistry to Veterinary Care: How DensiCAM Elevates Intraoral Imaging</h2>
+          </Link>
+          <p>Explore how intraoral imaging can support veterinary oral examinations, clinical documentation, and conversations with pet owners. Learn how depth of field, a 90&deg; field of view, and Full HD capture translate from human dentistry into veterinary care.</p>
+          <p className="hubfeature-meta">By Bharath Kumar <span aria-hidden="true">&bull;</span> 8 min read</p>
+          <AnimatedButton className="Hubread-more" text="Read more" backgroundColor="#344ea1" animationColor="#69ba2f" hoverColor="#69ba2f" to="/blogs/veterinary-intraoral-imaging-with-densicam"></AnimatedButton>
         </div>
       </div>
     </div>

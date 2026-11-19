@@ -72,7 +72,7 @@ const RightforExtraoral = () => {
 <p><a href="">Check out all our dental cameras</a></p>
 <p><a>Explore all our medical cameras</a></p>
 <p>Use our <a href="">Camera Selector Page </a>to find the best-fit camera for your product.</p>
-<p>If you need help integrating camera solutions into your dental loupes or other medical devices, please email us at <a href="">camerasolutions@e-consystems.com</a>.</p>
+<p>If you need help integrating camera solutions into your dental loupes or other medical devices, please email us at <a href="">dentalimaging@e-consystems.com</a>.</p>
 
 
 

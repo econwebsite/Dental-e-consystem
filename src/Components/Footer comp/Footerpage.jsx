@@ -104,6 +104,8 @@ const Footerpage = () => {
   </div>
   <Link to="/company/contact-us">Contact Us</Link>
   <Link to="/company/about-us">About Us</Link>
+  <Link to="/support">Support</Link>
+
 </div>
 
           </div>
@@ -113,8 +115,8 @@ const Footerpage = () => {
               <p><RiPhoneFill className='footer-con-icon' /><a style={{ textDecoration: "none", color: "#003873" }} href="tel:+14087667503">+1 408 766 7503 </a></p>
             </div>
             <div className="footer-contact-item">
-              <p><RiMailFill className='footer-con-icon' /> <a style={{ textDecoration: "none", color: "#003873" }} href="mailto:camerasolutions@e-consystems.com">
-                camerasolutions@e-consystems.com
+              <p><RiMailFill className='footer-con-icon' /> <a style={{ textDecoration: "none", color: "#003873" }} href="mailto:dentalimaging@e-consystems.com">
+                dentalimaging@e-consystems.com
               </a></p>
             </div>
           </div>

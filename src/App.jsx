@@ -30,6 +30,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Videos from './Components/Hubpage Comp/Videos/Videos';
 import Support from './Components/Support/Support';
+import EnhancedFullHDIntraoral from './Components/Future Blog/Enhanced-FullHD-Intraoral/EnhancedFullHDIntraoral';
 const App = () => {
   return (
     <BrowserRouter>
@@ -65,7 +66,10 @@ const App = () => {
 
       <Route path="/support" element={<Support />} />
 
-
+<Route
+  path="/blogs/whats-new-in-densicam"
+  element={<EnhancedFullHDIntraoral />}
+/>
 
 
         <Route path="*" element={<Notfoundpage />} />

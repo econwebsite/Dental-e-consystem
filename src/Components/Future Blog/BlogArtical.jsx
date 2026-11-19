@@ -69,8 +69,8 @@ const BlogArtical = () => {
         <p>If you need assistance with lens selection or integrating camera solutions into any of your medical or life sciences devices</p>
         <p>
           Please write to{' '}
-          <a className="mail-color" href="mailto:camerasolutions@e-consystems.com">
-            camerasolutions@e-consystems.com
+          <a className="mail-color" href="mailto:dentalimaging@e-consystems.com">
+            dentalimaging@e-consystems.com
           </a>
         </p>      </div>
       <div className="Artical-person">

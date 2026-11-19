@@ -39,7 +39,7 @@ const faqs = [
     answer: (
       <div>
         <p>DensiCAM is a wired intraoral camera that connects via USB interface. For more information or customization inquiries, 
-          please contact <a href="mailto:camerasolutions@e-consystems.com" className="email-link">camerasolutions@e-consystems.com</a>.
+          please contact <a href="mailto:dentalimaging@e-consystems.com" className="email-link">dentalimaging@e-consystems.com</a>.
         </p>
       </div>
     )
@@ -49,7 +49,7 @@ const faqs = [
     answer: (
       <div>
         <p>DensiCAM Intraoral camera comes with a 2m Magnetic Pogo Pin to USB 2.0 Type A cable. For longer cable requirements, contact us
-          <a href="mailto:camerasolutions@e-consystems.com" className="email-link"> camerasolutions@e-consystems.com</a>.
+          <a href="mailto:dentalimaging@e-consystems.com" className="email-link"> dentalimaging@e-consystems.com</a>.
         </p>
       </div>
     )
@@ -62,7 +62,7 @@ const faqs = [
     question:"Is UV or IR LED customization supported?",
     answer: (
       <div>
-        <p>The standard model features integrated high-power 8 LEDs, including a cool white 5000K color temperature LED, which provides stable illumination for dental imaging. please contact <a href="mailto:camerasolutions@e-consystems.com" className="email-link">camerasolutions@e-consystems.com</a> for more information on special lighting configurations.</p>
+        <p>The standard model features integrated high-power 8 LEDs, including a cool white 5000K color temperature LED, which provides stable illumination for dental imaging. please contact <a href="mailto:dentalimaging@e-consystems.com" className="email-link">dentalimaging@e-consystems.com</a> for more information on special lighting configurations.</p>
       </div>
     )
   },
@@ -166,7 +166,7 @@ const faqs = [
     question:"What is the warranty and return policy for DensiCAM?",
 answer: (
       <div>
-        <p>DensiCAM comes with a 3-year warranty. For return requests or additional support, please contact <a href="mailto:camerasolutions@e-consystems.com" className="email-link">camerasolutions@e-consystems.com</a>.
+        <p>DensiCAM comes with a 3-year warranty. For return requests or additional support, please contact <a href="mailto:dentalimaging@e-consystems.com" className="email-link">dentalimaging@e-consystems.com</a>.
         </p>
       </div>
     )
