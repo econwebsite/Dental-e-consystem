@@ -21,7 +21,6 @@ const Hubpageblog = () => {
     <div className='hubtot-blog'>
     <div className='mainContainer'>
       <h1>Our Blog</h1>
-
   <div className="hubpageblog hubfeature-row" data-aos="fade-up" data-aos-duration="1000">
       <div className="hubfeature-card">
         <div className="hubfeature-body">
